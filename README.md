@@ -1,39 +1,113 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# PLN Mobile Design System
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A reusable Flutter design system package that centralizes visual styling, theming, and UI components for PLN Mobile apps.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+This package helps teams build consistent, scalable, and maintainable UI by providing a single source of truth for design tokens and reusable widgets.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
-## Features
+## ✨ Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### 🎨 Design Tokens
+Centralized visual foundation for consistent UI:
+- Color palette (brand & semantic colors)
+- Typography (font family & text styles)
+- Spacing system
+- Border radius
 
-## Getting started
+### 🧩 Theming
+- Preconfigured light theme
+- Easy ThemeData integration
+- Consistent visual language across screens
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### 🖼️ Asset Management
+- Image asset paths
+- SVG asset paths
+- Lottie animation paths
+- Font asset configuration
 
-## Usage
+### 🧱 Reusable Widgets
+Production-ready UI components:
+- Buttons
+- Cards
+- App bars
+- Input fields
+- Sheets / dialogs
+- Indicators
+- And more
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### 🛠️ Utilities
+Helper tools for common UI needs:
+- Screen size helpers
+- Responsive scaling utilities
+- Formatters
+- Validators
+- BuildContext extensions
 
-```dart
-const like = 'sample';
+---
+
+## 📦 Installation
+
+### Option 1 — Local Path (for active development)
+
+```yaml
+dependencies:
+  pln_mobile_design_system:
+    path: ../pln_mobile_design_system
 ```
 
-## Additional information
+### Option 2 — Git Repository (recommended for teams)
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```yaml
+dependencies:
+  pln_mobile_design_system:
+    git:
+      url: https://gitlab.com/your-group/pln_mobile_design_system.git
+      ref: v1.0.0
+```
+
+## 📁 Package Structure
+
+```text
+lib/
+├─ assets/
+│  ├─ animations/
+│  │  └─ app_animations.dart
+│  ├─ icons/
+│  │  └─ app_icons.dart
+│  ├─ images/
+│  │  └─ app_images.dart
+│  ├─ sounds/
+│  │  └─ app_sounds.dart
+│  └─ app_assets.dart
+│
+├─ constants/
+│  ├─ colors/
+│  │  ├─ app_colors.dart
+│  │  └─ app_palette.dart
+│  ├─ app_radius.dart
+│  └─ app_spacing.dart
+│
+├─ theme/
+│  └─ app_theme.dart
+│
+├─ typography/
+│  ├─ app_font_size.dart
+│  ├─ app_font_weight.dart
+│  ├─ app_fonts.dart
+│  ├─ app_line_height.dart
+│  ├─ app_text_styles.dart
+│  └─ app_text_theme.dart
+│
+├─ utils/
+│  ├─ extensions/
+│  │  └─ context_extension.dart
+│  └─ formatters/
+│     └─ name_input_formatters.dart
+│
+├─ widgets/
+│  ├─ dialogs/
+│  └─ sheets/
+│
+└─ pln_mobile_design_system.dart
+```

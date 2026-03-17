@@ -15,7 +15,7 @@ export 'typography/app_text_styles.dart';
 export 'typography/app_text_theme.dart';
 
 export 'utils/extensions/context_extension.dart';
-export 'utils/formatters/name_input_formatters.dart';
+export 'utils/formatters/name_input_formatter.dart';
 
 export 'widgets/dialogs/loading_dialog.dart';
 export 'widgets/sheets/confirmation_bottom_sheet.dart';
