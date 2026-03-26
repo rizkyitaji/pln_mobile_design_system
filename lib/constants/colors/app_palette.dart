@@ -124,4 +124,68 @@ class AppPalette {
   static const Color purple800 = Color(0xFF6E11B0);
   static const Color purple900 = Color(0xFF59168B);
   static const Color purple950 = Color(0xFF3C0366);
+
+  // Existing Colors -- Remove when all components are migrated to use the new palette
+  static const Color primaryColor = Color(0xFF00A2B9);
+  static const Color secondaryColorNew = Color(0xFF038DA0);
+  static const Color secondaryColor = Color(0xFF035B71);
+  static const Color backgroundColor = Color(0xFFF4F4F4);
+  static const Color backgroundColor2 = Color(0xFFFBFCFD);
+  static const Color orange = Color(0xFFF2994A);
+  static const Color orangeDark = Color(0xFFEF7C29);
+  static const Color red = Color(0xFFFF3259);
+  static Color black70 = Colors.black.withValues(alpha: 0.7);
+  static const Color blackExs = Color(0xFF121314);
+  static const Color whiteExs = Color(0xFFFFFFFF);
+  static const Color blazeOrange = Color(0xFFFF5C00);
+  static const Color monzaRed = Color(0xFFDF0909);
+  static const Color stone = Color(0xFF7A7E80);
+  static const Color green = Color(0xFF05C77B);
+  static const Color lightGreen = Color(0xFFEFF8EA);
+  static const Color blue = Color(0xFF226DDE);
+  static const Color cyan = Color(0xFF23C4DB);
+  static const Color yellowWarning = Color(0xFFFAFEE5);
+  static const Color yellowBorder = Color(0xFFEEF5C9);
+  static const Color shark = Color(0xFF25262B);
+  static const Color grey = Colors.grey;
+  static const Color bluePurple = Color(0xFF225197);
+  static const Color yellowCongrats = Color(0xFFFFF5E8);
+  static const Color lightOrange = Color(0xFFF3AF01);
+  static const Color yellowInfo = Color(0xFFFFF5E8);
+  static const Color lightBlue = Color(0xFFd9e9ec);
+  static const Color softRed = Color(0xFFFF5E5E);
+  static const Color greenGrass = Color(0xFFA8D29F);
+  static const Color greenGreyish = Color(0xFFF4F7F8);
+
+  // REC Color
+  static const Color sunflower = Color(0xFFD4AE43);
+  static const Color successRec = Color(0XFF6BBF59);
+  static const Color tamarin = Color(0XFFFF7A00);
+
+  // Marketplace Color
+  static const Color greenBold = Color.fromRGBO(0, 169, 47, 1);
+  static const Color greenTransp = Color.fromRGBO(225, 255, 234, 1);
+  static const Color greenWa = Color(0xFF2BB640);
+  static const Color yellowBold = Color.fromRGBO(254, 183, 0, 1);
+  static const Color yellowTransp = Color.fromRGBO(255, 243, 136, 1);
+  static const Color blueBold = Color.fromRGBO(0, 157, 169, 1);
+  static const Color redBold = Color.fromRGBO(223, 9, 9, 1);
+  static const Color redTransp = Color.fromRGBO(255, 226, 226, 1);
+  static const Color greyIconPlay = Color(0XFFF8F8F8);
+
+  static const Color emperor = Color(0xFF4F4F4F);
+  static const Color lightGrey = Color(0XFFDDDDDD);
+  static const Color lightGreyBold = Color(0XFF666666);
+  static const Color lightGrey2 = Color(0XDDDDDDDD);
+  static const Color darkGrey = Color.fromRGBO(189, 189, 189, 1);
+  static const Color darkGrey2 = Color(0xFF595A5B);
+  static const Color darkGrey3 = Color(0xFF888989);
+  static const Color darkGrey4 = Color(0xFFDBDCDC);
+  static const Color darkGrey5 = Color(0xFF6C6966);
+  static const Color greyIconPlay1 = Color(0XFFD9D9D9);
+  static const Color textGreyIconPlay1 = Color(0XFF333333);
+  static const Color textGreyHCS = Color(0XFF9F9F9F);
+  static const Color greySoft = Color(0XFFEFEFEF);
+  static const Color greyDisable = Color(0XFFF3F3F3);
+  static const Color greyHard = Color(0XFFA6A6A6);
 }

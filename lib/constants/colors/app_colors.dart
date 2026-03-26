@@ -207,3 +207,12 @@ class AppColors {
     colors: [AppPalette.teal500, AppPalette.lemon200],
   );
 }
+
+// Existing Colors -- Remove when all components are migrated to use the new palette
+class AppColorsExsiting {
+  static const primary = AppPalette.primaryColor;
+  static const white = AppPalette.white;
+  static const black = AppPalette.black;
+  static const error = AppPalette.tamarin;
+  static const secondary = AppPalette.secondaryColor;
+}
