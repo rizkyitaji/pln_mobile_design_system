@@ -17,8 +17,8 @@ class AppAssets {
   static const chargingCompletionNotification =
       '$_basePath/${AppSounds.chargingCompletionNotification}';
 
-  static const iconPlnMobile = '$_basePath/${AppIcons.plnMobile}';
-  static const iconCheckmark = '$_basePath/${AppIcons.checkmark}';
+  static const iconPlnMobile = '$_basePath/${AppIcons.iconPlnmobile}';
+  static const iconCheckmark = '$_basePath/${AppIcons.iconSolidCheckmark}';
 
   static const illustrationOnBoardingLogin =
       '$_basePath/${AppImages.illustrationOnBoardingLogin}';

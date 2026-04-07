@@ -1,4 +1,6 @@
 export 'assets/app_assets.dart';
+export 'assets/images/app_images.dart';
+export 'assets/icons/app_icons.dart';
 
 export 'constants/colors/app_colors.dart';
 export 'constants/colors/app_palette.dart';
@@ -19,3 +21,6 @@ export 'utils/formatters/name_input_formatter.dart';
 
 export 'widgets/dialogs/loading_dialog.dart';
 export 'widgets/sheets/confirmation_bottom_sheet.dart';
+export 'widgets/buttons/index.dart';
+export 'widgets/form/index.dart';
+export 'widgets/list/index.dart';

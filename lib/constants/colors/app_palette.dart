@@ -76,6 +76,7 @@ class AppPalette {
   static const Color blue800 = Color(0xFF1C44B1);
   static const Color blue900 = Color(0xFF1D3D8B);
   static const Color blue950 = Color(0xFF172858);
+  static const Color blue1000 = Color(0xFF014573);
 
   static const Color yellow50 = Color(0xFFFFFCE7);
   static const Color yellow100 = Color(0xFFFFF9C1);
