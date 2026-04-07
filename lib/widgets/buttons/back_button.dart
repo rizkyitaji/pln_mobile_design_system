@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pln_mobile_design_system/assets/icons/app_icons.dart';
+import 'package:pln_mobile_design_system/assets/app_assets.dart';
 import 'package:pln_mobile_design_system/constants/colors/app_colors.dart';
 
 class AppBackButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class AppBackButton extends StatelessWidget {
     return IconButton(
       onPressed: () => Navigator.pop(context),
       icon: SvgPicture.asset(
-        AppIcons.iconArrowShortLeft,
+        AppAssets.iconArrowShortLeft,
         width: 24,
         height: 24,
         colorFilter: color != null

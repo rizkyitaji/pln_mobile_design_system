@@ -9,9 +9,6 @@ void main() {
   final buffer = StringBuffer();
 
   buffer.writeln('class AppIcons {');
-  buffer.writeln(
-    "  static const String _base = 'packages/pln_mobile_design_system/assets/icons';\n",
-  );
 
   for (var folder in folders) {
     final dir = Directory('${baseDirSvg.path}/$folder');
@@ -33,11 +30,11 @@ void main() {
     for (var file in files) {
       final name = file.uri.pathSegments.last;
 
-      final cleanName = name.replaceAll('.svg', '').replaceAll('icon-', '');      
+      final cleanName = name.replaceAll('.svg', '').replaceAll('icon-', '');
 
       final variableName = 'icon${_capitalize(_toCamelCase(cleanName))}';
 
-      final path = "\$_base/svg/$folder/$name";
+      final path = "assets/icons/svg/$folder/$name";
 
       buffer.writeln("  static const String $variableName = '$path';");
     }
@@ -66,12 +63,11 @@ void main() {
 
     final variableName = 'icon${_capitalize(_toCamelCase(cleanName))}';
 
-    final path = "\$_base/png/$name";
+    final path = "assets/icons/png/$name";
 
     buffer.writeln("  static const String $variableName = '$path';");
 
     buffer.writeln('');
-
   }
 
   buffer.writeln('}');
