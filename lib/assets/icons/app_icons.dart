@@ -1,391 +1,333 @@
-class AppIcons {
-  // =====================
-  // Outline Icons
-  // =====================
+// GENERATED CODE - DO NOT MODIFY BY HAND
+abstract class AppIcons {
+  AppIcons._();
 
-  static const String iconAddFriends =
-      'assets/icons/svg/outline/icon-add-friends.svg';
-  static const String iconArrange1 =
-      'assets/icons/svg/outline/icon-arrange-1.svg';
-  static const String iconArrowLongDiagonalRight =
-      'assets/icons/svg/outline/icon-arrow-long-diagonal-right.svg';
-  static const String iconArrowLongDown =
-      'assets/icons/svg/outline/icon-arrow-long-down.svg';
-  static const String iconArrowLongLeft =
-      'assets/icons/svg/outline/icon-arrow-long-left.svg';
-  static const String iconArrowLongRight =
-      'assets/icons/svg/outline/icon-arrow-long-right.svg';
-  static const String iconArrowLongUp =
-      'assets/icons/svg/outline/icon-arrow-long-up.svg';
-  static const String iconArrowShortDown =
-      'assets/icons/svg/outline/icon-arrow-short-down.svg';
-  static const String iconArrowShortLeft =
-      'assets/icons/svg/outline/icon-arrow-short-left.svg';
-  static const String iconArrowShortRight =
-      'assets/icons/svg/outline/icon-arrow-short-right.svg';
-  static const String iconArrowShortUp =
-      'assets/icons/svg/outline/icon-arrow-short-up.svg';
-  static const String iconBlock = 'assets/icons/svg/outline/icon-block.svg';
-  static const String iconBricks = 'assets/icons/svg/outline/icon-bricks.svg';
-  static const String iconCalendar =
-      'assets/icons/svg/outline/icon-calendar.svg';
-  static const String iconCallCenter =
-      'assets/icons/svg/outline/icon-call-center.svg';
-  static const String iconCarBeside =
-      'assets/icons/svg/outline/icon-car-beside.svg';
-  static const String iconCar = 'assets/icons/svg/outline/icon-car.svg';
-  static const String iconCart = 'assets/icons/svg/outline/icon-cart.svg';
-  static const String iconCc = 'assets/icons/svg/outline/icon-cc.svg';
-  static const String iconChargeBattery =
-      'assets/icons/svg/outline/icon-charge-battery.svg';
-  static const String iconCharge = 'assets/icons/svg/outline/icon-charge.svg';
-  static const String iconChart = 'assets/icons/svg/outline/icon-chart.svg';
-  static const String iconChat = 'assets/icons/svg/outline/icon-chat.svg';
-  static const String iconCheckmarkRounded =
-      'assets/icons/svg/outline/icon-checkmark-rounded.svg';
-  static const String iconChevronDown =
-      'assets/icons/svg/outline/icon-chevron-down.svg';
-  static const String iconChevronLeft =
-      'assets/icons/svg/outline/icon-chevron-left.svg';
-  static const String iconChevronRight =
-      'assets/icons/svg/outline/icon-chevron-right.svg';
-  static const String iconChevronUp =
-      'assets/icons/svg/outline/icon-chevron-up.svg';
-  static const String iconCircuitBreaker =
-      'assets/icons/svg/outline/icon-circuit-breaker.svg';
-  static const String iconClock = 'assets/icons/svg/outline/icon-clock.svg';
-  static const String iconCo2 = 'assets/icons/svg/outline/icon-co2.svg';
-  static const String iconCoffeshop =
-      'assets/icons/svg/outline/icon-coffeshop.svg';
-  static const String iconConnector1 =
-      'assets/icons/svg/outline/icon-connector-1.svg';
-  static const String iconConnector2 =
-      'assets/icons/svg/outline/icon-connector-2.svg';
-  static const String iconConnector3 =
-      'assets/icons/svg/outline/icon-connector-3.svg';
-  static const String iconConnector4 =
-      'assets/icons/svg/outline/icon-connector-4.svg';
-  static const String iconCopy = 'assets/icons/svg/outline/icon-copy.svg';
-  static const String iconDelete = 'assets/icons/svg/outline/icon-delete.svg';
-  static const String iconDelivery =
-      'assets/icons/svg/outline/icon-delivery.svg';
-  static const String iconDiscount =
-      'assets/icons/svg/outline/icon-discount.svg';
-  static const String iconDocs = 'assets/icons/svg/outline/icon-docs.svg';
-  static const String iconEdit = 'assets/icons/svg/outline/icon-edit.svg';
-  static const String iconEmail = 'assets/icons/svg/outline/icon-email.svg';
-  static const String iconEnergy = 'assets/icons/svg/outline/icon-energy.svg';
-  static const String iconEvCharger =
-      'assets/icons/svg/outline/icon-ev-charger.svg';
-  static const String iconFilter2 =
-      'assets/icons/svg/outline/icon-filter-2.svg';
-  static const String iconFilter = 'assets/icons/svg/outline/icon-filter.svg';
-  static const String iconFlag = 'assets/icons/svg/outline/icon-flag.svg';
-  static const String iconFood = 'assets/icons/svg/outline/icon-food.svg';
-  static const String iconGbt = 'assets/icons/svg/outline/icon-gbt.svg';
-  static const String iconGreenEnergy1 =
-      'assets/icons/svg/outline/icon-green-energy-1.svg';
-  static const String iconGreenEnergy =
-      'assets/icons/svg/outline/icon-green-energy.svg';
-  static const String iconGroup = 'assets/icons/svg/outline/icon-group.svg';
-  static const String iconHammer = 'assets/icons/svg/outline/icon-hammer.svg';
-  static const String iconHelp = 'assets/icons/svg/outline/icon-help.svg';
-  static const String iconHistory = 'assets/icons/svg/outline/icon-history.svg';
-  static const String iconHome1 = 'assets/icons/svg/outline/icon-home-1.svg';
-  static const String iconHome = 'assets/icons/svg/outline/icon-home.svg';
-  static const String iconId = 'assets/icons/svg/outline/icon-id.svg';
-  static const String iconInfoRounded =
-      'assets/icons/svg/outline/icon-info-rounded.svg';
-  static const String iconInstagram =
-      'assets/icons/svg/outline/icon-instagram.svg';
-  static const String iconLighting1 =
-      'assets/icons/svg/outline/icon-lighting-1.svg';
-  static const String iconLighting =
-      'assets/icons/svg/outline/icon-lighting.svg';
-  static const String iconLike = 'assets/icons/svg/outline/icon-like.svg';
-  static const String iconLocation =
-      'assets/icons/svg/outline/icon-location.svg';
-  static const String iconLogin = 'assets/icons/svg/outline/icon-login.svg';
-  static const String iconLowBattery =
-      'assets/icons/svg/outline/icon-low-battery.svg';
-  static const String iconMaps = 'assets/icons/svg/outline/icon-maps.svg';
-  static const String iconMushola = 'assets/icons/svg/outline/icon-mushola.svg';
-  static const String iconNavigate =
-      'assets/icons/svg/outline/icon-navigate.svg';
-  static const String iconNotification =
-      'assets/icons/svg/outline/icon-notification.svg';
-  static const String iconPackage = 'assets/icons/svg/outline/icon-package.svg';
-  static const String iconPemadaman =
-      'assets/icons/svg/outline/icon-pemadaman.svg';
-  static const String iconPesanan = 'assets/icons/svg/outline/icon-pesanan.svg';
-  static const String iconPinLocation =
-      'assets/icons/svg/outline/icon-pin-location.svg';
-  static const String iconPinMaps =
-      'assets/icons/svg/outline/icon-pin-maps.svg';
-  static const String iconPin = 'assets/icons/svg/outline/icon-pin.svg';
-  static const String iconPlug = 'assets/icons/svg/outline/icon-plug.svg';
-  static const String iconPowerSocket =
-      'assets/icons/svg/outline/icon-power-socket.svg';
-  static const String iconPowerUpgrade =
-      'assets/icons/svg/outline/icon-power-upgrade.svg';
-  static const String iconProfile = 'assets/icons/svg/outline/icon-profile.svg';
-  static const String iconQuestion =
-      'assets/icons/svg/outline/icon-question.svg';
-  static const String iconRefresh = 'assets/icons/svg/outline/icon-refresh.svg';
-  static const String iconRewards = 'assets/icons/svg/outline/icon-rewards.svg';
-  static const String iconRiceCooker =
-      'assets/icons/svg/outline/icon-rice-cooker.svg';
-  static const String iconRoute = 'assets/icons/svg/outline/icon-route.svg';
-  static const String iconScan = 'assets/icons/svg/outline/icon-scan.svg';
-  static const String iconSearch = 'assets/icons/svg/outline/icon-search.svg';
-  static const String iconSettings =
-      'assets/icons/svg/outline/icon-settings.svg';
-  static const String iconShare = 'assets/icons/svg/outline/icon-share.svg';
-  static const String iconSort = 'assets/icons/svg/outline/icon-sort.svg';
-  static const String iconStar = 'assets/icons/svg/outline/icon-star.svg';
-  static const String iconSwap = 'assets/icons/svg/outline/icon-swap.svg';
-  static const String iconTagihan = 'assets/icons/svg/outline/icon-tagihan.svg';
-  static const String iconToilet = 'assets/icons/svg/outline/icon-toilet.svg';
-  static const String iconTransaction =
-      'assets/icons/svg/outline/icon-transaction.svg';
-  static const String iconUpload = 'assets/icons/svg/outline/icon-upload.svg';
-  static const String iconWallet = 'assets/icons/svg/outline/icon-wallet.svg';
-  static const String iconWarning = 'assets/icons/svg/outline/icon-warning.svg';
-  static const String iconWatt = 'assets/icons/svg/outline/icon-watt.svg';
+  // Group: SVG
+  static const String arrange = 'assets/icons/svg/icon-arrange.svg';
+  static const String arrowLongDiagonalRight =
+      'assets/icons/svg/icon-arrow-long-diagonal-right.svg';
+  static const String arrowLongDown =
+      'assets/icons/svg/icon-arrow-long-down.svg';
+  static const String arrowLongLeft =
+      'assets/icons/svg/icon-arrow-long-left.svg';
+  static const String arrowLongRight =
+      'assets/icons/svg/icon-arrow-long-right.svg';
+  static const String arrowLongUp = 'assets/icons/svg/icon-arrow-long-up.svg';
+  static const String arrowShortDown =
+      'assets/icons/svg/icon-arrow-short-down.svg';
+  static const String arrowShortLeft =
+      'assets/icons/svg/icon-arrow-short-left.svg';
+  static const String arrowShortRight =
+      'assets/icons/svg/icon-arrow-short-right.svg';
+  static const String arrowShortUp = 'assets/icons/svg/icon-arrow-short-up.svg';
+  static const String block = 'assets/icons/svg/icon-block.svg';
+  static const String charge = 'assets/icons/svg/icon-charge.svg';
+  static const String chart = 'assets/icons/svg/icon-chart.svg';
+  static const String check = 'assets/icons/svg/icon-check.svg';
+  static const String chevronDown = 'assets/icons/svg/icon-chevron-down.svg';
+  static const String chevronLeft = 'assets/icons/svg/icon-chevron-left.svg';
+  static const String chevronRight = 'assets/icons/svg/icon-chevron-right.svg';
+  static const String chevronUp = 'assets/icons/svg/icon-chevron-up.svg';
+  static const String coffeshop = 'assets/icons/svg/icon-coffeshop.svg';
+  static const String connectorA5 = 'assets/icons/svg/icon-connector-a5.svg';
+  static const String connectorAc = 'assets/icons/svg/icon-connector-ac.svg';
+  static const String connectorCcs2 =
+      'assets/icons/svg/icon-connector-ccs2.svg';
+  static const String connectorChademo =
+      'assets/icons/svg/icon-connector-chademo.svg';
+  static const String connectorGbt = 'assets/icons/svg/icon-connector-gbt.svg';
+  static const String energy = 'assets/icons/svg/icon-energy.svg';
+  static const String food = 'assets/icons/svg/icon-food.svg';
+  static const String greenEnergy1 = 'assets/icons/svg/icon-green-energy-1.svg';
+  static const String greenEnergy = 'assets/icons/svg/icon-green-energy.svg';
+  static const String login = 'assets/icons/svg/icon-login.svg';
+  static const String maps = 'assets/icons/svg/icon-maps.svg';
+  static const String minus = 'assets/icons/svg/icon-minus.svg';
+  static const String moreHorizontal =
+      'assets/icons/svg/icon-more-horizontal.svg';
+  static const String moreVertical = 'assets/icons/svg/icon-more-vertical.svg';
+  static const String mushola = 'assets/icons/svg/icon-mushola.svg';
+  static const String pemadaman = 'assets/icons/svg/icon-pemadaman.svg';
+  static const String plug2 = 'assets/icons/svg/icon-plug-2.svg';
+  static const String plus = 'assets/icons/svg/icon-plus.svg';
+  static const String refresh = 'assets/icons/svg/icon-refresh.svg';
+  static const String route = 'assets/icons/svg/icon-route.svg';
+  static const String scan = 'assets/icons/svg/icon-scan.svg';
+  static const String search = 'assets/icons/svg/icon-search.svg';
+  static const String sort = 'assets/icons/svg/icon-sort.svg';
+  static const String swap2 = 'assets/icons/svg/icon-swap-2.svg';
+  static const String toilet = 'assets/icons/svg/icon-toilet.svg';
 
-  // =====================
-  // Solid Icons
-  // =====================
+  // Group: OUTLINED
+  static const String addFriendsOutlined =
+      'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
+  static const String arrange1Outlined =
+      'assets/icons/svg/outlined/icon-arrange-1-outlined.svg';
+  static const String bricksOutlined =
+      'assets/icons/svg/outlined/icon-bricks-outlined.svg';
+  static const String calendarOutlined =
+      'assets/icons/svg/outlined/icon-calendar-outlined.svg';
+  static const String callCenterOutlined =
+      'assets/icons/svg/outlined/icon-call-center-outlined.svg';
+  static const String carBesideOutlined =
+      'assets/icons/svg/outlined/icon-car-beside-outlined.svg';
+  static const String carOutlined =
+      'assets/icons/svg/outlined/icon-car-outlined.svg';
+  static const String cartOutlined =
+      'assets/icons/svg/outlined/icon-cart-outlined.svg';
+  static const String ccOutlined =
+      'assets/icons/svg/outlined/icon-cc-outlined.svg';
+  static const String chargeBatteryOutlined =
+      'assets/icons/svg/outlined/icon-charge-battery-outlined.svg';
+  static const String chatOutlined =
+      'assets/icons/svg/outlined/icon-chat-outlined.svg';
+  static const String checkRoundedOutlined =
+      'assets/icons/svg/outlined/icon-check-rounded-outlined.svg';
+  static const String circuitBreakerOutlined =
+      'assets/icons/svg/outlined/icon-circuit-breaker-outlined.svg';
+  static const String clockOutlined =
+      'assets/icons/svg/outlined/icon-clock-outlined.svg';
+  static const String co2Outlined =
+      'assets/icons/svg/outlined/icon-co2-outlined.svg';
+  static const String copyOutlined =
+      'assets/icons/svg/outlined/icon-copy-outlined.svg';
+  static const String deleteOutlined =
+      'assets/icons/svg/outlined/icon-delete-outlined.svg';
+  static const String deliveryOutlined =
+      'assets/icons/svg/outlined/icon-delivery-outlined.svg';
+  static const String discountOutlined =
+      'assets/icons/svg/outlined/icon-discount-outlined.svg';
+  static const String docsOutlined =
+      'assets/icons/svg/outlined/icon-docs-outlined.svg';
+  static const String editOutlined =
+      'assets/icons/svg/outlined/icon-edit-outlined.svg';
+  static const String emailOutlined =
+      'assets/icons/svg/outlined/icon-email-outlined.svg';
+  static const String evChargerOutlined =
+      'assets/icons/svg/outlined/icon-ev-charger-outlined.svg';
+  static const String filterOutlined =
+      'assets/icons/svg/outlined/icon-filter-outlined.svg';
+  static const String flagOutlined =
+      'assets/icons/svg/outlined/icon-flag-outlined.svg';
+  static const String groupOutlined =
+      'assets/icons/svg/outlined/icon-group-outlined.svg';
+  static const String hammerOutlined =
+      'assets/icons/svg/outlined/icon-hammer-outlined.svg';
+  static const String helpOutlined =
+      'assets/icons/svg/outlined/icon-help-outlined.svg';
+  static const String historyOutlined =
+      'assets/icons/svg/outlined/icon-history-outlined.svg';
+  static const String home1Outlined =
+      'assets/icons/svg/outlined/icon-home-1-outlined.svg';
+  static const String homeOutlined =
+      'assets/icons/svg/outlined/icon-home-outlined.svg';
+  static const String idOutlined =
+      'assets/icons/svg/outlined/icon-id-outlined.svg';
+  static const String infoRoundedOutlined =
+      'assets/icons/svg/outlined/icon-info-rounded-outlined.svg';
+  static const String instagramOutlined =
+      'assets/icons/svg/outlined/icon-instagram-outlined.svg';
+  static const String lighting1Outlined =
+      'assets/icons/svg/outlined/icon-lighting-1-outlined.svg';
+  static const String lightingOutlined =
+      'assets/icons/svg/outlined/icon-lighting-outlined.svg';
+  static const String likeOutlined =
+      'assets/icons/svg/outlined/icon-like-outlined.svg';
+  static const String locationOutlined =
+      'assets/icons/svg/outlined/icon-location-outlined.svg';
+  static const String lowBatteryOutlined =
+      'assets/icons/svg/outlined/icon-low-battery-outlined.svg';
+  static const String navigateOutlined =
+      'assets/icons/svg/outlined/icon-navigate-outlined.svg';
+  static const String notificationOutlined =
+      'assets/icons/svg/outlined/icon-notification-outlined.svg';
+  static const String packageOutlined =
+      'assets/icons/svg/outlined/icon-package-outlined.svg';
+  static const String pesananOutlined =
+      'assets/icons/svg/outlined/icon-pesanan-outlined.svg';
+  static const String pinLocationOutlined =
+      'assets/icons/svg/outlined/icon-pin-location-outlined.svg';
+  static const String pinMapsOutlined =
+      'assets/icons/svg/outlined/icon-pin-maps-outlined.svg';
+  static const String pinOutlined =
+      'assets/icons/svg/outlined/icon-pin-outlined.svg';
+  static const String powerSocketOutlined =
+      'assets/icons/svg/outlined/icon-power-socket-outlined.svg';
+  static const String profileOutlined =
+      'assets/icons/svg/outlined/icon-profile-outlined.svg';
+  static const String questionOutlined =
+      'assets/icons/svg/outlined/icon-question-outlined.svg';
+  static const String rewardsOutlined =
+      'assets/icons/svg/outlined/icon-rewards-outlined.svg';
+  static const String riceCookerOutlined =
+      'assets/icons/svg/outlined/icon-rice-cooker-outlined.svg';
+  static const String settingsOutlined =
+      'assets/icons/svg/outlined/icon-settings-outlined.svg';
+  static const String shareOutlined =
+      'assets/icons/svg/outlined/icon-share-outlined.svg';
+  static const String starOutlined =
+      'assets/icons/svg/outlined/icon-star-outlined.svg';
+  static const String tagihanOutlined =
+      'assets/icons/svg/outlined/icon-tagihan-outlined.svg';
+  static const String transactionOutlined =
+      'assets/icons/svg/outlined/icon-transaction-outlined.svg';
+  static const String uploadOutlined =
+      'assets/icons/svg/outlined/icon-upload-outlined.svg';
+  static const String walletOutlined =
+      'assets/icons/svg/outlined/icon-wallet-outlined.svg';
+  static const String warningOutlined =
+      'assets/icons/svg/outlined/icon-warning-outlined.svg';
+  static const String wattOutlined =
+      'assets/icons/svg/outlined/icon-watt-outlined.svg';
 
-  static const String iconSolidAddDocs =
-      'assets/icons/svg/solid/icon-solid-add-docs.svg';
-  static const String iconSolidAddImage =
-      'assets/icons/svg/solid/icon-solid-add-image.svg';
-  static const String iconSolidBatteryNotFound =
-      'assets/icons/svg/solid/icon-solid-battery-not-found.svg';
-  static const String iconSolidBattery =
-      'assets/icons/svg/solid/icon-solid-battery.svg';
-  static const String iconSolidCalendar1 =
-      'assets/icons/svg/solid/icon-solid-calendar-1.svg';
-  static const String iconSolidCalendar =
-      'assets/icons/svg/solid/icon-solid-calendar.svg';
-  static const String iconSolidCart =
-      'assets/icons/svg/solid/icon-solid-cart.svg';
-  static const String iconSolidChargePlug =
-      'assets/icons/svg/solid/icon-solid-charge-plug.svg';
-  static const String iconSolidChargerSpklu =
-      'assets/icons/svg/solid/icon-solid-charger-spklu.svg';
-  static const String iconSolidChargerStation =
-      'assets/icons/svg/solid/icon-solid-charger-station.svg';
-  static const String iconSolidCheckmarkRounded =
-      'assets/icons/svg/solid/icon-solid-checkmark-rounded.svg';
-  static const String iconSolidCheckmark =
-      'assets/icons/svg/solid/icon-solid-checkmark.svg';
-  static const String iconSolidClock =
-      'assets/icons/svg/solid/icon-solid-clock.svg';
-  static const String iconSolidCloseRounded =
-      'assets/icons/svg/solid/icon-solid-close-rounded.svg';
-  static const String iconSolidClose =
-      'assets/icons/svg/solid/icon-solid-close.svg';
-  static const String iconSolidContact =
-      'assets/icons/svg/solid/icon-solid-contact.svg';
-  static const String iconSolidCopy =
-      'assets/icons/svg/solid/icon-solid-copy.svg';
-  static const String iconSolidDiscount =
-      'assets/icons/svg/solid/icon-solid-discount.svg';
-  static const String iconSolidDocs =
-      'assets/icons/svg/solid/icon-solid-docs.svg';
-  static const String iconSolidDownload =
-      'assets/icons/svg/solid/icon-solid-download.svg';
-  static const String iconSolidEdit =
-      'assets/icons/svg/solid/icon-solid-edit.svg';
-  static const String iconSolidEvCar =
-      'assets/icons/svg/solid/icon-solid-ev-car.svg';
-  static const String iconSolidEvent =
-      'assets/icons/svg/solid/icon-solid-event.svg';
-  static const String iconSolidFilter =
-      'assets/icons/svg/solid/icon-solid-filter.svg';
-  static const String iconSolidFocus =
-      'assets/icons/svg/solid/icon-solid-focus.svg';
-  static const String iconSolidGift =
-      'assets/icons/svg/solid/icon-solid-gift.svg';
-  static const String iconSolidGroup =
-      'assets/icons/svg/solid/icon-solid-group.svg';
-  static const String iconSolidHistory =
-      'assets/icons/svg/solid/icon-solid-history.svg';
-  static const String iconSolidHomeCharging =
-      'assets/icons/svg/solid/icon-solid-home-charging.svg';
-  static const String iconSolidHome =
-      'assets/icons/svg/solid/icon-solid-home.svg';
-  static const String iconSolidInfoRounded =
-      'assets/icons/svg/solid/icon-solid-info-rounded.svg';
-  static const String iconSolidInfo =
-      'assets/icons/svg/solid/icon-solid-info.svg';
-  static const String iconSolidLeaf =
-      'assets/icons/svg/solid/icon-solid-leaf.svg';
-  static const String iconSolidLens =
-      'assets/icons/svg/solid/icon-solid-lens.svg';
-  static const String iconSolidLighting =
-      'assets/icons/svg/solid/icon-solid-lighting.svg';
-  static const String iconSolidLike =
-      'assets/icons/svg/solid/icon-solid-like.svg';
-  static const String iconSolidLink =
-      'assets/icons/svg/solid/icon-solid-link.svg';
-  static const String iconSolidListrik =
-      'assets/icons/svg/solid/icon-solid-listrik.svg';
-  static const String iconSolidLoading =
-      'assets/icons/svg/solid/icon-solid-loading.svg';
-  static const String iconSolidLocation =
-      'assets/icons/svg/solid/icon-solid-location.svg';
-  static const String iconSolidMaintenance =
-      'assets/icons/svg/solid/icon-solid-maintenance.svg';
-  static const String iconSolidMinus =
-      'assets/icons/svg/solid/icon-solid-minus.svg';
-  static const String iconSolidMoreHorizontal =
-      'assets/icons/svg/solid/icon-solid-more-horizontal.svg';
-  static const String iconSolidMoreVertical =
-      'assets/icons/svg/solid/icon-solid-more-vertical.svg';
-  static const String iconSolidMovieClip =
-      'assets/icons/svg/solid/icon-solid-movie-clip.svg';
-  static const String iconSolidNavigate =
-      'assets/icons/svg/solid/icon-solid-navigate.svg';
-  static const String iconSolidNoWifi =
-      'assets/icons/svg/solid/icon-solid-no-wifi.svg';
-  static const String iconSolidPickupPoint =
-      'assets/icons/svg/solid/icon-solid-pickup-point.svg';
-  static const String iconSolidPlug =
-      'assets/icons/svg/solid/icon-solid-plug.svg';
-  static const String iconSolidPlus =
-      'assets/icons/svg/solid/icon-solid-plus.svg';
-  static const String iconSolidPowerSocket =
-      'assets/icons/svg/solid/icon-solid-power-socket.svg';
-  static const String iconSolidProfile =
-      'assets/icons/svg/solid/icon-solid-profile.svg';
-  static const String iconSolidReport =
-      'assets/icons/svg/solid/icon-solid-report.svg';
-  static const String iconSolidRewards =
-      'assets/icons/svg/solid/icon-solid-rewards.svg';
-  static const String iconSolidSelfie =
-      'assets/icons/svg/solid/icon-solid-selfie.svg';
-  static const String iconSolidSend =
-      'assets/icons/svg/solid/icon-solid-send.svg';
-  static const String iconSolidShare =
-      'assets/icons/svg/solid/icon-solid-share.svg';
-  static const String iconSolidStar =
-      'assets/icons/svg/solid/icon-solid-star.svg';
-  static const String iconSolidStudio1 =
-      'assets/icons/svg/solid/icon-solid-studio-1.svg';
-  static const String iconSolidStudio =
-      'assets/icons/svg/solid/icon-solid-studio.svg';
-  static const String iconSolidSwap =
-      'assets/icons/svg/solid/icon-solid-swap.svg';
-  static const String iconSolidThumbs =
-      'assets/icons/svg/solid/icon-solid-thumbs.svg';
-  static const String iconSolidTitikPengisian1 =
-      'assets/icons/svg/solid/icon-solid-titik-pengisian-1.svg';
-  static const String iconSolidTitikPengisian =
-      'assets/icons/svg/solid/icon-solid-titik-pengisian.svg';
-  static const String iconSolidTransaksi =
-      'assets/icons/svg/solid/icon-solid-transaksi.svg';
-  static const String iconSolidVerify =
-      'assets/icons/svg/solid/icon-solid-verify.svg';
-  static const String iconSolidVoucher =
-      'assets/icons/svg/solid/icon-solid-voucher.svg';
-  static const String iconSolidWallet =
-      'assets/icons/svg/solid/icon-solid-wallet.svg';
-  static const String iconSolidWarning =
-      'assets/icons/svg/solid/icon-solid-warning.svg';
-  static const String iconSolidWifiAttention =
-      'assets/icons/svg/solid/icon-solid-wifi-attention.svg';
-  static const String iconSolidWifiError =
-      'assets/icons/svg/solid/icon-solid-wifi-error.svg';
-  static const String iconSolidWifiRouter =
-      'assets/icons/svg/solid/icon-solid-wifi-router.svg';
-  static const String iconSolidWifiUpgrade =
-      'assets/icons/svg/solid/icon-solid-wifi-upgrade.svg';
-  static const String iconSolidWifi =
-      'assets/icons/svg/solid/icon-solid-wifi.svg';
+  // Group: SOLID
+  static const String addDocs = 'assets/icons/svg/solid/icon-add-docs.svg';
+  static const String addImage = 'assets/icons/svg/solid/icon-add-image.svg';
+  static const String batteryNotFound =
+      'assets/icons/svg/solid/icon-battery-not-found.svg';
+  static const String battery = 'assets/icons/svg/solid/icon-battery.svg';
+  static const String calendar = 'assets/icons/svg/solid/icon-calendar.svg';
+  static const String cart = 'assets/icons/svg/solid/icon-cart.svg';
+  static const String chargePlug =
+      'assets/icons/svg/solid/icon-charge-plug.svg';
+  static const String chargerSpklu =
+      'assets/icons/svg/solid/icon-charger-spklu.svg';
+  static const String chargerStation =
+      'assets/icons/svg/solid/icon-charger-station.svg';
+  static const String checkRounded =
+      'assets/icons/svg/solid/icon-check-rounded.svg';
+  static const String clock = 'assets/icons/svg/solid/icon-clock.svg';
+  static const String closeRounded =
+      'assets/icons/svg/solid/icon-close-rounded.svg';
+  static const String close = 'assets/icons/svg/solid/icon-close.svg';
+  static const String contact = 'assets/icons/svg/solid/icon-contact.svg';
+  static const String copy = 'assets/icons/svg/solid/icon-copy.svg';
+  static const String discount = 'assets/icons/svg/solid/icon-discount.svg';
+  static const String docs = 'assets/icons/svg/solid/icon-docs.svg';
+  static const String download = 'assets/icons/svg/solid/icon-download.svg';
+  static const String edit = 'assets/icons/svg/solid/icon-edit.svg';
+  static const String evCar = 'assets/icons/svg/solid/icon-ev-car.svg';
+  static const String event = 'assets/icons/svg/solid/icon-event.svg';
+  static const String filter = 'assets/icons/svg/solid/icon-filter.svg';
+  static const String focus = 'assets/icons/svg/solid/icon-focus.svg';
+  static const String gift = 'assets/icons/svg/solid/icon-gift.svg';
+  static const String group = 'assets/icons/svg/solid/icon-group.svg';
+  static const String history = 'assets/icons/svg/solid/icon-history.svg';
+  static const String homeCharging =
+      'assets/icons/svg/solid/icon-home-charging.svg';
+  static const String home = 'assets/icons/svg/solid/icon-home.svg';
+  static const String infoRounded =
+      'assets/icons/svg/solid/icon-info-rounded.svg';
+  static const String info = 'assets/icons/svg/solid/icon-info.svg';
+  static const String leaf = 'assets/icons/svg/solid/icon-leaf.svg';
+  static const String lens = 'assets/icons/svg/solid/icon-lens.svg';
+  static const String lighting = 'assets/icons/svg/solid/icon-lighting.svg';
+  static const String like = 'assets/icons/svg/solid/icon-like.svg';
+  static const String link = 'assets/icons/svg/solid/icon-link.svg';
+  static const String listrik = 'assets/icons/svg/solid/icon-listrik.svg';
+  static const String loading = 'assets/icons/svg/solid/icon-loading.svg';
+  static const String location = 'assets/icons/svg/solid/icon-location.svg';
+  static const String maintenance =
+      'assets/icons/svg/solid/icon-maintenance.svg';
+  static const String movieClip = 'assets/icons/svg/solid/icon-movie-clip.svg';
+  static const String navigate = 'assets/icons/svg/solid/icon-navigate.svg';
+  static const String noWifi = 'assets/icons/svg/solid/icon-no-wifi.svg';
+  static const String pickupPoint =
+      'assets/icons/svg/solid/icon-pickup-point.svg';
+  static const String plug = 'assets/icons/svg/solid/icon-plug.svg';
+  static const String powerSocket =
+      'assets/icons/svg/solid/icon-power-socket.svg';
+  static const String profile = 'assets/icons/svg/solid/icon-profile.svg';
+  static const String report = 'assets/icons/svg/solid/icon-report.svg';
+  static const String rewards = 'assets/icons/svg/solid/icon-rewards.svg';
+  static const String selfie = 'assets/icons/svg/solid/icon-selfie.svg';
+  static const String send = 'assets/icons/svg/solid/icon-send.svg';
+  static const String share = 'assets/icons/svg/solid/icon-share.svg';
+  static const String star = 'assets/icons/svg/solid/icon-star.svg';
+  static const String studio1 = 'assets/icons/svg/solid/icon-studio-1.svg';
+  static const String studio = 'assets/icons/svg/solid/icon-studio.svg';
+  static const String swap = 'assets/icons/svg/solid/icon-swap.svg';
+  static const String thumbs = 'assets/icons/svg/solid/icon-thumbs.svg';
+  static const String titikPengisian1 =
+      'assets/icons/svg/solid/icon-titik-pengisian-1.svg';
+  static const String titikPengisian =
+      'assets/icons/svg/solid/icon-titik-pengisian.svg';
+  static const String transaksi = 'assets/icons/svg/solid/icon-transaksi.svg';
+  static const String verify = 'assets/icons/svg/solid/icon-verify.svg';
+  static const String voucher = 'assets/icons/svg/solid/icon-voucher.svg';
+  static const String wallet = 'assets/icons/svg/solid/icon-wallet.svg';
+  static const String warning = 'assets/icons/svg/solid/icon-warning.svg';
+  static const String wifiAttention =
+      'assets/icons/svg/solid/icon-wifi-attention.svg';
+  static const String wifiError = 'assets/icons/svg/solid/icon-wifi-error.svg';
+  static const String wifiRouter =
+      'assets/icons/svg/solid/icon-wifi-router.svg';
+  static const String wifiUpgrade =
+      'assets/icons/svg/solid/icon-wifi-upgrade.svg';
+  static const String wifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
-  // =====================
-  // Color Icons
-  // =====================
+  // Group: COLORED
+  static const String checkmarkColored =
+      'assets/icons/svg/colored/icon-checkmark.svg';
+  static const String evPointColored =
+      'assets/icons/svg/colored/icon-ev-point.svg';
+  static const String handshakeColored =
+      'assets/icons/svg/colored/icon-handshake.svg';
+  static const String moneyColored = 'assets/icons/svg/colored/icon-money.svg';
+  static const String pointsColored =
+      'assets/icons/svg/colored/icon-points.svg';
+  static const String rank1Colored = 'assets/icons/svg/colored/icon-rank-1.svg';
+  static const String rank2Colored = 'assets/icons/svg/colored/icon-rank-2.svg';
+  static const String rank3Colored = 'assets/icons/svg/colored/icon-rank-3.svg';
+  static const String targetColored =
+      'assets/icons/svg/colored/icon-target.svg';
+  static const String thropyColored =
+      'assets/icons/svg/colored/icon-thropy.svg';
+  static const String voucherColored =
+      'assets/icons/svg/colored/icon-voucher.svg';
+  static const String walletColored =
+      'assets/icons/svg/colored/icon-wallet.svg';
 
-  static const String iconColorCheckmark =
-      'assets/icons/svg/color/icon-color-checkmark.svg';
-  static const String iconColorEvPoint =
-      'assets/icons/svg/color/icon-color-ev-point.svg';
-  static const String iconColorHandshake =
-      'assets/icons/svg/color/icon-color-handshake.svg';
-  static const String iconColorMoney =
-      'assets/icons/svg/color/icon-color-money.svg';
-  static const String iconColorPointsIcon =
-      'assets/icons/svg/color/icon-color-points-icon.svg';
-  static const String iconColorRank1 =
-      'assets/icons/svg/color/icon-color-rank-1.svg';
-  static const String iconColorRank2 =
-      'assets/icons/svg/color/icon-color-rank-2.svg';
-  static const String iconColorRank3 =
-      'assets/icons/svg/color/icon-color-rank-3.svg';
-  static const String iconColorTarget =
-      'assets/icons/svg/color/icon-color-target.svg';
-  static const String iconColorThropy =
-      'assets/icons/svg/color/icon-color-thropy.svg';
-  static const String iconColorVoucher =
-      'assets/icons/svg/color/icon-color-voucher.svg';
-  static const String iconColorWallet =
-      'assets/icons/svg/color/icon-color-wallet.svg';
-
-  // =====================
-  // Menu Icons
-  // =====================
-
-  static const String iconMenuBalikNama =
+  // Group: MENU
+  static const String menuBalikNama =
       'assets/icons/svg/menu/icon-menu-balik-nama.svg';
-  static const String iconMenuCatatMeter =
+  static const String menuCatatMeter =
       'assets/icons/svg/menu/icon-menu-catat-meter.svg';
-  static const String iconMenuEbilling =
+  static const String menuEbilling =
       'assets/icons/svg/menu/icon-menu-ebilling.svg';
-  static const String iconMenuEv = 'assets/icons/svg/menu/icon-menu-ev.svg';
-  static const String iconMenuEvent =
-      'assets/icons/svg/menu/icon-menu-event.svg';
-  static const String iconMenuInternet =
+  static const String menuEv = 'assets/icons/svg/menu/icon-menu-ev.svg';
+  static const String menuEvent = 'assets/icons/svg/menu/icon-menu-event.svg';
+  static const String menuInternet =
       'assets/icons/svg/menu/icon-menu-internet.svg';
-  static const String iconMenuListrik =
+  static const String menuListrik =
       'assets/icons/svg/menu/icon-menu-listrik.svg';
-  static const String iconMenuMarketplace =
+  static const String menuMarketplace =
       'assets/icons/svg/menu/icon-menu-marketplace.svg';
-  static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
-  static const String iconMenuPasangBaru =
+  static const String menuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
+  static const String menuPasangBaru =
       'assets/icons/svg/menu/icon-menu-pasang-baru.svg';
-  static const String iconMenuPengaduan =
+  static const String menuPengaduan =
       'assets/icons/svg/menu/icon-menu-pengaduan.svg';
-  static const String iconMenuPengelolaanListrik =
+  static const String menuPengelolaanListrik =
       'assets/icons/svg/menu/icon-menu-pengelolaan-listrik.svg';
-  static const String iconMenuPulsaTagihan =
+  static const String menuPulsaTagihan =
       'assets/icons/svg/menu/icon-menu-pulsa-tagihan.svg';
-  static const String iconMenuPvRooftop =
+  static const String menuPvRooftop =
       'assets/icons/svg/menu/icon-menu-pv-rooftop.svg';
-  static const String iconMenuSimulasiBiaya =
+  static const String menuSimulasiBiaya =
       'assets/icons/svg/menu/icon-menu-simulasi-biaya.svg';
-  static const String iconMenuSpklu =
-      'assets/icons/svg/menu/icon-menu-spklu.svg';
-  static const String iconMenuSplu = 'assets/icons/svg/menu/icon-menu-splu.svg';
-  static const String iconMenuTambahDayaSementara =
+  static const String menuSpklu = 'assets/icons/svg/menu/icon-menu-spklu.svg';
+  static const String menuSplu = 'assets/icons/svg/menu/icon-menu-splu.svg';
+  static const String menuTambahDayaSementara =
       'assets/icons/svg/menu/icon-menu-tambah-daya-sementara.svg';
-  static const String iconMenuTitikPengisian =
+  static const String menuTitikPengisian =
       'assets/icons/svg/menu/icon-menu-titik-pengisian.svg';
-  static const String iconMenuTokenPembayaran =
+  static const String menuTokenPembayaran =
       'assets/icons/svg/menu/icon-menu-token-pembayaran.svg';
-  static const String iconMenuTripPlanner =
+  static const String menuTripPlanner =
       'assets/icons/svg/menu/icon-menu-trip-planner.svg';
-  static const String iconMenuTukarBaterai =
+  static const String menuTukarBaterai =
       'assets/icons/svg/menu/icon-menu-tukar-baterai.svg';
-  static const String iconMenuUbahDaya =
+  static const String menuUbahDaya =
       'assets/icons/svg/menu/icon-menu-ubah-daya.svg';
-
-  // =====================
-  // PNG Icons
-  // =====================
-
-  static const String iconPlnmobile = 'assets/icons/png/icon-plnmobile.png';
 }

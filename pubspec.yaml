@@ -29,11 +29,13 @@ flutter:
     - assets/animations/lottie/
     - assets/fonts/
     - assets/icons/png/
-    - assets/icons/svg/outline/
-    - assets/icons/svg/solid/
-    - assets/icons/svg/color/
+    - assets/icons/svg/
+    - assets/icons/svg/colored/
     - assets/icons/svg/menu/
+    - assets/icons/svg/outlined/
+    - assets/icons/svg/solid/
     - assets/images/png/
+    - assets/images/png/mascot/
     - assets/images/svg/
     - assets/sounds/
 

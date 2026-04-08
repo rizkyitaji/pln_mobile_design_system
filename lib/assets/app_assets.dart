@@ -1,299 +1,301 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
 import 'animations/app_animations.dart';
 import 'icons/app_icons.dart';
 import 'images/app_images.dart';
 import 'sounds/app_sounds.dart';
 
-class AppAssets {
+abstract class AppAssets {
   static const _basePath = 'packages/pln_mobile_design_system';
 
-  static const animationOnBoarding1 = '$_basePath/${AppAnimations.onboarding1}';
-  static const animationOnBoarding2 = '$_basePath/${AppAnimations.onboarding2}';
-  static const animationOnBoarding3 = '$_basePath/${AppAnimations.onboarding3}';
+  // --- AppIcons Mapping ---
+  static const iconArrange = '$_basePath/${AppIcons.arrange}';
+  static const iconArrowLongDiagonalRight =
+      '$_basePath/${AppIcons.arrowLongDiagonalRight}';
+  static const iconArrowLongDown = '$_basePath/${AppIcons.arrowLongDown}';
+  static const iconArrowLongLeft = '$_basePath/${AppIcons.arrowLongLeft}';
+  static const iconArrowLongRight = '$_basePath/${AppIcons.arrowLongRight}';
+  static const iconArrowLongUp = '$_basePath/${AppIcons.arrowLongUp}';
+  static const iconArrowShortDown = '$_basePath/${AppIcons.arrowShortDown}';
+  static const iconArrowShortLeft = '$_basePath/${AppIcons.arrowShortLeft}';
+  static const iconArrowShortRight = '$_basePath/${AppIcons.arrowShortRight}';
+  static const iconArrowShortUp = '$_basePath/${AppIcons.arrowShortUp}';
+  static const iconBlock = '$_basePath/${AppIcons.block}';
+  static const iconCharge = '$_basePath/${AppIcons.charge}';
+  static const iconChart = '$_basePath/${AppIcons.chart}';
+  static const iconCheck = '$_basePath/${AppIcons.check}';
+  static const iconChevronDown = '$_basePath/${AppIcons.chevronDown}';
+  static const iconChevronLeft = '$_basePath/${AppIcons.chevronLeft}';
+  static const iconChevronRight = '$_basePath/${AppIcons.chevronRight}';
+  static const iconChevronUp = '$_basePath/${AppIcons.chevronUp}';
+  static const iconCoffeshop = '$_basePath/${AppIcons.coffeshop}';
+  static const iconConnectorA5 = '$_basePath/${AppIcons.connectorA5}';
+  static const iconConnectorAc = '$_basePath/${AppIcons.connectorAc}';
+  static const iconConnectorCcs2 = '$_basePath/${AppIcons.connectorCcs2}';
+  static const iconConnectorChademo = '$_basePath/${AppIcons.connectorChademo}';
+  static const iconConnectorGbt = '$_basePath/${AppIcons.connectorGbt}';
+  static const iconEnergy = '$_basePath/${AppIcons.energy}';
+  static const iconFood = '$_basePath/${AppIcons.food}';
+  static const iconGreenEnergy1 = '$_basePath/${AppIcons.greenEnergy1}';
+  static const iconGreenEnergy = '$_basePath/${AppIcons.greenEnergy}';
+  static const iconLogin = '$_basePath/${AppIcons.login}';
+  static const iconMaps = '$_basePath/${AppIcons.maps}';
+  static const iconMinus = '$_basePath/${AppIcons.minus}';
+  static const iconMoreHorizontal = '$_basePath/${AppIcons.moreHorizontal}';
+  static const iconMoreVertical = '$_basePath/${AppIcons.moreVertical}';
+  static const iconMushola = '$_basePath/${AppIcons.mushola}';
+  static const iconPemadaman = '$_basePath/${AppIcons.pemadaman}';
+  static const iconPlug2 = '$_basePath/${AppIcons.plug2}';
+  static const iconPlus = '$_basePath/${AppIcons.plus}';
+  static const iconRefresh = '$_basePath/${AppIcons.refresh}';
+  static const iconRoute = '$_basePath/${AppIcons.route}';
+  static const iconScan = '$_basePath/${AppIcons.scan}';
+  static const iconSearch = '$_basePath/${AppIcons.search}';
+  static const iconSort = '$_basePath/${AppIcons.sort}';
+  static const iconSwap2 = '$_basePath/${AppIcons.swap2}';
+  static const iconToilet = '$_basePath/${AppIcons.toilet}';
+  static const iconAddFriendsOutlined =
+      '$_basePath/${AppIcons.addFriendsOutlined}';
+  static const iconArrange1Outlined = '$_basePath/${AppIcons.arrange1Outlined}';
+  static const iconBricksOutlined = '$_basePath/${AppIcons.bricksOutlined}';
+  static const iconCalendarOutlined = '$_basePath/${AppIcons.calendarOutlined}';
+  static const iconCallCenterOutlined =
+      '$_basePath/${AppIcons.callCenterOutlined}';
+  static const iconCarBesideOutlined =
+      '$_basePath/${AppIcons.carBesideOutlined}';
+  static const iconCarOutlined = '$_basePath/${AppIcons.carOutlined}';
+  static const iconCartOutlined = '$_basePath/${AppIcons.cartOutlined}';
+  static const iconCcOutlined = '$_basePath/${AppIcons.ccOutlined}';
+  static const iconChargeBatteryOutlined =
+      '$_basePath/${AppIcons.chargeBatteryOutlined}';
+  static const iconChatOutlined = '$_basePath/${AppIcons.chatOutlined}';
+  static const iconCheckRoundedOutlined =
+      '$_basePath/${AppIcons.checkRoundedOutlined}';
+  static const iconCircuitBreakerOutlined =
+      '$_basePath/${AppIcons.circuitBreakerOutlined}';
+  static const iconClockOutlined = '$_basePath/${AppIcons.clockOutlined}';
+  static const iconCo2Outlined = '$_basePath/${AppIcons.co2Outlined}';
+  static const iconCopyOutlined = '$_basePath/${AppIcons.copyOutlined}';
+  static const iconDeleteOutlined = '$_basePath/${AppIcons.deleteOutlined}';
+  static const iconDeliveryOutlined = '$_basePath/${AppIcons.deliveryOutlined}';
+  static const iconDiscountOutlined = '$_basePath/${AppIcons.discountOutlined}';
+  static const iconDocsOutlined = '$_basePath/${AppIcons.docsOutlined}';
+  static const iconEditOutlined = '$_basePath/${AppIcons.editOutlined}';
+  static const iconEmailOutlined = '$_basePath/${AppIcons.emailOutlined}';
+  static const iconEvChargerOutlined =
+      '$_basePath/${AppIcons.evChargerOutlined}';
+  static const iconFilterOutlined = '$_basePath/${AppIcons.filterOutlined}';
+  static const iconFlagOutlined = '$_basePath/${AppIcons.flagOutlined}';
+  static const iconGroupOutlined = '$_basePath/${AppIcons.groupOutlined}';
+  static const iconHammerOutlined = '$_basePath/${AppIcons.hammerOutlined}';
+  static const iconHelpOutlined = '$_basePath/${AppIcons.helpOutlined}';
+  static const iconHistoryOutlined = '$_basePath/${AppIcons.historyOutlined}';
+  static const iconHome1Outlined = '$_basePath/${AppIcons.home1Outlined}';
+  static const iconHomeOutlined = '$_basePath/${AppIcons.homeOutlined}';
+  static const iconIdOutlined = '$_basePath/${AppIcons.idOutlined}';
+  static const iconInfoRoundedOutlined =
+      '$_basePath/${AppIcons.infoRoundedOutlined}';
+  static const iconInstagramOutlined =
+      '$_basePath/${AppIcons.instagramOutlined}';
+  static const iconLighting1Outlined =
+      '$_basePath/${AppIcons.lighting1Outlined}';
+  static const iconLightingOutlined = '$_basePath/${AppIcons.lightingOutlined}';
+  static const iconLikeOutlined = '$_basePath/${AppIcons.likeOutlined}';
+  static const iconLocationOutlined = '$_basePath/${AppIcons.locationOutlined}';
+  static const iconLowBatteryOutlined =
+      '$_basePath/${AppIcons.lowBatteryOutlined}';
+  static const iconNavigateOutlined = '$_basePath/${AppIcons.navigateOutlined}';
+  static const iconNotificationOutlined =
+      '$_basePath/${AppIcons.notificationOutlined}';
+  static const iconPackageOutlined = '$_basePath/${AppIcons.packageOutlined}';
+  static const iconPesananOutlined = '$_basePath/${AppIcons.pesananOutlined}';
+  static const iconPinLocationOutlined =
+      '$_basePath/${AppIcons.pinLocationOutlined}';
+  static const iconPinMapsOutlined = '$_basePath/${AppIcons.pinMapsOutlined}';
+  static const iconPinOutlined = '$_basePath/${AppIcons.pinOutlined}';
+  static const iconPowerSocketOutlined =
+      '$_basePath/${AppIcons.powerSocketOutlined}';
+  static const iconProfileOutlined = '$_basePath/${AppIcons.profileOutlined}';
+  static const iconQuestionOutlined = '$_basePath/${AppIcons.questionOutlined}';
+  static const iconRewardsOutlined = '$_basePath/${AppIcons.rewardsOutlined}';
+  static const iconRiceCookerOutlined =
+      '$_basePath/${AppIcons.riceCookerOutlined}';
+  static const iconSettingsOutlined = '$_basePath/${AppIcons.settingsOutlined}';
+  static const iconShareOutlined = '$_basePath/${AppIcons.shareOutlined}';
+  static const iconStarOutlined = '$_basePath/${AppIcons.starOutlined}';
+  static const iconTagihanOutlined = '$_basePath/${AppIcons.tagihanOutlined}';
+  static const iconTransactionOutlined =
+      '$_basePath/${AppIcons.transactionOutlined}';
+  static const iconUploadOutlined = '$_basePath/${AppIcons.uploadOutlined}';
+  static const iconWalletOutlined = '$_basePath/${AppIcons.walletOutlined}';
+  static const iconWarningOutlined = '$_basePath/${AppIcons.warningOutlined}';
+  static const iconWattOutlined = '$_basePath/${AppIcons.wattOutlined}';
+  static const iconAddDocs = '$_basePath/${AppIcons.addDocs}';
+  static const iconAddImage = '$_basePath/${AppIcons.addImage}';
+  static const iconBatteryNotFound = '$_basePath/${AppIcons.batteryNotFound}';
+  static const iconBattery = '$_basePath/${AppIcons.battery}';
+  static const iconCalendar = '$_basePath/${AppIcons.calendar}';
+  static const iconCart = '$_basePath/${AppIcons.cart}';
+  static const iconChargePlug = '$_basePath/${AppIcons.chargePlug}';
+  static const iconChargerSpklu = '$_basePath/${AppIcons.chargerSpklu}';
+  static const iconChargerStation = '$_basePath/${AppIcons.chargerStation}';
+  static const iconCheckRounded = '$_basePath/${AppIcons.checkRounded}';
+  static const iconClock = '$_basePath/${AppIcons.clock}';
+  static const iconCloseRounded = '$_basePath/${AppIcons.closeRounded}';
+  static const iconClose = '$_basePath/${AppIcons.close}';
+  static const iconContact = '$_basePath/${AppIcons.contact}';
+  static const iconCopy = '$_basePath/${AppIcons.copy}';
+  static const iconDiscount = '$_basePath/${AppIcons.discount}';
+  static const iconDocs = '$_basePath/${AppIcons.docs}';
+  static const iconDownload = '$_basePath/${AppIcons.download}';
+  static const iconEdit = '$_basePath/${AppIcons.edit}';
+  static const iconEvCar = '$_basePath/${AppIcons.evCar}';
+  static const iconEvent = '$_basePath/${AppIcons.event}';
+  static const iconFilter = '$_basePath/${AppIcons.filter}';
+  static const iconFocus = '$_basePath/${AppIcons.focus}';
+  static const iconGift = '$_basePath/${AppIcons.gift}';
+  static const iconGroup = '$_basePath/${AppIcons.group}';
+  static const iconHistory = '$_basePath/${AppIcons.history}';
+  static const iconHomeCharging = '$_basePath/${AppIcons.homeCharging}';
+  static const iconHome = '$_basePath/${AppIcons.home}';
+  static const iconInfoRounded = '$_basePath/${AppIcons.infoRounded}';
+  static const iconInfo = '$_basePath/${AppIcons.info}';
+  static const iconLeaf = '$_basePath/${AppIcons.leaf}';
+  static const iconLens = '$_basePath/${AppIcons.lens}';
+  static const iconLighting = '$_basePath/${AppIcons.lighting}';
+  static const iconLike = '$_basePath/${AppIcons.like}';
+  static const iconLink = '$_basePath/${AppIcons.link}';
+  static const iconListrik = '$_basePath/${AppIcons.listrik}';
+  static const iconLoading = '$_basePath/${AppIcons.loading}';
+  static const iconLocation = '$_basePath/${AppIcons.location}';
+  static const iconMaintenance = '$_basePath/${AppIcons.maintenance}';
+  static const iconMovieClip = '$_basePath/${AppIcons.movieClip}';
+  static const iconNavigate = '$_basePath/${AppIcons.navigate}';
+  static const iconNoWifi = '$_basePath/${AppIcons.noWifi}';
+  static const iconPickupPoint = '$_basePath/${AppIcons.pickupPoint}';
+  static const iconPlug = '$_basePath/${AppIcons.plug}';
+  static const iconPowerSocket = '$_basePath/${AppIcons.powerSocket}';
+  static const iconProfile = '$_basePath/${AppIcons.profile}';
+  static const iconReport = '$_basePath/${AppIcons.report}';
+  static const iconRewards = '$_basePath/${AppIcons.rewards}';
+  static const iconSelfie = '$_basePath/${AppIcons.selfie}';
+  static const iconSend = '$_basePath/${AppIcons.send}';
+  static const iconShare = '$_basePath/${AppIcons.share}';
+  static const iconStar = '$_basePath/${AppIcons.star}';
+  static const iconStudio1 = '$_basePath/${AppIcons.studio1}';
+  static const iconStudio = '$_basePath/${AppIcons.studio}';
+  static const iconSwap = '$_basePath/${AppIcons.swap}';
+  static const iconThumbs = '$_basePath/${AppIcons.thumbs}';
+  static const iconTitikPengisian1 = '$_basePath/${AppIcons.titikPengisian1}';
+  static const iconTitikPengisian = '$_basePath/${AppIcons.titikPengisian}';
+  static const iconTransaksi = '$_basePath/${AppIcons.transaksi}';
+  static const iconVerify = '$_basePath/${AppIcons.verify}';
+  static const iconVoucher = '$_basePath/${AppIcons.voucher}';
+  static const iconWallet = '$_basePath/${AppIcons.wallet}';
+  static const iconWarning = '$_basePath/${AppIcons.warning}';
+  static const iconWifiAttention = '$_basePath/${AppIcons.wifiAttention}';
+  static const iconWifiError = '$_basePath/${AppIcons.wifiError}';
+  static const iconWifiRouter = '$_basePath/${AppIcons.wifiRouter}';
+  static const iconWifiUpgrade = '$_basePath/${AppIcons.wifiUpgrade}';
+  static const iconWifi = '$_basePath/${AppIcons.wifi}';
+  static const iconCheckmarkColored = '$_basePath/${AppIcons.checkmarkColored}';
+  static const iconEvPointColored = '$_basePath/${AppIcons.evPointColored}';
+  static const iconHandshakeColored = '$_basePath/${AppIcons.handshakeColored}';
+  static const iconMoneyColored = '$_basePath/${AppIcons.moneyColored}';
+  static const iconPointsColored = '$_basePath/${AppIcons.pointsColored}';
+  static const iconRank1Colored = '$_basePath/${AppIcons.rank1Colored}';
+  static const iconRank2Colored = '$_basePath/${AppIcons.rank2Colored}';
+  static const iconRank3Colored = '$_basePath/${AppIcons.rank3Colored}';
+  static const iconTargetColored = '$_basePath/${AppIcons.targetColored}';
+  static const iconThropyColored = '$_basePath/${AppIcons.thropyColored}';
+  static const iconVoucherColored = '$_basePath/${AppIcons.voucherColored}';
+  static const iconWalletColored = '$_basePath/${AppIcons.walletColored}';
+  static const iconMenuBalikNama = '$_basePath/${AppIcons.menuBalikNama}';
+  static const iconMenuCatatMeter = '$_basePath/${AppIcons.menuCatatMeter}';
+  static const iconMenuEbilling = '$_basePath/${AppIcons.menuEbilling}';
+  static const iconMenuEv = '$_basePath/${AppIcons.menuEv}';
+  static const iconMenuEvent = '$_basePath/${AppIcons.menuEvent}';
+  static const iconMenuInternet = '$_basePath/${AppIcons.menuInternet}';
+  static const iconMenuListrik = '$_basePath/${AppIcons.menuListrik}';
+  static const iconMenuMarketplace = '$_basePath/${AppIcons.menuMarketplace}';
+  static const iconMenuMore = '$_basePath/${AppIcons.menuMore}';
+  static const iconMenuPasangBaru = '$_basePath/${AppIcons.menuPasangBaru}';
+  static const iconMenuPengaduan = '$_basePath/${AppIcons.menuPengaduan}';
+  static const iconMenuPengelolaanListrik =
+      '$_basePath/${AppIcons.menuPengelolaanListrik}';
+  static const iconMenuPulsaTagihan = '$_basePath/${AppIcons.menuPulsaTagihan}';
+  static const iconMenuPvRooftop = '$_basePath/${AppIcons.menuPvRooftop}';
+  static const iconMenuSimulasiBiaya =
+      '$_basePath/${AppIcons.menuSimulasiBiaya}';
+  static const iconMenuSpklu = '$_basePath/${AppIcons.menuSpklu}';
+  static const iconMenuSplu = '$_basePath/${AppIcons.menuSplu}';
+  static const iconMenuTambahDayaSementara =
+      '$_basePath/${AppIcons.menuTambahDayaSementara}';
+  static const iconMenuTitikPengisian =
+      '$_basePath/${AppIcons.menuTitikPengisian}';
+  static const iconMenuTokenPembayaran =
+      '$_basePath/${AppIcons.menuTokenPembayaran}';
+  static const iconMenuTripPlanner = '$_basePath/${AppIcons.menuTripPlanner}';
+  static const iconMenuTukarBaterai = '$_basePath/${AppIcons.menuTukarBaterai}';
+  static const iconMenuUbahDaya = '$_basePath/${AppIcons.menuUbahDaya}';
+
+  // --- AppImages Mapping ---
+  static const imageComplaintBackgroundHomepage2 =
+      '$_basePath/${AppImages.complaintBackgroundHomepage2}';
+  static const imageComplaintBackgroundHomepage =
+      '$_basePath/${AppImages.complaintBackgroundHomepage}';
+  static const imageIllustrationOnBoardingLogin =
+      '$_basePath/${AppImages.illustrationOnBoardingLogin}';
+  static const imagePlaceholderWebviewError =
+      '$_basePath/${AppImages.placeholderWebviewError}';
+  static const imagePlaceholderBlock =
+      '$_basePath/${AppImages.placeholderBlock}';
+  static const imagePlaceholderConfirmation =
+      '$_basePath/${AppImages.placeholderConfirmation}';
+  static const imagePlaceholderElectroncard =
+      '$_basePath/${AppImages.placeholderElectroncard}';
+  static const imagePlaceholderEmptySearch =
+      '$_basePath/${AppImages.placeholderEmptySearch}';
+  static const imagePlaceholderFailed =
+      '$_basePath/${AppImages.placeholderFailed}';
+  static const imagePlaceholderHelp = '$_basePath/${AppImages.placeholderHelp}';
+  static const imagePlaceholderInfoSc =
+      '$_basePath/${AppImages.placeholderInfoSc}';
+  static const imagePlaceholderInfo = '$_basePath/${AppImages.placeholderInfo}';
+  static const imagePlaceholderLocation =
+      '$_basePath/${AppImages.placeholderLocation}';
+  static const imagePlaceholderNfcUnsupported =
+      '$_basePath/${AppImages.placeholderNfcUnsupported}';
+  static const imagePlaceholderNoData =
+      '$_basePath/${AppImages.placeholderNoData}';
+  static const imagePlaceholderNoInternet =
+      '$_basePath/${AppImages.placeholderNoInternet}';
+  static const imagePlaceholderSuccess =
+      '$_basePath/${AppImages.placeholderSuccess}';
+  static const imagePlaceholderWarningSc =
+      '$_basePath/${AppImages.placeholderWarningSc}';
+  static const imagePlaceholderWarning =
+      '$_basePath/${AppImages.placeholderWarning}';
+  static const imageMascot1 = '$_basePath/${AppImages.mascot1}';
+  static const imageMascot2 = '$_basePath/${AppImages.mascot2}';
+  static const imageMascot3 = '$_basePath/${AppImages.mascot3}';
+  static const imageMascot4 = '$_basePath/${AppImages.mascot4}';
+  static const imageMascot5 = '$_basePath/${AppImages.mascot5}';
+  static const imageMascot6 = '$_basePath/${AppImages.mascot6}';
+  static const imageMascot7 = '$_basePath/${AppImages.mascot7}';
+  static const imageMascot8 = '$_basePath/${AppImages.mascot8}';
+  static const imageMascot9 = '$_basePath/${AppImages.mascot9}';
+  static const imageMascot = '$_basePath/${AppImages.mascot}';
+
+  // --- AppAnimations Mapping ---
+  static const animationOnBoarding1 = '$_basePath/${AppAnimations.onBoarding1}';
+  static const animationOnBoarding2 = '$_basePath/${AppAnimations.onBoarding2}';
+  static const animationOnBoarding3 = '$_basePath/${AppAnimations.onBoarding3}';
   static const animationLoadingPrimary =
       '$_basePath/${AppAnimations.loadingPrimary}';
   static const animationLoadingWhite =
       '$_basePath/${AppAnimations.loadingWhite}';
 
-  static const chargingCompletionNotification =
-      '$_basePath/${AppSounds.chargingCompletionNotification}';
-
-  static const iconAddFriends = '$_basePath/${AppIcons.iconAddFriends}';
-  static const iconArrange1 = '$_basePath/${AppIcons.iconArrange1}';
-  static const iconArrowLongDiagonalRight =
-      '$_basePath/${AppIcons.iconArrowLongDiagonalRight}';
-  static const iconArrowLongDown = '$_basePath/${AppIcons.iconArrowLongDown}';
-  static const iconArrowLongLeft = '$_basePath/${AppIcons.iconArrowLongLeft}';
-  static const iconArrowLongRight = '$_basePath/${AppIcons.iconArrowLongRight}';
-  static const iconArrowLongUp = '$_basePath/${AppIcons.iconArrowLongUp}';
-  static const iconArrowShortDown = '$_basePath/${AppIcons.iconArrowShortDown}';
-  static const iconArrowShortLeft = '$_basePath/${AppIcons.iconArrowShortLeft}';
-  static const iconArrowShortRight =
-      '$_basePath/${AppIcons.iconArrowShortRight}';
-  static const iconArrowShortUp = '$_basePath/${AppIcons.iconArrowShortUp}';
-  static const iconBlock = '$_basePath/${AppIcons.iconBlock}';
-  static const iconBricks = '$_basePath/${AppIcons.iconBricks}';
-  static const iconCalendar = '$_basePath/${AppIcons.iconCalendar}';
-  static const iconCallCenter = '$_basePath/${AppIcons.iconCallCenter}';
-  static const iconCarBeside = '$_basePath/${AppIcons.iconCarBeside}';
-  static const iconCar = '$_basePath/${AppIcons.iconCar}';
-  static const iconCart = '$_basePath/${AppIcons.iconCart}';
-  static const iconCc = '$_basePath/${AppIcons.iconCc}';
-  static const iconChargeBattery = '$_basePath/${AppIcons.iconChargeBattery}';
-  static const iconCharge = '$_basePath/${AppIcons.iconCharge}';
-  static const iconChart = '$_basePath/${AppIcons.iconChart}';
-  static const iconChat = '$_basePath/${AppIcons.iconChat}';
-  static const iconCheckmarkRounded =
-      '$_basePath/${AppIcons.iconCheckmarkRounded}';
-  static const iconChevronDown = '$_basePath/${AppIcons.iconChevronDown}';
-  static const iconChevronLeft = '$_basePath/${AppIcons.iconChevronLeft}';
-  static const iconChevronRight = '$_basePath/${AppIcons.iconChevronRight}';
-  static const iconChevronUp = '$_basePath/${AppIcons.iconChevronUp}';
-  static const iconCircuitBreaker = '$_basePath/${AppIcons.iconCircuitBreaker}';
-  static const iconClock = '$_basePath/${AppIcons.iconClock}';
-  static const iconCo2 = '$_basePath/${AppIcons.iconCo2}';
-  static const iconCoffeshop = '$_basePath/${AppIcons.iconCoffeshop}';
-  static const iconConnector1 = '$_basePath/${AppIcons.iconConnector1}';
-  static const iconConnector2 = '$_basePath/${AppIcons.iconConnector2}';
-  static const iconConnector3 = '$_basePath/${AppIcons.iconConnector3}';
-  static const iconConnector4 = '$_basePath/${AppIcons.iconConnector4}';
-  static const iconCopy = '$_basePath/${AppIcons.iconCopy}';
-  static const iconDelete = '$_basePath/${AppIcons.iconDelete}';
-  static const iconDelivery = '$_basePath/${AppIcons.iconDelivery}';
-  static const iconDiscount = '$_basePath/${AppIcons.iconDiscount}';
-  static const iconDocs = '$_basePath/${AppIcons.iconDocs}';
-  static const iconEdit = '$_basePath/${AppIcons.iconEdit}';
-  static const iconEmail = '$_basePath/${AppIcons.iconEmail}';
-  static const iconEnergy = '$_basePath/${AppIcons.iconEnergy}';
-  static const iconEvCharger = '$_basePath/${AppIcons.iconEvCharger}';
-  static const iconFilter2 = '$_basePath/${AppIcons.iconFilter2}';
-  static const iconFilter = '$_basePath/${AppIcons.iconFilter}';
-  static const iconFlag = '$_basePath/${AppIcons.iconFlag}';
-  static const iconFood = '$_basePath/${AppIcons.iconFood}';
-  static const iconGbt = '$_basePath/${AppIcons.iconGbt}';
-  static const iconGreenEnergy1 = '$_basePath/${AppIcons.iconGreenEnergy1}';
-  static const iconGreenEnergy = '$_basePath/${AppIcons.iconGreenEnergy}';
-  static const iconGroup = '$_basePath/${AppIcons.iconGroup}';
-  static const iconHammer = '$_basePath/${AppIcons.iconHammer}';
-  static const iconHelp = '$_basePath/${AppIcons.iconHelp}';
-  static const iconHistory = '$_basePath/${AppIcons.iconHistory}';
-  static const iconHome1 = '$_basePath/${AppIcons.iconHome1}';
-  static const iconHome = '$_basePath/${AppIcons.iconHome}';
-  static const iconId = '$_basePath/${AppIcons.iconId}';
-  static const iconInfoRounded = '$_basePath/${AppIcons.iconInfoRounded}';
-  static const iconInstagram = '$_basePath/${AppIcons.iconInstagram}';
-  static const iconLighting1 = '$_basePath/${AppIcons.iconLighting1}';
-  static const iconLighting = '$_basePath/${AppIcons.iconLighting}';
-  static const iconLike = '$_basePath/${AppIcons.iconLike}';
-  static const iconLocation = '$_basePath/${AppIcons.iconLocation}';
-  static const iconLogin = '$_basePath/${AppIcons.iconLogin}';
-  static const iconLowBattery = '$_basePath/${AppIcons.iconLowBattery}';
-  static const iconMaps = '$_basePath/${AppIcons.iconMaps}';
-  static const iconMushola = '$_basePath/${AppIcons.iconMushola}';
-  static const iconNavigate = '$_basePath/${AppIcons.iconNavigate}';
-  static const iconNotification = '$_basePath/${AppIcons.iconNotification}';
-  static const iconPackage = '$_basePath/${AppIcons.iconPackage}';
-  static const iconPemadaman = '$_basePath/${AppIcons.iconPemadaman}';
-  static const iconPesanan = '$_basePath/${AppIcons.iconPesanan}';
-  static const iconPinLocation = '$_basePath/${AppIcons.iconPinLocation}';
-  static const iconPinMaps = '$_basePath/${AppIcons.iconPinMaps}';
-  static const iconPin = '$_basePath/${AppIcons.iconPin}';
-  static const iconPlug = '$_basePath/${AppIcons.iconPlug}';
-  static const iconPowerSocket = '$_basePath/${AppIcons.iconPowerSocket}';
-  static const iconPowerUpgrade = '$_basePath/${AppIcons.iconPowerUpgrade}';
-  static const iconProfile = '$_basePath/${AppIcons.iconProfile}';
-  static const iconQuestion = '$_basePath/${AppIcons.iconQuestion}';
-  static const iconRefresh = '$_basePath/${AppIcons.iconRefresh}';
-  static const iconRewards = '$_basePath/${AppIcons.iconRewards}';
-  static const iconRiceCooker = '$_basePath/${AppIcons.iconRiceCooker}';
-  static const iconRoute = '$_basePath/${AppIcons.iconRoute}';
-  static const iconScan = '$_basePath/${AppIcons.iconScan}';
-  static const iconSearch = '$_basePath/${AppIcons.iconSearch}';
-  static const iconSettings = '$_basePath/${AppIcons.iconSettings}';
-  static const iconShare = '$_basePath/${AppIcons.iconShare}';
-  static const iconSort = '$_basePath/${AppIcons.iconSort}';
-  static const iconStar = '$_basePath/${AppIcons.iconStar}';
-  static const iconSwap = '$_basePath/${AppIcons.iconSwap}';
-  static const iconTagihan = '$_basePath/${AppIcons.iconTagihan}';
-  static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
-  static const iconTransaction = '$_basePath/${AppIcons.iconTransaction}';
-  static const iconUpload = '$_basePath/${AppIcons.iconUpload}';
-  static const iconWallet = '$_basePath/${AppIcons.iconWallet}';
-  static const iconWarning = '$_basePath/${AppIcons.iconWarning}';
-  static const iconWatt = '$_basePath/${AppIcons.iconWatt}';
-  static const iconSolidAddDocs = '$_basePath/${AppIcons.iconSolidAddDocs}';
-  static const iconSolidAddImage = '$_basePath/${AppIcons.iconSolidAddImage}';
-  static const iconSolidBatteryNotFound =
-      '$_basePath/${AppIcons.iconSolidBatteryNotFound}';
-  static const iconSolidBattery = '$_basePath/${AppIcons.iconSolidBattery}';
-  static const iconSolidCalendar1 = '$_basePath/${AppIcons.iconSolidCalendar1}';
-  static const iconSolidCalendar = '$_basePath/${AppIcons.iconSolidCalendar}';
-  static const iconSolidCart = '$_basePath/${AppIcons.iconSolidCart}';
-  static const iconSolidChargePlug =
-      '$_basePath/${AppIcons.iconSolidChargePlug}';
-  static const iconSolidChargerSpklu =
-      '$_basePath/${AppIcons.iconSolidChargerSpklu}';
-  static const iconSolidChargerStation =
-      '$_basePath/${AppIcons.iconSolidChargerStation}';
-  static const iconSolidCheckmarkRounded =
-      '$_basePath/${AppIcons.iconSolidCheckmarkRounded}';
-  static const iconSolidCheckmark = '$_basePath/${AppIcons.iconSolidCheckmark}';
-  static const iconSolidClock = '$_basePath/${AppIcons.iconSolidClock}';
-  static const iconSolidCloseRounded =
-      '$_basePath/${AppIcons.iconSolidCloseRounded}';
-  static const iconSolidClose = '$_basePath/${AppIcons.iconSolidClose}';
-  static const iconSolidContact = '$_basePath/${AppIcons.iconSolidContact}';
-  static const iconSolidCopy = '$_basePath/${AppIcons.iconSolidCopy}';
-  static const iconSolidDiscount = '$_basePath/${AppIcons.iconSolidDiscount}';
-  static const iconSolidDocs = '$_basePath/${AppIcons.iconSolidDocs}';
-  static const iconSolidDownload = '$_basePath/${AppIcons.iconSolidDownload}';
-  static const iconSolidEdit = '$_basePath/${AppIcons.iconSolidEdit}';
-  static const iconSolidEvCar = '$_basePath/${AppIcons.iconSolidEvCar}';
-  static const iconSolidEvent = '$_basePath/${AppIcons.iconSolidEvent}';
-  static const iconSolidFilter = '$_basePath/${AppIcons.iconSolidFilter}';
-  static const iconSolidFocus = '$_basePath/${AppIcons.iconSolidFocus}';
-  static const iconSolidGift = '$_basePath/${AppIcons.iconSolidGift}';
-  static const iconSolidGroup = '$_basePath/${AppIcons.iconSolidGroup}';
-  static const iconSolidHistory = '$_basePath/${AppIcons.iconSolidHistory}';
-  static const iconSolidHomeCharging =
-      '$_basePath/${AppIcons.iconSolidHomeCharging}';
-  static const iconSolidHome = '$_basePath/${AppIcons.iconSolidHome}';
-  static const iconSolidInfoRounded =
-      '$_basePath/${AppIcons.iconSolidInfoRounded}';
-  static const iconSolidInfo = '$_basePath/${AppIcons.iconSolidInfo}';
-  static const iconSolidLeaf = '$_basePath/${AppIcons.iconSolidLeaf}';
-  static const iconSolidLens = '$_basePath/${AppIcons.iconSolidLens}';
-  static const iconSolidLighting = '$_basePath/${AppIcons.iconSolidLighting}';
-  static const iconSolidLike = '$_basePath/${AppIcons.iconSolidLike}';
-  static const iconSolidLink = '$_basePath/${AppIcons.iconSolidLink}';
-  static const iconSolidListrik = '$_basePath/${AppIcons.iconSolidListrik}';
-  static const iconSolidLoading = '$_basePath/${AppIcons.iconSolidLoading}';
-  static const iconSolidLocation = '$_basePath/${AppIcons.iconSolidLocation}';
-  static const iconSolidMaintenance =
-      '$_basePath/${AppIcons.iconSolidMaintenance}';
-  static const iconSolidMinus = '$_basePath/${AppIcons.iconSolidMinus}';
-  static const iconSolidMoreHorizontal =
-      '$_basePath/${AppIcons.iconSolidMoreHorizontal}';
-  static const iconSolidMoreVertical =
-      '$_basePath/${AppIcons.iconSolidMoreVertical}';
-  static const iconSolidMovieClip = '$_basePath/${AppIcons.iconSolidMovieClip}';
-  static const iconSolidNavigate = '$_basePath/${AppIcons.iconSolidNavigate}';
-  static const iconSolidNoWifi = '$_basePath/${AppIcons.iconSolidNoWifi}';
-  static const iconSolidPickupPoint =
-      '$_basePath/${AppIcons.iconSolidPickupPoint}';
-  static const iconSolidPlug = '$_basePath/${AppIcons.iconSolidPlug}';
-  static const iconSolidPlus = '$_basePath/${AppIcons.iconSolidPlus}';
-  static const iconSolidPowerSocket =
-      '$_basePath/${AppIcons.iconSolidPowerSocket}';
-  static const iconSolidProfile = '$_basePath/${AppIcons.iconSolidProfile}';
-  static const iconSolidReport = '$_basePath/${AppIcons.iconSolidReport}';
-  static const iconSolidRewards = '$_basePath/${AppIcons.iconSolidRewards}';
-  static const iconSolidSelfie = '$_basePath/${AppIcons.iconSolidSelfie}';
-  static const iconSolidSend = '$_basePath/${AppIcons.iconSolidSend}';
-  static const iconSolidShare = '$_basePath/${AppIcons.iconSolidShare}';
-  static const iconSolidStar = '$_basePath/${AppIcons.iconSolidStar}';
-  static const iconSolidStudio1 = '$_basePath/${AppIcons.iconSolidStudio1}';
-  static const iconSolidStudio = '$_basePath/${AppIcons.iconSolidStudio}';
-  static const iconSolidSwap = '$_basePath/${AppIcons.iconSolidSwap}';
-  static const iconSolidThumbs = '$_basePath/${AppIcons.iconSolidThumbs}';
-  static const iconSolidTitikPengisian1 =
-      '$_basePath/${AppIcons.iconSolidTitikPengisian1}';
-  static const iconSolidTitikPengisian =
-      '$_basePath/${AppIcons.iconSolidTitikPengisian}';
-  static const iconSolidTransaksi = '$_basePath/${AppIcons.iconSolidTransaksi}';
-  static const iconSolidVerify = '$_basePath/${AppIcons.iconSolidVerify}';
-  static const iconSolidVoucher = '$_basePath/${AppIcons.iconSolidVoucher}';
-  static const iconSolidWallet = '$_basePath/${AppIcons.iconSolidWallet}';
-  static const iconSolidWarning = '$_basePath/${AppIcons.iconSolidWarning}';
-  static const iconSolidWifiAttention =
-      '$_basePath/${AppIcons.iconSolidWifiAttention}';
-  static const iconSolidWifiError = '$_basePath/${AppIcons.iconSolidWifiError}';
-  static const iconSolidWifiRouter =
-      '$_basePath/${AppIcons.iconSolidWifiRouter}';
-  static const iconSolidWifiUpgrade =
-      '$_basePath/${AppIcons.iconSolidWifiUpgrade}';
-  static const iconSolidWifi = '$_basePath/${AppIcons.iconSolidWifi}';
-  static const iconColorCheckmark = '$_basePath/${AppIcons.iconColorCheckmark}';
-  static const iconColorEvPoint = '$_basePath/${AppIcons.iconColorEvPoint}';
-  static const iconColorHandshake = '$_basePath/${AppIcons.iconColorHandshake}';
-  static const iconColorMoney = '$_basePath/${AppIcons.iconColorMoney}';
-  static const iconColorPointsIcon =
-      '$_basePath/${AppIcons.iconColorPointsIcon}';
-  static const iconColorRank1 = '$_basePath/${AppIcons.iconColorRank1}';
-  static const iconColorRank2 = '$_basePath/${AppIcons.iconColorRank2}';
-  static const iconColorRank3 = '$_basePath/${AppIcons.iconColorRank3}';
-  static const iconColorTarget = '$_basePath/${AppIcons.iconColorTarget}';
-  static const iconColorThropy = '$_basePath/${AppIcons.iconColorThropy}';
-  static const iconColorVoucher = '$_basePath/${AppIcons.iconColorVoucher}';
-  static const iconColorWallet = '$_basePath/${AppIcons.iconColorWallet}';
-  static const iconMenuBalikNama = '$_basePath/${AppIcons.iconMenuBalikNama}';
-  static const iconMenuCatatMeter = '$_basePath/${AppIcons.iconMenuCatatMeter}';
-  static const iconMenuEbilling = '$_basePath/${AppIcons.iconMenuEbilling}';
-  static const iconMenuEv = '$_basePath/${AppIcons.iconMenuEv}';
-  static const iconMenuEvent = '$_basePath/${AppIcons.iconMenuEvent}';
-  static const iconMenuInternet = '$_basePath/${AppIcons.iconMenuInternet}';
-  static const iconMenuListrik = '$_basePath/${AppIcons.iconMenuListrik}';
-  static const iconMenuMarketplace =
-      '$_basePath/${AppIcons.iconMenuMarketplace}';
-  static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
-  static const iconMenuPasangBaru = '$_basePath/${AppIcons.iconMenuPasangBaru}';
-  static const iconMenuPengaduan = '$_basePath/${AppIcons.iconMenuPengaduan}';
-  static const iconMenuPengelolaanListrik =
-      '$_basePath/${AppIcons.iconMenuPengelolaanListrik}';
-  static const iconMenuPulsaTagihan =
-      '$_basePath/${AppIcons.iconMenuPulsaTagihan}';
-  static const iconMenuPvRooftop = '$_basePath/${AppIcons.iconMenuPvRooftop}';
-  static const iconMenuSimulasiBiaya =
-      '$_basePath/${AppIcons.iconMenuSimulasiBiaya}';
-  static const iconMenuSpklu = '$_basePath/${AppIcons.iconMenuSpklu}';
-  static const iconMenuSplu = '$_basePath/${AppIcons.iconMenuSplu}';
-  static const iconMenuTambahDayaSementara =
-      '$_basePath/${AppIcons.iconMenuTambahDayaSementara}';
-  static const iconMenuTitikPengisian =
-      '$_basePath/${AppIcons.iconMenuTitikPengisian}';
-  static const iconMenuTokenPembayaran =
-      '$_basePath/${AppIcons.iconMenuTokenPembayaran}';
-  static const iconMenuTripPlanner =
-      '$_basePath/${AppIcons.iconMenuTripPlanner}';
-  static const iconMenuTukarBaterai =
-      '$_basePath/${AppIcons.iconMenuTukarBaterai}';
-  static const iconMenuUbahDaya = '$_basePath/${AppIcons.iconMenuUbahDaya}';
-  static const iconPlnmobile = '$_basePath/${AppIcons.iconPlnmobile}';
-
-  static const iconPlnMobile = '$_basePath/${AppIcons.iconPlnmobile}';
-  static const iconCheckmark = '$_basePath/${AppIcons.iconSolidCheckmark}';
-
-  static const illustrationOnBoardingLogin =
-      '$_basePath/${AppImages.illustrationOnBoardingLogin}';
-  static const complaintBackgroundHomepage =
-      '$_basePath/${AppImages.complaintBackgroundHomepage}';
-  static const complaintBackgroundHomepage2 =
-      '$_basePath/${AppImages.complaintBackgroundHomepage2}';
-  static const placeholderFailed = '$_basePath/${AppImages.placeholderFailed}';
-  static const placeholderNoData = '$_basePath/${AppImages.placeholderNoData}';
-  static const placeholderSuccess =
-      '$_basePath/${AppImages.placeholderSuccess}';
-  static const placeholderInfo = '$_basePath/${AppImages.placeholderInfo}';
-  static const placeholderWarning =
-      '$_basePath/${AppImages.placeholderWarning}';
-  static const placeholderHelp = '$_basePath/${AppImages.placeholderHelp}';
-  static const placeholderInfoSC = '$_basePath/${AppImages.placeholderInfoSC}';
-  static const placeholderWebviewError =
-      '$_basePath/${AppImages.placeholderWebviewError}';
-  static const placeholderWarningSC =
-      '$_basePath/${AppImages.placeholderWarningSC}';
-  static const placeholderBlock = '$_basePath/${AppImages.placeholderBlock}';
-  static const placeholderConfirmation =
-      '$_basePath/${AppImages.placeholderConfirmation}';
-  static const placeholderLocation =
-      '$_basePath/${AppImages.placeholderLocation}';
-  static const placeholderEmptySearch =
-      '$_basePath/${AppImages.placeholderEmptySearch}';
-  static const placeholderConnectionFailed =
-      '$_basePath/${AppImages.placeholderConnectionFailed}';
-  static const placeholderElectronicCard =
-      '$_basePath/${AppImages.placeholderElectronicCard}';
-  static const placeholderNoInternet =
-      '$_basePath/${AppImages.placeholderNoInternet}';
-  static const placeholderNfcUnsupported =
-      '$_basePath/${AppImages.placeholderNfcUnsupported}';
+  // --- AppSounds Mapping ---
+  static const soundChargingCompletionNotificationSound =
+      '$_basePath/${AppSounds.chargingCompletionNotificationSound}';
 }

@@ -1,4 +1,8 @@
-class AppSounds {
-  static const String chargingCompletionNotification =
-      'assets/sounds/charging-completion-notification.wav';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+abstract class AppSounds {
+  AppSounds._();
+
+  // Group: SOUNDS
+  static const String chargingCompletionNotificationSound =
+      'assets/sounds/charging-completion-notification-sound.wav';
 }
