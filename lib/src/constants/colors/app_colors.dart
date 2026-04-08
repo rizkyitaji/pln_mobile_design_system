@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'app_palette.dart';
 
 /// Define semantic tokens from [AppPalette]
-class AppColors {
+abstract class AppColors {
+  AppColors._();
+
   static const Color white = AppPalette.white;
   static const Color black = AppPalette.black;
   static const Color transparent = Colors.transparent;

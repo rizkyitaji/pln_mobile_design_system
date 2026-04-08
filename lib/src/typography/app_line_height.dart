@@ -1,4 +1,6 @@
-class AppLineHeight {
+abstract class AppLineHeight {
+  AppLineHeight._();
+
   static const double xxxs = 12.0;
   static const double xxs = 16.0;
   static const double xs = 18.0;

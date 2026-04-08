@@ -5,7 +5,9 @@ import 'app_font_weight.dart';
 import 'app_fonts.dart';
 import 'app_line_height.dart';
 
-class AppTextStyles {
+abstract class AppTextStyles {
+  AppTextStyles._();
+
   static final String _package = 'pln_mobile_design_system';
 
   static double _height(double lineHeight, double fontSize) {

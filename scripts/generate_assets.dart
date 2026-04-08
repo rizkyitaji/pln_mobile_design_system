@@ -7,6 +7,8 @@ void main() {
   final bufferSounds = StringBuffer();
   final bufferMainAssets = StringBuffer();
 
+  const String outputRoot = 'lib/src/assets'; // Path baru di dalam src
+
   // 1. GENERATE SUB-CLASSES
   _generateSubClass(
     className: 'AppIcons',
@@ -14,7 +16,7 @@ void main() {
     folders: ['outlined', 'solid', 'colored', 'menu'],
     extensions: ['.svg'],
     buffer: bufferIcons,
-    outputFile: 'lib/assets/icons/app_icons.dart',
+    outputFile: '$outputRoot/icons/app_icons.dart',
   );
 
   _generateSubClass(
@@ -23,7 +25,7 @@ void main() {
     folders: ['png', 'svg', 'png/mascot'],
     extensions: ['.png', '.svg'],
     buffer: bufferImages,
-    outputFile: 'lib/assets/images/app_images.dart',
+    outputFile: '$outputRoot/images/app_images.dart',
   );
 
   _generateSubClass(
@@ -32,7 +34,7 @@ void main() {
     folders: ['gif', 'lottie'],
     extensions: ['.gif', '.json'],
     buffer: bufferAnimations,
-    outputFile: 'lib/assets/animations/app_animations.dart',
+    outputFile: '$outputRoot/animations/app_animations.dart',
   );
 
   _generateSubClass(
@@ -41,7 +43,7 @@ void main() {
     folders: [],
     extensions: ['.wav', '.mp3'],
     buffer: bufferSounds,
-    outputFile: 'lib/assets/sounds/app_sounds.dart',
+    outputFile: '$outputRoot/sounds/app_sounds.dart',
   );
 
   // 2. GENERATE MAIN APP_ASSETS.DART
@@ -50,26 +52,27 @@ void main() {
   bufferMainAssets.writeln("import 'icons/app_icons.dart';");
   bufferMainAssets.writeln("import 'images/app_images.dart';");
   bufferMainAssets.writeln("import 'sounds/app_sounds.dart';\n");
+  bufferMainAssets.writeln('abstract class AppAssets {');
   bufferMainAssets.writeln(
-    'abstract class AppAssets {',
-  ); // Menggunakan abstract class
+    '  AppAssets._();\n',
+  ); // TAMBAHAN: Private constructor biar konsisten
   bufferMainAssets.writeln(
     "  static const _basePath = 'packages/pln_mobile_design_system';\n",
   );
 
-  _writeMainMapping(bufferMainAssets, 'AppIcons', 'icon');
-  _writeMainMapping(bufferMainAssets, 'AppImages', 'image');
-  _writeMainMapping(bufferMainAssets, 'AppAnimations', 'animation');
-  _writeMainMapping(bufferMainAssets, 'AppSounds', 'sound');
+  _writeMainMapping(bufferMainAssets, 'AppIcons', 'icon', outputRoot);
+  _writeMainMapping(bufferMainAssets, 'AppImages', 'image', outputRoot);
+  _writeMainMapping(bufferMainAssets, 'AppAnimations', 'animation', outputRoot);
+  _writeMainMapping(bufferMainAssets, 'AppSounds', 'sound', outputRoot);
 
   bufferMainAssets.writeln('}');
 
   File(
-    'lib/assets/app_assets.dart',
+    '$outputRoot/app_assets.dart',
   ).writeAsStringSync(bufferMainAssets.toString());
 
   // ignore: avoid_print
-  print('✅ [PLN Mobile] All Assets Generated (using Abstract Classes)!');
+  print('✅ [PLN Mobile] All Assets Generated in lib/src/assets Successfully!');
 }
 
 void _generateSubClass({
@@ -81,7 +84,7 @@ void _generateSubClass({
   required String outputFile,
 }) {
   buffer.writeln("// GENERATED CODE - DO NOT MODIFY BY HAND");
-  buffer.writeln('abstract class $className {'); // Menggunakan abstract class
+  buffer.writeln('abstract class $className {');
   buffer.writeln('  $className._();\n');
 
   final List<String> targetPaths = [
@@ -132,7 +135,6 @@ void _generateSubClass({
           !cleanName.toLowerCase().contains('colored')) {
         suffix = 'Colored';
       }
-      // Suffix solid dibuang karena lo ganti nama file jadi swap-2
 
       final varName = _toCamelCase(cleanName) + suffix;
       final normalizedPath = file.path.replaceAll('\\', '/');
@@ -150,9 +152,10 @@ void _writeMainMapping(
   StringBuffer buffer,
   String subClassName,
   String prefix,
+  String outputRoot,
 ) {
   final file = File(
-    'lib/assets/${_getFolderByClass(subClassName)}/${_getFileNameByClass(subClassName)}',
+    '$outputRoot/${_getFolderByClass(subClassName)}/${_getFileNameByClass(subClassName)}',
   );
   if (!file.existsSync()) return;
 
@@ -182,6 +185,7 @@ void _writeMainMapping(
 
 String _getFolderByClass(String cls) =>
     cls.replaceFirst('App', '').toLowerCase();
+
 String _getFileNameByClass(String cls) {
   if (cls == 'AppIcons') return 'app_icons.dart';
   if (cls == 'AppImages') return 'app_images.dart';

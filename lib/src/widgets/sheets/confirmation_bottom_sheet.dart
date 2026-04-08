@@ -34,7 +34,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
       canPop: canPop,
       child: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(AppSpacing.lg),
+          padding: const EdgeInsets.all(AppSizes.s16),
           decoration: const BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
@@ -48,7 +48,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
                   replacement: Image.asset(asset ?? ''),
                   child: SvgPicture.asset(asset ?? ''),
                 ),
-                const SizedBox(height: AppSpacing.xl),
+                const SizedBox(height: AppSizes.s24),
               ],
               if (title != null) ...[
                 Text(
@@ -57,10 +57,10 @@ class ConfirmationBottomSheet extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: AppColors.black,
-                    fontSize: titleFontSize ?? AppSpacing.xl,
+                    fontSize: titleFontSize ?? AppSizes.s24,
                   ),
                 ),
-                const SizedBox(height: AppSpacing.md),
+                const SizedBox(height: AppSizes.s12),
               ],
               MarkdownBody(
                 data: description ?? '',
@@ -73,14 +73,14 @@ class ConfirmationBottomSheet extends StatelessWidget {
                   ),
                 ).copyWith(textAlign: WrapAlignment.center),
               ),
-              const SizedBox(height: AppSpacing.xl),
+              const SizedBox(height: AppSizes.s24),
               if (useColumn) ...[
                 ElevatedButton(
                   onPressed: onConfirm ?? () => Navigator.pop(context),
                   style: confirmButtonStyle,
                   child: Center(child: Text(confirmText ?? 'Konfirmasi')),
                 ),
-                SizedBox(height: AppSpacing.md),
+                SizedBox(height: AppSizes.s12),
                 OutlinedButton(
                   onPressed: onCancel ?? () => Navigator.pop(context),
                   style: cancelButtonStyle,
@@ -88,7 +88,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
                 ),
               ] else ...[
                 Row(
-                  spacing: AppSpacing.md,
+                  spacing: AppSizes.s12,
                   children: [
                     Expanded(
                       child: OutlinedButton(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pln_mobile_design_system/constants/colors/app_colors.dart';
+import 'package:pln_mobile_design_system/src/constants/colors/app_colors.dart';
 
 class AppRoundedButton extends StatelessWidget {
   final String text;

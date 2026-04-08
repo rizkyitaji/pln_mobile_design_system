@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pln_mobile_design_system/constants/app_radius.dart';
-import 'package:pln_mobile_design_system/constants/colors/app_colors.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppTabButton extends StatelessWidget {
   final String label;
@@ -14,7 +13,7 @@ class AppTabButton extends StatelessWidget {
     required this.label,
     this.isSelected = false,
     required this.onPressed,
-    this.fontSize = 12,
+    this.fontSize = AppFontSize.xs,
     this.padding = const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
   });
 
@@ -26,7 +25,7 @@ class AppTabButton extends StatelessWidget {
         padding: padding,
         decoration: BoxDecoration(
           color: isSelected ? AppColors.primary : AppColors.transparent,
-          borderRadius: AppRadius.full,
+          borderRadius: AppRadius.rounded,
           border: Border.all(
             color: isSelected
                 ? AppColors.borderPrimaryPressed

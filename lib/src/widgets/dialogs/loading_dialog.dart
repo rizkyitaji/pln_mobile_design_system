@@ -13,10 +13,10 @@ class LoadingDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: const EdgeInsets.all(AppSpacing.lg),
+            padding: const EdgeInsets.all(AppSizes.s16),
             decoration: BoxDecoration(
               color: AppColors.white,
-              borderRadius: AppRadius.xs,
+              borderRadius: AppRadius.rounded12,
             ),
             child: Lottie.asset(
               AppAssets.animationLoadingPrimary,
@@ -29,7 +29,10 @@ class LoadingDialog extends StatelessWidget {
     );
   }
 
-  static Future<void> show(BuildContext context, {bool barrierDismissible = true}) {
+  static Future<void> show(
+    BuildContext context, {
+    bool barrierDismissible = true,
+  }) {
     return showDialog(
       context: context,
       barrierDismissible: barrierDismissible,

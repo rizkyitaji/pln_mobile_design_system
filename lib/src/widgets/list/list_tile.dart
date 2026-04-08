@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pln_mobile_design_system/constants/app_radius.dart';
-import 'package:pln_mobile_design_system/constants/colors/app_colors.dart';
+import 'package:pln_mobile_design_system/src/constants/app_radius.dart';
+import 'package:pln_mobile_design_system/src/constants/colors/app_colors.dart';
 
 class AppListTile extends StatelessWidget {
   final Widget? leading;
@@ -31,7 +31,7 @@ class AppListTile extends StatelessWidget {
     this.titleTextStyle,
     this.subtitleTextStyle,
     this.border,
-    this.borderRadius = AppRadius.sm,
+    this.borderRadius,
     this.useBorder = true,
   });
 
@@ -41,7 +41,7 @@ class AppListTile extends StatelessWidget {
       decoration: useBorder
           ? BoxDecoration(
               border: border ?? Border.all(color: AppColors.textOnDisabled),
-              borderRadius: borderRadius,
+              borderRadius: borderRadius ?? AppRadius.rounded12,
             )
           : null,
 

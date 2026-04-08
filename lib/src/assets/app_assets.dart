@@ -5,6 +5,8 @@ import 'images/app_images.dart';
 import 'sounds/app_sounds.dart';
 
 abstract class AppAssets {
+  AppAssets._();
+
   static const _basePath = 'packages/pln_mobile_design_system';
 
   // --- AppIcons Mapping ---
