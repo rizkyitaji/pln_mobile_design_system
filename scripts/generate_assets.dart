@@ -7,7 +7,7 @@ void main() {
   final bufferSounds = StringBuffer();
   final bufferMainAssets = StringBuffer();
 
-  const String outputRoot = 'lib/src/assets'; // Path baru di dalam src
+  const String outputRoot = 'lib/src/assets';
 
   // 1. GENERATE SUB-CLASSES
   _generateSubClass(
@@ -22,7 +22,7 @@ void main() {
   _generateSubClass(
     className: 'AppImages',
     basePath: 'assets/images',
-    folders: ['png', 'svg', 'png/mascot'],
+    folders: ['png', 'svg', 'png/mascot', 'png/backgrounds'],
     extensions: ['.png', '.svg'],
     buffer: bufferImages,
     outputFile: '$outputRoot/images/app_images.dart',
@@ -53,9 +53,7 @@ void main() {
   bufferMainAssets.writeln("import 'images/app_images.dart';");
   bufferMainAssets.writeln("import 'sounds/app_sounds.dart';\n");
   bufferMainAssets.writeln('abstract class AppAssets {');
-  bufferMainAssets.writeln(
-    '  AppAssets._();\n',
-  ); // TAMBAHAN: Private constructor biar konsisten
+  bufferMainAssets.writeln('  AppAssets._();\n');
   bufferMainAssets.writeln(
     "  static const _basePath = 'packages/pln_mobile_design_system';\n",
   );

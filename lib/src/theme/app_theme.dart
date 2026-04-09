@@ -13,12 +13,12 @@ abstract class AppTheme {
     dividerTheme: DividerThemeData(color: AppColors.border),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded16),
-        foregroundColor: AppColors.white,
+        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded),
+        foregroundColor: AppColors.textOnColorHeading,
         backgroundColor: AppColors.primary,
         padding: EdgeInsets.symmetric(
-          vertical: AppSizes.s16,
-          horizontal: AppSizes.s8,
+          vertical: AppSizes.s10,
+          horizontal: AppSizes.s24,
         ),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -27,14 +27,12 @@ abstract class AppTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded16),
-        side: BorderSide(
-          color: AppColors.primaryPressed.withValues(alpha: 0.75),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded),
+        side: BorderSide(color: AppColors.borderOnColorPrimary),
         foregroundColor: AppColors.textPrimary,
         padding: EdgeInsets.symmetric(
-          vertical: AppSizes.s16,
-          horizontal: AppSizes.s8,
+          vertical: AppSizes.s10,
+          horizontal: AppSizes.s24,
         ),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
