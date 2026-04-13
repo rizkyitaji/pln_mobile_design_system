@@ -5,7 +5,7 @@ class AppGeneralPage extends StatelessWidget {
   final bool extendBodyBehindAppBar;
   final String? backgroundImage, title;
   final List<Widget> children;
-  final Widget child, bottomSheet;
+  final Widget child, persistentSheet;
   final Color? backgroundColor, appBarColor, backButtonColor;
   final Future<void> Function()? onRefresh;
   final VoidCallback? onBackPressed;
@@ -16,7 +16,7 @@ class AppGeneralPage extends StatelessWidget {
     this.backgroundImage,
     this.children = const [],
     this.child = const SizedBox(),
-    this.bottomSheet = const SizedBox(),
+    this.persistentSheet = const SizedBox(),
     this.backgroundColor,
     this.appBarColor,
     this.backButtonColor,
@@ -66,7 +66,7 @@ class AppGeneralPage extends StatelessWidget {
                   ),
                 ),
               ),
-              bottomSheet,
+              persistentSheet,
             ],
           ),
         ],

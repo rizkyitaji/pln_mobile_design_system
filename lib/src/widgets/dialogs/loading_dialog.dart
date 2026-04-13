@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class LoadingDialog extends StatelessWidget {
-  const LoadingDialog({super.key});
+class AppLoadingDialog extends StatelessWidget {
+  const AppLoadingDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class LoadingDialog extends StatelessWidget {
     return showDialog(
       context: context,
       barrierDismissible: barrierDismissible,
-      builder: (_) => const LoadingDialog(),
+      builder: (_) => const AppLoadingDialog(),
     );
   }
 

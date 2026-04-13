@@ -16,9 +16,10 @@ export 'src/utils/extensions/context_extension.dart';
 export 'src/utils/formatters/name_input_formatter.dart';
 
 export 'src/widgets/buttons/index.dart';
+export 'src/widgets/cards/index.dart';
 export 'src/widgets/dialogs/index.dart';
 export 'src/widgets/forms/index.dart';
 export 'src/widgets/indicators/index.dart';
 export 'src/widgets/layouts/index.dart';
-export 'src/widgets/list/index.dart';
+export 'src/widgets/tiles/index.dart';
 export 'src/widgets/sheets/index.dart';
