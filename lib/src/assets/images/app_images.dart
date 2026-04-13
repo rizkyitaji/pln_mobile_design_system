@@ -38,7 +38,12 @@ abstract class AppImages {
   static const String mascot = 'assets/images/png/mascot/mascot.png';
 
   // Group: BACKGROUNDS
-  static const String backgroundChargingConnected = 'assets/images/png/backgrounds/background-charging-connected.png';
-  static const String backgroundChargingDisconnected = 'assets/images/png/backgrounds/background-charging-disconnected.png';
-
+  static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';
+  static const String backgroundIndicatorChargingConnected = 'assets/images/png/backgrounds/background-indicator-charging-connected.png';
+  static const String backgroundIndicatorChargingConnecting = 'assets/images/png/backgrounds/background-indicator-charging-connecting.png';
+  static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
+  static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
+  static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
+  static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
+  static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
 }

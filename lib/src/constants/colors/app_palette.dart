@@ -6,6 +6,7 @@ abstract class AppPalette {
 
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
+  static const Color blackPearl = Color(0xFF06141C);
 
   static const Color slate50 = Color(0xFFF8FAFC);
   static const Color slate100 = Color(0xFFF1F5F9);

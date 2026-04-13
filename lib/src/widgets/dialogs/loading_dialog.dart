@@ -19,7 +19,7 @@ class LoadingDialog extends StatelessWidget {
               borderRadius: AppRadius.rounded12,
             ),
             child: Lottie.asset(
-              AppAssets.animationLoadingPrimary,
+              AppAssets.animationLoading,
               width: 50,
               height: 50,
             ),

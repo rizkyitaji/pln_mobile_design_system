@@ -55,7 +55,11 @@ abstract class AppTheme {
       iconTheme: IconThemeData(color: AppColors.icon),
       titleTextStyle: AppTextStyles.headingSmall,
       scrolledUnderElevation: 0,
+      titleSpacing: 8,
       elevation: 0,
+    ),
+    cardTheme: CardThemeData(
+      shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded12),
     ),
     inputDecorationTheme: InputDecorationThemeData(
       filled: true,

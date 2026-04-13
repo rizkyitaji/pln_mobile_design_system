@@ -218,5 +218,4 @@ abstract class AppIcons {
   static const String menuTripPlanner = 'assets/icons/svg/menu/icon-menu-trip-planner.svg';
   static const String menuTukarBaterai = 'assets/icons/svg/menu/icon-menu-tukar-baterai.svg';
   static const String menuUbahDaya = 'assets/icons/svg/menu/icon-menu-ubah-daya.svg';
-
 }

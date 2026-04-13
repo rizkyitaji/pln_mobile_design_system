@@ -8,6 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  custom_refresh_indicator: ^4.0.1
   flutter:
     sdk: flutter
   flutter_markdown_plus: ^1.0.7

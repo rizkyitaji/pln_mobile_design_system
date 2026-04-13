@@ -83,7 +83,7 @@ void _generateSubClass({
 }) {
   buffer.writeln("// GENERATED CODE - DO NOT MODIFY BY HAND");
   buffer.writeln('abstract class $className {');
-  buffer.writeln('  $className._();\n');
+  buffer.writeln('  $className._();');
 
   final List<String> targetPaths = [
     basePath,
@@ -107,7 +107,7 @@ void _generateSubClass({
     if (files.isEmpty) continue;
 
     final groupName = path.split('/').last.toUpperCase();
-    buffer.writeln('  // Group: $groupName');
+    buffer.writeln('\n  // Group: $groupName');
 
     for (var file in files) {
       if (processedFiles.contains(file.path)) continue;
@@ -139,7 +139,6 @@ void _generateSubClass({
 
       buffer.writeln("  static const String $varName = '$normalizedPath';");
     }
-    buffer.writeln('');
   }
   buffer.writeln('}');
   File(outputFile).createSync(recursive: true);
