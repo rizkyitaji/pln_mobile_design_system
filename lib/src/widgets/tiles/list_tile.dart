@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pln_mobile_design_system/src/constants/app_radius.dart';
-import 'package:pln_mobile_design_system/src/constants/colors/app_colors.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppListTile extends StatelessWidget {
   final Widget? leading;
@@ -25,8 +24,8 @@ class AppListTile extends StatelessWidget {
     this.onTap,
     this.backgroundColor,
     this.contentPadding = const EdgeInsets.symmetric(
-      horizontal: 16,
-      vertical: 8,
+      horizontal: AppSizes.s16,
+      vertical: AppSizes.s8,
     ),
     this.titleTextStyle,
     this.subtitleTextStyle,
@@ -48,12 +47,12 @@ class AppListTile extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(AppSizes.s12),
           child: Row(
             children: [
               if (leading != null) ...[
                 leading ?? const SizedBox(),
-                const SizedBox(width: 10),
+                const SizedBox(width: AppSizes.s10),
               ],
               Expanded(
                 child: Column(
@@ -67,7 +66,7 @@ class AppListTile extends StatelessWidget {
                 ),
               ),
               if (trailing != null) ...[
-                const SizedBox(width: 10),
+                const SizedBox(width: AppSizes.s10),
                 trailing ?? const SizedBox(),
               ],
             ],

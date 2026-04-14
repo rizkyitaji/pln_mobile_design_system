@@ -20,7 +20,7 @@ extension ContextExtensions on BuildContext {
   double get textScale => PlatformDispatcher.instance.textScaleFactor;
 
   // ===== SCALING =====
-  static const double _designWidth = 344.0;
+  static const double _designWidth = 375.0;
 
   double get _scale {
     final scale = screenWidth / _designWidth;

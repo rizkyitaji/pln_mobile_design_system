@@ -15,6 +15,8 @@ abstract class AppRadius {
   static BorderRadius get rounded48 => BorderRadius.circular(xl);
   static BorderRadius get rounded => BorderRadius.circular(full);
 
+  static BorderRadius get topRounded12 =>
+      BorderRadius.vertical(top: Radius.circular(AppRadius.sm));
   static BorderRadius get topRounded16 =>
-      BorderRadius.vertical(top: Radius.circular(16));
+      BorderRadius.vertical(top: Radius.circular(AppRadius.md));
 }

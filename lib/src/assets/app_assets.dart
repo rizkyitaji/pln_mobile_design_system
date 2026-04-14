@@ -251,13 +251,23 @@ abstract class AppAssets {
   static const imageMascot8 = '$_basePath/${AppImages.mascot8}';
   static const imageMascot9 = '$_basePath/${AppImages.mascot9}';
   static const imageMascot = '$_basePath/${AppImages.mascot}';
+  static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
+  static const imageBackgroundIndicatorChargingConnected = '$_basePath/${AppImages.backgroundIndicatorChargingConnected}';
+  static const imageBackgroundIndicatorChargingConnecting = '$_basePath/${AppImages.backgroundIndicatorChargingConnecting}';
+  static const imageBackgroundIndicatorChargingDisconnected = '$_basePath/${AppImages.backgroundIndicatorChargingDisconnected}';
+  static const imageBackgroundIndicatorChargingIdle = '$_basePath/${AppImages.backgroundIndicatorChargingIdle}';
+  static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
+  static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
+  static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
 
   // --- AppAnimations Mapping ---
   static const animationOnBoarding1 = '$_basePath/${AppAnimations.onBoarding1}';
   static const animationOnBoarding2 = '$_basePath/${AppAnimations.onBoarding2}';
   static const animationOnBoarding3 = '$_basePath/${AppAnimations.onBoarding3}';
+  static const animationCharging = '$_basePath/${AppAnimations.charging}';
   static const animationLoadingPrimary = '$_basePath/${AppAnimations.loadingPrimary}';
   static const animationLoadingWhite = '$_basePath/${AppAnimations.loadingWhite}';
+  static const animationLoading = '$_basePath/${AppAnimations.loading}';
 
   // --- AppSounds Mapping ---
   static const soundChargingCompletionNotificationSound = '$_basePath/${AppSounds.chargingCompletionNotificationSound}';

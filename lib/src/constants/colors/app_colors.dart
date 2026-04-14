@@ -9,6 +9,7 @@ abstract class AppColors {
   static const Color white = AppPalette.white;
   static const Color black = AppPalette.black;
   static const Color transparent = Colors.transparent;
+  static const Color blackPearl = AppPalette.blackPearl;
 
   // --- BACKGROUND ---
   static const Color background = AppPalette.slate50;
@@ -157,16 +158,16 @@ abstract class AppColors {
   );
 
   // --- BORDER PRIMARY ---
-  static const Color borderPrimary = AppPalette.teal700;
-  static const Color borderPrimaryPressed = AppPalette.teal800;
+  static const Color borderPrimary = AppPalette.teal600;
+  static const Color borderPrimaryPressed = AppPalette.teal700;
   static const Color borderPrimarySubtle = AppPalette.teal50;
   static const Color borderPrimarySubtlePressed = AppPalette.teal100;
 
   // --- BORDER PRIMARY ON-COLOR ---
-  static final Color borderOnColorPrimary = AppPalette.teal700.withValues(
-    alpha: 0.75,
+  static final Color borderOnColorPrimary = AppPalette.teal600.withValues(
+    alpha: 0.50,
   );
-  static final Color borderOnColorPrimaryPressed = AppPalette.teal800
+  static final Color borderOnColorPrimaryPressed = AppPalette.teal700
       .withValues(alpha: 0.75);
   static final Color borderOnColorPrimarySubtle = AppPalette.teal50.withValues(
     alpha: 0.75,
