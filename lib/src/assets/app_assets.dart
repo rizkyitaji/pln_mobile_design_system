@@ -187,6 +187,7 @@ abstract class AppAssets {
   static const iconHandshakeColored = '$_basePath/${AppIcons.handshakeColored}';
   static const iconMoneyColored = '$_basePath/${AppIcons.moneyColored}';
   static const iconPinIdpelPadamColored = '$_basePath/${AppIcons.pinIdpelPadamColored}';
+  static const iconPinNyalaColored = '$_basePath/${AppIcons.pinNyalaColored}';
   static const iconPinPadamColored = '$_basePath/${AppIcons.pinPadamColored}';
   static const iconPointsColored = '$_basePath/${AppIcons.pointsColored}';
   static const iconRank1Colored = '$_basePath/${AppIcons.rank1Colored}';

@@ -186,6 +186,7 @@ abstract class AppIcons {
   static const String handshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
   static const String moneyColored = 'assets/icons/svg/colored/icon-money.svg';
   static const String pinIdpelPadamColored = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
+  static const String pinNyalaColored = 'assets/icons/svg/colored/icon-pin-nyala.svg';
   static const String pinPadamColored = 'assets/icons/svg/colored/icon-pin-padam.svg';
   static const String pointsColored = 'assets/icons/svg/colored/icon-points.svg';
   static const String rank1Colored = 'assets/icons/svg/colored/icon-rank-1.svg';
