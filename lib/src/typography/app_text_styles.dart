@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-import 'app_font_size.dart';
-import 'app_font_weight.dart';
-import 'app_fonts.dart';
 import 'app_line_height.dart';
 
 abstract class AppTextStyles {

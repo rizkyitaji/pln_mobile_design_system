@@ -4,17 +4,19 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppGeneralPage extends StatelessWidget {
   final bool extendBodyBehindAppBar;
   final String? backgroundImage, title;
-  final List<Widget> children;
+  final List<Widget> children, scrollableContent;
   final Widget child, persistentSheet;
   final Color? backgroundColor, appBarColor, backButtonColor;
   final Future<void> Function()? onRefresh;
   final VoidCallback? onBackPressed;
+  final double initialChildSize, minChildSize, maxChildSize;
 
   const AppGeneralPage({
     super.key,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
     this.children = const [],
+    this.scrollableContent = const [],
     this.child = const SizedBox(),
     this.persistentSheet = const SizedBox(),
     this.backgroundColor,
@@ -23,6 +25,9 @@ class AppGeneralPage extends StatelessWidget {
     this.title,
     this.onRefresh,
     this.onBackPressed,
+    this.initialChildSize = 0.2,
+    this.minChildSize = 0.2,
+    this.maxChildSize = 0.88,
   });
 
   @override
@@ -51,24 +56,34 @@ class AppGeneralPage extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).padding.top + kToolbarHeight,
+          Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).padding.top + kToolbarHeight,
+            ),
+            child: Visibility(
+              visible: onRefresh != null,
+              replacement: _content,
+              child: AppRefreshIndicator(
+                onRefresh: onRefresh != null ? onRefresh! : () async {},
+                child: _content,
               ),
-              Expanded(
-                child: Visibility(
-                  visible: onRefresh != null,
-                  replacement: _content,
-                  child: AppRefreshIndicator(
-                    onRefresh: onRefresh != null ? onRefresh! : () async {},
-                    child: _content,
-                  ),
-                ),
-              ),
-              persistentSheet,
-            ],
+            ),
           ),
+          Visibility(
+            visible: scrollableContent.isNotEmpty,
+            child: DraggableScrollableSheet(
+              initialChildSize: initialChildSize,
+              minChildSize: minChildSize,
+              maxChildSize: maxChildSize,
+              builder: (context, scrollController) {
+                return AppSheetContainer(
+                  scrollController: scrollController,
+                  children: scrollableContent,
+                );
+              },
+            ),
+          ),
+          Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet),
         ],
       ),
     );

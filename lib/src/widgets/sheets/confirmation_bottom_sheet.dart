@@ -3,7 +3,7 @@ import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class ConfirmationBottomSheet extends StatelessWidget {
+class AppConfirmationBottomSheet extends StatelessWidget {
   final String? asset, title, description, cancelText, confirmText;
   final VoidCallback? onCancel, onConfirm;
   final ButtonStyle? confirmButtonStyle, cancelButtonStyle;
@@ -11,7 +11,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
   final double? titleFontSize;
   final bool canPop, useColumn;
 
-  const ConfirmationBottomSheet({
+  const AppConfirmationBottomSheet({
     super.key,
     this.asset,
     this.title,
@@ -136,7 +136,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
       backgroundColor: Colors.transparent,
       isDismissible: canPop,
       enableDrag: canPop,
-      builder: (context) => ConfirmationBottomSheet(
+      builder: (context) => AppConfirmationBottomSheet(
         asset: asset,
         title: title,
         description: description,

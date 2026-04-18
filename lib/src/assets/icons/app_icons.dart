@@ -47,6 +47,7 @@ abstract class AppIcons {
   static const String sort = 'assets/icons/svg/icon-sort.svg';
   static const String swap2 = 'assets/icons/svg/icon-swap-2.svg';
   static const String toilet = 'assets/icons/svg/icon-toilet.svg';
+  static const String warningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
   // Group: OUTLINED
   static const String addFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';

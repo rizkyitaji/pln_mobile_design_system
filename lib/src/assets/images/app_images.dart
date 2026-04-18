@@ -5,6 +5,8 @@ abstract class AppImages {
   // Group: PNG
   static const String complaintBackgroundHomepage2 = 'assets/images/png/complaint-background-homepage-2.png';
   static const String complaintBackgroundHomepage = 'assets/images/png/complaint-background-homepage.png';
+  static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
+  static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
