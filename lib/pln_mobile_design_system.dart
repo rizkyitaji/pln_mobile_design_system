@@ -12,8 +12,8 @@ export 'src/typography/app_fonts.dart';
 export 'src/typography/app_text_styles.dart';
 export 'src/typography/app_text_theme.dart';
 
-export 'src/utils/extensions/context_extension.dart';
-export 'src/utils/formatters/name_input_formatter.dart';
+export 'src/utils/extensions/index.dart';
+export 'src/utils/formatters/index.dart';
 
 export 'src/widgets/buttons/index.dart';
 export 'src/widgets/cards/index.dart';

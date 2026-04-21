@@ -8,6 +8,8 @@ abstract class AppImages {
   static const String illustrationComplaintConfirm = 'assets/images/png/illustration-complaint-confirm.png';
   static const String illustrationComplaintLocation = 'assets/images/png/illustration-complaint-location.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
+  static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
+  static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 

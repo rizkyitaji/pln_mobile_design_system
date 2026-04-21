@@ -2,6 +2,7 @@ abstract class AppSizes {
   AppSizes._();
 
   static const double s1 = 1.0;
+  static const double zero = 0.0;
   static const double s2 = 2.0;
   static const double s4 = 4.0;
   static const double s5 = 5.0;

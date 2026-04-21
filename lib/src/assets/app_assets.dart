@@ -54,6 +54,7 @@ abstract class AppAssets {
   static const iconSort = '$_basePath/${AppIcons.sort}';
   static const iconSwap2 = '$_basePath/${AppIcons.swap2}';
   static const iconToilet = '$_basePath/${AppIcons.toilet}';
+  static const iconWarningRounded = '$_basePath/${AppIcons.warningRounded}';
   static const iconAddFriendsOutlined = '$_basePath/${AppIcons.addFriendsOutlined}';
   static const iconArrange1Outlined = '$_basePath/${AppIcons.arrange1Outlined}';
   static const iconBricksOutlined = '$_basePath/${AppIcons.bricksOutlined}';
@@ -224,6 +225,8 @@ abstract class AppAssets {
   // --- AppImages Mapping ---
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imageComplaintBackgroundHomepage = '$_basePath/${AppImages.complaintBackgroundHomepage}';
+  static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
+  static const imageIllustrationConnectorPlugged = '$_basePath/${AppImages.illustrationConnectorPlugged}';
   static const imageIllustrationComplaintConfirm = '$_basePath/${AppImages.illustrationComplaintConfirm}';
   static const imageIllustrationComplaintLocation = '$_basePath/${AppImages.illustrationComplaintLocation}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
