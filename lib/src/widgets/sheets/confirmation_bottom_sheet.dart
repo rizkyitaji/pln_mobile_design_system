@@ -76,7 +76,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
               const SizedBox(height: AppSizes.s24),
               if (useColumn) ...[
                 ElevatedButton(
-                  onPressed: onConfirm ?? () => Navigator.pop(context),
+                  onPressed: onConfirm ?? () => Navigator.pop(context, true),
                   style: confirmButtonStyle,
                   child: Center(child: Text(confirmText ?? 'Konfirmasi')),
                 ),
@@ -99,7 +99,8 @@ class ConfirmationBottomSheet extends StatelessWidget {
                     ),
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: onConfirm ?? () => Navigator.pop(context),
+                        onPressed:
+                            onConfirm ?? () => Navigator.pop(context, true),
                         style: confirmButtonStyle,
                         child: Text(confirmText ?? 'Konfirmasi'),
                       ),

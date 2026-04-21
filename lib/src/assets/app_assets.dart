@@ -224,6 +224,9 @@ abstract class AppAssets {
   // --- AppImages Mapping ---
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imageComplaintBackgroundHomepage = '$_basePath/${AppImages.complaintBackgroundHomepage}';
+  static const imageIllustrationComplaintConfirm = '$_basePath/${AppImages.illustrationComplaintConfirm}';
+  static const imageIllustrationComplaintLocation = '$_basePath/${AppImages.illustrationComplaintLocation}';
+  static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imagePlaceholderWebviewError = '$_basePath/${AppImages.placeholderWebviewError}';
   static const imagePlaceholderBlock = '$_basePath/${AppImages.placeholderBlock}';
