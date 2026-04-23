@@ -11,5 +11,4 @@ abstract class AppAnimations {
   static const String charging = 'assets/animations/lottie/animation-charging.json';
   static const String loadingPrimary = 'assets/animations/lottie/animation-loading-primary.json';
   static const String loadingWhite = 'assets/animations/lottie/animation-loading-white.json';
-  static const String loading = 'assets/animations/lottie/animation-loading.json';
 }

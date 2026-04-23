@@ -7,7 +7,9 @@ abstract class AppImages {
   static const String complaintBackgroundHomepage = 'assets/images/png/complaint-background-homepage.png';
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
+  static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
+  static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
   // Group: SVG
