@@ -3,17 +3,24 @@ abstract class AppImages {
   AppImages._();
 
   // Group: PNG
-  static const String complaintBackgroundHomepage2 = 'assets/images/png/complaint-background-homepage-2.png';
-  static const String complaintBackgroundHomepage = 'assets/images/png/complaint-background-homepage.png';
   static const String illustrationComplaintConfirm = 'assets/images/png/illustration-complaint-confirm.png';
   static const String illustrationComplaintLocation = 'assets/images/png/illustration-complaint-location.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
+  static const String illustrationEmptyState1 = 'assets/images/png/illustration-empty-state-1.png';
+  static const String illustrationFailedState = 'assets/images/png/illustration-failed-state.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
+  static const String illustrationShinyLamp = 'assets/images/png/illustration-shiny-lamp.png';
+  static const String illustrtionEmptyState = 'assets/images/png/illustrtion-empty-state.png';
+  static const String placeholderConfirmation1 = 'assets/images/png/placeholder-confirmation-1.png';
+  static const String placeholderSuccess1 = 'assets/images/png/placeholder-success-1.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
   // Group: SVG
+  static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
+  static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
+  static const String illustrationEmptyStateComplaintHistory = 'assets/images/svg/illustration-empty-state-complaint-history.svg';
   static const String placeholderBlock = 'assets/images/svg/placeholder-block.svg';
   static const String placeholderConfirmation = 'assets/images/svg/placeholder-confirmation.svg';
   static const String placeholderElectroncard = 'assets/images/svg/placeholder-electronic-card.svg';
@@ -51,4 +58,7 @@ abstract class AppImages {
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
+  static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
+  static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
+  static const String complaintBackgroundHomepage = 'assets/images/png/backgrounds/complaint-background-homepage.png';
 }

@@ -34,13 +34,11 @@ class AppGeneralPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: extendBodyBehindAppBar,
-      appBar: AppBar(
-        leading: AppBackButton(
-          color: backButtonColor,
-          onPressed: onBackPressed,
-        ),
+      appBar: DSAppBar(
+        title: title,
         backgroundColor: appBarColor,
-        title: Text(title ?? ''),
+        backButtonColor: backButtonColor,
+        onBackPressed: onBackPressed,
       ),
       backgroundColor: backgroundColor,
       body: Stack(

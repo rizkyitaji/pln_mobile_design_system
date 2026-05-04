@@ -182,6 +182,7 @@ abstract class AppIcons {
   static const String wifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
   // Group: COLORED
+  static const String chargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String checkmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
   static const String evPointColored = 'assets/icons/svg/colored/icon-ev-point.svg';
   static const String handshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
@@ -195,6 +196,7 @@ abstract class AppIcons {
   static const String rank3Colored = 'assets/icons/svg/colored/icon-rank-3.svg';
   static const String targetColored = 'assets/icons/svg/colored/icon-target.svg';
   static const String thropyColored = 'assets/icons/svg/colored/icon-thropy.svg';
+  static const String tileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String voucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
   static const String walletColored = 'assets/icons/svg/colored/icon-wallet.svg';
 
