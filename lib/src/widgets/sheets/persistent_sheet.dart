@@ -18,6 +18,7 @@ class AppPersistentSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
       child: Container(
         width: double.infinity,
         padding: padding ?? EdgeInsets.all(AppSizes.s16),

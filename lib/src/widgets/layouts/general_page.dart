@@ -3,31 +3,29 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppGeneralPage extends StatelessWidget {
   final bool extendBodyBehindAppBar;
-  final String? backgroundImage, title;
-  final List<Widget> children, scrollableContent;
+  final EdgeInsetsGeometry? padding;
+  final List<Widget> children;
   final Widget child, persistentSheet;
+  final String? backgroundImage, title, refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor;
   final Future<void> Function()? onRefresh;
   final VoidCallback? onBackPressed;
-  final double initialChildSize, minChildSize, maxChildSize;
 
   const AppGeneralPage({
     super.key,
+    this.title,
+    this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
     this.children = const [],
-    this.scrollableContent = const [],
     this.child = const SizedBox(),
     this.persistentSheet = const SizedBox(),
     this.backgroundColor,
     this.appBarColor,
     this.backButtonColor,
-    this.title,
+    this.refreshIndicatorIcon,
     this.onRefresh,
     this.onBackPressed,
-    this.initialChildSize = 0.2,
-    this.minChildSize = 0.2,
-    this.maxChildSize = 0.88,
   });
 
   @override
@@ -62,23 +60,10 @@ class AppGeneralPage extends StatelessWidget {
               visible: onRefresh != null,
               replacement: _content,
               child: AppRefreshIndicator(
+                icon: refreshIndicatorIcon,
                 onRefresh: onRefresh != null ? onRefresh! : () async {},
                 child: _content,
               ),
-            ),
-          ),
-          Visibility(
-            visible: scrollableContent.isNotEmpty,
-            child: DraggableScrollableSheet(
-              initialChildSize: initialChildSize,
-              minChildSize: minChildSize,
-              maxChildSize: maxChildSize,
-              builder: (context, scrollController) {
-                return AppSheetContainer(
-                  scrollController: scrollController,
-                  children: scrollableContent,
-                );
-              },
             ),
           ),
           Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet),
@@ -89,7 +74,7 @@ class AppGeneralPage extends StatelessWidget {
 
   Widget get _content {
     return ListView(
-      padding: EdgeInsets.all(AppSizes.s16),
+      padding: padding ?? EdgeInsets.all(AppSizes.s16),
       physics: AlwaysScrollableScrollPhysics(),
       children: [child, ...children],
     );

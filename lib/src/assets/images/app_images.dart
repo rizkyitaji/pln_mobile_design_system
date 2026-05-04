@@ -15,6 +15,8 @@ abstract class AppImages {
   static const String illustrtionEmptyState = 'assets/images/png/illustrtion-empty-state.png';
   static const String placeholderConfirmation1 = 'assets/images/png/placeholder-confirmation-1.png';
   static const String placeholderSuccess1 = 'assets/images/png/placeholder-success-1.png';
+  static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';  
+  static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
   // Group: SVG

@@ -17,4 +17,8 @@ extension NumExt on num {
     if (context == null) return toDouble();
     return scaleWidth / context.mediaQuery.textScaler.scale(1);
   }
+
+  String get zeroPadding {
+    return toString().padLeft(2, '0');
+  }
 }

@@ -237,6 +237,8 @@ abstract class AppAssets {
   static const imageIllustrtionEmptyState = '$_basePath/${AppImages.illustrtionEmptyState}';
   static const imagePlaceholderConfirmation1 = '$_basePath/${AppImages.placeholderConfirmation1}';
   static const imagePlaceholderSuccess1 = '$_basePath/${AppImages.placeholderSuccess1}';
+  static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';  
+  static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
   static const imagePlaceholderWebviewError = '$_basePath/${AppImages.placeholderWebviewError}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
@@ -285,7 +287,6 @@ abstract class AppAssets {
   static const animationCharging = '$_basePath/${AppAnimations.charging}';
   static const animationLoadingPrimary = '$_basePath/${AppAnimations.loadingPrimary}';
   static const animationLoadingWhite = '$_basePath/${AppAnimations.loadingWhite}';
-  static const animationLoading = '$_basePath/${AppAnimations.loading}';
 
   // --- AppSounds Mapping ---
   static const soundChargingCompletionNotificationSound = '$_basePath/${AppSounds.chargingCompletionNotificationSound}';

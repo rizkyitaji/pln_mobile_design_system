@@ -6,12 +6,14 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppRefreshIndicator extends StatelessWidget {
   final Future<void> Function() onRefresh;
+  final String? icon;
   final Widget child;
 
   const AppRefreshIndicator({
     super.key,
     required this.onRefresh,
     required this.child,
+    this.icon,
   });
 
   @override
@@ -31,7 +33,7 @@ class AppRefreshIndicator extends StatelessWidget {
                   Positioned(
                     top: paddingTop * controller.value,
                     child: Lottie.asset(
-                      AppAssets.animationLoading,
+                      icon ?? AppAssets.animationLoadingPrimary,
                       animate: controller.isLoading,
                       width: 40,
                     ),

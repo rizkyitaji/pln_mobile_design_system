@@ -14,4 +14,11 @@ extension DateTimeExt on DateTime? {
     if (date == null) return '-';
     return DateFormat('dd MMMM y, HH:mm', 'id_ID').format(date);
   }
+
+  /// 09:10
+  String get formatHHmm {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('HH:mm', 'id_ID').format(date);
+  }
 }
