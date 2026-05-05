@@ -119,5 +119,21 @@ abstract class AppTheme {
         borderRadius: AppRadius.rounded8,
       ),
     ),
+    textTheme: TextTheme(
+      headlineLarge: AppTextStyles.headingLarge,
+      headlineMedium: AppTextStyles.headingMedium,
+      headlineSmall: AppTextStyles.headingSmall,
+      bodyLarge: AppTextStyles.bodyLarge,
+      bodyMedium: AppTextStyles.bodyMedium,
+      bodySmall: AppTextStyles.bodySmall,
+    ),
+    primaryTextTheme: TextTheme(
+      headlineLarge: AppTextStyles.headingLarge,
+      headlineMedium: AppTextStyles.headingMedium,
+      headlineSmall: AppTextStyles.headingSmall,
+      bodyLarge: AppTextStyles.bodyLarge,
+      bodyMedium: AppTextStyles.bodyMedium,
+      bodySmall: AppTextStyles.bodySmall,
+    ),
   );
 }

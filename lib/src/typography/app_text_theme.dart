@@ -5,6 +5,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
   final TextStyle headingLarge;
   final TextStyle headingMedium;
   final TextStyle headingSmall;
+  final TextStyle titleLarge;
+  final TextStyle titleMedium;
+  final TextStyle titleSmall;
   final TextStyle bodyLarge;
   final TextStyle bodyLargeMedium;
   final TextStyle bodyLargeSemiBold;
@@ -22,6 +25,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     required this.headingLarge,
     required this.headingMedium,
     required this.headingSmall,
+    required this.titleLarge,
+    required this.titleMedium,
+    required this.titleSmall,
     required this.bodyLarge,
     required this.bodyLargeMedium,
     required this.bodyLargeSemiBold,
@@ -40,6 +46,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     headingLarge: AppTextStyles.headingLarge,
     headingMedium: AppTextStyles.headingMedium,
     headingSmall: AppTextStyles.headingSmall,
+    titleLarge: AppTextStyles.titleLarge,
+    titleMedium: AppTextStyles.titleMedium,
+    titleSmall: AppTextStyles.titleSmall,
     bodyLarge: AppTextStyles.bodyLarge,
     bodyLargeMedium: AppTextStyles.bodyLargeMedium,
     bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold,
@@ -59,6 +68,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     TextStyle? headingLarge,
     TextStyle? headingMedium,
     TextStyle? headingSmall,
+    TextStyle? titleLarge,
+    TextStyle? titleMedium,
+    TextStyle? titleSmall,
     TextStyle? bodyLarge,
     TextStyle? bodyLargeMedium,
     TextStyle? bodyLargeSemiBold,
@@ -76,6 +88,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       headingLarge: headingLarge ?? this.headingLarge,
       headingMedium: headingMedium ?? this.headingMedium,
       headingSmall: headingSmall ?? this.headingSmall,
+      titleLarge: titleLarge ?? this.titleLarge,
+      titleMedium: titleMedium ?? this.titleMedium,
+      titleSmall: titleSmall ?? this.titleSmall,
       bodyLarge: bodyLarge ?? this.bodyLarge,
       bodyLargeMedium: bodyLargeMedium ?? this.bodyLargeMedium,
       bodyLargeSemiBold: bodyLargeSemiBold ?? this.bodyLargeSemiBold,
@@ -98,6 +113,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       headingLarge: TextStyle.lerp(headingLarge, other.headingLarge, t)!,
       headingMedium: TextStyle.lerp(headingMedium, other.headingMedium, t)!,
       headingSmall: TextStyle.lerp(headingSmall, other.headingSmall, t)!,
+      titleLarge: TextStyle.lerp(titleLarge, other.titleLarge, t)!,
+      titleMedium: TextStyle.lerp(titleMedium, other.titleMedium, t)!,
+      titleSmall: TextStyle.lerp(titleSmall, other.titleSmall, t)!,
       bodyLarge: TextStyle.lerp(bodyLarge, other.bodyLarge, t)!,
       bodyLargeMedium: TextStyle.lerp(
         bodyLargeMedium,

@@ -10,6 +10,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
   final TextStyle? descriptionStyle;
   final double? titleFontSize;
   final bool canPop, useColumn;
+  final bool? useSafeArea;
+  final SizedBox? paddingBottom;
 
   const AppConfirmationBottomSheet({
     super.key,
@@ -26,6 +28,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.descriptionStyle,
     this.canPop = true,
     this.useColumn = false,
+    this.useSafeArea,
+    this.paddingBottom,
   });
 
   @override
@@ -33,6 +37,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: canPop,
       child: SafeArea(
+        top: useSafeArea ?? true,
+        bottom: useSafeArea ?? true,
         child: Container(
           padding: const EdgeInsets.all(AppSizes.s16),
           decoration: const BoxDecoration(
@@ -76,7 +82,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
               const SizedBox(height: AppSizes.s24),
               if (useColumn) ...[
                 ElevatedButton(
-                  onPressed: onConfirm ?? () => Navigator.pop(context),
+                  onPressed: onConfirm ?? () => Navigator.pop(context, true),
                   style: confirmButtonStyle,
                   child: Center(child: Text(confirmText ?? 'Konfirmasi')),
                 ),
@@ -99,7 +105,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                     ),
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: onConfirm ?? () => Navigator.pop(context),
+                        onPressed:
+                            onConfirm ?? () => Navigator.pop(context, true),
                         style: confirmButtonStyle,
                         child: Text(confirmText ?? 'Konfirmasi'),
                       ),
@@ -107,6 +114,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                   ],
                 ),
               ],
+              useSafeArea == false && (paddingBottom != null) ? paddingBottom! : const SizedBox(),
             ],
           ),
         ),
@@ -129,6 +137,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     TextStyle? descriptionStyle,
     bool canPop = true,
     bool useColumn = false,
+    bool useSafeArea = false,
+    SizedBox? paddingBottom,
   }) {
     return showModalBottomSheet<T>(
       context: context,
@@ -150,6 +160,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
         descriptionStyle: descriptionStyle,
         canPop: canPop,
         useColumn: useColumn,
+        useSafeArea: useSafeArea,
+        paddingBottom: paddingBottom,
       ),
     );
   }

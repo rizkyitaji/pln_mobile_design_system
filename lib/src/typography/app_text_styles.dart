@@ -35,6 +35,24 @@ abstract class AppTextStyles {
     height: _height(AppLineHeight.lg, AppFontSize.lg),
   );
 
+  static TextStyle titleLarge = _textStyle.copyWith(
+    fontSize: AppFontSize.md,
+    fontWeight: AppFontWeight.semibold,
+    height: _height(AppLineHeight.md, AppFontSize.md),
+  );
+
+  static TextStyle titleMedium = _textStyle.copyWith(
+    fontSize: AppFontSize.sm,
+    fontWeight: AppFontWeight.semibold,
+    height: _height(AppLineHeight.sm, AppFontSize.sm),
+  );
+
+  static TextStyle titleSmall = _textStyle.copyWith(
+    fontSize: AppFontSize.xs,
+    fontWeight: AppFontWeight.semibold,
+    height: _height(AppLineHeight.xs, AppFontSize.xs),
+  );
+
   static TextStyle bodyLarge = _textStyle.copyWith(
     fontSize: AppFontSize.md,
     fontWeight: AppFontWeight.regular,
