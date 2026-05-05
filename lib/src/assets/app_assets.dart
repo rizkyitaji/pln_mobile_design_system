@@ -225,19 +225,23 @@ abstract class AppAssets {
   static const iconMenuUbahDaya = '$_basePath/${AppIcons.menuUbahDaya}';
 
   // --- AppImages Mapping ---
-  static const imageIllustrationComplaintConfirm = '$_basePath/${AppImages.illustrationComplaintConfirm}';
-  static const imageIllustrationComplaintLocation = '$_basePath/${AppImages.illustrationComplaintLocation}';
+  static const imageIllustrationBannerConfirmation = '$_basePath/${AppImages.illustrationBannerConfirmation}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
+  static const imageIllustrationConfirmationGeneral = '$_basePath/${AppImages.illustrationConfirmationGeneral}';
   static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
   static const imageIllustrationConnectorPlugged = '$_basePath/${AppImages.illustrationConnectorPlugged}';
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
-  static const imageIllustrationGeneralConfirmation = '$_basePath/${AppImages.illustrationGeneralConfirmation}';
-  static const imageIllustrationGeneralFailed = '$_basePath/${AppImages.illustrationGeneralFailed}';
-  static const imageIllustrationGeneralSuccess = '$_basePath/${AppImages.illustrationGeneralSuccess}';
+  static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
+  static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
+  static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
+  static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
-  static const imageIllustrationShinyLamp = '$_basePath/${AppImages.illustrationShinyLamp}';
+  static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
+  static const imageIllustrationSmileDefault = '$_basePath/${AppImages.illustrationSmileDefault}';
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
+  static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
+  static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
   static const imagePlaceholderWebviewError = '$_basePath/${AppImages.placeholderWebviewError}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
@@ -257,16 +261,6 @@ abstract class AppAssets {
   static const imagePlaceholderSuccess = '$_basePath/${AppImages.placeholderSuccess}';
   static const imagePlaceholderWarningSc = '$_basePath/${AppImages.placeholderWarningSc}';
   static const imagePlaceholderWarning = '$_basePath/${AppImages.placeholderWarning}';
-  static const imageMascot1 = '$_basePath/${AppImages.mascot1}';
-  static const imageMascot2 = '$_basePath/${AppImages.mascot2}';
-  static const imageMascot3 = '$_basePath/${AppImages.mascot3}';
-  static const imageMascot4 = '$_basePath/${AppImages.mascot4}';
-  static const imageMascot5 = '$_basePath/${AppImages.mascot5}';
-  static const imageMascot6 = '$_basePath/${AppImages.mascot6}';
-  static const imageMascot7 = '$_basePath/${AppImages.mascot7}';
-  static const imageMascot8 = '$_basePath/${AppImages.mascot8}';
-  static const imageMascot9 = '$_basePath/${AppImages.mascot9}';
-  static const imageMascot = '$_basePath/${AppImages.mascot}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
   static const imageBackgroundIndicatorChargingConnected = '$_basePath/${AppImages.backgroundIndicatorChargingConnected}';
   static const imageBackgroundIndicatorChargingConnecting = '$_basePath/${AppImages.backgroundIndicatorChargingConnecting}';

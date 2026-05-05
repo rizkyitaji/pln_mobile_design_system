@@ -3,19 +3,23 @@ abstract class AppImages {
   AppImages._();
 
   // Group: PNG
-  static const String illustrationComplaintConfirm = 'assets/images/png/illustration-complaint-confirm.png';
-  static const String illustrationComplaintLocation = 'assets/images/png/illustration-complaint-location.png';
+  static const String illustrationBannerConfirmation = 'assets/images/png/illustration-banner-confirmation.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
+  static const String illustrationConfirmationGeneral = 'assets/images/png/illustration-confirmation-general.png';
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
-  static const String illustrationGeneralConfirmation = 'assets/images/png/illustration-general-confirmation.png';
-  static const String illustrationGeneralFailed = 'assets/images/png/illustration-general-failed.png';
-  static const String illustrationGeneralSuccess = 'assets/images/png/illustration-general-success.png';
+  static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
+  static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
+  static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
+  static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
-  static const String illustrationShinyLamp = 'assets/images/png/illustration-shiny-lamp.png';
+  static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
+  static const String illustrationSmileDefault = 'assets/images/png/illustration-smile-default.png';
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
+  static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
+  static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
   // Group: SVG
@@ -37,18 +41,6 @@ abstract class AppImages {
   static const String placeholderSuccess = 'assets/images/svg/placeholder-success.svg';
   static const String placeholderWarningSc = 'assets/images/svg/placeholder-warning-sc.svg';
   static const String placeholderWarning = 'assets/images/svg/placeholder-warning.svg';
-
-  // Group: MASCOT
-  static const String mascot1 = 'assets/images/png/mascot/mascot-1.png';
-  static const String mascot2 = 'assets/images/png/mascot/mascot-2.png';
-  static const String mascot3 = 'assets/images/png/mascot/mascot-3.png';
-  static const String mascot4 = 'assets/images/png/mascot/mascot-4.png';
-  static const String mascot5 = 'assets/images/png/mascot/mascot-5.png';
-  static const String mascot6 = 'assets/images/png/mascot/mascot-6.png';
-  static const String mascot7 = 'assets/images/png/mascot/mascot-7.png';
-  static const String mascot8 = 'assets/images/png/mascot/mascot-8.png';
-  static const String mascot9 = 'assets/images/png/mascot/mascot-9.png';
-  static const String mascot = 'assets/images/png/mascot/mascot.png';
 
   // Group: BACKGROUNDS
   static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';
