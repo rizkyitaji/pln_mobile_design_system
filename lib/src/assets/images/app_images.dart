@@ -8,14 +8,13 @@ abstract class AppImages {
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
-  static const String illustrationEmptyState1 = 'assets/images/png/illustration-empty-state-1.png';
-  static const String illustrationFailedState = 'assets/images/png/illustration-failed-state.png';
+  static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
+  static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
+  static const String illustrationGeneralConfirmation = 'assets/images/png/illustration-general-confirmation.png';
+  static const String illustrationGeneralFailed = 'assets/images/png/illustration-general-failed.png';
+  static const String illustrationGeneralSuccess = 'assets/images/png/illustration-general-success.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationShinyLamp = 'assets/images/png/illustration-shiny-lamp.png';
-  static const String illustrtionEmptyState = 'assets/images/png/illustrtion-empty-state.png';
-  static const String placeholderConfirmation1 = 'assets/images/png/placeholder-confirmation-1.png';
-  static const String placeholderSuccess1 = 'assets/images/png/placeholder-success-1.png';
-  static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';  
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
