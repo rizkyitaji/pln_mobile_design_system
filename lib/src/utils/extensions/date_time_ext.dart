@@ -15,7 +15,7 @@ extension DateTimeExt on DateTime? {
     return DateFormat('dd MMMM y, HH:mm', 'id_ID').format(date);
   }
 
-  /// 09:10
+  /// Output: 09:10
   String get formatHHmm {
     var date = this;
     if (date == null) return '-';

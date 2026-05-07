@@ -39,7 +39,6 @@ flutter:
     - assets/icons/svg/solid/
     - assets/images/png/
     - assets/images/png/backgrounds/
-    - assets/images/png/mascot/
     - assets/images/svg/
     - assets/sounds/
 

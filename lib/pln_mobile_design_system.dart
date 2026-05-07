@@ -16,7 +16,7 @@ export 'src/utils/extensions/index.dart';
 export 'src/utils/formatters/index.dart';
 
 export 'src/widgets/buttons/index.dart';
-export 'src/widgets/app_bar.dart';
+export 'src/widgets/app_bars/app_bar_default.dart';
 export 'src/widgets/cards/index.dart';
 export 'src/widgets/dialogs/index.dart';
 export 'src/widgets/forms/index.dart';

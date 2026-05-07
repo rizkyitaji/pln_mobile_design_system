@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class DSAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String? title;
-  final Widget? titleWidget;
-  final Widget? leading;
+/// Utamakan untuk gunakan AppBar pada AppGeneralPage, jika tidak ada keperluan khusus untuk pakai widget ini maka bisa dihapus
+class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
+  final String? titleText;
+  final Widget? title, leading;
   final List<Widget>? actions;
   final PreferredSizeWidget? bottom;
   final Color? backgroundColor;
@@ -14,12 +14,12 @@ class DSAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double elevation;
   final double toolbarHeight;
   final bool centerTitle;
-  final bool showBackButton;
+  final bool automaticallyImplyLeading;
 
-  const DSAppBar({
+  const AppBarDefault({
     super.key,
+    this.titleText,
     this.title,
-    this.titleWidget,
     this.leading,
     this.actions,
     this.bottom,
@@ -30,7 +30,7 @@ class DSAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.elevation = 0,
     this.toolbarHeight = kToolbarHeight,
     this.centerTitle = false,
-    this.showBackButton = true,
+    this.automaticallyImplyLeading = true,
   });
 
   @override
@@ -42,30 +42,28 @@ class DSAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading:
           leading ??
-          (showBackButton
-              ? AppBackButton(color: backButtonColor, onPressed: onBackPressed)
-              : null),
+          (automaticallyImplyLeading
+              ? null
+              : AppBackButton(
+                  color: backButtonColor,
+                  onPressed: onBackPressed,
+                )),
       actions: actions,
       bottom: bottom,
-      backgroundColor: backgroundColor ?? AppColors.white,
-      automaticallyImplyLeading: false,
+      backgroundColor: backgroundColor ?? AppColors.background,
+      automaticallyImplyLeading: automaticallyImplyLeading,
       surfaceTintColor: AppColors.transparent,
       elevation: elevation,
       scrolledUnderElevation: elevation,
       centerTitle: centerTitle,
       toolbarHeight: toolbarHeight,
-      titleSpacing: 0,
-      title: Padding(
-        padding: const EdgeInsets.only(bottom: 4.0),
-        child:
-            titleWidget ??
-            Text(
-              title ?? '',
-              style: AppTextStyles.headingSmall.copyWith(
-                color: titleColor ?? AppColors.textHeading,
-              ),
-            ),
-      ),
+      titleSpacing: 8,
+      title:
+          title ??
+          Text(
+            titleText ?? '',
+            style: AppTextStyles.headingSmall.copyWith(color: titleColor),
+          ),
     );
   }
 }

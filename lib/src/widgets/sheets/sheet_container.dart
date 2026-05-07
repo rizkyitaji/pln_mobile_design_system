@@ -4,6 +4,7 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppSheetContainer extends StatelessWidget {
   final Widget? child;
   final List<Widget> children;
+  final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
   final bool showDragHandle;
 
@@ -11,6 +12,7 @@ class AppSheetContainer extends StatelessWidget {
     super.key,
     this.child,
     this.padding,
+    this.controller,
     this.children = const [],
     this.showDragHandle = true,
   });
@@ -46,6 +48,7 @@ class AppSheetContainer extends StatelessWidget {
               visible: child != null,
               replacement: ListView(
                 shrinkWrap: true,
+                controller: controller,
                 padding: padding ?? EdgeInsets.zero,
                 physics: ClampingScrollPhysics(),
                 children: children,
