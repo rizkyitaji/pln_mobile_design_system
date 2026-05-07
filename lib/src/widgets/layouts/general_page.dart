@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppGeneralPage extends StatelessWidget {
+  final VoidCallback? onBackPressed;
   final EdgeInsetsGeometry? padding;
   final List<Widget>? children, actionsAppBar;
   final Widget child, persistentSheet;
   final Widget? leadingAppBar, titleAppBar;
+  final PreferredSizeWidget? bottomAppBar;
+  final Future<void> Function()? onRefresh;
   final String? backgroundImage, title, refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
-  final Future<void> Function()? onRefresh;
-  final VoidCallback? onBackPressed;
-  final PreferredSizeWidget? bottomAppBar;
-  final double? initialChildSize, minChildSize, maxChildSize;
+  final double? initialChildSize, minChildSize, maxChildSize, paddingTop;
   final bool extendBodyBehindAppBar, automaticallyImplyLeading, showDragHandle;
+  final ScrollPhysics? physics;
 
   const AppGeneralPage({
     super.key,
@@ -39,6 +40,8 @@ class AppGeneralPage extends StatelessWidget {
     this.minChildSize,
     this.maxChildSize,
     this.showDragHandle = false,
+    this.paddingTop,
+    this.physics,
   });
 
   @override
@@ -46,15 +49,15 @@ class AppGeneralPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: extendBodyBehindAppBar,
       appBar: AppBar(
-        automaticallyImplyLeading: automaticallyImplyLeading,
+        automaticallyImplyLeading: false,
         leading:
             leadingAppBar ??
             (automaticallyImplyLeading
-                ? null
-                : AppBackButton(
+                ? AppBackButton(
                     color: backButtonColor,
                     onPressed: onBackPressed,
-                  )),
+                  )
+                : null),
         backgroundColor: appBarColor,
         title: titleAppBar ?? Text(title ?? ''),
         titleTextStyle: AppTextStyles.headingSmall.copyWith(color: titleColor),
@@ -77,7 +80,9 @@ class AppGeneralPage extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).padding.top + kToolbarHeight,
+              top:
+                  paddingTop ??
+                  MediaQuery.of(context).padding.top + kToolbarHeight,
             ),
             child: Visibility(
               visible: onRefresh != null,
@@ -97,6 +102,8 @@ class AppGeneralPage extends StatelessWidget {
               maxChildSize: maxChildSize ?? 0.88,
               builder: (context, scrollController) {
                 return AppSheetContainer(
+                  expand: true,
+                  physics: physics,
                   showDragHandle: showDragHandle,
                   controller: scrollController,
                   children: children ?? [],

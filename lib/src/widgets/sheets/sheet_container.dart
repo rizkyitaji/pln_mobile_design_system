@@ -6,7 +6,8 @@ class AppSheetContainer extends StatelessWidget {
   final List<Widget> children;
   final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
-  final bool showDragHandle;
+  final bool showDragHandle, expand;
+  final ScrollPhysics? physics;
 
   const AppSheetContainer({
     super.key,
@@ -15,6 +16,8 @@ class AppSheetContainer extends StatelessWidget {
     this.controller,
     this.children = const [],
     this.showDragHandle = true,
+    this.expand = false,
+    this.physics,
   });
 
   @override
@@ -46,18 +49,26 @@ class AppSheetContainer extends StatelessWidget {
             ),
             Visibility(
               visible: child != null,
-              replacement: ListView(
-                shrinkWrap: true,
-                controller: controller,
-                padding: padding ?? EdgeInsets.zero,
-                physics: ClampingScrollPhysics(),
-                children: children,
+              replacement: Visibility(
+                visible: expand,
+                replacement: _listView,
+                child: Expanded(child: _listView),
               ),
               child: child ?? SizedBox(),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget get _listView {
+    return ListView(
+      shrinkWrap: true,
+      controller: controller,
+      padding: padding ?? EdgeInsets.zero,
+      physics: physics ?? ClampingScrollPhysics(),
+      children: children,
     );
   }
 }

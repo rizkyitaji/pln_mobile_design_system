@@ -43,15 +43,12 @@ class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
       leading:
           leading ??
           (automaticallyImplyLeading
-              ? null
-              : AppBackButton(
-                  color: backButtonColor,
-                  onPressed: onBackPressed,
-                )),
+              ? AppBackButton(color: backButtonColor, onPressed: onBackPressed)
+              : null),
       actions: actions,
       bottom: bottom,
+      automaticallyImplyLeading: false,
       backgroundColor: backgroundColor ?? AppColors.background,
-      automaticallyImplyLeading: automaticallyImplyLeading,
       surfaceTintColor: AppColors.transparent,
       elevation: elevation,
       scrolledUnderElevation: elevation,
