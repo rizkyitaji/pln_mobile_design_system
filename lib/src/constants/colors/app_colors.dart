@@ -199,7 +199,7 @@ abstract class AppColors {
   static const Color borderWarning = AppPalette.yellow500;
   static const Color borderWarningPressed = AppPalette.yellow600;
   static const Color borderWarningSubtle = AppPalette.yellow50;
-  static const Color borderYellowSubtlePressed = AppPalette.yellow100;
+  static const Color borderWarningSubtlePressed = AppPalette.yellow100;
 
   // --- BORDER DISABLED ---
   static const Color borderDisabled = AppPalette.slate200;
