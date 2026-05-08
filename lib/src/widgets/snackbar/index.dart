@@ -89,7 +89,7 @@ class AppSnackBar {
                   children: [
                     Text(
                       message,
-                      style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textOnColorHeading,
                       ),
                     ),
@@ -97,7 +97,7 @@ class AppSnackBar {
                       visible: description != null,
                       child: Text(
                         description ?? '-',
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textOnColorBody,
                         ),
                       ),
@@ -112,9 +112,8 @@ class AppSnackBar {
                           ),
                           child: Text(
                             actionText ?? 'OK',
-                            style: AppTextStyles.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textOnColorHeading,
-                            ),
+                            style: context.textTheme.bodyCaptionSemiBold
+                                .copyWith(color: AppColors.textOnColorHeading),
                           ),
                         ),
                       ),
@@ -165,7 +164,7 @@ class AppSnackBar {
                   children: [
                     Text(
                       message,
-                      style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textOnColorHeading,
                       ),
                     ),
@@ -173,7 +172,7 @@ class AppSnackBar {
                       visible: description != null,
                       child: Text(
                         description ?? '-',
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textOnColorBody,
                         ),
                       ),
@@ -188,9 +187,8 @@ class AppSnackBar {
                           ),
                           child: Text(
                             actionText ?? 'OK',
-                            style: AppTextStyles.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textOnColorHeading,
-                            ),
+                            style: context.textTheme.bodyCaptionSemiBold
+                                .copyWith(color: AppColors.textOnColorHeading),
                           ),
                         ),
                       ),
@@ -241,7 +239,7 @@ class AppSnackBar {
                   children: [
                     Text(
                       message,
-                      style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textOnColorHeading,
                       ),
                     ),
@@ -249,7 +247,7 @@ class AppSnackBar {
                       visible: description != null,
                       child: Text(
                         description ?? '-',
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textOnColorBody,
                         ),
                       ),
@@ -264,9 +262,8 @@ class AppSnackBar {
                           ),
                           child: Text(
                             actionText ?? 'OK',
-                            style: AppTextStyles.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textOnColorHeading,
-                            ),
+                            style: context.textTheme.bodyCaptionSemiBold
+                                .copyWith(color: AppColors.textOnColorHeading),
                           ),
                         ),
                       ),
@@ -317,7 +314,7 @@ class AppSnackBar {
                   children: [
                     Text(
                       message,
-                      style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textOnColorHeading,
                       ),
                     ),
@@ -325,7 +322,7 @@ class AppSnackBar {
                       visible: description != null,
                       child: Text(
                         description ?? '-',
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textOnColorBody,
                         ),
                       ),
@@ -340,9 +337,8 @@ class AppSnackBar {
                           ),
                           child: Text(
                             actionText ?? 'OK',
-                            style: AppTextStyles.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textOnColorHeading,
-                            ),
+                            style: context.textTheme.bodyCaptionSemiBold
+                                .copyWith(color: AppColors.textOnColorHeading),
                           ),
                         ),
                       ),
@@ -388,7 +384,7 @@ class AppSnackBar {
                   children: [
                     Text(
                       message,
-                      style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textOnColorHeading,
                       ),
                     ),
@@ -396,7 +392,7 @@ class AppSnackBar {
                       visible: description != null,
                       child: Text(
                         description ?? '-',
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textOnColorBody,
                         ),
                       ),
@@ -411,9 +407,8 @@ class AppSnackBar {
                           ),
                           child: Text(
                             actionText ?? 'OK',
-                            style: AppTextStyles.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textOnColorHeading,
-                            ),
+                            style: context.textTheme.bodyCaptionSemiBold
+                                .copyWith(color: AppColors.textOnColorHeading),
                           ),
                         ),
                       ),

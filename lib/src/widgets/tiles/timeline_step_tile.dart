@@ -85,7 +85,7 @@ class AppTimelineStepTile extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: AppTextStyles.bodyMediumSemiBold.copyWith(
+                  style: context.textTheme.bodyMediumSemiBold.copyWith(
                     color: AppColors.textHeading,
                   ),
                 ),
@@ -106,7 +106,7 @@ class AppTimelineStepTile extends StatelessWidget {
                     Expanded(
                       child: Text(
                         subtitle,
-                        style: AppTextStyles.bodyCaption.copyWith(
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: AppColors.textPlaceholder,
                         ),
                       ),

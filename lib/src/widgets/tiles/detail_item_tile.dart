@@ -38,7 +38,7 @@ class AppDetailItemTile extends StatelessWidget {
                   label,
                   style:
                       labelStyle ??
-                      AppTextStyles.bodyCaptionMedium.copyWith(
+                      context.textTheme.bodyCaptionMedium.copyWith(
                         color: AppColors.textCaption,
                       ),
                 ),
@@ -54,7 +54,7 @@ class AppDetailItemTile extends StatelessWidget {
             value,
             style:
                 valueStyle ??
-                AppTextStyles.bodyMediumMed.copyWith(
+                context.textTheme.bodyMediumMed.copyWith(
                   color: AppColors.textHeading,
                 ),
           ),
