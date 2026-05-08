@@ -11,6 +11,7 @@ abstract class AppColors {
   static const Color transparent = Colors.transparent;
   static const Color blackPearl = AppPalette.blackPearl;
   static const Color blueDeep = AppPalette.blue1000;
+  static const Color dark = AppPalette.slate700;
 
   // --- BACKGROUND ---
   static const Color background = AppPalette.slate50;
@@ -139,11 +140,11 @@ abstract class AppColors {
   static const Color iconOnSuccess = AppPalette.green100;
   static const Color iconOnSuccessPressed = AppPalette.green200;
 
-  // --- ICON YELLOW (Warning) ---
-  static const Color iconYellow = AppPalette.yellow600;
-  static const Color iconYellowPressed = AppPalette.yellow700;
-  static const Color iconOnYellow = AppPalette.yellow100;
-  static const Color iconOnYellowPressed = AppPalette.yellow200;
+  // --- ICON WARNING ---
+  static const Color iconWarning = AppPalette.yellow600;
+  static const Color iconWarningPressed = AppPalette.yellow700;
+  static const Color iconOnWarning = AppPalette.yellow100;
+  static const Color iconOnWarningPressed = AppPalette.yellow200;
 
   // --- ICON DISABLED ---
   static const Color iconDisabled = AppPalette.slate500;
@@ -194,10 +195,10 @@ abstract class AppColors {
   static const Color borderSuccessSubtle = AppPalette.green50;
   static const Color borderSuccessSubtlePressed = AppPalette.green100;
 
-  // --- BORDER YELLOW (Warning) ---
-  static const Color borderYellow = AppPalette.yellow500;
-  static const Color borderYellowPressed = AppPalette.yellow600;
-  static const Color borderYellowSubtle = AppPalette.yellow50;
+  // --- BORDER WARNING ---
+  static const Color borderWarning = AppPalette.yellow500;
+  static const Color borderWarningPressed = AppPalette.yellow600;
+  static const Color borderWarningSubtle = AppPalette.yellow50;
   static const Color borderYellowSubtlePressed = AppPalette.yellow100;
 
   // --- BORDER DISABLED ---

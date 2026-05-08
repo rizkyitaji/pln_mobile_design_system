@@ -4,15 +4,20 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppSheetContainer extends StatelessWidget {
   final Widget? child;
   final List<Widget> children;
+  final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
-  final bool showDragHandle;
+  final bool showDragHandle, expand;
+  final ScrollPhysics? physics;
 
   const AppSheetContainer({
     super.key,
     this.child,
     this.padding,
+    this.controller,
     this.children = const [],
     this.showDragHandle = true,
+    this.expand = false,
+    this.physics,
   });
 
   @override
@@ -44,17 +49,26 @@ class AppSheetContainer extends StatelessWidget {
             ),
             Visibility(
               visible: child != null,
-              replacement: ListView(
-                shrinkWrap: true,
-                padding: padding ?? EdgeInsets.zero,
-                physics: ClampingScrollPhysics(),
-                children: children,
+              replacement: Visibility(
+                visible: expand,
+                replacement: _listView,
+                child: Expanded(child: _listView),
               ),
               child: child ?? SizedBox(),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Widget get _listView {
+    return ListView(
+      shrinkWrap: true,
+      controller: controller,
+      padding: padding ?? EdgeInsets.zero,
+      physics: physics ?? ClampingScrollPhysics(),
+      children: children,
     );
   }
 }

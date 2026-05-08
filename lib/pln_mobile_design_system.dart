@@ -16,7 +16,7 @@ export 'src/utils/extensions/index.dart';
 export 'src/utils/formatters/index.dart';
 
 export 'src/widgets/buttons/index.dart';
-export 'src/widgets/app_bar.dart';
+export 'src/widgets/app_bars/index.dart';
 export 'src/widgets/cards/index.dart';
 export 'src/widgets/dialogs/index.dart';
 export 'src/widgets/forms/index.dart';
@@ -24,3 +24,4 @@ export 'src/widgets/indicators/index.dart';
 export 'src/widgets/layouts/index.dart';
 export 'src/widgets/tiles/index.dart';
 export 'src/widgets/sheets/index.dart';
+export 'src/widgets/snackbar/index.dart';
