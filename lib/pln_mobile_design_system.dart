@@ -24,3 +24,4 @@ export 'src/widgets/indicators/index.dart';
 export 'src/widgets/layouts/index.dart';
 export 'src/widgets/tiles/index.dart';
 export 'src/widgets/sheets/index.dart';
+export 'src/widgets/snackbar/index.dart';

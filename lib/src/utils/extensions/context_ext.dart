@@ -14,6 +14,8 @@ extension ContextExt on BuildContext {
   EdgeInsets get viewInsets => mediaQuery.viewInsets;
   EdgeInsets get viewPadding => mediaQuery.viewPadding;
 
+  double get paddingTop => mediaQuery.padding.top;
+
   Orientation get orientation => mediaQuery.orientation;
 
   bool get isPortrait => orientation == Orientation.portrait;
@@ -22,4 +24,10 @@ extension ContextExt on BuildContext {
   double get textScale => PlatformDispatcher.instance.textScaleFactor;
 
   AppTextTheme get textTheme => Theme.of(this).extension<AppTextTheme>()!;
+
+  void safePop<T extends Object?>([T? result]) {
+    if (Navigator.canPop(this)) {
+      Navigator.pop<T>(this, result);
+    }
+  }
 }

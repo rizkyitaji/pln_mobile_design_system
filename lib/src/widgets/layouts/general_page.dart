@@ -11,7 +11,7 @@ class AppGeneralPage extends StatelessWidget {
   final Future<void> Function()? onRefresh;
   final String? backgroundImage, title, refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
-  final double? initialChildSize, minChildSize, maxChildSize, paddingTop;
+  final double? initialChildSize, minChildSize, maxChildSize;
   final bool extendBodyBehindAppBar, automaticallyImplyLeading, showDragHandle;
   final ScrollPhysics? physics;
 
@@ -35,12 +35,11 @@ class AppGeneralPage extends StatelessWidget {
     this.titleAppBar,
     this.bottomAppBar,
     this.actionsAppBar,
-    this.automaticallyImplyLeading = false,
+    this.automaticallyImplyLeading = true,
     this.initialChildSize,
     this.minChildSize,
     this.maxChildSize,
     this.showDragHandle = false,
-    this.paddingTop,
     this.physics,
   });
 
@@ -80,9 +79,9 @@ class AppGeneralPage extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              top:
-                  paddingTop ??
-                  MediaQuery.of(context).padding.top + kToolbarHeight,
+              top: extendBodyBehindAppBar
+                  ? context.paddingTop + kToolbarHeight
+                  : 0,
             ),
             child: Visibility(
               visible: onRefresh != null,
