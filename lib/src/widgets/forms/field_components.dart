@@ -89,8 +89,12 @@ class AppUploadField extends StatelessWidget {
   final ImageProvider? image;
   final VoidCallback onTap;
   final String changeLabel;
+  final String addLabel;
   final String uploadLabel;
   final Widget? loadingWidget;
+  final bool showAddButton;
+  final double? height;
+  final BorderRadius? borderRadius;
 
   const AppUploadField({
     super.key,
@@ -100,13 +104,20 @@ class AppUploadField extends StatelessWidget {
     this.required = false,
     this.image,
     this.changeLabel = 'Ganti Foto',
+    this.addLabel = 'Tambah Foto',
     this.uploadLabel = 'Upload file atau foto',
     this.loadingWidget,
+    this.showAddButton = false,
+    this.height,
+    this.borderRadius,
   });
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final effectiveOnTap = loading ? null : onTap;
+    final effectiveBorderRadius = borderRadius ?? AppRadius.rounded12;
+    final showActionButton = image != null || showAddButton;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,18 +127,22 @@ class AppUploadField extends StatelessWidget {
             Expanded(
               child: AppFieldLabel(label: label, required: required),
             ),
-            if (image != null)
-              TextButton(onPressed: onTap, child: Text(changeLabel)),
+            if (showActionButton)
+              TextButton(
+                onPressed: effectiveOnTap,
+                child: Text(image != null ? changeLabel : addLabel),
+              ),
           ],
         ),
         const SizedBox(height: AppSizes.s8),
         if (loading) ...[
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(AppSizes.s24),
+            height: height,
+            padding: height == null ? const EdgeInsets.all(AppSizes.s24) : null,
             decoration: BoxDecoration(
               color: AppColors.primarySubtle,
-              borderRadius: AppRadius.rounded12,
+              borderRadius: effectiveBorderRadius,
             ),
             child: Center(
               child:
@@ -141,33 +156,36 @@ class AppUploadField extends StatelessWidget {
           ),
         ] else if (image != null)
           InkWell(
-            borderRadius: AppRadius.rounded12,
-            onTap: onTap,
+            borderRadius: effectiveBorderRadius,
+            onTap: effectiveOnTap,
             child: ClipRRect(
-              borderRadius: AppRadius.rounded12,
+              borderRadius: effectiveBorderRadius,
               child: SizedBox(
                 width: double.infinity,
-                height: 190,
+                height: height ?? 190,
                 child: Image(image: image!, fit: BoxFit.cover),
               ),
             ),
           )
         else
           InkWell(
-            borderRadius: AppRadius.rounded12,
-            onTap: onTap,
+            borderRadius: effectiveBorderRadius,
+            onTap: effectiveOnTap,
             child: DottedBorder(
               options: RoundedRectDottedBorderOptions(
                 dashPattern: const [8, 6],
-                radius: const Radius.circular(AppRadius.sm),
+                radius: effectiveBorderRadius.topLeft,
                 color: AppColors.borderPrimary,
               ),
               child: Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: AppSizes.s32),
+                height: height,
+                padding: height == null
+                    ? const EdgeInsets.symmetric(vertical: AppSizes.s32)
+                    : null,
                 decoration: BoxDecoration(
                   color: AppColors.primarySubtle,
-                  borderRadius: AppRadius.rounded12,
+                  borderRadius: effectiveBorderRadius,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

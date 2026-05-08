@@ -6,8 +6,10 @@ class AppGeneralPage extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final List<Widget> children;
   final Widget child, persistentSheet;
+  final Widget? floatingActionButton;
+  final List<Widget>? actions;
   final String? backgroundImage, title, refreshIndicatorIcon;
-  final Color? backgroundColor, appBarColor, backButtonColor;
+  final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final Future<void> Function()? onRefresh;
   final VoidCallback? onBackPressed;
 
@@ -20,9 +22,12 @@ class AppGeneralPage extends StatelessWidget {
     this.children = const [],
     this.child = const SizedBox(),
     this.persistentSheet = const SizedBox(),
+    this.floatingActionButton,
+    this.actions,
     this.backgroundColor,
     this.appBarColor,
     this.backButtonColor,
+    this.titleColor,
     this.refreshIndicatorIcon,
     this.onRefresh,
     this.onBackPressed,
@@ -35,7 +40,9 @@ class AppGeneralPage extends StatelessWidget {
       appBar: DSAppBar(
         title: title,
         backgroundColor: appBarColor,
+        titleColor: titleColor,
         backButtonColor: backButtonColor,
+        actions: actions,
         onBackPressed: onBackPressed,
       ),
       backgroundColor: backgroundColor,
