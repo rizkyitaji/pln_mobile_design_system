@@ -22,13 +22,13 @@ class AppSheetContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: AppRadius.topRounded12,
-          color: AppColors.white,
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: AppRadius.topRounded12,
+        color: AppColors.white,
+      ),
+      child: SafeArea(
+        top: false,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

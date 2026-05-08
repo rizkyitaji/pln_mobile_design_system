@@ -5,30 +5,27 @@ class AppPersistentSheet extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final BorderRadiusGeometry? borderRadius;
   final BoxBorder? border;
-  final Widget? child;
+  final Widget child;
 
   const AppPersistentSheet({
     super.key,
     this.padding,
     this.borderRadius,
     this.border,
-    this.child,
+    this.child = const SizedBox(),
   });
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      child: Container(
-        width: double.infinity,
-        padding: padding ?? EdgeInsets.all(AppSizes.s16),
-        decoration: BoxDecoration(
-          borderRadius: borderRadius ?? AppRadius.topRounded12,
-          color: AppColors.white,
-          border: border,
-        ),
-        child: child,
+    return Container(
+      width: double.infinity,
+      padding: padding ?? EdgeInsets.all(AppSizes.s16),
+      decoration: BoxDecoration(
+        borderRadius: borderRadius ?? AppRadius.topRounded12,
+        color: AppColors.white,
+        border: border,
       ),
+      child: SafeArea(top: false, child: child),
     );
   }
 }

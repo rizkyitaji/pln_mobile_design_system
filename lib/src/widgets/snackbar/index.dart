@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-enum SnackBarType { success, error, info, warning }
+enum AppSnackBarType { success, error, info, warning }
 
-enum SnackBarPosition { top, bottom }
+enum AppSnackBarPosition { top, bottom }
 
 class AppSnackBar {
   static void show({
     String? msg,
     String? description,
-    SnackBarType? type,
-    SnackBarPosition? position,
+    AppSnackBarType? type,
+    AppSnackBarPosition? position,
     VoidCallback? onTap,
     String? actionText,
     double? height,
@@ -38,8 +38,8 @@ class AppSnackBar {
     required BuildContext context,
     required String message,
     String? description,
-    SnackBarType? type,
-    SnackBarPosition? position,
+    AppSnackBarType? type,
+    AppSnackBarPosition? position,
     VoidCallback? onTap,
     String? actionText,
     double? height,
@@ -58,14 +58,14 @@ class AppSnackBar {
         context.screenHeight - kToolbarHeight - context.paddingTop - height;
 
     switch (type) {
-      case SnackBarType.success:
+      case AppSnackBarType.success:
         return SnackBar(
           duration: Duration(seconds: 3),
           margin: EdgeInsets.fromLTRB(
             AppSizes.s16,
             AppSizes.zero,
             AppSizes.s16,
-            position == SnackBarPosition.top ? paddingBottom : AppSizes.s32,
+            position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
           backgroundColor: AppColors.successPressed,
@@ -134,14 +134,14 @@ class AppSnackBar {
             ],
           ),
         );
-      case SnackBarType.error:
+      case AppSnackBarType.error:
         return SnackBar(
           duration: Duration(seconds: 3),
           margin: EdgeInsets.fromLTRB(
             AppSizes.s16,
             AppSizes.zero,
             AppSizes.s16,
-            position == SnackBarPosition.top ? paddingBottom : AppSizes.s32,
+            position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
           backgroundColor: AppColors.errorPressed,
@@ -210,14 +210,14 @@ class AppSnackBar {
             ],
           ),
         );
-      case SnackBarType.info:
+      case AppSnackBarType.info:
         return SnackBar(
           duration: Duration(seconds: 3),
           margin: EdgeInsets.fromLTRB(
             AppSizes.s16,
             AppSizes.zero,
             AppSizes.s16,
-            position == SnackBarPosition.top ? paddingBottom : AppSizes.s32,
+            position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
           backgroundColor: AppColors.secondaryPressed,
@@ -286,14 +286,14 @@ class AppSnackBar {
             ],
           ),
         );
-      case SnackBarType.warning:
+      case AppSnackBarType.warning:
         return SnackBar(
           duration: Duration(seconds: 3),
           margin: EdgeInsets.fromLTRB(
             AppSizes.s16,
             AppSizes.zero,
             AppSizes.s16,
-            position == SnackBarPosition.top ? paddingBottom : AppSizes.s32,
+            position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
           backgroundColor: AppColors.textWarningPressed,
