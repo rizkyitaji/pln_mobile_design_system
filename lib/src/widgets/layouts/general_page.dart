@@ -60,7 +60,9 @@ class AppGeneralPage extends StatelessWidget {
                 : null),
         backgroundColor: appBarColor,
         title: titleAppBar ?? Text(title ?? ''),
-        titleTextStyle: AppTextStyles.headingSmall.copyWith(color: titleColor),
+        titleTextStyle: AppTextStyles.headingSmall.copyWith(
+          color: titleColor ?? AppColors.textHeading,
+        ),
         bottom: bottomAppBar,
         actions: actionsAppBar,
       ),

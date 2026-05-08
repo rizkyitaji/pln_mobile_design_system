@@ -269,9 +269,9 @@ abstract class AppAssets {
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
+  static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
-  static const imageComplaintBackgroundHomepage = '$_basePath/${AppImages.complaintBackgroundHomepage}';
 
   // --- AppAnimations Mapping ---
   static const animationOnBoarding1 = '$_basePath/${AppAnimations.onBoarding1}';

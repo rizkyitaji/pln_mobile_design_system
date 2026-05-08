@@ -59,7 +59,9 @@ class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
           title ??
           Text(
             titleText ?? '',
-            style: AppTextStyles.headingSmall.copyWith(color: titleColor),
+            style: AppTextStyles.headingSmall.copyWith(
+              color: titleColor ?? AppColors.textHeading,
+            ),
           ),
     );
   }
