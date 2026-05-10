@@ -17,7 +17,7 @@ class AppBackButton extends StatelessWidget {
         width: AppSizes.s24,
         height: AppSizes.s24,
         colorFilter: color != null
-            ? ColorFilter.mode(color ?? AppColors.iconOnColor, BlendMode.srcIn)
+            ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
             : null,
       ),
     );

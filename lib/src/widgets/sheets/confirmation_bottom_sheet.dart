@@ -10,7 +10,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
   final TextStyle? descriptionStyle;
   final double? titleFontSize;
   final bool canPop, useColumn;
-  final bool? useSafeArea;
   final SizedBox? paddingBottom;
 
   const AppConfirmationBottomSheet({
@@ -28,7 +27,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.descriptionStyle,
     this.canPop = true,
     this.useColumn = false,
-    this.useSafeArea,
     this.paddingBottom,
   });
 
@@ -36,9 +34,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: canPop,
-      child: SafeArea(
-        top: useSafeArea ?? true,
-        bottom: useSafeArea ?? true,
+      child: AppSheetContainer(
         child: Container(
           padding: const EdgeInsets.all(AppSizes.s16),
           decoration: const BoxDecoration(
@@ -80,41 +76,50 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                 ).copyWith(textAlign: WrapAlignment.center),
               ),
               const SizedBox(height: AppSizes.s24),
-              if (useColumn) ...[
-                ElevatedButton(
-                  onPressed: onConfirm ?? () => Navigator.pop(context, true),
-                  style: confirmButtonStyle,
-                  child: Center(child: Text(confirmText ?? 'Konfirmasi')),
-                ),
-                SizedBox(height: AppSizes.s12),
-                OutlinedButton(
-                  onPressed: onCancel ?? () => Navigator.pop(context),
-                  style: cancelButtonStyle,
-                  child: Center(child: Text(cancelText ?? 'Batal')),
-                ),
-              ] else ...[
-                Row(
-                  spacing: AppSizes.s12,
-                  children: [
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: onCancel ?? () => Navigator.pop(context),
-                        style: cancelButtonStyle,
-                        child: Text(cancelText ?? 'Batal'),
+              AppPersistentSheet(
+                border: Border(top: BorderSide(color: AppColors.border)),
+                child: useColumn
+                    ? Column(
+                        children: [
+                          ElevatedButton(
+                            onPressed:
+                                onConfirm ?? () => Navigator.pop(context, true),
+                            style: confirmButtonStyle,
+                            child: Center(
+                              child: Text(confirmText ?? 'Konfirmasi'),
+                            ),
+                          ),
+                          SizedBox(height: AppSizes.s12),
+                          OutlinedButton(
+                            onPressed: onCancel ?? () => Navigator.pop(context),
+                            style: cancelButtonStyle,
+                            child: Center(child: Text(cancelText ?? 'Batal')),
+                          ),
+                        ],
+                      )
+                    : Row(
+                        spacing: AppSizes.s12,
+                        children: [
+                          Expanded(
+                            child: OutlinedButton(
+                              onPressed:
+                                  onCancel ?? () => Navigator.pop(context),
+                              style: cancelButtonStyle,
+                              child: Text(cancelText ?? 'Batal'),
+                            ),
+                          ),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed:
+                                  onConfirm ??
+                                  () => Navigator.pop(context, true),
+                              style: confirmButtonStyle,
+                              child: Text(confirmText ?? 'Konfirmasi'),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed:
-                            onConfirm ?? () => Navigator.pop(context, true),
-                        style: confirmButtonStyle,
-                        child: Text(confirmText ?? 'Konfirmasi'),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-              useSafeArea == false && (paddingBottom != null) ? paddingBottom! : const SizedBox(),
+              ),
             ],
           ),
         ),
@@ -137,7 +142,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     TextStyle? descriptionStyle,
     bool canPop = true,
     bool useColumn = false,
-    bool useSafeArea = false,
     SizedBox? paddingBottom,
   }) {
     return showModalBottomSheet<T>(
@@ -160,7 +164,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
         descriptionStyle: descriptionStyle,
         canPop: canPop,
         useColumn: useColumn,
-        useSafeArea: useSafeArea,
         paddingBottom: paddingBottom,
       ),
     );

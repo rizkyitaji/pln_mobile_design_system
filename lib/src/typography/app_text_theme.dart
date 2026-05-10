@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
+
 import 'app_text_styles.dart';
 
 class AppTextTheme extends ThemeExtension<AppTextTheme> {
@@ -42,25 +44,108 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     required this.bodySmallSemiBold,
   });
 
-  static AppTextTheme defaultTextTheme = AppTextTheme(
-    headingLarge: AppTextStyles.headingLarge,
-    headingMedium: AppTextStyles.headingMedium,
-    headingSmall: AppTextStyles.headingSmall,
-    titleLarge: AppTextStyles.titleLarge,
-    titleMedium: AppTextStyles.titleMedium,
-    titleSmall: AppTextStyles.titleSmall,
-    bodyLarge: AppTextStyles.bodyLarge,
-    bodyLargeMedium: AppTextStyles.bodyLargeMedium,
-    bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold,
-    bodyMedium: AppTextStyles.bodyMedium,
-    bodyMediumMed: AppTextStyles.bodyMediumMed,
-    bodyMediumSemiBold: AppTextStyles.bodyMediumSemiBold,
-    bodyCaption: AppTextStyles.bodyCaption,
-    bodyCaptionMedium: AppTextStyles.bodyCaptionMedium,
-    bodyCaptionSemiBold: AppTextStyles.bodyCaptionSemiBold,
-    bodySmall: AppTextStyles.bodySmall,
-    bodySmallMedium: AppTextStyles.bodySmallMedium,
-    bodySmallSemiBold: AppTextStyles.bodySmallSemiBold,
+  static final AppTextTheme lightTextTheme = AppTextTheme(
+    headingLarge: AppTextStyles.headingLarge.copyWith(
+      color: AppColors.textHeading,
+    ),
+    headingMedium: AppTextStyles.headingMedium.copyWith(
+      color: AppColors.textHeading,
+    ),
+    headingSmall: AppTextStyles.headingSmall.copyWith(
+      color: AppColors.textHeading,
+    ),
+    titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.textHeading),
+    titleMedium: AppTextStyles.titleMedium.copyWith(
+      color: AppColors.textHeading,
+    ),
+    titleSmall: AppTextStyles.titleSmall.copyWith(color: AppColors.textHeading),
+    bodyLarge: AppTextStyles.bodyLarge.copyWith(color: AppColors.textBody),
+    bodyLargeMedium: AppTextStyles.bodyLargeMedium.copyWith(
+      color: AppColors.textBody,
+    ),
+    bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold.copyWith(
+      color: AppColors.textBody,
+    ),
+    bodyMedium: AppTextStyles.bodyMedium.copyWith(color: AppColors.textBody),
+    bodyMediumMed: AppTextStyles.bodyMediumMed.copyWith(
+      color: AppColors.textBody,
+    ),
+    bodyMediumSemiBold: AppTextStyles.bodyMediumSemiBold.copyWith(
+      color: AppColors.textBody,
+    ),
+    bodyCaption: AppTextStyles.bodyCaption.copyWith(
+      color: AppColors.textCaption,
+    ),
+    bodyCaptionMedium: AppTextStyles.bodyCaptionMedium.copyWith(
+      color: AppColors.textCaption,
+    ),
+    bodyCaptionSemiBold: AppTextStyles.bodyCaptionSemiBold.copyWith(
+      color: AppColors.textCaption,
+    ),
+    bodySmall: AppTextStyles.bodySmall.copyWith(color: AppColors.textCaption),
+    bodySmallMedium: AppTextStyles.bodySmallMedium.copyWith(
+      color: AppColors.textCaption,
+    ),
+    bodySmallSemiBold: AppTextStyles.bodySmallSemiBold.copyWith(
+      color: AppColors.textCaption,
+    ),
+  );
+
+  static final AppTextTheme darkTextTheme = AppTextTheme(
+    headingLarge: AppTextStyles.headingLarge.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    headingMedium: AppTextStyles.headingMedium.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    headingSmall: AppTextStyles.headingSmall.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    titleLarge: AppTextStyles.titleLarge.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    titleMedium: AppTextStyles.titleMedium.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    titleSmall: AppTextStyles.titleSmall.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    bodyLarge: AppTextStyles.bodyLarge.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyLargeMedium: AppTextStyles.bodyLargeMedium.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyMedium: AppTextStyles.bodyMedium.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyMediumMed: AppTextStyles.bodyMediumMed.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyMediumSemiBold: AppTextStyles.bodyMediumSemiBold.copyWith(
+      color: AppColors.textOnColorBody,
+    ),
+    bodyCaption: AppTextStyles.bodyCaption.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
+    bodyCaptionMedium: AppTextStyles.bodyCaptionMedium.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
+    bodyCaptionSemiBold: AppTextStyles.bodyCaptionSemiBold.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
+    bodySmall: AppTextStyles.bodySmall.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
+    bodySmallMedium: AppTextStyles.bodySmallMedium.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
+    bodySmallSemiBold: AppTextStyles.bodySmallSemiBold.copyWith(
+      color: AppColors.textOnColorCaption,
+    ),
   );
 
   @override

@@ -57,7 +57,7 @@ class AppAlertCard extends StatelessWidget {
                       ),
                       child: Text(
                         actionText ?? 'OK',
-                        style: AppTextStyles.bodyCaptionSemiBold.copyWith(
+                        style: context.textTheme.bodyCaptionSemiBold.copyWith(
                           color: AppColors.textPrimary,
                         ),
                       ),

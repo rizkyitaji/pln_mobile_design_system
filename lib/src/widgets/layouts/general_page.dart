@@ -11,7 +11,11 @@ class AppGeneralPage extends StatelessWidget {
   final Future<void> Function()? onRefresh;
   final String? backgroundImage, title, refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
-  final double? initialChildSize, minChildSize, maxChildSize, paddingTop;
+  final double? initialChildSize,
+      minChildSize,
+      maxChildSize,
+      paddingTop,
+      backgroundImageHeight;
   final bool extendBodyBehindAppBar, automaticallyImplyLeading, showDragHandle;
   final ScrollPhysics? physics;
 
@@ -42,6 +46,7 @@ class AppGeneralPage extends StatelessWidget {
     this.showDragHandle = false,
     this.physics,
     this.paddingTop,
+    this.backgroundImageHeight,
   });
 
   @override
@@ -60,7 +65,9 @@ class AppGeneralPage extends StatelessWidget {
                 : null),
         backgroundColor: appBarColor,
         title: titleAppBar ?? Text(title ?? ''),
-        titleTextStyle: AppTextStyles.headingSmall.copyWith(color: titleColor),
+        titleTextStyle: context.textTheme.headingSmall.copyWith(
+          color: titleColor,
+        ),
         bottom: bottomAppBar,
         actions: actionsAppBar,
       ),
@@ -70,6 +77,7 @@ class AppGeneralPage extends StatelessWidget {
           Visibility(
             visible: backgroundImage != null,
             child: Container(
+              height: backgroundImageHeight,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(backgroundImage ?? ''),

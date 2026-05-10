@@ -9,7 +9,7 @@ abstract class AppTheme {
     fontFamily: AppFonts.primary,
     scaffoldBackgroundColor: AppColors.background,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
-    extensions: <ThemeExtension<dynamic>>[AppTextTheme.defaultTextTheme],
+    extensions: <ThemeExtension<dynamic>>[AppTextTheme.lightTextTheme],
     dividerTheme: DividerThemeData(color: AppColors.border),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -25,7 +25,7 @@ abstract class AppTheme {
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         shadowColor: AppColors.transparent,
-        textStyle: AppTextStyles.bodyMediumSemiBold,
+        textStyle: AppTextTheme.lightTextTheme.bodyMediumSemiBold,
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -39,7 +39,7 @@ abstract class AppTheme {
         ),
         elevation: 0,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        textStyle: AppTextStyles.bodyMediumSemiBold,
+        textStyle: AppTextTheme.lightTextTheme.bodyMediumSemiBold,
       ),
     ),
     textButtonTheme: TextButtonThemeData(
@@ -53,11 +53,19 @@ abstract class AppTheme {
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
       ),
     ),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        iconSize: AppSizes.s24,
+        visualDensity: VisualDensity.compact,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        padding: EdgeInsets.zero,
+      ),
+    ),
     appBarTheme: AppBarThemeData(
       centerTitle: false,
       backgroundColor: AppColors.background,
       iconTheme: IconThemeData(color: AppColors.icon),
-      titleTextStyle: AppTextStyles.headingSmall,
+      titleTextStyle: AppTextTheme.lightTextTheme.headingSmall,
       scrolledUnderElevation: 0,
       titleSpacing: 8,
       elevation: 0,
@@ -86,14 +94,16 @@ abstract class AppTheme {
       filled: true,
       isDense: true,
       fillColor: Colors.white,
-      labelStyle: AppTextStyles.bodyMedium.copyWith(color: AppColors.black),
-      hintStyle: AppTextStyles.bodyMedium.copyWith(
+      labelStyle: AppTextTheme.lightTextTheme.bodyMedium.copyWith(
+        color: AppColors.black,
+      ),
+      hintStyle: AppTextTheme.lightTextTheme.bodyMedium.copyWith(
         color: AppColors.textPlaceholder,
       ),
-      helperStyle: AppTextStyles.bodyCaption.copyWith(
+      helperStyle: AppTextTheme.lightTextTheme.bodyCaption.copyWith(
         color: AppColors.textPlaceholder,
       ),
-      errorStyle: AppTextStyles.bodyCaption.copyWith(
+      errorStyle: AppTextTheme.lightTextTheme.bodyCaption.copyWith(
         color: AppColors.textError,
       ),
       floatingLabelBehavior: FloatingLabelBehavior.auto,
@@ -120,20 +130,38 @@ abstract class AppTheme {
       ),
     ),
     textTheme: TextTheme(
-      headlineLarge: AppTextStyles.headingLarge,
-      headlineMedium: AppTextStyles.headingMedium,
-      headlineSmall: AppTextStyles.headingSmall,
-      bodyLarge: AppTextStyles.bodyLarge,
-      bodyMedium: AppTextStyles.bodyMedium,
-      bodySmall: AppTextStyles.bodySmall,
+      displayLarge: AppTextTheme.lightTextTheme.headingLarge,
+      displayMedium: AppTextTheme.lightTextTheme.headingMedium,
+      displaySmall: AppTextTheme.lightTextTheme.headingSmall,
+      headlineLarge: AppTextTheme.lightTextTheme.headingLarge,
+      headlineMedium: AppTextTheme.lightTextTheme.headingMedium,
+      headlineSmall: AppTextTheme.lightTextTheme.headingSmall,
+      titleLarge: AppTextTheme.lightTextTheme.titleLarge,
+      titleMedium: AppTextTheme.lightTextTheme.titleMedium,
+      titleSmall: AppTextTheme.lightTextTheme.titleSmall,
+      bodyLarge: AppTextTheme.lightTextTheme.bodyLarge,
+      bodyMedium: AppTextTheme.lightTextTheme.bodyMedium,
+      bodySmall: AppTextTheme.lightTextTheme.bodySmall,
+      labelLarge: AppTextTheme.lightTextTheme.bodyMediumSemiBold,
+      labelMedium: AppTextTheme.lightTextTheme.bodyCaptionMedium,
+      labelSmall: AppTextTheme.lightTextTheme.bodySmallMedium,
     ),
     primaryTextTheme: TextTheme(
-      headlineLarge: AppTextStyles.headingLarge,
-      headlineMedium: AppTextStyles.headingMedium,
-      headlineSmall: AppTextStyles.headingSmall,
-      bodyLarge: AppTextStyles.bodyLarge,
-      bodyMedium: AppTextStyles.bodyMedium,
-      bodySmall: AppTextStyles.bodySmall,
+      displayLarge: AppTextTheme.lightTextTheme.headingLarge,
+      displayMedium: AppTextTheme.lightTextTheme.headingMedium,
+      displaySmall: AppTextTheme.lightTextTheme.headingSmall,
+      headlineLarge: AppTextTheme.lightTextTheme.headingLarge,
+      headlineMedium: AppTextTheme.lightTextTheme.headingMedium,
+      headlineSmall: AppTextTheme.lightTextTheme.headingSmall,
+      titleLarge: AppTextTheme.lightTextTheme.titleLarge,
+      titleMedium: AppTextTheme.lightTextTheme.titleMedium,
+      titleSmall: AppTextTheme.lightTextTheme.titleSmall,
+      bodyLarge: AppTextTheme.lightTextTheme.bodyLarge,
+      bodyMedium: AppTextTheme.lightTextTheme.bodyMedium,
+      bodySmall: AppTextTheme.lightTextTheme.bodySmall,
+      labelLarge: AppTextTheme.lightTextTheme.bodyMediumSemiBold,
+      labelMedium: AppTextTheme.lightTextTheme.bodyCaptionMedium,
+      labelSmall: AppTextTheme.lightTextTheme.bodySmallMedium,
     ),
   );
 }
