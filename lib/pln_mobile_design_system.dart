@@ -14,6 +14,7 @@ export 'src/typography/app_text_theme.dart';
 
 export 'src/utils/extensions/index.dart';
 export 'src/utils/formatters/index.dart';
+export 'src/utils/helper/index.dart';
 
 export 'src/widgets/buttons/index.dart';
 export 'src/widgets/app_bars/index.dart';

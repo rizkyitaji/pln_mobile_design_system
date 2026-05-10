@@ -4,8 +4,6 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-import '../../utils/helper/index.dart';
-
 class AppInformationBottomSheet extends StatelessWidget {
   final String? icon, title, descriptionHtml, descriptionText, buttonText;
   final Color? titleColor;
@@ -54,7 +52,6 @@ class AppInformationBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return PopScope(
       canPop: willPop,
       child: AppSheetContainer(
