@@ -266,10 +266,12 @@ abstract class AppAssets {
   static const imageBackgroundIndicatorChargingConnecting = '$_basePath/${AppImages.backgroundIndicatorChargingConnecting}';
   static const imageBackgroundIndicatorChargingDisconnected = '$_basePath/${AppImages.backgroundIndicatorChargingDisconnected}';
   static const imageBackgroundIndicatorChargingIdle = '$_basePath/${AppImages.backgroundIndicatorChargingIdle}';
+  static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
+  static const imageBackgroundPageLogin = '$_basePath/${AppImages.backgroundPageLogin}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
 

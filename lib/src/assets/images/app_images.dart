@@ -48,10 +48,12 @@ abstract class AppImages {
   static const String backgroundIndicatorChargingConnecting = 'assets/images/png/backgrounds/background-indicator-charging-connecting.png';
   static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
   static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
+  static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch_image.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
+  static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 }
