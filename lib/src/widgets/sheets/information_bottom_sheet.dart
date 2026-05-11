@@ -58,128 +58,129 @@ class AppInformationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: willPop,
       child: AppSheetContainer(
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: crossAxisAlignment,
-            mainAxisAlignment: isFullScreen
-                ? MainAxisAlignment.center
-                : MainAxisAlignment.start,
-            mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
-            children: [
-              if (icon != null) ...[
-                Container(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Center(
-                    child: icon!.contains('svg')
-                        ? SvgPicture.asset(icon!, height: 160.0)
-                        : Image.asset(icon!, height: 160.0),
-                  ),
-                ),
-                const SizedBox(height: 16.0),
-              ],
-              if (title != null) ...[
-                if (enableCloseButton) ...[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        title.toString(),
-                        style: context.textTheme.headingSmall.copyWith(
-                          color: titleColor,
+        child: Column(
+          crossAxisAlignment: crossAxisAlignment,
+          mainAxisAlignment: isFullScreen
+              ? MainAxisAlignment.center
+              : MainAxisAlignment.start,
+          mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (icon != null) ...[
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Center(
+                        child: icon!.contains('svg')
+                            ? SvgPicture.asset(icon!, height: 160.0)
+                            : Image.asset(icon!, height: 160.0),
+                      ),
+                    ),
+                    const SizedBox(height: 16.0),
+                  ],
+                  if (title != null) ...[
+                    if (enableCloseButton) ...[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            title.toString(),
+                            style: context.textTheme.headingSmall.copyWith(
+                              color: titleColor,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () => AppHelper.safePop(context),
+                            icon: const Icon(Icons.close),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 16.0),
+                    ] else ...[
+                      Center(
+                        child: Text(
+                          title.toString(),
+                          textAlign: TextAlign.center,
+                          style: context.textTheme.headingSmall.copyWith(
+                            color: titleColor,
+                          ),
                         ),
                       ),
-                      IconButton(
-                        onPressed: () => AppHelper.safePop(context),
-                        icon: const Icon(Icons.close),
-                      ),
+                      const SizedBox(height: 16.0),
                     ],
-                  ),
-                  const SizedBox(height: 16.0),
-                ] else ...[
-                  Center(
-                    child: Text(
-                      title.toString(),
-                      textAlign: TextAlign.center,
-                      style: context.textTheme.headingSmall.copyWith(
-                        color: titleColor,
+                  ],
+                  if (highlight != null) ...[
+                    highlight!,
+                    const SizedBox(height: 12),
+                  ],
+                  if (descriptionHtml != null) ...[
+                    Html(
+                      data: descriptionHtml,
+                      style: {
+                        'body': Style(
+                          margin: Margins.zero,
+                          padding: HtmlPaddings.zero,
+                          textAlign: textAlign ?? TextAlign.center,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                          fontSize: FontSize.medium,
+                          lineHeight: LineHeight.number(1.3),
+                        ),
+                      },
+                    ),
+                  ],
+                  if (descriptionText != null)
+                    MarkdownBody(
+                      data: descriptionText!,
+                      styleSheet: MarkdownStyleSheet(
+                        textAlign: _getWrapAlignment(),
+                        p: context.textTheme.bodyMedium,
+                        code: context.textTheme.bodyMedium.copyWith(
+                          color: const Color(0xFFEF476F),
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 16.0),
+                  if (more != null) ...[const SizedBox(height: 12), more!],
                 ],
-              ],
-              if (highlight != null) ...[
-                highlight!,
-                const SizedBox(height: 12),
-              ],
-              if (descriptionHtml != null) ...[
-                Html(
-                  data: descriptionHtml,
-                  style: {
-                    'body': Style(
-                      margin: Margins.zero,
-                      padding: HtmlPaddings.zero,
-                      textAlign: textAlign ?? TextAlign.center,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                      fontSize: FontSize.medium,
-                      lineHeight: LineHeight.number(1.3),
-                    ),
-                  },
-                ),
-              ],
-              if (descriptionText != null)
-                MarkdownBody(
-                  data: descriptionText!,
-                  styleSheet: MarkdownStyleSheet(
-                    textAlign: _getWrapAlignment(),
-                    p: context.textTheme.bodyMedium,
-                    code: context.textTheme.bodyMedium.copyWith(
-                      color: const Color(0xFFEF476F),
-                    ),
-                  ),
-                ),
-              if (more != null) ...[const SizedBox(height: 12), more!],
-              const SizedBox(height: 32.0),
-              AppPersistentSheet(
-                border: Border(top: BorderSide(color: AppColors.border)),
-                child: useElevatedButton
-                    ? ElevatedButton(
-                        onPressed:
-                            onTap ?? () => AppHelper.safePop(context, true),
-                        style: buttonStyle,
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10.0,
-                            ),
-                            child: Text(
-                              buttonText ?? 'Oke, Mengerti',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      )
-                    : OutlinedButton(
-                        onPressed:
-                            onTap ?? () => AppHelper.safePop(context, true),
-                        style: buttonStyle,
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10.0,
-                            ),
-                            child: Text(
-                              buttonText ?? 'Oke, Mengerti',
-                              textAlign: TextAlign.center,
-                            ),
+              ),
+            ),
+            const SizedBox(height: 32.0),
+            AppPersistentSheet(
+              border: Border(top: BorderSide(color: AppColors.border)),
+              child: useElevatedButton
+                  ? ElevatedButton(
+                      onPressed:
+                          onTap ?? () => AppHelper.safePop(context, true),
+                      style: buttonStyle,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            buttonText ?? 'Oke, Mengerti',
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
-              ),
-            ],
-          ),
+                    )
+                  : OutlinedButton(
+                      onPressed:
+                          onTap ?? () => AppHelper.safePop(context, true),
+                      style: buttonStyle,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            buttonText ?? 'Oke, Mengerti',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+            ),
+          ],
         ),
       ),
     );

@@ -225,6 +225,7 @@ abstract class AppAssets {
   static const iconMenuUbahDaya = '$_basePath/${AppIcons.menuUbahDaya}';
 
   // --- AppImages Mapping ---
+  static const imageBannerFaq = '$_basePath/${AppImages.bannerFaq}';
   static const imageIllustrationBannerConfirmation = '$_basePath/${AppImages.illustrationBannerConfirmation}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
   static const imageIllustrationConfirmationGeneral = '$_basePath/${AppImages.illustrationConfirmationGeneral}';
