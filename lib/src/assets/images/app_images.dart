@@ -3,6 +3,7 @@ abstract class AppImages {
   AppImages._();
 
   // Group: PNG
+  static const String bannerFaq = 'assets/images/png/banner-faq.png';
   static const String illustrationBannerConfirmation = 'assets/images/png/illustration-banner-confirmation.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
   static const String illustrationConfirmationGeneral = 'assets/images/png/illustration-confirmation-general.png';
