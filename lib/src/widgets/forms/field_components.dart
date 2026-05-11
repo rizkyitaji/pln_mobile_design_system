@@ -279,12 +279,16 @@ class AppLabeledTextFormField extends StatelessWidget {
   final bool readOnly;
   final int maxLines;
   final int? minLines;
+  final int? maxLength;
   final String? prefixText;
+  final String? counterText;
   final TextInputType? keyboardType;
+  final TextInputAction? textInputAction;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final VoidCallback? onTap;
   final Widget? suffixIcon;
+  final BoxConstraints? suffixIconConstraints;
   final void Function(String)? onChanged;
 
   const AppLabeledTextFormField({
@@ -296,6 +300,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     required this.hintText,
     this.readOnly = false,
     this.maxLines = 1,
+    this.maxLength,
     this.minLines,
     this.prefixText,
     this.keyboardType,
@@ -303,6 +308,9 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.validator,
     this.onTap,
     this.suffixIcon,
+    this.textInputAction,
+    this.counterText,
+    this.suffixIconConstraints,
   });
 
   @override
@@ -317,7 +325,9 @@ class AppLabeledTextFormField extends StatelessWidget {
           readOnly: readOnly,
           maxLines: maxLines,
           minLines: minLines,
+          maxLength: maxLength,
           keyboardType: keyboardType,
+          textInputAction: textInputAction,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           inputFormatters: inputFormatters,
           validator: validator,
@@ -328,7 +338,9 @@ class AppLabeledTextFormField extends StatelessWidget {
             suffixIcon: suffixIcon,
             prefix: prefixText != null ? Text(prefixText!) : null,
             filled: true,
+            counterText: counterText,
             fillColor: AppColors.white,
+            suffixIconConstraints: suffixIconConstraints,
             contentPadding: EdgeInsets.symmetric(
               horizontal: AppSizes.s16,
               vertical: maxLines > 1 ? AppSizes.s14 : AppSizes.s12,
