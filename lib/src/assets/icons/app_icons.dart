@@ -177,6 +177,7 @@ abstract class AppIcons {
   static const String voucher = 'assets/icons/svg/solid/icon-voucher.svg';
   static const String wallet = 'assets/icons/svg/solid/icon-wallet.svg';
   static const String warning = 'assets/icons/svg/solid/icon-warning.svg';
+  static const String whatsapp = 'assets/icons/svg/solid/icon-whatsapp.svg';
   static const String wifiAttention = 'assets/icons/svg/solid/icon-wifi-attention.svg';
   static const String wifiError = 'assets/icons/svg/solid/icon-wifi-error.svg';
   static const String wifiRouter = 'assets/icons/svg/solid/icon-wifi-router.svg';
@@ -201,6 +202,7 @@ abstract class AppIcons {
   static const String tileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String voucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
   static const String walletColored = 'assets/icons/svg/colored/icon-wallet.svg';
+  static const String whatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
   // Group: MENU
   static const String menuBalikNama = 'assets/icons/svg/menu/icon-menu-balik-nama.svg';

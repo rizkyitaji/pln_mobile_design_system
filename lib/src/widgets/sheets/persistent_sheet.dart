@@ -22,8 +22,8 @@ class AppPersistentSheet extends StatelessWidget {
       padding: padding ?? EdgeInsets.all(AppSizes.s16),
       decoration: BoxDecoration(
         borderRadius: borderRadius ?? AppRadius.topRounded12,
+        border: border ?? Border(top: BorderSide(color: AppColors.border)),
         color: AppColors.white,
-        border: border,
       ),
       child: SafeArea(top: false, child: child),
     );

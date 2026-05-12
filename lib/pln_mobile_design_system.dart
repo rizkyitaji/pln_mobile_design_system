@@ -21,6 +21,7 @@ export 'src/widgets/app_bars/index.dart';
 export 'src/widgets/cards/index.dart';
 export 'src/widgets/dialogs/index.dart';
 export 'src/widgets/forms/index.dart';
+export 'src/widgets/images/index.dart';
 export 'src/widgets/indicators/index.dart';
 export 'src/widgets/layouts/index.dart';
 export 'src/widgets/lazy_loads/index.dart';

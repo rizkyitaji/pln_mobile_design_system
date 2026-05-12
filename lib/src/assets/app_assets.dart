@@ -180,6 +180,7 @@ abstract class AppAssets {
   static const iconVoucher = '$_basePath/${AppIcons.voucher}';
   static const iconWallet = '$_basePath/${AppIcons.wallet}';
   static const iconWarning = '$_basePath/${AppIcons.warning}';
+  static const iconWhatsapp = '$_basePath/${AppIcons.whatsapp}';
   static const iconWifiAttention = '$_basePath/${AppIcons.wifiAttention}';
   static const iconWifiError = '$_basePath/${AppIcons.wifiError}';
   static const iconWifiRouter = '$_basePath/${AppIcons.wifiRouter}';
@@ -202,6 +203,7 @@ abstract class AppAssets {
   static const iconTileComplaintHistoryColored = '$_basePath/${AppIcons.tileComplaintHistoryColored}';
   static const iconVoucherColored = '$_basePath/${AppIcons.voucherColored}';
   static const iconWalletColored = '$_basePath/${AppIcons.walletColored}';
+  static const iconWhatsappColored = '$_basePath/${AppIcons.whatsappColored}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.menuBalikNama}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.menuCatatMeter}';
   static const iconMenuEbilling = '$_basePath/${AppIcons.menuEbilling}';
