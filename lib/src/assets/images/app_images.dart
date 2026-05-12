@@ -45,6 +45,7 @@ abstract class AppImages {
   static const String placeholderWarning = 'assets/images/svg/placeholder-warning.svg';
 
   // Group: BACKGROUNDS
+  static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
   static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';
   static const String backgroundIndicatorChargingConnected = 'assets/images/png/backgrounds/background-indicator-charging-connected.png';

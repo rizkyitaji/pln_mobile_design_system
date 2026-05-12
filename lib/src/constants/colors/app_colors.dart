@@ -12,6 +12,8 @@ abstract class AppColors {
   static const Color blackPearl = AppPalette.blackPearl;
   static const Color blueDeep = AppPalette.blue1000;
   static const Color dark = AppPalette.slate700;
+  static const Color slate400 = AppPalette.slate400;
+  static const Color green700 = AppPalette.green700;
 
   // --- BACKGROUND ---
   static const Color background = AppPalette.slate50;
