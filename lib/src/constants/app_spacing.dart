@@ -24,4 +24,7 @@ abstract class AppSpacing {
   static Widget h16 = const SizedBox(height: AppSizes.s16);
   static Widget h24 = const SizedBox(height: AppSizes.s24);
   static Widget h32 = const SizedBox(height: AppSizes.s32);
+  static Widget h168 = const SizedBox(height: AppSizes.s168);
+  static Widget h192 = const SizedBox(height: AppSizes.s192);
+  static Widget h198 = const SizedBox(height: AppSizes.s198);
 }

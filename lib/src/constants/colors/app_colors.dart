@@ -223,4 +223,6 @@ abstract class AppColors {
     end: Alignment.topRight,
     colors: [AppPalette.teal500, AppPalette.lemon200],
   );
+
+  static const Color iconDefaultLemon = AppPalette.lemon200;
 }
