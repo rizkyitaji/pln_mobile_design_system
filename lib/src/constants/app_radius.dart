@@ -11,6 +11,7 @@ abstract class AppRadius {
   static const double xxl = 48;
   static const double full = 100;
 
+  static BorderRadius get zero => BorderRadius.zero;
   static BorderRadius get rounded8 => BorderRadius.circular(xs);
   static BorderRadius get rounded12 => BorderRadius.circular(sm);
   static BorderRadius get rounded16 => BorderRadius.circular(md);

@@ -28,6 +28,8 @@ abstract class AppIcons {
   static const String connectorChademo = 'assets/icons/svg/icon-connector-chademo.svg';
   static const String connectorGbt = 'assets/icons/svg/icon-connector-gbt.svg';
   static const String energy = 'assets/icons/svg/icon-energy.svg';
+  static const String eyeOff = 'assets/icons/svg/icon-eye-off.svg';
+  static const String eye = 'assets/icons/svg/icon-eye.svg';
   static const String food = 'assets/icons/svg/icon-food.svg';
   static const String greenEnergy1 = 'assets/icons/svg/icon-green-energy-1.svg';
   static const String greenEnergy = 'assets/icons/svg/icon-green-energy.svg';

@@ -17,6 +17,18 @@ abstract class AppColors {
   static const Color background = AppPalette.slate50;
   static const Color backgroundSecondary = AppPalette.slate100;
 
+  // --- SHIMMER DEFAULT ---
+  static const Color shimmerBase = AppPalette.slate200;
+  static const Color shimmerHighlight = AppPalette.slate50;
+
+  // --- SHIMMER ON-COLOR ---
+  static final Color shimmerBaseOnColor = AppPalette.teal600.withValues(
+    alpha: 0.5,
+  );
+  static final Color shimmerHighlightOnColor = AppPalette.teal400.withValues(
+    alpha: 0.5,
+  );
+
   // --- PRIMARY ---
   static const Color primary = AppPalette.teal500;
   static const Color primaryPressed = AppPalette.teal600;

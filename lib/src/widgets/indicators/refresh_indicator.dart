@@ -35,11 +35,11 @@ class AppRefreshIndicator extends StatelessWidget {
                     child: Lottie.asset(
                       icon ?? AppAssets.animationLoadingPrimary,
                       animate: controller.isLoading,
-                      width: 40,
+                      width: AppSizes.s40,
                     ),
                   ),
                 Transform.translate(
-                  offset: Offset(0, (paddingTop * 2) * controller.value),
+                  offset: Offset(0, (paddingTop * 3) * controller.value),
                   child: child,
                 ),
               ],

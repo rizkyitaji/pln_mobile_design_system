@@ -35,6 +35,8 @@ abstract class AppAssets {
   static const iconConnectorChademo = '$_basePath/${AppIcons.connectorChademo}';
   static const iconConnectorGbt = '$_basePath/${AppIcons.connectorGbt}';
   static const iconEnergy = '$_basePath/${AppIcons.energy}';
+  static const iconEyeOff = '$_basePath/${AppIcons.eyeOff}';
+  static const iconEye = '$_basePath/${AppIcons.eye}';
   static const iconFood = '$_basePath/${AppIcons.food}';
   static const iconGreenEnergy1 = '$_basePath/${AppIcons.greenEnergy1}';
   static const iconGreenEnergy = '$_basePath/${AppIcons.greenEnergy}';
@@ -242,7 +244,8 @@ abstract class AppAssets {
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
-  static const imageIllustrationSmileDefault = '$_basePath/${AppImages.illustrationSmileDefault}';
+  static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
+  static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
@@ -265,6 +268,7 @@ abstract class AppAssets {
   static const imagePlaceholderSuccess = '$_basePath/${AppImages.placeholderSuccess}';
   static const imagePlaceholderWarningSc = '$_basePath/${AppImages.placeholderWarningSc}';
   static const imagePlaceholderWarning = '$_basePath/${AppImages.placeholderWarning}';
+  static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
   static const imageBackgroundIndicatorChargingConnected = '$_basePath/${AppImages.backgroundIndicatorChargingConnected}';
   static const imageBackgroundIndicatorChargingConnecting = '$_basePath/${AppImages.backgroundIndicatorChargingConnecting}';
