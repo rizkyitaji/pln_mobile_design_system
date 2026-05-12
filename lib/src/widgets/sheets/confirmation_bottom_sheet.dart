@@ -39,8 +39,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
             if (asset != null) ...[
               Visibility(
                 visible: asset!.contains('svg'),
-                replacement: Image.asset(asset ?? ''),
-                child: SvgPicture.asset(asset ?? ''),
+                replacement: Image.asset(asset ?? '', height: 160.0),
+                child: SvgPicture.asset(asset ?? '', height: 160.0),
               ),
               AppSpacing.h12,
             ],
