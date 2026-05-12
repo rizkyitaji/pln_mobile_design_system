@@ -270,6 +270,7 @@ abstract class AppAssets {
   static const imagePlaceholderWarningSc = '$_basePath/${AppImages.placeholderWarningSc}';
   static const imagePlaceholderWarning = '$_basePath/${AppImages.placeholderWarning}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
+  static const imageBackgroundHeaderTripPlanner = '$_basePath/${AppImages.backgroundHeaderTripPlanner}';
   static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
   static const imageBackgroundIndicatorChargingConnected = '$_basePath/${AppImages.backgroundIndicatorChargingConnected}';

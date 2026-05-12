@@ -32,14 +32,14 @@ class AppSheetContainer extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: AppSizes.s16),
+            AppSpacing.h16,
             Visibility(
               visible: showDragHandle,
               child: Center(
                 child: Container(
-                  width: 48,
-                  height: 4,
-                  margin: EdgeInsets.only(bottom: AppSizes.s12),
+                  width: AppSizes.s48,
+                  height: AppSizes.s4,
+                  margin: EdgeInsets.only(bottom: AppSizes.s16),
                   decoration: BoxDecoration(
                     color: AppColors.iconOnDisabled,
                     borderRadius: AppRadius.rounded32,
@@ -54,8 +54,12 @@ class AppSheetContainer extends StatelessWidget {
                 replacement: _listView,
                 child: Expanded(child: _listView),
               ),
-              child: child ?? SizedBox(),
+              child: Padding(
+                padding: padding ?? EdgeInsets.zero,
+                child: child ?? SizedBox(),
+              ),
             ),
+            AppSpacing.h16,
           ],
         ),
       ),
