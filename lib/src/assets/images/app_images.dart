@@ -15,6 +15,7 @@ abstract class AppImages {
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
+  static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
   static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';

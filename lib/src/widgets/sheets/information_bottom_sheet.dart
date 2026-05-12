@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
@@ -146,7 +146,6 @@ class AppInformationBottomSheet extends StatelessWidget {
             ),
             const SizedBox(height: 32.0),
             AppPersistentSheet(
-              border: Border(top: BorderSide(color: AppColors.border)),
               child: useElevatedButton
                   ? ElevatedButton(
                       onPressed:

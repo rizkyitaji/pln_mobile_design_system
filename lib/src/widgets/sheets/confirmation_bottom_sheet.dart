@@ -5,12 +5,10 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppConfirmationBottomSheet extends StatelessWidget {
   final String? asset, title, description, cancelText, confirmText;
-  final VoidCallback? onCancel, onConfirm;
   final ButtonStyle? confirmButtonStyle, cancelButtonStyle;
-  final TextStyle? descriptionStyle;
-  final double? titleFontSize;
+  final VoidCallback? onCancel, onConfirm;
+  final Widget? confirmIcon, cancelIcon;
   final bool canPop, useColumn;
-  final SizedBox? paddingBottom;
 
   const AppConfirmationBottomSheet({
     super.key,
@@ -23,11 +21,10 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.onConfirm,
     this.confirmButtonStyle,
     this.cancelButtonStyle,
-    this.titleFontSize,
-    this.descriptionStyle,
+    this.confirmIcon,
+    this.cancelIcon,
     this.canPop = true,
     this.useColumn = false,
-    this.paddingBottom,
   });
 
   @override
@@ -35,7 +32,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: canPop,
       child: AppSheetContainer(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(AppSizes.s16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -45,50 +42,53 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                 replacement: Image.asset(asset ?? ''),
                 child: SvgPicture.asset(asset ?? ''),
               ),
-              const SizedBox(height: AppSizes.s24),
+              AppSpacing.h12,
             ],
             if (title != null) ...[
               Text(
                 title ?? '',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.black,
-                  fontSize: titleFontSize ?? AppSizes.s24,
-                ),
+                style: context.textTheme.headingSmall,
               ),
-              const SizedBox(height: AppSizes.s12),
+              AppSpacing.h8,
             ],
-            MarkdownBody(
-              data: description ?? '',
-              styleSheet: MarkdownStyleSheet.fromTheme(
-                ThemeData(
-                  textTheme: TextTheme(
-                    bodyMedium:
-                        descriptionStyle ?? context.textTheme.bodyMedium,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+              child: MarkdownBody(
+                data: description ?? '',
+                styleSheet: MarkdownStyleSheet.fromTheme(
+                  ThemeData(
+                    textTheme: TextTheme(
+                      bodyMedium: context.textTheme.bodyMedium,
+                    ),
                   ),
-                ),
-              ).copyWith(textAlign: WrapAlignment.center),
+                ).copyWith(textAlign: WrapAlignment.center),
+              ),
             ),
-            const SizedBox(height: AppSizes.s24),
+            AppSpacing.h16,
             AppPersistentSheet(
-              border: Border(top: BorderSide(color: AppColors.border)),
               child: useColumn
                   ? Column(
+                      spacing: AppSizes.s12,
                       children: [
-                        ElevatedButton(
-                          onPressed:
-                              onConfirm ?? () => Navigator.pop(context, true),
-                          style: confirmButtonStyle,
-                          child: Center(
-                            child: Text(confirmText ?? 'Konfirmasi'),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton.icon(
+                            onPressed:
+                                onConfirm ?? () => Navigator.pop(context, true),
+                            style: confirmButtonStyle,
+                            icon: confirmIcon,
+                            label: Text(confirmText ?? 'Konfirmasi'),
                           ),
                         ),
-                        SizedBox(height: AppSizes.s12),
-                        OutlinedButton(
-                          onPressed: onCancel ?? () => Navigator.pop(context),
-                          style: cancelButtonStyle,
-                          child: Center(child: Text(cancelText ?? 'Batal')),
+                        SizedBox(
+                          width: double.infinity,
+                          child: OutlinedButton.icon(
+                            onPressed: onCancel ?? () => Navigator.pop(context),
+                            style: cancelButtonStyle,
+                            icon: cancelIcon,
+                            label: Text(cancelText ?? 'Batal'),
+                          ),
                         ),
                       ],
                     )
@@ -96,21 +96,23 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                       spacing: AppSizes.s12,
                       children: [
                         Expanded(
-                          child: OutlinedButton(
+                          child: OutlinedButton.icon(
                             onPressed: onCancel ?? () => Navigator.pop(context),
                             style: cancelButtonStyle,
-                            child: Text(
+                            icon: cancelIcon,
+                            label: Text(
                               cancelText ?? 'Batal',
                               textAlign: TextAlign.center,
                             ),
                           ),
                         ),
                         Expanded(
-                          child: ElevatedButton(
+                          child: ElevatedButton.icon(
                             onPressed:
                                 onConfirm ?? () => Navigator.pop(context, true),
                             style: confirmButtonStyle,
-                            child: Text(
+                            icon: confirmIcon,
+                            label: Text(
                               confirmText ?? 'Konfirmasi',
                               textAlign: TextAlign.center,
                             ),
@@ -136,12 +138,10 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     VoidCallback? onConfirm,
     ButtonStyle? confirmButtonStyle,
     ButtonStyle? cancelButtonStyle,
-    double? titleFontSize,
-    TextStyle? descriptionStyle,
+    Widget? confirmIcon,
+    Widget? cancelIcon,
     bool canPop = true,
     bool useColumn = false,
-    SizedBox? paddingBottom,
-    
   }) {
     return showModalBottomSheet<T>(
       context: context,
@@ -159,11 +159,10 @@ class AppConfirmationBottomSheet extends StatelessWidget {
         onConfirm: onConfirm,
         confirmButtonStyle: confirmButtonStyle,
         cancelButtonStyle: cancelButtonStyle,
-        titleFontSize: titleFontSize,
-        descriptionStyle: descriptionStyle,
+        confirmIcon: confirmIcon,
+        cancelIcon: cancelIcon,
         canPop: canPop,
         useColumn: useColumn,
-        paddingBottom: paddingBottom,
       ),
     );
   }

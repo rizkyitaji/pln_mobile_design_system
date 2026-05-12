@@ -180,6 +180,7 @@ abstract class AppAssets {
   static const iconVoucher = '$_basePath/${AppIcons.voucher}';
   static const iconWallet = '$_basePath/${AppIcons.wallet}';
   static const iconWarning = '$_basePath/${AppIcons.warning}';
+  static const iconWhatsapp = '$_basePath/${AppIcons.whatsapp}';
   static const iconWifiAttention = '$_basePath/${AppIcons.wifiAttention}';
   static const iconWifiError = '$_basePath/${AppIcons.wifiError}';
   static const iconWifiRouter = '$_basePath/${AppIcons.wifiRouter}';
@@ -204,6 +205,7 @@ abstract class AppAssets {
   static const iconThropy = '$_basePath/${AppIcons.thropy}';
   static const iconTileComplaintHistory = '$_basePath/${AppIcons.tileComplaintHistory}';
   static const iconVerification = '$_basePath/${AppIcons.verification}';
+  static const iconWhatsappColored = '$_basePath/${AppIcons.whatsappColored}';
   static const iconWishlist = '$_basePath/${AppIcons.wishlist}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.menuBalikNama}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.menuCatatMeter}';
@@ -242,6 +244,7 @@ abstract class AppAssets {
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
+  static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';

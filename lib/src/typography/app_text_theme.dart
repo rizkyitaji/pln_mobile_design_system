@@ -64,7 +64,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       color: AppColors.textBody,
     ),
     bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold.copyWith(
-      color: AppColors.textBody,
+      color: AppColors.textHeading,
     ),
     bodyMedium: AppTextStyles.bodyMedium.copyWith(color: AppColors.textBody),
     bodyMediumMed: AppTextStyles.bodyMediumMed.copyWith(
@@ -117,7 +117,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       color: AppColors.textOnColorBody,
     ),
     bodyLargeSemiBold: AppTextStyles.bodyLargeSemiBold.copyWith(
-      color: AppColors.textOnColorBody,
+      color: AppColors.textOnColorHeading,
     ),
     bodyMedium: AppTextStyles.bodyMedium.copyWith(
       color: AppColors.textOnColorBody,
