@@ -15,7 +15,8 @@ class AppGeneralPage extends StatelessWidget {
       minChildSize,
       maxChildSize,
       paddingTop,
-      backgroundImageHeight;
+      backgroundImageHeight,
+      titleSpacing;
   final bool extendBodyBehindAppBar, automaticallyImplyLeading, showDragHandle;
   final ScrollPhysics? physics;
 
@@ -47,6 +48,7 @@ class AppGeneralPage extends StatelessWidget {
     this.physics,
     this.paddingTop,
     this.backgroundImageHeight,
+    this.titleSpacing,
   });
 
   @override
@@ -55,6 +57,7 @@ class AppGeneralPage extends StatelessWidget {
       extendBodyBehindAppBar: extendBodyBehindAppBar,
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        titleSpacing: titleSpacing,
         leading:
             leadingAppBar ??
             (automaticallyImplyLeading
