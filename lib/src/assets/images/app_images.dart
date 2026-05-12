@@ -17,7 +17,8 @@ abstract class AppImages {
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
-  static const String illustrationSmileDefault = 'assets/images/png/illustration-smile-default.png';
+  static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';
+  static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
@@ -44,6 +45,7 @@ abstract class AppImages {
   static const String placeholderWarning = 'assets/images/svg/placeholder-warning.svg';
 
   // Group: BACKGROUNDS
+  static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
   static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';
   static const String backgroundIndicatorChargingConnected = 'assets/images/png/backgrounds/background-indicator-charging-connected.png';
   static const String backgroundIndicatorChargingConnecting = 'assets/images/png/backgrounds/background-indicator-charging-connecting.png';

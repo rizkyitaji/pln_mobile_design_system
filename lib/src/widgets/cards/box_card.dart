@@ -7,6 +7,7 @@ class AppBoxCard extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final List<BoxShadow>? boxShadow;
   final BoxBorder? border;
+  final String? asset;
   final Color? color;
   final Widget child;
 
@@ -19,6 +20,7 @@ class AppBoxCard extends StatelessWidget {
     this.borderRadius,
     this.boxShadow,
     this.border,
+    this.asset,
     this.color,
     required this.child,
   });
@@ -31,6 +33,9 @@ class AppBoxCard extends StatelessWidget {
       padding: padding ?? EdgeInsets.all(AppSizes.s12),
       margin: margin,
       decoration: BoxDecoration(
+        image: asset != null
+            ? DecorationImage(image: AssetImage(asset!), fit: BoxFit.fill)
+            : null,
         borderRadius: borderRadius ?? AppRadius.rounded12,
         color: color ?? AppColors.white,
         boxShadow: boxShadow,
