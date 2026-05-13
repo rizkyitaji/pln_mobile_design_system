@@ -10,6 +10,7 @@ abstract class AppImages {
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
+  static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';

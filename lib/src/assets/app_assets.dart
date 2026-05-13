@@ -236,6 +236,7 @@ abstract class AppAssets {
   static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
   static const imageIllustrationConnectorPlugged = '$_basePath/${AppImages.illustrationConnectorPlugged}';
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
+  static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
