@@ -77,6 +77,7 @@ abstract class AppAssets {
   static const iconCopyOutlined = '$_basePath/${AppIcons.copyOutlined}';
   static const iconDeleteOutlined = '$_basePath/${AppIcons.deleteOutlined}';
   static const iconDeliveryOutlined = '$_basePath/${AppIcons.deliveryOutlined}';
+  static const iconDeviceOutlined = '$_basePath/${AppIcons.deviceOutlined}';
   static const iconDiscountOutlined = '$_basePath/${AppIcons.discountOutlined}';
   static const iconDocsOutlined = '$_basePath/${AppIcons.docsOutlined}';
   static const iconEditOutlined = '$_basePath/${AppIcons.editOutlined}';

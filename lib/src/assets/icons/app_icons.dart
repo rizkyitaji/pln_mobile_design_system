@@ -74,6 +74,7 @@ abstract class AppIcons {
   static const String copyOutlined = 'assets/icons/svg/outlined/icon-copy-outlined.svg';
   static const String deleteOutlined = 'assets/icons/svg/outlined/icon-delete-outlined.svg';
   static const String deliveryOutlined = 'assets/icons/svg/outlined/icon-delivery-outlined.svg';
+  static const String deviceOutlined = 'assets/icons/svg/outlined/icon-device-outlined.svg';
   static const String discountOutlined = 'assets/icons/svg/outlined/icon-discount-outlined.svg';
   static const String docsOutlined = 'assets/icons/svg/outlined/icon-docs-outlined.svg';
   static const String editOutlined = 'assets/icons/svg/outlined/icon-edit-outlined.svg';
