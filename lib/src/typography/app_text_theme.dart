@@ -7,6 +7,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
   final TextStyle headingLarge;
   final TextStyle headingMedium;
   final TextStyle headingSmall;
+  final TextStyle headingLargeBold;
   final TextStyle titleLarge;
   final TextStyle titleMedium;
   final TextStyle titleSmall;
@@ -27,6 +28,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     required this.headingLarge,
     required this.headingMedium,
     required this.headingSmall,
+    required this.headingLargeBold,
     required this.titleLarge,
     required this.titleMedium,
     required this.titleSmall,
@@ -52,6 +54,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       color: AppColors.textHeading,
     ),
     headingSmall: AppTextStyles.headingSmall.copyWith(
+      color: AppColors.textHeading,
+    ),
+    headingLargeBold: AppTextStyles.headingLargeBold.copyWith(
       color: AppColors.textHeading,
     ),
     titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.textHeading),
@@ -99,6 +104,9 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       color: AppColors.textOnColorHeading,
     ),
     headingSmall: AppTextStyles.headingSmall.copyWith(
+      color: AppColors.textOnColorHeading,
+    ),
+    headingLargeBold: AppTextStyles.headingLargeBold.copyWith(
       color: AppColors.textOnColorHeading,
     ),
     titleLarge: AppTextStyles.titleLarge.copyWith(
@@ -153,6 +161,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     TextStyle? headingLarge,
     TextStyle? headingMedium,
     TextStyle? headingSmall,
+    TextStyle? headingLargeBold,
     TextStyle? titleLarge,
     TextStyle? titleMedium,
     TextStyle? titleSmall,
@@ -173,6 +182,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       headingLarge: headingLarge ?? this.headingLarge,
       headingMedium: headingMedium ?? this.headingMedium,
       headingSmall: headingSmall ?? this.headingSmall,
+      headingLargeBold: headingLargeBold ?? this.headingLargeBold,
       titleLarge: titleLarge ?? this.titleLarge,
       titleMedium: titleMedium ?? this.titleMedium,
       titleSmall: titleSmall ?? this.titleSmall,
@@ -198,6 +208,11 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       headingLarge: TextStyle.lerp(headingLarge, other.headingLarge, t)!,
       headingMedium: TextStyle.lerp(headingMedium, other.headingMedium, t)!,
       headingSmall: TextStyle.lerp(headingSmall, other.headingSmall, t)!,
+      headingLargeBold: TextStyle.lerp(
+        headingLargeBold,
+        other.headingLargeBold,
+        t,
+      )!,
       titleLarge: TextStyle.lerp(titleLarge, other.titleLarge, t)!,
       titleMedium: TextStyle.lerp(titleMedium, other.titleMedium, t)!,
       titleSmall: TextStyle.lerp(titleSmall, other.titleSmall, t)!,

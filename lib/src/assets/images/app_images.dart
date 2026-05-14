@@ -20,6 +20,7 @@ abstract class AppImages {
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationPhoneDuplicate = 'assets/images/png/illustration-phone-duplicate.png';
   static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
+  static const String illustrationRecOnboarding = 'assets/images/png/illustration-rec-onboarding.png';
   static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';
   static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
@@ -57,11 +58,14 @@ abstract class AppImages {
   static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
   static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
   static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
+  static const String backgroundNoImageDefault = 'assets/images/png/backgrounds/background-no-image-default.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
+  static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
+  static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 }

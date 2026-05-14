@@ -20,6 +20,7 @@ class AppRoundedTextFormField extends StatelessWidget {
   final TextCapitalization textCapitalization;
   final TextInputAction? textInputAction;
   final TextStyle? style;
+  final TextStyle? hintStyle;
   final StrutStyle? strutStyle;
   final TextDirection? textDirection;
   final TextAlign textAlign;
@@ -86,6 +87,7 @@ class AppRoundedTextFormField extends StatelessWidget {
   final TapRegionUpCallback? onTapUpOutside;
   final VoidCallback? onEditingComplete;
   final ValueChanged<String>? onFieldSubmitted;
+  final Color? fillColor;
 
   const AppRoundedTextFormField({
     super.key,
@@ -101,6 +103,7 @@ class AppRoundedTextFormField extends StatelessWidget {
     this.textCapitalization = TextCapitalization.none,
     this.textInputAction,
     this.style,
+    this.hintStyle,
     this.strutStyle,
     this.textDirection,
     this.textAlign = TextAlign.start,
@@ -168,6 +171,7 @@ class AppRoundedTextFormField extends StatelessWidget {
     this.onTapUpOutside,
     this.onEditingComplete,
     this.onFieldSubmitted,
+    this.fillColor,
   }) : assert(initialValue == null || controller == null);
 
   @override
@@ -197,6 +201,8 @@ class AppRoundedTextFormField extends StatelessWidget {
           .copyWith(
             hintText: decoration?.hintText ?? hintText,
             labelText: decoration?.labelText ?? labelText,
+            hintStyle: decoration?.hintStyle ?? hintStyle,
+            fillColor: decoration?.fillColor ?? fillColor,
           )
           .copyWith(
             icon: decoration?.icon,

@@ -290,6 +290,8 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final BoxConstraints? suffixIconConstraints;
   final void Function(String)? onChanged;
+  final FocusNode? focusNode;
+  final Color? fillColor;
 
   const AppLabeledTextFormField({
     super.key,
@@ -311,6 +313,8 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.textInputAction,
     this.counterText,
     this.suffixIconConstraints,
+    this.focusNode,
+    this.fillColor,
   });
 
   @override
@@ -333,13 +337,14 @@ class AppLabeledTextFormField extends StatelessWidget {
           validator: validator,
           onTap: onTap,
           onChanged: onChanged,
+          focusNode: focusNode,
           decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: suffixIcon,
             prefix: prefixText != null ? Text(prefixText!) : null,
             filled: true,
             counterText: counterText,
-            fillColor: AppColors.white,
+            fillColor: fillColor ?? AppColors.white,
             suffixIconConstraints: suffixIconConstraints,
             contentPadding: EdgeInsets.symmetric(
               horizontal: AppSizes.s16,
