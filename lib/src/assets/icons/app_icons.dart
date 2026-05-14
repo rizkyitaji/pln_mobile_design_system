@@ -51,6 +51,10 @@ abstract class AppIcons {
   static const String toilet = 'assets/icons/svg/icon-toilet.svg';
   static const String warningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
+  // Group: PNG
+  static const String plnmobile = 'assets/icons/png/icon-plnmobile.png';
+  static const String recCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
+
   // Group: OUTLINED
   static const String addFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
   static const String arrange1Outlined = 'assets/icons/svg/outlined/icon-arrange-1-outlined.svg';
@@ -185,23 +189,26 @@ abstract class AppIcons {
   static const String wifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
   // Group: COLORED
-  static const String chargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
-  static const String checkmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
-  static const String evPointColored = 'assets/icons/svg/colored/icon-ev-point.svg';
-  static const String handshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
-  static const String moneyColored = 'assets/icons/svg/colored/icon-money.svg';
-  static const String pinIdpelPadamColored = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
-  static const String pinNyalaColored = 'assets/icons/svg/colored/icon-pin-nyala.svg';
-  static const String pinPadamColored = 'assets/icons/svg/colored/icon-pin-padam.svg';
-  static const String pointsColored = 'assets/icons/svg/colored/icon-points.svg';
-  static const String rank1Colored = 'assets/icons/svg/colored/icon-rank-1.svg';
-  static const String rank2Colored = 'assets/icons/svg/colored/icon-rank-2.svg';
-  static const String rank3Colored = 'assets/icons/svg/colored/icon-rank-3.svg';
-  static const String targetColored = 'assets/icons/svg/colored/icon-target.svg';
-  static const String thropyColored = 'assets/icons/svg/colored/icon-thropy.svg';
-  static const String tileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
-  static const String voucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
-  static const String walletColored = 'assets/icons/svg/colored/icon-wallet.svg';
+  static const String checkmark = 'assets/icons/svg/colored/icon-checkmark.svg';
+  static const String evPoint = 'assets/icons/svg/colored/icon-ev-point.svg';
+  static const String handshake = 'assets/icons/svg/colored/icon-handshake.svg';
+  static const String money = 'assets/icons/svg/colored/icon-money.svg';
+  static const String pinIdpelPadam = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
+  static const String pinNyala = 'assets/icons/svg/colored/icon-pin-nyala.svg';
+  static const String pinPadam = 'assets/icons/svg/colored/icon-pin-padam.svg';
+  static const String points = 'assets/icons/svg/colored/icon-points.svg';
+  static const String rank1 = 'assets/icons/svg/colored/icon-rank-1.svg';
+  static const String rank2 = 'assets/icons/svg/colored/icon-rank-2.svg';
+  static const String rank3 = 'assets/icons/svg/colored/icon-rank-3.svg';
+  static const String recCertificate = 'assets/icons/svg/colored/icon-rec-certificate.svg';
+  static const String recHistory = 'assets/icons/svg/colored/icon-rec-history.svg';
+  static const String recItem = 'assets/icons/svg/colored/icon-rec-item.svg';
+  static const String recListrik = 'assets/icons/svg/colored/icon-rec-listrik.svg';
+  static const String recUnit = 'assets/icons/svg/colored/icon-rec-unit.svg';
+  static const String target = 'assets/icons/svg/colored/icon-target.svg';
+  static const String thropy = 'assets/icons/svg/colored/icon-thropy.svg';
+  static const String tileComplaintHistory = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
+  static const String user = 'assets/icons/svg/colored/icon-user.svg';
   static const String whatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
   // Group: MENU

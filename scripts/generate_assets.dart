@@ -12,9 +12,16 @@ void main() {
   // 1. GENERATE SUB-CLASSES
   _generateSubClass(
     className: 'AppIcons',
-    basePath: 'assets/icons/svg',
-    folders: ['outlined', 'solid', 'colored', 'menu'],
-    extensions: ['.svg'],
+    basePath: 'assets/icons',
+    folders: [
+      'svg',
+      'png',
+      'svg/outlined',
+      'svg/solid',
+      'svg/colored',
+      'svg/menu',
+    ],
+    extensions: ['.svg', '.png'],
     buffer: bufferIcons,
     outputFile: '$outputRoot/icons/app_icons.dart',
   );
