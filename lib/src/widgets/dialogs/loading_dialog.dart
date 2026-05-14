@@ -3,25 +3,23 @@ import 'package:lottie/lottie.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppLoadingDialog extends StatelessWidget {
-  const AppLoadingDialog({super.key});
+  final bool canPop;
+
+  const AppLoadingDialog({super.key, this.canPop = false});
 
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      canPop: false,
+      canPop: canPop,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
+          AppBoxCard(
             padding: const EdgeInsets.all(AppSizes.s16),
-            decoration: BoxDecoration(
-              color: AppColors.white,
-              borderRadius: AppRadius.rounded12,
-            ),
             child: Lottie.asset(
               AppAssets.animationLoadingPrimary,
-              width: 50,
-              height: 50,
+              width: AppSizes.s50,
+              height: AppSizes.s50,
             ),
           ),
         ],
@@ -29,18 +27,14 @@ class AppLoadingDialog extends StatelessWidget {
     );
   }
 
-  static Future<void> show(
-    BuildContext context, {
-    bool barrierDismissible = true,
-  }) {
+  static Future<void> show(BuildContext context, {bool canPop = false}) {
     return showDialog(
       context: context,
-      barrierDismissible: barrierDismissible,
-      builder: (_) => const AppLoadingDialog(),
+      builder: (_) => AppLoadingDialog(canPop: canPop),
     );
   }
 
   static void hide(BuildContext context) {
-    Navigator.pop(context);
+    context.safePop();
   }
 }

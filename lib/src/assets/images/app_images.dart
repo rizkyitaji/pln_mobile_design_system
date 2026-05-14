@@ -10,6 +10,7 @@ abstract class AppImages {
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
+  static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
@@ -49,13 +50,14 @@ abstract class AppImages {
 
   // Group: BACKGROUNDS
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
+  static const String backgroundHeaderTripPlanner = 'assets/images/png/backgrounds/background-header-trip-planner.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
   static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';
   static const String backgroundIndicatorChargingConnected = 'assets/images/png/backgrounds/background-indicator-charging-connected.png';
   static const String backgroundIndicatorChargingConnecting = 'assets/images/png/backgrounds/background-indicator-charging-connecting.png';
   static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
   static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
-  static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch_image.png';
+  static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
   static const String backgroundNoImageDefault = 'assets/images/png/backgrounds/background-no-image-default.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
