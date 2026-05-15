@@ -103,6 +103,7 @@ abstract class AppAssets {
   static const iconNotificationOutlined = '$_basePath/${AppIcons.notificationOutlined}';
   static const iconPackageOutlined = '$_basePath/${AppIcons.packageOutlined}';
   static const iconPesananOutlined = '$_basePath/${AppIcons.pesananOutlined}';
+  static const iconPhoneOutlined = '$_basePath/${AppIcons.phoneOutlined}';
   static const iconPinLocationOutlined = '$_basePath/${AppIcons.pinLocationOutlined}';
   static const iconPinMapsOutlined = '$_basePath/${AppIcons.pinMapsOutlined}';
   static const iconPinOutlined = '$_basePath/${AppIcons.pinOutlined}';

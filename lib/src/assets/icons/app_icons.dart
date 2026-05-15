@@ -100,6 +100,7 @@ abstract class AppIcons {
   static const String notificationOutlined = 'assets/icons/svg/outlined/icon-notification-outlined.svg';
   static const String packageOutlined = 'assets/icons/svg/outlined/icon-package-outlined.svg';
   static const String pesananOutlined = 'assets/icons/svg/outlined/icon-pesanan-outlined.svg';
+  static const String phoneOutlined = 'assets/icons/svg/outlined/icon-phone-outlined.svg';
   static const String pinLocationOutlined = 'assets/icons/svg/outlined/icon-pin-location-outlined.svg';
   static const String pinMapsOutlined = 'assets/icons/svg/outlined/icon-pin-maps-outlined.svg';
   static const String pinOutlined = 'assets/icons/svg/outlined/icon-pin-outlined.svg';
