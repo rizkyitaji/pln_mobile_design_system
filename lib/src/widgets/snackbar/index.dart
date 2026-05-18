@@ -218,7 +218,7 @@ class AppSnackBar {
             position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
-          backgroundColor: AppColors.secondaryPressed,
+          backgroundColor: AppColors.dark,
           shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded12),
           content: Row(
             spacing: AppSizes.s12,

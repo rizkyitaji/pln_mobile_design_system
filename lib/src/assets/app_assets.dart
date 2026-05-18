@@ -188,8 +188,10 @@ abstract class AppAssets {
   static const iconWifi = '$_basePath/${AppIcons.wifi}';
   static const iconChargerStationColored = '$_basePath/${AppIcons.chargerStationColored}';
   static const iconCheckmarkColored = '$_basePath/${AppIcons.checkmarkColored}';
+  static const iconComplaintRedColored = '$_basePath/${AppIcons.complaintRedColored}';
   static const iconEvPointColored = '$_basePath/${AppIcons.evPointColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.handshakeColored}';
+  static const iconKwhMeterColored = '$_basePath/${AppIcons.kwhMeterColored}';
   static const iconMoneyColored = '$_basePath/${AppIcons.moneyColored}';
   static const iconPinIdpelPadamColored = '$_basePath/${AppIcons.pinIdpelPadamColored}';
   static const iconPinNyalaColored = '$_basePath/${AppIcons.pinNyalaColored}';
@@ -269,6 +271,7 @@ abstract class AppAssets {
   static const imagePlaceholderSuccess = '$_basePath/${AppImages.placeholderSuccess}';
   static const imagePlaceholderWarningSc = '$_basePath/${AppImages.placeholderWarningSc}';
   static const imagePlaceholderWarning = '$_basePath/${AppImages.placeholderWarning}';
+  static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
   static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
@@ -282,6 +285,7 @@ abstract class AppAssets {
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageLogin = '$_basePath/${AppImages.backgroundPageLogin}';
+  static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
 

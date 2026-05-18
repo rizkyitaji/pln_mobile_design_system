@@ -10,10 +10,7 @@ abstract class AppColors {
   static const Color black = AppPalette.black;
   static const Color transparent = Colors.transparent;
   static const Color blackPearl = AppPalette.blackPearl;
-  static const Color blueDeep = AppPalette.blue1000;
   static const Color dark = AppPalette.slate700;
-  static const Color slate400 = AppPalette.slate400;
-  static const Color green700 = AppPalette.green700;
 
   // --- BACKGROUND ---
   static const Color background = AppPalette.slate50;
@@ -77,6 +74,7 @@ abstract class AppColors {
   static const Color textBody = AppPalette.slate800;
   static final Color textCaption = AppPalette.slate800.withValues(alpha: 0.75);
   static const Color textPlaceholder = AppPalette.slate500;
+  static const Color textMuted = AppPalette.slate400;
 
   // --- FONT COLORS ON-COLOR ---
   static const Color textOnColorHeading = AppPalette.slate50;
@@ -153,6 +151,7 @@ abstract class AppColors {
   static const Color iconSuccessPressed = AppPalette.green900;
   static const Color iconOnSuccess = AppPalette.green100;
   static const Color iconOnSuccessPressed = AppPalette.green200;
+  static const Color iconSuccessStatus = AppPalette.green700;
 
   // --- ICON WARNING ---
   static const Color iconWarning = AppPalette.yellow600;

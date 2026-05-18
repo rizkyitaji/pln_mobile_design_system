@@ -292,7 +292,11 @@ class AppRoundedTextFormField extends StatelessWidget {
       restorationId: restorationId,
       enableIMEPersonalizedLearning: enableIMEPersonalizedLearning,
       mouseCursor: mouseCursor,
-      contextMenuBuilder: contextMenuBuilder,
+      contextMenuBuilder: contextMenuBuilder ??
+          (context, editableTextState) =>
+              AdaptiveTextSelectionToolbar.editableText(
+                editableTextState: editableTextState,
+              ),
       spellCheckConfiguration: spellCheckConfiguration,
       magnifierConfiguration: magnifierConfiguration,
       undoController: undoController,
