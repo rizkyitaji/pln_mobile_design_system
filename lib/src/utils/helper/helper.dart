@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppHelper {
@@ -94,5 +95,28 @@ class AppHelper {
     }
 
     return fullDeeplink;
+  }
+
+  static void zoomImage(BuildContext context, {String? url}) async {
+    if (url != null) {
+      await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          insetPadding: EdgeInsets.zero,
+          backgroundColor: Colors.transparent,
+          content: GestureDetector(
+            onTap: () => context.safePop(),
+            child: AppNetworkImage(
+              url: url,
+              height: 155.scaleWidth,
+              borderRadius: AppRadius.rounded8,
+              backgroundColor: AppColors.transparent,
+              margin: EdgeInsets.symmetric(horizontal: AppSizes.s16),
+            ),
+          ),
+        ),
+      );
+    }
   }
 }

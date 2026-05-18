@@ -35,6 +35,12 @@ abstract class AppTextStyles {
     height: _height(AppLineHeight.lg, AppFontSize.lg),
   );
 
+  static TextStyle headingLargeBold = _textStyle.copyWith(
+    fontSize: AppFontSize.lg,
+    fontWeight: AppFontWeight.bold,
+    height: _height(AppLineHeight.lg, AppFontSize.lg),
+  );
+
   static TextStyle titleLarge = _textStyle.copyWith(
     fontSize: AppFontSize.md,
     fontWeight: AppFontWeight.semibold,

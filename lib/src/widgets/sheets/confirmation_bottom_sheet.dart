@@ -32,97 +32,91 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: canPop,
       child: AppSheetContainer(
-        padding: const EdgeInsets.all(AppSizes.s16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (asset != null) ...[
-              Visibility(
-                visible: asset!.contains('svg'),
-                replacement: Image.asset(asset ?? '', height: 160.0),
-                child: SvgPicture.asset(asset ?? '', height: 160.0),
-              ),
-              AppSpacing.h12,
-            ],
-            if (title != null) ...[
-              Text(
-                title ?? '',
-                textAlign: TextAlign.center,
-                style: context.textTheme.headingSmall,
-              ),
-              AppSpacing.h8,
-            ],
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
-              child: MarkdownBody(
-                data: description ?? '',
-                styleSheet: MarkdownStyleSheet.fromTheme(
-                  ThemeData(
-                    textTheme: TextTheme(
-                      bodyMedium: context.textTheme.bodyMedium,
-                    ),
-                  ),
-                ).copyWith(textAlign: WrapAlignment.center),
-              ),
+        children: [
+          if (asset != null) ...[
+            Visibility(
+              visible: asset!.contains('svg'),
+              replacement: Image.asset(asset ?? '', height: 224.scaleWidth),
+              child: SvgPicture.asset(asset ?? '', height: 224.scaleWidth),
             ),
-            AppSpacing.h16,
-            AppPersistentSheet(
-              child: useColumn
-                  ? Column(
-                      spacing: AppSizes.s12,
-                      children: [
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton.icon(
-                            onPressed:
-                                onConfirm ?? () => Navigator.pop(context, true),
-                            style: confirmButtonStyle,
-                            icon: confirmIcon,
-                            label: Text(confirmText ?? 'Konfirmasi'),
-                          ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          child: OutlinedButton.icon(
-                            onPressed: onCancel ?? () => Navigator.pop(context),
-                            style: cancelButtonStyle,
-                            icon: cancelIcon,
-                            label: Text(cancelText ?? 'Batal'),
-                          ),
-                        ),
-                      ],
-                    )
-                  : Row(
-                      spacing: AppSizes.s12,
-                      children: [
-                        Expanded(
-                          child: OutlinedButton.icon(
-                            onPressed: onCancel ?? () => Navigator.pop(context),
-                            style: cancelButtonStyle,
-                            icon: cancelIcon,
-                            label: Text(
-                              cancelText ?? 'Batal',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: ElevatedButton.icon(
-                            onPressed:
-                                onConfirm ?? () => Navigator.pop(context, true),
-                            style: confirmButtonStyle,
-                            icon: confirmIcon,
-                            label: Text(
-                              confirmText ?? 'Konfirmasi',
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-            ),
+            AppSpacing.h12,
           ],
-        ),
+          if (title != null) ...[
+            Text(
+              title ?? '',
+              textAlign: TextAlign.center,
+              style: context.textTheme.headingSmall,
+            ),
+            AppSpacing.h8,
+          ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+            child: MarkdownBody(
+              data: description ?? '',
+              styleSheet: MarkdownStyleSheet.fromTheme(
+                ThemeData(
+                  textTheme: TextTheme(
+                    bodyMedium: context.textTheme.bodyMedium,
+                  ),
+                ),
+              ).copyWith(textAlign: WrapAlignment.center),
+            ),
+          ),
+          AppSpacing.h16,
+          AppPersistentSheet(
+            child: useColumn
+                ? Column(
+                    spacing: AppSizes.s12,
+                    children: [
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          onPressed: onConfirm ?? () => context.safePop(true),
+                          style: confirmButtonStyle,
+                          icon: confirmIcon,
+                          label: Text(confirmText ?? 'Konfirmasi'),
+                        ),
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton.icon(
+                          onPressed: onCancel ?? () => context.safePop(),
+                          style: cancelButtonStyle,
+                          icon: cancelIcon,
+                          label: Text(cancelText ?? 'Batal'),
+                        ),
+                      ),
+                    ],
+                  )
+                : Row(
+                    spacing: AppSizes.s12,
+                    children: [
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          onPressed: onCancel ?? () => context.safePop(),
+                          style: cancelButtonStyle,
+                          icon: cancelIcon,
+                          label: Text(
+                            cancelText ?? 'Batal',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          onPressed: onConfirm ?? () => context.safePop(true),
+                          style: confirmButtonStyle,
+                          icon: confirmIcon,
+                          label: Text(
+                            confirmText ?? 'Konfirmasi',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+          ),
+        ],
       ),
     );
   }
@@ -146,7 +140,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     return showModalBottomSheet<T>(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.transparent,
       isDismissible: canPop,
       enableDrag: canPop,
       builder: (context) => AppConfirmationBottomSheet(
