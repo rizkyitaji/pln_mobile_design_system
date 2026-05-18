@@ -46,13 +46,15 @@ abstract class AppTheme {
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded16),
-        foregroundColor: AppColors.primary,
+        shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded8),
+        foregroundColor: AppColors.textPrimary,
         padding: EdgeInsets.symmetric(
-          vertical: AppSizes.s16,
+          vertical: AppSizes.s4,
           horizontal: AppSizes.s8,
         ),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        textStyle: AppTextTheme.lightTextTheme.bodyCaptionSemiBold,
+        minimumSize: Size.zero,
       ),
     ),
     iconButtonTheme: IconButtonThemeData(

@@ -34,6 +34,13 @@ class AppSnackBar {
     }
   }
 
+  static void hide() {
+    var context = navigatorKey.currentContext;
+    if (context != null) {
+      ScaffoldMessenger.of(context).removeCurrentSnackBar();
+    }
+  }
+
   static SnackBar snackBar({
     required BuildContext context,
     required String message,

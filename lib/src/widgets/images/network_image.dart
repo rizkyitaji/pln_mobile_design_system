@@ -5,9 +5,10 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppNetworkImage extends StatelessWidget {
   final String? url, errorImage;
   final double? width, height, size;
-  final EdgeInsetsGeometry? margin, padding;
-  final BorderRadius? borderRadius;
+  final EdgeInsetsGeometry margin, padding;
+  final BorderRadius borderRadius;
   final Color? backgroundColor;
+  final VoidCallback? onTap;
   final BoxFit fit;
 
   const AppNetworkImage({
@@ -16,45 +17,52 @@ class AppNetworkImage extends StatelessWidget {
     this.width,
     this.height,
     this.size,
-    this.margin,
-    this.padding,
-    this.borderRadius,
+    this.margin = EdgeInsets.zero,
+    this.padding = EdgeInsets.zero,
+    this.borderRadius = BorderRadius.zero,
     this.backgroundColor,
-    this.fit = BoxFit.cover,
+    this.fit = BoxFit.fill,
     this.errorImage,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     var imageUrl = url ?? '';
 
-    return AppBoxCard(
-      width: width ?? size,
-      height: height ?? size,
-      margin: margin,
-      padding: padding,
-      borderRadius: borderRadius,
-      color: backgroundColor,
-      child: Visibility(
-        visible: imageUrl.isNotEmpty,
-        replacement: AppErrorImage(),
-        child: CachedNetworkImage(
-          imageUrl: imageUrl,
-          width: width ?? size,
-          height: height ?? size,
-          fit: fit,
-          placeholder: (context, _) {
-            return const Center(child: AppLoadingIndicator());
-          },
-          errorWidget: (context, _, __) {
-            return AppErrorImage(
-              asset: errorImage,
+    return InkWell(
+      onTap: onTap,
+      child: AppBoxCard(
+        width: width ?? size,
+        height: height ?? size,
+        margin: margin,
+        padding: padding,
+        borderRadius: borderRadius,
+        color: backgroundColor,
+        child: Visibility(
+          visible: imageUrl.isNotEmpty,
+          replacement: AppErrorImage(),
+          child: ClipRRect(
+            borderRadius: borderRadius,
+            child: CachedNetworkImage(
+              imageUrl: imageUrl,
               width: width ?? size,
               height: height ?? size,
-              size: size,
-              borderRadius: borderRadius,
-            );
-          },
+              fit: fit,
+              placeholder: (context, _) {
+                return const Center(child: AppLoadingIndicator());
+              },
+              errorWidget: (context, _, __) {
+                return AppErrorImage(
+                  asset: errorImage,
+                  width: width ?? size,
+                  height: height ?? size,
+                  size: size,
+                  borderRadius: borderRadius,
+                );
+              },
+            ),
+          ),
         ),
       ),
     );

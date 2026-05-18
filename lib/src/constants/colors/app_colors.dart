@@ -11,6 +11,8 @@ abstract class AppColors {
   static const Color transparent = Colors.transparent;
   static const Color blackPearl = AppPalette.blackPearl;
   static const Color dark = AppPalette.slate700;
+  static const Color slate400 = AppPalette.slate400;
+  static const Color green700 = AppPalette.green700;
 
   // --- BACKGROUND ---
   static const Color background = AppPalette.slate50;
@@ -127,6 +129,7 @@ abstract class AppColors {
   // --- ICON DEFAULT ---
   static const Color icon = AppPalette.slate950;
   static const Color iconOnColor = AppPalette.slate50;
+  static const Color iconSubtle = AppPalette.slate500;
 
   // --- ICON PRIMARY ---
   static const Color iconPrimary = AppPalette.teal700;
