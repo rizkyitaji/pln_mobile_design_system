@@ -187,11 +187,12 @@ abstract class AppIcons {
   // Group: COLORED
   static const String addressLocation = 'assets/icons/svg/colored/icon-address-location.svg';
   static const String checkmark = 'assets/icons/svg/colored/icon-checkmark.svg';
-  static const String discussion = 'assets/icons/svg/colored/icon-discussion.svg';
   static const String evPoint = 'assets/icons/svg/colored/icon-ev-point.svg';
   static const String handshake = 'assets/icons/svg/colored/icon-handshake.svg';
+  static const String marketplaceDiscussion = 'assets/icons/svg/colored/icon-marketplace-discussion.svg';
+  static const String marketplaceOrder = 'assets/icons/svg/colored/icon-marketplace-order.svg';
+  static const String marketplaceWishlist = 'assets/icons/svg/colored/icon-marketplace-wishlist.svg';
   static const String money = 'assets/icons/svg/colored/icon-money.svg';
-  static const String order = 'assets/icons/svg/colored/icon-order.svg';
   static const String pinIdpelPadam = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
   static const String pinNyala = 'assets/icons/svg/colored/icon-pin-nyala.svg';
   static const String pinPadam = 'assets/icons/svg/colored/icon-pin-padam.svg';
@@ -205,7 +206,6 @@ abstract class AppIcons {
   static const String tileComplaintHistory = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String verification = 'assets/icons/svg/colored/icon-verification.svg';
   static const String whatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
-  static const String wishlist = 'assets/icons/svg/colored/icon-wishlist.svg';
 
   // Group: MENU
   static const String menuBalikNama = 'assets/icons/svg/menu/icon-menu-balik-nama.svg';

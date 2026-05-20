@@ -38,23 +38,26 @@ class AppNetworkImage extends StatelessWidget {
       child: Visibility(
         visible: imageUrl.isNotEmpty,
         replacement: AppErrorImage(),
-        child: CachedNetworkImage(
-          imageUrl: imageUrl,
-          width: width ?? size,
-          height: height ?? size,
-          fit: fit,
-          placeholder: (context, _) {
-            return const Center(child: AppLoadingIndicator());
-          },
-          errorWidget: (context, _, __) {
-            return AppErrorImage(
-              asset: errorImage,
-              width: width ?? size,
-              height: height ?? size,
-              size: size,
-              borderRadius: borderRadius,
-            );
-          },
+        child: ClipRRect(
+          borderRadius: borderRadius ?? BorderRadius.zero,
+          child: CachedNetworkImage(
+            imageUrl: imageUrl,
+            width: width ?? size,
+            height: height ?? size,
+            fit: fit,
+            placeholder: (context, _) {
+              return const Center(child: AppLoadingIndicator());
+            },
+            errorWidget: (context, _, __) {
+              return AppErrorImage(
+                asset: errorImage,
+                width: width ?? size,
+                height: height ?? size,
+                size: size,
+                borderRadius: borderRadius,
+              );
+            },
+          ),
         ),
       ),
     );

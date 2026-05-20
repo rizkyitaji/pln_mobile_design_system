@@ -188,11 +188,12 @@ abstract class AppAssets {
   static const iconWifi = '$_basePath/${AppIcons.wifi}';
   static const iconAddressLocation = '$_basePath/${AppIcons.addressLocation}';
   static const iconCheckmark = '$_basePath/${AppIcons.checkmark}';
-  static const iconDiscussion = '$_basePath/${AppIcons.discussion}';
   static const iconEvPoint = '$_basePath/${AppIcons.evPoint}';
   static const iconHandshake = '$_basePath/${AppIcons.handshake}';
+  static const iconMarketplaceDiscussion = '$_basePath/${AppIcons.marketplaceDiscussion}';
+  static const iconMarketplaceOrder = '$_basePath/${AppIcons.marketplaceOrder}';
+  static const iconMarketplaceWishlist = '$_basePath/${AppIcons.marketplaceWishlist}';
   static const iconMoney = '$_basePath/${AppIcons.money}';
-  static const iconOrder = '$_basePath/${AppIcons.order}';
   static const iconPinIdpelPadam = '$_basePath/${AppIcons.pinIdpelPadam}';
   static const iconPinNyala = '$_basePath/${AppIcons.pinNyala}';
   static const iconPinPadam = '$_basePath/${AppIcons.pinPadam}';
@@ -206,7 +207,6 @@ abstract class AppAssets {
   static const iconTileComplaintHistory = '$_basePath/${AppIcons.tileComplaintHistory}';
   static const iconVerification = '$_basePath/${AppIcons.verification}';
   static const iconWhatsappColored = '$_basePath/${AppIcons.whatsappColored}';
-  static const iconWishlist = '$_basePath/${AppIcons.wishlist}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.menuBalikNama}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.menuCatatMeter}';
   static const iconMenuEbilling = '$_basePath/${AppIcons.menuEbilling}';
