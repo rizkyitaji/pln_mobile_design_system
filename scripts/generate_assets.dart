@@ -26,10 +26,17 @@ void main() {
     outputFile: '$outputRoot/icons/app_icons.dart',
   );
 
+  // Daftarkan 'svg/placeholders' agar foldernya discan oleh generator
   _generateSubClass(
     className: 'AppImages',
     basePath: 'assets/images',
-    folders: ['png', 'svg', 'png/mascot', 'png/backgrounds'],
+    folders: [
+      'png',
+      'svg',
+      'png/mascot',
+      'png/backgrounds',
+      'svg/placeholders',
+    ],
     extensions: ['.png', '.svg'],
     buffer: bufferImages,
     outputFile: '$outputRoot/images/app_images.dart',
@@ -67,7 +74,12 @@ void main() {
 
   _writeMainMapping(bufferMainAssets, 'AppIcons', 'icon', outputRoot);
   _writeMainMapping(bufferMainAssets, 'AppImages', 'image', outputRoot);
-  _writeMainMapping(bufferMainAssets, 'AppAnimations', 'animation', outputRoot);
+  _writeMainAssetsMapping(
+    bufferMainAssets,
+    'AppAnimations',
+    'animation',
+    outputRoot,
+  );
   _writeMainMapping(bufferMainAssets, 'AppSounds', 'sound', outputRoot);
 
   bufferMainAssets.writeln('}');
@@ -121,6 +133,9 @@ void _generateSubClass({
       processedFiles.add(file.path);
 
       final fileName = file.uri.pathSegments.last;
+
+      // Bersihkan hanya prefix bawaan OS/Figma yang mengganggu,
+      // JANGAN hapus kata 'placeholder' atau 'background' agar nama asli file terjaga.
       String cleanName = fileName
           .split('.')
           .first
@@ -128,11 +143,13 @@ void _generateSubClass({
           .replaceAll('ic-', '')
           .replaceAll('ic_', '')
           .replaceAll('img-', '')
+          .replaceAll('img_', '')
           .replaceAll('animation-', '');
 
       String suffix = '';
       final currentFolder = file.parent.path.split(Platform.pathSeparator).last;
 
+      // Suffix untuk icon tetap dipertahankan karena nama filenya di folder biasa gaada kata 'outlined'/'colored'
       if (currentFolder == 'outlined' &&
           !cleanName.toLowerCase().contains('outlined')) {
         suffix = 'Outlined';
@@ -173,6 +190,7 @@ void _writeMainMapping(
       final varNameFromSubClass = parts[1].split('=')[0].trim();
 
       String finalVarName;
+      // Jika nama variable sudah diawali dengan kata 'image' / 'icon', tidak perlu ditambah prefix lagi
       if (varNameFromSubClass.toLowerCase().startsWith(prefix.toLowerCase())) {
         finalVarName = varNameFromSubClass;
       } else {
@@ -185,6 +203,16 @@ void _writeMainMapping(
     }
   }
   buffer.writeln('');
+}
+
+// Khusus untuk mapping selain icon & image yang struktur prefixnya berbeda jika diperlukan
+void _writeMainAssetsMapping(
+  StringBuffer buffer,
+  String subClassName,
+  String prefix,
+  String outputRoot,
+) {
+  _writeMainMapping(buffer, subClassName, prefix, outputRoot);
 }
 
 String _getFolderByClass(String cls) =>

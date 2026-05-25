@@ -28,9 +28,6 @@ class AppTimelineStepTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final connectorColor = isCurrent
-        ? AppColors.borderPrimary
-        : AppColors.border;
     final badgeBackgroundColor = isError
         ? AppColors.iconError
         : isCurrent

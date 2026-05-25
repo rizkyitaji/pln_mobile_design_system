@@ -9,26 +9,6 @@ abstract class AppColors {
   static const Color white = AppPalette.white;
   static const Color black = AppPalette.black;
   static const Color transparent = Colors.transparent;
-  static const Color blackPearl = AppPalette.blackPearl;
-  static const Color dark = AppPalette.slate700;
-  static const Color slate400 = AppPalette.slate400;
-  static const Color green700 = AppPalette.green700;
-
-  // --- BACKGROUND ---
-  static const Color background = AppPalette.slate50;
-  static const Color backgroundSecondary = AppPalette.slate100;
-
-  // --- SHIMMER DEFAULT ---
-  static const Color shimmerBase = AppPalette.slate200;
-  static const Color shimmerHighlight = AppPalette.slate50;
-
-  // --- SHIMMER ON-COLOR ---
-  static final Color shimmerBaseOnColor = AppPalette.teal600.withValues(
-    alpha: 0.5,
-  );
-  static final Color shimmerHighlightOnColor = AppPalette.teal400.withValues(
-    alpha: 0.5,
-  );
 
   // --- PRIMARY ---
   static const Color primary = AppPalette.teal500;
@@ -136,6 +116,7 @@ abstract class AppColors {
   static const Color iconPrimaryPressed = AppPalette.teal800;
   static const Color iconOnPrimary = AppPalette.teal100;
   static const Color iconOnPrimaryPressed = AppPalette.teal200;
+  static const Color iconOnPrimaryVariant = AppPalette.teal300;
 
   // --- ICON ERROR ---
   static const Color iconError = AppPalette.red700;
@@ -152,9 +133,9 @@ abstract class AppColors {
   // --- ICON SUCCESS ---
   static const Color iconSuccess = AppPalette.green800;
   static const Color iconSuccessPressed = AppPalette.green900;
+  static const Color iconSuccessStatus = AppPalette.green700;
   static const Color iconOnSuccess = AppPalette.green100;
   static const Color iconOnSuccessPressed = AppPalette.green200;
-  static const Color iconSuccessStatus = AppPalette.green700;
 
   // --- ICON WARNING ---
   static const Color iconWarning = AppPalette.yellow600;
@@ -220,11 +201,54 @@ abstract class AppColors {
   // --- BORDER DISABLED ---
   static const Color borderDisabled = AppPalette.slate200;
 
+  // --- OTHER BORDER ---
+  static const Color borderIndicator = AppPalette.sky750;
+
+  // --------------------------------------------- OTHER COLORS ---------------------------------------------
+
+  // --- BACKGROUND ---
+  static const Color background = AppPalette.slate50;
+  static const Color backgroundSecondary = AppPalette.slate100;
+  static const Color backgroundDark = AppPalette.slate1000;
+  static const Color backgroundSecondaryDark = AppPalette.sky950;
+  static const Color backgroundSnackbar = AppPalette.slate700;
+  static const Color backgroundIndicator = AppPalette.sky1050;
+
+  // --- SHIMMER DEFAULT ---
+  static const Color shimmerBase = AppPalette.slate200;
+  static const Color shimmerHighlight = AppPalette.slate50;
+
+  // --- SHIMMER ON-COLOR ---
+  static final Color shimmerBaseOnColor = AppPalette.teal600.withValues(
+    alpha: 0.5,
+  );
+  static final Color shimmerHighlightOnColor = AppPalette.teal400.withValues(
+    alpha: 0.5,
+  );
+
+  // --- DISCOUNT ---
+  static const Color discount = AppPalette.orange50;
+  static const Color textDiscount = AppPalette.orange600;
+  static const Color iconDiscount = AppPalette.orange500;
+
   // --------------------------------------------- GRADIENT COLORS ---------------------------------------------
 
-  static const LinearGradient linearGradient = LinearGradient(
-    begin: Alignment.bottomLeft,
-    end: Alignment.topRight,
-    colors: [AppPalette.teal500, AppPalette.lemon200],
+  static const LinearGradient progressIndicatorGradient = LinearGradient(
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    colors: [AppPalette.cyan200, AppPalette.cyan400],
+  );
+
+  static const LinearGradient bgProgressIndicatorGradient = LinearGradient(
+    begin: Alignment(-1.2, -0.6),
+    end: Alignment(3.8, 0.5),
+    colors: [
+      AppPalette.sky1050,
+      AppPalette.sky1000,
+      AppPalette.blue1000,
+      AppPalette.teal550,
+      AppPalette.teal450,
+    ],
+    stops: [0.0, 0.45, 0.75, 0.85, 1.0],
   );
 }

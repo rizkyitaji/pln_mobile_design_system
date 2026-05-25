@@ -18,7 +18,7 @@ class AppBoxLazyLoad extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width ?? context.screenWidth,
-      height: height,
+      height: height ?? AppSizes.s24,
       margin: margin,
       decoration: BoxDecoration(
         color: AppColors.shimmerHighlight,

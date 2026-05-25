@@ -4,17 +4,17 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppBackButton extends StatelessWidget {
   final Color? color;
-  final String? asset;
+  final String? icon;
   final VoidCallback? onPressed;
 
-  const AppBackButton({super.key, this.color, this.asset, this.onPressed});
+  const AppBackButton({super.key, this.color, this.icon, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: onPressed ?? () => context.safePop(),
       icon: SvgPicture.asset(
-        asset ?? AppAssets.iconArrowShortLeft,
+        icon ?? AppAssets.iconArrowShortLeft,
         width: AppSizes.s24,
         height: AppSizes.s24,
         colorFilter: color != null

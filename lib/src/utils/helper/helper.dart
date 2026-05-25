@@ -109,7 +109,7 @@ class AppHelper {
             onTap: () => context.safePop(),
             child: AppNetworkImage(
               url: url,
-              height: 155.scaleWidth,
+              height: AppSizes.s156.scaleWidth,
               borderRadius: AppRadius.rounded8,
               backgroundColor: AppColors.transparent,
               margin: EdgeInsets.symmetric(horizontal: AppSizes.s16),

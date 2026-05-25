@@ -26,30 +26,14 @@ abstract class AppImages {
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
-  static const String placeholderWebviewError = 'assets/images/png/placeholder-webview-error.png';
 
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
   static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
-  static const String illustrationEmptyStateComplaintHistory = 'assets/images/svg/illustration-empty-state-complaint-history.svg';
-  static const String placeholderBlock = 'assets/images/svg/placeholder-block.svg';
-  static const String placeholderConfirmation = 'assets/images/svg/placeholder-confirmation.svg';
-  static const String placeholderElectroncard = 'assets/images/svg/placeholder-electronic-card.svg';
-  static const String placeholderEmptySearch = 'assets/images/svg/placeholder-empty-search.svg';
-  static const String placeholderFailed = 'assets/images/svg/placeholder-failed.svg';
-  static const String placeholderHelp = 'assets/images/svg/placeholder-help.svg';
-  static const String placeholderInfoSc = 'assets/images/svg/placeholder-info-sc.svg';
-  static const String placeholderInfo = 'assets/images/svg/placeholder-info.svg';
-  static const String placeholderLocation = 'assets/images/svg/placeholder-location.svg';
-  static const String placeholderNfcUnsupported = 'assets/images/svg/placeholder-nfc-unsupported.svg';
-  static const String placeholderNoData = 'assets/images/svg/placeholder-no-data.svg';
-  static const String placeholderNoInternet = 'assets/images/svg/placeholder-no-internet.svg';
-  static const String placeholderSuccess = 'assets/images/svg/placeholder-success.svg';
-  static const String placeholderWarningSc = 'assets/images/svg/placeholder-warning-sc.svg';
-  static const String placeholderWarning = 'assets/images/svg/placeholder-warning.svg';
 
   // Group: BACKGROUNDS
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
+  static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
   static const String backgroundHeaderTripPlanner = 'assets/images/png/backgrounds/background-header-trip-planner.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
@@ -70,4 +54,8 @@ abstract class AppImages {
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
+
+  // Group: PLACEHOLDERS
+  static const String placeholderBattery = 'assets/images/svg/placeholders/placeholder-battery.svg';
+  static const String placeholderEv = 'assets/images/svg/placeholders/placeholder-ev.svg';
 }

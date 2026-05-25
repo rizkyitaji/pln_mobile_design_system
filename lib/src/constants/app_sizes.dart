@@ -27,6 +27,10 @@ abstract class AppSizes {
   static const double s66 = 66.0;
   static const double s80 = 80.0;
   static const double s100 = 100.0;
+  static const double s110 = 110.0;
+  static const double s120 = 120.0;
+  static const double s150 = 150.0;
   static const double s156 = 156.0;
   static const double s200 = 200.0;
+  static const double s220 = 220.0;
 }
