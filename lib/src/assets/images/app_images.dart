@@ -50,7 +50,7 @@ abstract class AppImages {
 
   // Group: BACKGROUNDS
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
-  static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';  
+  static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
   static const String backgroundHeaderTripPlanner = 'assets/images/png/backgrounds/background-header-trip-planner.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
   static const String backgroundIndicatorChargingCompleted = 'assets/images/png/backgrounds/background-indicator-charging-completed.png';

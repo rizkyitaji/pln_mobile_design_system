@@ -53,6 +53,7 @@ abstract class AppIcons {
 
   // Group: PNG
   static const String plnmobile = 'assets/icons/png/icon-plnmobile.png';
+  static const String ratingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String recCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
 
   // Group: OUTLINED
@@ -193,12 +194,14 @@ abstract class AppIcons {
   static const String wifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
   // Group: COLORED
+  static const String chargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String checkmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
   static const String complaintRedColored = 'assets/icons/svg/colored/icon-complaint-red.svg';
   static const String evPointColored = 'assets/icons/svg/colored/icon-ev-point.svg';
   static const String handshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
   static const String kwhMeterColored = 'assets/icons/svg/colored/icon-kwh-meter.svg';
   static const String moneyColored = 'assets/icons/svg/colored/icon-money.svg';
+  static const String personRatingColored = 'assets/icons/svg/colored/icon-person-rating.svg';
   static const String pinIdpelPadamColored = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
   static const String pinNyalaColored = 'assets/icons/svg/colored/icon-pin-nyala.svg';
   static const String pinPadamColored = 'assets/icons/svg/colored/icon-pin-padam.svg';

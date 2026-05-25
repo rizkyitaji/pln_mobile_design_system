@@ -58,6 +58,7 @@ abstract class AppAssets {
   static const iconToilet = '$_basePath/${AppIcons.toilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.warningRounded}';
   static const iconPlnmobile = '$_basePath/${AppIcons.plnmobile}';
+  static const iconRatingHeader = '$_basePath/${AppIcons.ratingHeader}';
   static const iconRecCleanEnergy = '$_basePath/${AppIcons.recCleanEnergy}';
   static const iconAddFriendsOutlined = '$_basePath/${AppIcons.addFriendsOutlined}';
   static const iconArrange1Outlined = '$_basePath/${AppIcons.arrange1Outlined}';
@@ -192,12 +193,14 @@ abstract class AppAssets {
   static const iconWifiRouter = '$_basePath/${AppIcons.wifiRouter}';
   static const iconWifiUpgrade = '$_basePath/${AppIcons.wifiUpgrade}';
   static const iconWifi = '$_basePath/${AppIcons.wifi}';
+  static const iconChargerStationColored = '$_basePath/${AppIcons.chargerStationColored}';
   static const iconCheckmarkColored = '$_basePath/${AppIcons.checkmarkColored}';
   static const iconComplaintRedColored = '$_basePath/${AppIcons.complaintRedColored}';
   static const iconEvPointColored = '$_basePath/${AppIcons.evPointColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.handshakeColored}';
   static const iconKwhMeterColored = '$_basePath/${AppIcons.kwhMeterColored}';
   static const iconMoneyColored = '$_basePath/${AppIcons.moneyColored}';
+  static const iconPersonRatingColored = '$_basePath/${AppIcons.personRatingColored}';
   static const iconPinIdpelPadamColored = '$_basePath/${AppIcons.pinIdpelPadamColored}';
   static const iconPinNyalaColored = '$_basePath/${AppIcons.pinNyalaColored}';
   static const iconPinPadamColored = '$_basePath/${AppIcons.pinPadamColored}';
@@ -283,7 +286,7 @@ abstract class AppAssets {
   static const imagePlaceholderWarningSc = '$_basePath/${AppImages.placeholderWarningSc}';
   static const imagePlaceholderWarning = '$_basePath/${AppImages.placeholderWarning}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
-  static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';  
+  static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
   static const imageBackgroundHeaderTripPlanner = '$_basePath/${AppImages.backgroundHeaderTripPlanner}';
   static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
