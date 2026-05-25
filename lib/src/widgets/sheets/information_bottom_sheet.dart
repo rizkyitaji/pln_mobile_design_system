@@ -13,6 +13,8 @@ class AppInformationBottomSheet extends StatelessWidget {
   final ButtonStyle? buttonStyle;
   final CrossAxisAlignment crossAxisAlignment;
   final VoidCallback? onTap;
+  final bool centerTitle;
+  final double? iconSize;
 
   const AppInformationBottomSheet({
     super.key,
@@ -32,6 +34,8 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.crossAxisAlignment = CrossAxisAlignment.center,
     this.isFullScreen = false,
     this.onTap,
+    this.centerTitle = true,
+    this.iconSize,
   });
 
   WrapAlignment _getWrapAlignment() {
@@ -72,8 +76,8 @@ class AppInformationBottomSheet extends StatelessWidget {
                       padding: const EdgeInsets.all(16.0),
                       child: Center(
                         child: icon!.contains('svg')
-                            ? SvgPicture.asset(icon!, height: 160.0)
-                            : Image.asset(icon!, height: 160.0),
+                            ? SvgPicture.asset(icon!, height: iconSize ?? 160.0)
+                            : Image.asset(icon!, height: iconSize ?? 160.0),
                       ),
                     ),
                     const SizedBox(height: 16.0),
@@ -97,12 +101,24 @@ class AppInformationBottomSheet extends StatelessWidget {
                       ),
                       const SizedBox(height: 16.0),
                     ] else ...[
-                      Center(
-                        child: Text(
+                      Visibility(
+                        visible: centerTitle,
+                        replacement: Text(
                           title.toString(),
-                          textAlign: TextAlign.center,
+                          textAlign: _getWrapAlignment() == WrapAlignment.center
+                              ? TextAlign.center
+                              : TextAlign.start,
                           style: context.textTheme.headingSmall.copyWith(
                             color: titleColor,
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            title.toString(),
+                            textAlign: TextAlign.center,
+                            style: context.textTheme.headingSmall.copyWith(
+                              color: titleColor,
+                            ),
                           ),
                         ),
                       ),
@@ -203,6 +219,8 @@ class AppInformationBottomSheet extends StatelessWidget {
     bool useElevatedButton = true,
     double? titleSize,
     VoidCallback? onTap,
+    bool centerTitle = true,
+    double? iconSize,
   }) async {
     final information = await showModalBottomSheet<bool>(
       context: context,
@@ -221,6 +239,8 @@ class AppInformationBottomSheet extends StatelessWidget {
         enableCloseButton: enableCloseButton,
         useElevatedButton: useElevatedButton,
         onTap: onTap,
+        centerTitle: centerTitle,
+        iconSize: iconSize,
       ),
       isDismissible: isDismissible,
       enableDrag: isDraggable,

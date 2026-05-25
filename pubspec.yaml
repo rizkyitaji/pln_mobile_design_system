@@ -45,6 +45,7 @@ flutter:
     - assets/images/png/
     - assets/images/png/backgrounds/
     - assets/images/svg/
+    - assets/images/svg/placeholders/
     - assets/sounds/
 
   fonts:

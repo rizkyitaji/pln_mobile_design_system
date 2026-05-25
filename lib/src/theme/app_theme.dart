@@ -31,7 +31,9 @@ abstract class AppTheme {
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded),
-        side: BorderSide(color: AppColors.borderPrimaryPressed),
+        side: BorderSide(
+          color: AppColors.borderPrimaryPressed.withValues(alpha: .5),
+        ),
         foregroundColor: AppColors.textPrimary,
         padding: EdgeInsets.symmetric(
           vertical: AppSizes.s10,

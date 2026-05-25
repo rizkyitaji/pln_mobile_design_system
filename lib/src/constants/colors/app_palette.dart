@@ -6,7 +6,6 @@ abstract class AppPalette {
 
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
-  static const Color blackPearl = Color(0xFF06141C);
 
   static const Color slate50 = Color(0xFFF8FAFC);
   static const Color slate100 = Color(0xFFF1F5F9);
@@ -19,13 +18,16 @@ abstract class AppPalette {
   static const Color slate800 = Color(0xFF1D293D);
   static const Color slate900 = Color(0xFF0F172B);
   static const Color slate950 = Color(0xFF020618);
+  static const Color slate1000 = Color(0xFF06141C);
 
   static const Color teal50 = Color(0xFFF0FBFB);
   static const Color teal100 = Color(0xFFD9F4F3);
   static const Color teal200 = Color(0xFFB8E9E9);
   static const Color teal300 = Color(0xFF86D8DA);
   static const Color teal400 = Color(0xFF4EBEC2);
+  static const Color teal450 = Color(0xFF28BFC9);
   static const Color teal500 = Color(0xFF36AEB4);
+  static const Color teal550 = Color(0xFF22ADBC);
   static const Color teal600 = Color(0xFF2D848D);
   static const Color teal700 = Color(0xFF2A6B74);
   static const Color teal800 = Color(0xFF2A5860);
@@ -40,9 +42,12 @@ abstract class AppPalette {
   static const Color sky500 = Color(0xFF2C90CB);
   static const Color sky600 = Color(0xFF1C6EA4);
   static const Color sky700 = Color(0xFF195D8B);
+  static const Color sky750 = Color(0xFF234E6B);
   static const Color sky800 = Color(0xFF184F74);
   static const Color sky900 = Color(0xFF1A4260);
   static const Color sky950 = Color(0xFF112A40);
+  static const Color sky1000 = Color(0xFF022B46);
+  static const Color sky1050 = Color(0xFF000D15);
 
   static const Color lemon50 = Color(0xFFFBFCEA);
   static const Color lemon100 = Color(0xFFFAFAC7);
@@ -79,7 +84,7 @@ abstract class AppPalette {
   static const Color blue800 = Color(0xFF1C44B1);
   static const Color blue900 = Color(0xFF1D3D8B);
   static const Color blue950 = Color(0xFF172858);
-  static const Color blue1000 = Color(0xFF014573);
+  static const Color blue1000 = Color(0xFF004573);
 
   static const Color yellow50 = Color(0xFFFFFCE7);
   static const Color yellow100 = Color(0xFFFFF9C1);
@@ -128,4 +133,7 @@ abstract class AppPalette {
   static const Color purple800 = Color(0xFF6E11B0);
   static const Color purple900 = Color(0xFF59168B);
   static const Color purple950 = Color(0xFF3C0366);
+
+  static const Color cyan200 = Color(0xFF0AFFF3);
+  static const Color cyan400 = Color(0xFF00AFFF);
 }
