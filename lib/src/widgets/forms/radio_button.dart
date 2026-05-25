@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class AppRadioIndicator extends StatelessWidget {
+class AppRadioButton extends StatelessWidget {
   final bool? selected;
   final Color? activeColor;
   final Color? activeBorderColor;
   final Color? activeFillColor;
   final double size;
 
-  const AppRadioIndicator({
+  const AppRadioButton({
     super.key,
     this.selected = false,
     this.activeColor,

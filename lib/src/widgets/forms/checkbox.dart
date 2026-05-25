@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class AppCheckboxIndicator extends StatelessWidget {
+class AppCheckbox extends StatelessWidget {
   final bool value;
   final ValueChanged<bool?>? onChanged;
   final Color? activeColor;
@@ -9,7 +9,7 @@ class AppCheckboxIndicator extends StatelessWidget {
   final double borderWidth;
   final double borderRadius;
 
-  const AppCheckboxIndicator({
+  const AppCheckbox({
     super.key,
     this.value = false,
     this.onChanged,
