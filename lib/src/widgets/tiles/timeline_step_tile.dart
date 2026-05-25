@@ -9,6 +9,7 @@ class AppTimelineStepTile extends StatelessWidget {
   final Widget? subtitleLeading;
   final EdgeInsetsGeometry padding;
   final bool isCurrent;
+  final bool isError;
   final bool showTopConnector;
   final bool showBottomConnector;
 
@@ -20,6 +21,7 @@ class AppTimelineStepTile extends StatelessWidget {
     this.subtitleLeading,
     this.padding = EdgeInsets.zero,
     this.isCurrent = false,
+    this.isError = false,
     this.showTopConnector = false,
     this.showBottomConnector = true,
   });
@@ -29,13 +31,15 @@ class AppTimelineStepTile extends StatelessWidget {
     final connectorColor = isCurrent
         ? AppColors.borderPrimary
         : AppColors.border;
-    final badgeBorderColor = isCurrent
+    final badgeBackgroundColor = isError
+        ? AppColors.iconError
+        : isCurrent
         ? AppColors.primary
-        : AppColors.borderPrimary;
-    final badgeBackgroundColor = isCurrent
-        ? AppColors.primary
-        : AppColors.white;
-    final iconColor = isCurrent ? AppColors.iconOnColor : AppColors.iconPrimary;
+        : AppColors.primarySubtle;
+    final iconColor = (isError || isCurrent)
+        ? AppColors.iconOnColor
+        : AppColors.iconPrimary;
+    final titleColor = isError ? AppColors.textError : AppColors.textHeading;
 
     return Padding(
       padding: padding,
@@ -49,30 +53,46 @@ class AppTimelineStepTile extends StatelessWidget {
                 SizedBox(
                   height: AppSizes.s12,
                   child: showTopConnector
-                      ? Container(width: 1, color: connectorColor)
+                      ? Container(
+                          width: 1,
+                          decoration: BoxDecoration(
+                            color: AppColors.border,
+                            borderRadius: AppRadius.rounded,
+                          ),
+                        )
                       : const SizedBox.shrink(),
                 ),
+                SizedBox(height: AppSizes.s4),
                 Container(
                   width: AppSizes.s20,
                   height: AppSizes.s20,
+                  padding: !isError
+                      ? EdgeInsets.all(AppSizes.s4)
+                      : EdgeInsets.all(AppSizes.zero),
                   decoration: BoxDecoration(
                     color: badgeBackgroundColor,
                     borderRadius: AppRadius.rounded,
-                    border: Border.all(color: badgeBorderColor),
                   ),
                   child: Center(
                     child: SvgPicture.asset(
-                      AppAssets.iconCheck,
-                      width: AppSizes.s12,
-                      height: AppSizes.s12,
+                      isError ? AppAssets.iconClose : AppAssets.iconCheck,
+                      width: AppSizes.s16,
+                      height: AppSizes.s16,
                       colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn),
                     ),
                   ),
                 ),
+                SizedBox(height: AppSizes.s4),
                 SizedBox(
                   height: AppSizes.s12,
                   child: showBottomConnector
-                      ? Container(width: 1, color: connectorColor)
+                      ? Container(
+                          width: 1,
+                          decoration: BoxDecoration(
+                            color: AppColors.border,
+                            borderRadius: AppRadius.rounded,
+                          ),
+                        )
                       : const SizedBox.shrink(),
                 ),
               ],
@@ -86,7 +106,7 @@ class AppTimelineStepTile extends StatelessWidget {
                 Text(
                   title,
                   style: context.textTheme.bodyMediumSemiBold.copyWith(
-                    color: AppColors.textHeading,
+                    color: titleColor,
                   ),
                 ),
                 const SizedBox(height: AppSizes.s4),

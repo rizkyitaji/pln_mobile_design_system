@@ -226,8 +226,15 @@ class AppOptionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AppColors.transparent,
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: AppRadius.rounded12,
+        border: Border.all(
+          color: selected ? AppColors.borderPrimary : AppColors.border,
+          width: selected ? 2 : 1,
+        ),
+      ),
       child: InkWell(
         borderRadius: AppRadius.rounded12,
         onTap: onTap,
@@ -236,22 +243,13 @@ class AppOptionCard extends StatelessWidget {
             horizontal: AppSizes.s16,
             vertical: AppSizes.s14,
           ),
-          decoration: BoxDecoration(
-            color: AppColors.white,
-            borderRadius: AppRadius.rounded12,
-            border: Border.all(
-              color: selected ? AppColors.borderPrimary : AppColors.border,
-            ),
-          ),
           child: Row(
             children: [
               Icon(
                 selected
                     ? Icons.radio_button_checked_rounded
                     : Icons.radio_button_unchecked_rounded,
-                color: selected
-                    ? AppColors.iconPrimary
-                    : AppColors.iconDisabled,
+                color: selected ? AppColors.primary : AppColors.iconDisabled,
               ),
               const SizedBox(width: AppSizes.s12),
               Expanded(
@@ -290,6 +288,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final BoxConstraints? suffixIconConstraints;
   final void Function(String)? onChanged;
+  final Widget? suffixLabelIcon;
   final FocusNode? focusNode;
   final Color? fillColor;
 
@@ -313,6 +312,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.textInputAction,
     this.counterText,
     this.suffixIconConstraints,
+    this.suffixLabelIcon,
     this.focusNode,
     this.fillColor,
   });
@@ -322,7 +322,17 @@ class AppLabeledTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AppFieldLabel(label: label, required: required),
+        if (suffixLabelIcon != null) ...[
+          Row(
+            children: [
+              AppFieldLabel(label: label, required: required),
+              const SizedBox(width: AppSizes.s4),
+              suffixLabelIcon ?? SizedBox(),
+            ],
+          ),
+        ] else ...[
+          AppFieldLabel(label: label, required: required),
+        ],
         const SizedBox(height: AppSizes.s8),
         AppRoundedTextFormField(
           controller: controller,

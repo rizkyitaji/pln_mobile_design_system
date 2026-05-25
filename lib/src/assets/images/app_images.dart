@@ -49,6 +49,7 @@ abstract class AppImages {
   static const String placeholderWarning = 'assets/images/svg/placeholder-warning.svg';
 
   // Group: BACKGROUNDS
+  static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
   static const String backgroundHeaderTripPlanner = 'assets/images/png/backgrounds/background-header-trip-planner.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
@@ -64,6 +65,7 @@ abstract class AppImages {
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
+  static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
