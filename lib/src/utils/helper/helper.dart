@@ -119,4 +119,43 @@ class AppHelper {
       );
     }
   }
+
+  static String getOperatorIcon(String? operator) {
+    switch ((operator ?? '').toLowerCase()) {
+      case 'pln':
+        return AppAssets.iconPln;
+      case 'charge+':
+        return AppAssets.iconChargePlus;
+      case 'bluecharge':
+        return AppAssets.iconBlueCharge;
+      case 'voltron':
+        return AppAssets.iconVoltron;
+      case 'hyundai':
+        return AppAssets.iconHyundai;
+      case 'indomobil':
+        return AppAssets.iconIndomobil;
+      case 'dayagreen':
+        return AppAssets.iconDayaGreen;
+      case 'lexus':
+        return AppAssets.iconLexus;
+      case 'parking+':
+        return AppAssets.iconParkingPlus;
+      case 'astra':
+        return AppAssets.iconAstra;
+      case 'terra charge':
+        return AppAssets.iconTerraCharge;
+      case 'toyota':
+        return AppAssets.iconToyota;
+      case 'starvo':
+        return AppAssets.iconStarvo;
+      case 'hvt':
+        return AppAssets.iconHvt;
+      case 'wuling':
+        return AppAssets.iconWuling;
+      case 'igreen+':
+        return AppAssets.iconIGreenPlus;
+      default:
+        return AppAssets.iconMenuSpklu;
+    }
+  }
 }
