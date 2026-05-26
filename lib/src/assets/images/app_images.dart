@@ -30,6 +30,7 @@ abstract class AppImages {
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
   static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
+  static const String illustrationEmptyStateComplaintHistory = 'assets/images/svg/illustration-empty-state-complaint-history.svg';
 
   // Group: BACKGROUNDS
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
