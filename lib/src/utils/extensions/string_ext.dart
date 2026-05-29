@@ -15,4 +15,16 @@ extension StringExt on String? {
 
     return DateTime.tryParse(cleanedDate);
   }
+
+  String get toCamelCase {
+    if (this == null || this!.isEmpty) return '';
+    return this!
+        .split(' ')
+        .map(
+          (word) => word.isEmpty
+              ? word
+              : word[0].toUpperCase() + word.substring(1).toLowerCase(),
+        )
+        .join(' ');
+  }
 }

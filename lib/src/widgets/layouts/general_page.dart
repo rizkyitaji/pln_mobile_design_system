@@ -17,8 +17,12 @@ class AppGeneralPage extends StatelessWidget {
       paddingTop,
       backgroundImageHeight,
       titleSpacing;
-  final bool extendBodyBehindAppBar, automaticallyImplyLeading, showDragHandle;
+  final bool extendBodyBehindAppBar,
+      automaticallyImplyLeading,
+      showDragHandle,
+      isLoadingMore;
   final ScrollPhysics? physics;
+  final ScrollController? scrollController;
 
   const AppGeneralPage({
     super.key,
@@ -49,6 +53,8 @@ class AppGeneralPage extends StatelessWidget {
     this.paddingTop,
     this.backgroundImageHeight,
     this.titleSpacing,
+    this.scrollController,
+    this.isLoadingMore = false,
   });
 
   @override
@@ -132,9 +138,17 @@ class AppGeneralPage extends StatelessWidget {
 
   Widget get _content {
     return ListView(
+      controller: scrollController,
       padding: padding ?? EdgeInsets.all(AppSizes.s16),
       physics: physics ?? AlwaysScrollableScrollPhysics(),
-      children: [child],
+      children: [
+        child,
+        if (isLoadingMore)
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
+            child: Center(child: AppLoadingIndicator()),
+          ),
+      ],
     );
   }
 }

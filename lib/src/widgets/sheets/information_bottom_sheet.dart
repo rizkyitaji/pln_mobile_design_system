@@ -130,13 +130,15 @@ class AppInformationBottomSheet extends StatelessWidget {
                     ),
                   ],
                   if (descriptionText != null)
-                    MarkdownBody(
-                      data: descriptionText!,
-                      styleSheet: MarkdownStyleSheet(
-                        textAlign: _getWrapAlignment(),
-                        p: context.textTheme.bodyMedium,
-                        code: context.textTheme.bodyMedium.copyWith(
-                          color: const Color(0xFFEF476F),
+                    Center(
+                      child: MarkdownBody(
+                        data: descriptionText!,
+                        styleSheet: MarkdownStyleSheet(
+                          textAlign: _getWrapAlignment(),
+                          p: context.textTheme.bodyMedium,
+                          code: context.textTheme.bodyMedium.copyWith(
+                            color: const Color(0xFFEF476F),
+                          ),
                         ),
                       ),
                     ),
