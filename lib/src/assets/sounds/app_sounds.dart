@@ -3,5 +3,5 @@ abstract class AppSounds {
   AppSounds._();
 
   // Group: SOUNDS
-  static const String chargingCompletionNotificationSound = 'assets/sounds/charging-completion-notification-sound.wav';
+  static const String chargingCompletion = 'assets/sounds/charging-completion.wav';
 }

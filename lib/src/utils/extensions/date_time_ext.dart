@@ -21,4 +21,11 @@ extension DateTimeExt on DateTime? {
     if (date == null) return '-';
     return DateFormat('HH:mm', 'id_ID').format(date);
   }
+
+  /// Output: 01 Januari 2026
+  String get formatddMMMMy {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('dd MMMM y', 'id_ID').format(date);
+  }
 }
