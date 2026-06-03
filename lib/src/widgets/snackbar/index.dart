@@ -225,7 +225,7 @@ class AppSnackBar {
             position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
-          backgroundColor: AppColors.secondaryPressed,
+          backgroundColor: AppColors.backgroundSnackbar,
           shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded12),
           content: Row(
             spacing: AppSizes.s12,
@@ -368,9 +368,14 @@ class AppSnackBar {
       default:
         return SnackBar(
           duration: Duration(seconds: 3),
-          margin: EdgeInsets.fromLTRB(16, 0, 16, 32),
+          margin: EdgeInsets.fromLTRB(
+            AppSizes.s16,
+            AppSizes.zero,
+            AppSizes.s16,
+            AppSizes.s32,
+          ),
           behavior: SnackBarBehavior.floating,
-          backgroundColor: AppColors.dark,
+          backgroundColor: AppColors.backgroundSnackbar,
           shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded12),
           content: Row(
             spacing: AppSizes.s12,

@@ -16,6 +16,18 @@ extension StringExt on String? {
     return DateTime.tryParse(cleanedDate);
   }
 
+  bool get isStandardImage {
+    final str = this ?? '';
+    final lowerCasePath = str.toLowerCase();
+
+    return lowerCasePath.endsWith('.png') ||
+        lowerCasePath.endsWith('.jpg') ||
+        lowerCasePath.endsWith('.jpeg') ||
+        lowerCasePath.endsWith('.webp') ||
+        lowerCasePath.endsWith('.gif') ||
+        lowerCasePath.endsWith('.bmp');
+  }
+
   String get toCamelCase {
     if (this == null || this!.isEmpty) return '';
     return this!

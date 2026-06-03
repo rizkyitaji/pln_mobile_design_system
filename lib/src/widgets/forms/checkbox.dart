@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class AppCheckboxIndicator extends StatelessWidget {
-  final bool value;
+class AppCheckbox extends StatelessWidget {
+  final bool? value;
   final ValueChanged<bool?>? onChanged;
   final Color? activeColor;
   final double size;
   final double borderWidth;
   final double borderRadius;
+  final bool tristate;
 
-  const AppCheckboxIndicator({
+  const AppCheckbox({
     super.key,
     this.value = false,
     this.onChanged,
@@ -17,6 +18,7 @@ class AppCheckboxIndicator extends StatelessWidget {
     this.size = AppSizes.s16,
     this.borderWidth = AppSizes.s2,
     this.borderRadius = AppSizes.s4,
+    this.tristate = false,
   });
 
   @override
@@ -27,6 +29,7 @@ class AppCheckboxIndicator extends StatelessWidget {
       child: Checkbox(
         activeColor: activeColor ?? AppColors.primary,
         splashRadius: 4.0,
+        tristate: tristate,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
         ),

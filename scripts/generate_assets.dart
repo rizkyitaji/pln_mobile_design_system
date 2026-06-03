@@ -16,12 +16,13 @@ void main() {
     folders: [
       'svg',
       'png',
+      'png/brands', // Sub-folder brand baru lo
       'svg/outlined',
       'svg/solid',
       'svg/colored',
       'svg/menu',
     ],
-    extensions: ['.svg', '.png'],
+    extensions: ['.svg', '.png', '.jpeg'],
     buffer: bufferIcons,
     outputFile: '$outputRoot/icons/app_icons.dart',
   );
@@ -29,7 +30,13 @@ void main() {
   _generateSubClass(
     className: 'AppImages',
     basePath: 'assets/images',
-    folders: ['png', 'svg', 'png/mascot', 'png/backgrounds'],
+    folders: [
+      'png',
+      'svg',
+      'png/mascot',
+      'png/backgrounds',
+      'svg/placeholders',
+    ],
     extensions: ['.png', '.svg'],
     buffer: bufferImages,
     outputFile: '$outputRoot/images/app_images.dart',
@@ -67,7 +74,12 @@ void main() {
 
   _writeMainMapping(bufferMainAssets, 'AppIcons', 'icon', outputRoot);
   _writeMainMapping(bufferMainAssets, 'AppImages', 'image', outputRoot);
-  _writeMainMapping(bufferMainAssets, 'AppAnimations', 'animation', outputRoot);
+  _writeMainAssetsMapping(
+    bufferMainAssets,
+    'AppAnimations',
+    'animation',
+    outputRoot,
+  );
   _writeMainMapping(bufferMainAssets, 'AppSounds', 'sound', outputRoot);
 
   bufferMainAssets.writeln('}');
@@ -121,17 +133,27 @@ void _generateSubClass({
       processedFiles.add(file.path);
 
       final fileName = file.uri.pathSegments.last;
-      String cleanName = fileName
-          .split('.')
-          .first
-          .replaceAll('icon-', '')
-          .replaceAll('ic-', '')
-          .replaceAll('ic_', '')
-          .replaceAll('img-', '')
-          .replaceAll('animation-', '');
+      String rawName = fileName.split('.').first;
+
+      String cleanName = rawName;
+      if (RegExp(
+        r'^(icon|ic|img|animation)[-_][a-zA-Z0-9]+',
+      ).hasMatch(rawName)) {
+        cleanName = rawName;
+      } else {
+        cleanName = rawName
+            .replaceAll('icon-', '')
+            .replaceAll('ic-', '')
+            .replaceAll('ic_', '')
+            .replaceAll('img-', '')
+            .replaceAll('img_', '')
+            .replaceAll('animation-', '');
+      }
 
       String suffix = '';
-      final currentFolder = file.parent.path.split(Platform.pathSeparator).last;
+
+      final normalizedParentPath = file.parent.path.replaceAll('\\', '/');
+      final currentFolder = normalizedParentPath.split('/').last;
 
       if (currentFolder == 'outlined' &&
           !cleanName.toLowerCase().contains('outlined')) {
@@ -185,6 +207,15 @@ void _writeMainMapping(
     }
   }
   buffer.writeln('');
+}
+
+void _writeMainAssetsMapping(
+  StringBuffer buffer,
+  String subClassName,
+  String prefix,
+  String outputRoot,
+) {
+  _writeMainMapping(buffer, subClassName, prefix, outputRoot);
 }
 
 String _getFolderByClass(String cls) =>

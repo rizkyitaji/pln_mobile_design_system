@@ -32,6 +32,7 @@ class AppSheetContainer extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            
             AppSpacing.h16,
             Visibility(
               visible: showDragHandle,
