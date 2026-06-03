@@ -16,17 +16,17 @@ void main() {
     folders: [
       'svg',
       'png',
+      'png/brands', // Sub-folder brand baru lo
       'svg/outlined',
       'svg/solid',
       'svg/colored',
       'svg/menu',
     ],
-    extensions: ['.svg', '.png'],
+    extensions: ['.svg', '.png', '.jpeg'],
     buffer: bufferIcons,
     outputFile: '$outputRoot/icons/app_icons.dart',
   );
 
-  // Daftarkan 'svg/placeholders' agar foldernya discan oleh generator
   _generateSubClass(
     className: 'AppImages',
     basePath: 'assets/images',
@@ -133,23 +133,28 @@ void _generateSubClass({
       processedFiles.add(file.path);
 
       final fileName = file.uri.pathSegments.last;
+      String rawName = fileName.split('.').first;
 
-      // Bersihkan hanya prefix bawaan OS/Figma yang mengganggu,
-      // JANGAN hapus kata 'placeholder' atau 'background' agar nama asli file terjaga.
-      String cleanName = fileName
-          .split('.')
-          .first
-          .replaceAll('icon-', '')
-          .replaceAll('ic-', '')
-          .replaceAll('ic_', '')
-          .replaceAll('img-', '')
-          .replaceAll('img_', '')
-          .replaceAll('animation-', '');
+      String cleanName = rawName;
+      if (RegExp(
+        r'^(icon|ic|img|animation)[-_][a-zA-Z0-9]+',
+      ).hasMatch(rawName)) {
+        cleanName = rawName;
+      } else {
+        cleanName = rawName
+            .replaceAll('icon-', '')
+            .replaceAll('ic-', '')
+            .replaceAll('ic_', '')
+            .replaceAll('img-', '')
+            .replaceAll('img_', '')
+            .replaceAll('animation-', '');
+      }
 
       String suffix = '';
-      final currentFolder = file.parent.path.split(Platform.pathSeparator).last;
 
-      // Suffix untuk icon tetap dipertahankan karena nama filenya di folder biasa gaada kata 'outlined'/'colored'
+      final normalizedParentPath = file.parent.path.replaceAll('\\', '/');
+      final currentFolder = normalizedParentPath.split('/').last;
+
       if (currentFolder == 'outlined' &&
           !cleanName.toLowerCase().contains('outlined')) {
         suffix = 'Outlined';
@@ -190,7 +195,6 @@ void _writeMainMapping(
       final varNameFromSubClass = parts[1].split('=')[0].trim();
 
       String finalVarName;
-      // Jika nama variable sudah diawali dengan kata 'image' / 'icon', tidak perlu ditambah prefix lagi
       if (varNameFromSubClass.toLowerCase().startsWith(prefix.toLowerCase())) {
         finalVarName = varNameFromSubClass;
       } else {
@@ -205,7 +209,6 @@ void _writeMainMapping(
   buffer.writeln('');
 }
 
-// Khusus untuk mapping selain icon & image yang struktur prefixnya berbeda jika diperlukan
 void _writeMainAssetsMapping(
   StringBuffer buffer,
   String subClassName,

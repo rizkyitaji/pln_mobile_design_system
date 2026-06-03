@@ -129,8 +129,7 @@ class AppSnackBar {
                 ),
               ),
               InkWell(
-                onTap: () =>
-                    ScaffoldMessenger.of(context).removeCurrentSnackBar(),
+                onTap: hide,
                 child: Icon(
                   Icons.close,
                   color: AppColors.iconOnColor,
@@ -204,8 +203,7 @@ class AppSnackBar {
                 ),
               ),
               InkWell(
-                onTap: () =>
-                    ScaffoldMessenger.of(context).removeCurrentSnackBar(),
+                onTap: hide,
                 child: Icon(
                   Icons.close,
                   color: AppColors.iconOnColor,
@@ -279,8 +277,7 @@ class AppSnackBar {
                 ),
               ),
               InkWell(
-                onTap: () =>
-                    ScaffoldMessenger.of(context).removeCurrentSnackBar(),
+                onTap: hide,
                 child: Icon(
                   Icons.close,
                   color: AppColors.iconOnColor,
@@ -354,8 +351,7 @@ class AppSnackBar {
                 ),
               ),
               InkWell(
-                onTap: () =>
-                    ScaffoldMessenger.of(context).removeCurrentSnackBar(),
+                onTap: hide,
                 child: Icon(
                   Icons.close,
                   color: AppColors.iconOnColor,
@@ -429,8 +425,7 @@ class AppSnackBar {
                 ),
               ),
               InkWell(
-                onTap: () =>
-                    ScaffoldMessenger.of(context).removeCurrentSnackBar(),
+                onTap: hide,
                 child: Icon(
                   Icons.close,
                   color: AppColors.iconOnColor,
