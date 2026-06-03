@@ -319,6 +319,6 @@ abstract class AppAssets {
   static const animationLoadingWhite = '$_basePath/${AppAnimations.animationLoadingWhite}';
 
   // --- AppSounds Mapping ---
-  static const soundChargingCompletionNotificationSound = '$_basePath/${AppSounds.chargingCompletionNotificationSound}';
+  static const soundChargingCompletion = '$_basePath/${AppSounds.chargingCompletion}';
 
 }

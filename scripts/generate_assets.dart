@@ -16,7 +16,7 @@ void main() {
     folders: [
       'svg',
       'png',
-      'png/brands',
+      'png/brands', // Sub-folder brand baru lo
       'svg/outlined',
       'svg/solid',
       'svg/colored',
@@ -151,7 +151,9 @@ void _generateSubClass({
       }
 
       String suffix = '';
-      final currentFolder = file.parent.path.split(Platform.pathSeparator).last;
+
+      final normalizedParentPath = file.parent.path.replaceAll('\\', '/');
+      final currentFolder = normalizedParentPath.split('/').last;
 
       if (currentFolder == 'outlined' &&
           !cleanName.toLowerCase().contains('outlined')) {
