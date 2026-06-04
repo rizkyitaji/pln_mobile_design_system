@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 enum AppSnackBarType { success, error, info, warning }
@@ -81,13 +80,10 @@ class AppSnackBar {
             spacing: AppSizes.s12,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                AppAssets.iconCheckRounded,
+              AppImage(
+                asset: AppAssets.iconCheckRounded,
+                color: AppColors.iconOnSuccess,
                 width: AppSizes.s20,
-                colorFilter: ColorFilter.mode(
-                  AppColors.iconOnSuccess,
-                  BlendMode.srcIn,
-                ),
               ),
               Expanded(
                 child: Column(
@@ -155,13 +151,10 @@ class AppSnackBar {
             spacing: AppSizes.s12,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                AppAssets.iconInfoRounded,
+              AppImage(
+                asset: AppAssets.iconInfoRounded,
+                color: AppColors.iconOnError,
                 width: AppSizes.s20,
-                colorFilter: ColorFilter.mode(
-                  AppColors.iconOnError,
-                  BlendMode.srcIn,
-                ),
               ),
               Expanded(
                 child: Column(
@@ -229,13 +222,10 @@ class AppSnackBar {
             spacing: AppSizes.s12,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                AppAssets.iconInfoRounded,
+              AppImage(
+                asset: AppAssets.iconInfoRounded,
+                color: AppColors.iconOnInfo,
                 width: AppSizes.s20,
-                colorFilter: ColorFilter.mode(
-                  AppColors.iconOnInfo,
-                  BlendMode.srcIn,
-                ),
               ),
               Expanded(
                 child: Column(
@@ -303,13 +293,10 @@ class AppSnackBar {
             spacing: AppSizes.s12,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                AppAssets.iconWarning,
+              AppImage(
+                asset: AppAssets.iconWarning,
+                color: AppColors.iconOnWarning,
                 width: AppSizes.s20,
-                colorFilter: ColorFilter.mode(
-                  AppColors.iconOnWarning,
-                  BlendMode.srcIn,
-                ),
               ),
               Expanded(
                 child: Column(
@@ -377,13 +364,10 @@ class AppSnackBar {
             spacing: AppSizes.s12,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                AppAssets.iconCheckRounded,
+              AppImage(
+                asset: AppAssets.iconCheckRounded,
+                color: AppColors.iconOnSuccess,
                 width: AppSizes.s20,
-                colorFilter: ColorFilter.mode(
-                  AppColors.iconOnSuccess,
-                  BlendMode.srcIn,
-                ),
               ),
               Expanded(
                 child: Column(
