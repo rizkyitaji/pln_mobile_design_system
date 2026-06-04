@@ -281,12 +281,14 @@ abstract class AppAssets {
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
+  static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
+  static const imageIllustrationNikNotRegistered = '$_basePath/${AppImages.illustrationNikNotRegistered}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imageIllustrationPhoneDuplicate = '$_basePath/${AppImages.illustrationPhoneDuplicate}';
   static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
@@ -334,6 +336,6 @@ abstract class AppAssets {
   static const animationLoadingWhite = '$_basePath/${AppAnimations.animationLoadingWhite}';
 
   // --- AppSounds Mapping ---
-  static const soundChargingCompletionNotificationSound = '$_basePath/${AppSounds.chargingCompletionNotificationSound}';
+  static const soundChargingCompletion = '$_basePath/${AppSounds.chargingCompletion}';
 
 }

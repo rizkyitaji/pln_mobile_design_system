@@ -158,4 +158,42 @@ class AppHelper {
         return AppAssets.iconMenuSpklu;
     }
   }
+
+  static double getPercent(double value, double total) {
+    double progress = value / (total == 0 ? 1 : total);
+    double percent = progress * 100;
+    return percent;
+  }
+
+  static double toDouble(dynamic value) {
+    if (value == null) {
+      return 0;
+    } else if (value is num) {
+      return value.toDouble();
+    } else if (value is String) {
+      final str = value.trim();
+      if (str.isEmpty || str == 'null' || str == '-') {
+        return 0;
+      }
+      return double.tryParse(str) ?? 0;
+    } else {
+      return 0;
+    }
+  }
+
+  static int toInt(dynamic value) {
+    if (value == null) {
+      return 0;
+    } else if (value is num) {
+      return value.toInt();
+    } else if (value is String) {
+      final str = value.trim();
+      if (str.isEmpty || str == 'null' || str == '-') {
+        return 0;
+      }
+      return int.tryParse(str) ?? 0;
+    } else {
+      return 0;
+    }
+  }
 }

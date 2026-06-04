@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppInformationBottomSheet extends StatelessWidget {
@@ -13,7 +12,7 @@ class AppInformationBottomSheet extends StatelessWidget {
   final ButtonStyle? buttonStyle;
   final CrossAxisAlignment crossAxisAlignment;
   final VoidCallback? onTap;
-  final bool centerTitle;
+  final bool centerTitle, showDragHandle;
   final double? iconSize;
 
   const AppInformationBottomSheet({
@@ -36,6 +35,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.onTap,
     this.centerTitle = true,
     this.iconSize,
+    this.showDragHandle = true,
   });
 
   WrapAlignment _getWrapAlignment() {
@@ -59,6 +59,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: willPop,
       child: AppSheetContainer(
+        showDragHandle: showDragHandle,
         child: Column(
           crossAxisAlignment: crossAxisAlignment,
           mainAxisAlignment: isFullScreen
@@ -67,20 +68,21 @@ class AppInformationBottomSheet extends StatelessWidget {
           mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (icon != null) ...[
                     Container(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(AppSizes.s16),
                       child: Center(
-                        child: icon!.contains('svg')
-                            ? SvgPicture.asset(icon!, height: iconSize ?? 160.0)
-                            : Image.asset(icon!, height: iconSize ?? 160.0),
+                        child: AppImage(
+                          asset: icon!,
+                          height: iconSize ?? AppSizes.s160,
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 16.0),
+                    AppSpacing.h16,
                   ],
                   if (title != null) ...[
                     if (enableCloseButton) ...[
@@ -93,13 +95,10 @@ class AppInformationBottomSheet extends StatelessWidget {
                               color: titleColor,
                             ),
                           ),
-                          IconButton(
-                            onPressed: () => AppHelper.safePop(context),
-                            icon: const Icon(Icons.close),
-                          ),
+                          AppBackButton(icon: AppAssets.iconClose),
                         ],
                       ),
-                      const SizedBox(height: 16.0),
+                      AppSpacing.h16,
                     ] else ...[
                       Visibility(
                         visible: centerTitle,
@@ -122,13 +121,10 @@ class AppInformationBottomSheet extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16.0),
+                      AppSpacing.h16,
                     ],
                   ],
-                  if (highlight != null) ...[
-                    highlight!,
-                    const SizedBox(height: 12),
-                  ],
+                  if (highlight != null) ...[highlight!, AppSpacing.h12],
                   if (descriptionHtml != null) ...[
                     Html(
                       data: descriptionHtml,
@@ -158,20 +154,21 @@ class AppInformationBottomSheet extends StatelessWidget {
                         ),
                       ),
                     ),
-                  if (more != null) ...[const SizedBox(height: 12), more!],
+                  if (more != null) ...[AppSpacing.h12, more!],
                 ],
               ),
             ),
-            const SizedBox(height: 32.0),
+            AppSpacing.h16,
             AppPersistentSheet(
               child: useElevatedButton
                   ? ElevatedButton(
-                      onPressed:
-                          onTap ?? () => AppHelper.safePop(context, true),
+                      onPressed: onTap ?? () => context.safePop(true),
                       style: buttonStyle,
                       child: Center(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSizes.s10,
+                          ),
                           child: Text(
                             buttonText ?? 'Oke, Mengerti',
                             textAlign: TextAlign.center,
@@ -180,12 +177,13 @@ class AppInformationBottomSheet extends StatelessWidget {
                       ),
                     )
                   : OutlinedButton(
-                      onPressed:
-                          onTap ?? () => AppHelper.safePop(context, true),
+                      onPressed: onTap ?? () => context.safePop(true),
                       style: buttonStyle,
                       child: Center(
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSizes.s10,
+                          ),
                           child: Text(
                             buttonText ?? 'Oke, Mengerti',
                             textAlign: TextAlign.center,
@@ -221,6 +219,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     VoidCallback? onTap,
     bool centerTitle = true,
     double? iconSize,
+    bool showDragHandle = true,
   }) async {
     final information = await showModalBottomSheet<bool>(
       context: context,
@@ -241,6 +240,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         onTap: onTap,
         centerTitle: centerTitle,
         iconSize: iconSize,
+        showDragHandle: showDragHandle,
       ),
       isDismissible: isDismissible,
       enableDrag: isDraggable,

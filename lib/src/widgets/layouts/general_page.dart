@@ -6,7 +6,7 @@ class AppGeneralPage extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final List<Widget>? children, actionsAppBar;
   final Widget child, persistentSheet;
-  final Widget? leadingAppBar, titleAppBar;
+  final Widget? leadingAppBar, titleAppBar, floatingActionButton;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
   final String? backgroundImage, title, refreshIndicatorIcon;
@@ -21,6 +21,7 @@ class AppGeneralPage extends StatelessWidget {
       automaticallyImplyLeading,
       showDragHandle,
       isLoadingMore;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
   final ScrollPhysics? physics;
   final ScrollController? scrollController;
   final bool? useSafeArea,
@@ -65,6 +66,8 @@ class AppGeneralPage extends StatelessWidget {
     this.bottomSafeArea = false,
     this.leftSafeArea = false,
     this.rightSafeArea = false,
+    this.floatingActionButton,
+    this.floatingActionButtonLocation,
   });
 
   @override
@@ -96,6 +99,8 @@ class AppGeneralPage extends StatelessWidget {
           actions: actionsAppBar,
         ),
         backgroundColor: backgroundColor,
+        floatingActionButton: floatingActionButton,
+        floatingActionButtonLocation: floatingActionButtonLocation,
         body: Stack(
           children: [
             Visibility(

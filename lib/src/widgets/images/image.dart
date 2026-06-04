@@ -5,7 +5,7 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppImage extends StatelessWidget {
   final String asset;
-  final double? width, height;
+  final double? width, height, size;
   final Color? color;
   final BoxFit? fit;
   final bool? animate, repeat, reverse;
@@ -15,6 +15,7 @@ class AppImage extends StatelessWidget {
     required this.asset,
     this.width,
     this.height,
+    this.size,
     this.color,
     this.fit,
     this.animate,
@@ -30,15 +31,15 @@ class AppImage extends StatelessWidget {
         visible: asset.contains('svg'),
         replacement: Image.asset(
           asset,
-          width: width,
-          height: height,
+          width: width ?? size,
+          height: height ?? size,
           color: color,
           fit: fit,
         ),
         child: SvgPicture.asset(
           asset,
-          width: width,
-          height: height,
+          width: width ?? size,
+          height: height ?? size,
           fit: fit ?? BoxFit.contain,
           colorFilter: color != null
               ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
@@ -47,8 +48,8 @@ class AppImage extends StatelessWidget {
       ),
       child: Lottie.asset(
         asset,
-        width: width,
-        height: height,
+        width: width ?? size,
+        height: height ?? size,
         fit: fit,
         repeat: repeat,
         reverse: reverse,
