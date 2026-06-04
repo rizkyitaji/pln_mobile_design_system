@@ -16,10 +16,9 @@ class AppLoadingDialog extends StatelessWidget {
         children: [
           AppBoxCard(
             padding: const EdgeInsets.all(AppSizes.s16),
-            child: Lottie.asset(
-              AppAssets.animationLoadingPrimary,
-              width: AppSizes.s50,
-              height: AppSizes.s50,
+            child: AppImage(
+              asset: AppAssets.animationLoadingPrimary,
+              size: AppSizes.s50,
             ),
           ),
         ],
