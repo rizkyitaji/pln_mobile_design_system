@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppMenuCard extends StatelessWidget {
@@ -25,7 +24,7 @@ class AppMenuCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SvgPicture.asset(asset, width: AppSizes.s56, height: AppSizes.s56),
+          AppImage(asset: asset, size: AppSizes.s56),
           AppSpacing.h2,
           Text(
             name,

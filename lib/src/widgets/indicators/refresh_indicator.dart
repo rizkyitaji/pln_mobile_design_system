@@ -1,7 +1,6 @@
 import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lottie/lottie.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppRefreshIndicator extends StatelessWidget {
@@ -32,8 +31,8 @@ class AppRefreshIndicator extends StatelessWidget {
                 if (controller.isLoading || controller.value > 0)
                   Positioned(
                     top: paddingTop * controller.value,
-                    child: Lottie.asset(
-                      icon ?? AppAssets.animationLoadingPrimary,
+                    child: AppImage(
+                      asset: icon ?? AppAssets.animationLoadingPrimary,
                       animate: controller.isLoading,
                       width: AppSizes.s40,
                     ),
