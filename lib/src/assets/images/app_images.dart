@@ -12,11 +12,14 @@ abstract class AppImages {
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
+  static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
+  static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
+  static const String illustrationNikNotRegistered = 'assets/images/png/illustration-nik-not-registered.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationPhoneDuplicate = 'assets/images/png/illustration-phone-duplicate.png';
   static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
@@ -43,6 +46,8 @@ abstract class AppImages {
   static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
   static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
   static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
+  static const String backgroundMarketplaceHeader = 'assets/images/png/backgrounds/background-marketplace-header.png';
+  static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
   static const String backgroundNoImageDefault = 'assets/images/png/backgrounds/background-no-image-default.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
