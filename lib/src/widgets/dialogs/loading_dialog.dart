@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppLoadingDialog extends StatelessWidget {
