@@ -52,6 +52,11 @@ abstract class AppIcons {
   static const String iconWarningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
   // Group: PNG
+  static const String iconMarketplaceFlashSale = 'assets/icons/png/icon-marketplace-flash-sale.png';
+  static const String iconMarketplaceIncentive = 'assets/icons/png/icon-marketplace-incentive.png';
+  static const String iconMarketplaceOfficialStore = 'assets/icons/png/icon-marketplace-official-store.png';
+  static const String iconMarketplaceShippingDiscount = 'assets/icons/png/icon-marketplace-shipping-discount.png';
+  static const String iconMarketplaceTopProduct = 'assets/icons/png/icon-marketplace-top-product.png';
   static const String iconRatingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String iconRecCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
 
@@ -124,6 +129,7 @@ abstract class AppIcons {
   static const String iconPinMapsOutlined = 'assets/icons/svg/outlined/icon-pin-maps-outlined.svg';
   static const String iconPinOutlined = 'assets/icons/svg/outlined/icon-pin-outlined.svg';
   static const String iconPowerSocketOutlined = 'assets/icons/svg/outlined/icon-power-socket-outlined.svg';
+  static const String iconProductOutlined = 'assets/icons/svg/outlined/icon-product.svg';
   static const String iconProfileOutlined = 'assets/icons/svg/outlined/icon-profile-outlined.svg';
   static const String iconQuestionOutlined = 'assets/icons/svg/outlined/icon-question-outlined.svg';
   static const String iconRewardsOutlined = 'assets/icons/svg/outlined/icon-rewards-outlined.svg';
@@ -137,6 +143,7 @@ abstract class AppIcons {
   static const String iconWalletOutlined = 'assets/icons/svg/outlined/icon-wallet-outlined.svg';
   static const String iconWarningOutlined = 'assets/icons/svg/outlined/icon-warning-outlined.svg';
   static const String iconWattOutlined = 'assets/icons/svg/outlined/icon-watt-outlined.svg';
+  static const String iconWhatsappOutlined = 'assets/icons/svg/outlined/icon-whatsapp-outlined.svg';
 
   // Group: SOLID
   static const String iconAddDocs = 'assets/icons/svg/solid/icon-add-docs.svg';
@@ -212,6 +219,7 @@ abstract class AppIcons {
   static const String iconWifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
   // Group: COLORED
+  static const String iconAddressLocationColored = 'assets/icons/svg/colored/icon-address-location.svg';
   static const String iconChargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String iconCheckmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
   static const String iconComplaintRedColored = 'assets/icons/svg/colored/icon-complaint-red.svg';
@@ -219,6 +227,9 @@ abstract class AppIcons {
   static const String iconEvPointColored = 'assets/icons/svg/colored/icon-ev-point.svg';
   static const String iconHandshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
   static const String iconKwhMeterColored = 'assets/icons/svg/colored/icon-kwh-meter.svg';
+  static const String iconMarketplaceDiscussionColored = 'assets/icons/svg/colored/icon-marketplace-discussion.svg';
+  static const String iconMarketplaceOrderColored = 'assets/icons/svg/colored/icon-marketplace-order.svg';
+  static const String iconMarketplaceWishlistColored = 'assets/icons/svg/colored/icon-marketplace-wishlist.svg';
   static const String iconMoneyColored = 'assets/icons/svg/colored/icon-money.svg';
   static const String iconPersonRatingColored = 'assets/icons/svg/colored/icon-person-rating.svg';
   static const String iconPinIdpelPadamColored = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
@@ -237,6 +248,7 @@ abstract class AppIcons {
   static const String iconThropyColored = 'assets/icons/svg/colored/icon-thropy.svg';
   static const String iconTileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String iconUserColored = 'assets/icons/svg/colored/icon-user.svg';
+  static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
   // Group: MENU

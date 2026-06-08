@@ -251,4 +251,6 @@ abstract class AppColors {
     ],
     stops: [0.0, 0.45, 0.75, 0.85, 1.0],
   );
+
+  static const Color iconDefaultLemon = AppPalette.lemon200;
 }
