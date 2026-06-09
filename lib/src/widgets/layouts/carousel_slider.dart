@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
@@ -6,6 +7,8 @@ class AppCarouselSlider extends StatefulWidget {
   final ValueChanged<int>? onPageChanged;
   final Widget Function(BuildContext context, int index) itemBuilder;
   final double viewportFraction, spacing, paddingHorizontal;
+  final bool autoSlide;
+  final Duration autoSlideDuration;
 
   const AppCarouselSlider({
     super.key,
@@ -15,6 +18,8 @@ class AppCarouselSlider extends StatefulWidget {
     this.viewportFraction = 0.88,
     this.spacing = AppSizes.s16,
     this.paddingHorizontal = AppSizes.s16,
+    this.autoSlide = false,
+    this.autoSlideDuration = const Duration(seconds: 2),
   });
 
   @override
@@ -24,17 +29,44 @@ class AppCarouselSlider extends StatefulWidget {
 class _AppCarouselSliderState extends State<AppCarouselSlider> {
   late ScrollController _scrollController;
   int _currentIndex = 0;
+  Timer? _autoSlideTimer;
+  double _currentScrollStep = 0.0;
 
   @override
   void initState() {
     super.initState();
     _scrollController = ScrollController();
+    _startAutoSlide();
   }
 
   @override
   void dispose() {
+    _stopAutoSlide();
     _scrollController.dispose();
     super.dispose();
+  }
+
+  void _startAutoSlide() {
+    if (!widget.autoSlide || widget.itemCount <= 1) return;
+
+    _stopAutoSlide();
+
+    _autoSlideTimer = Timer.periodic(widget.autoSlideDuration, (timer) {
+      if (!_scrollController.hasClients) return;
+
+      final nextIndex = (_currentIndex + 1) % widget.itemCount;
+
+      _scrollController.animateTo(
+        nextIndex * _currentScrollStep,
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
+
+  void _stopAutoSlide() {
+    _autoSlideTimer?.cancel();
+    _autoSlideTimer = null;
   }
 
   @override
@@ -47,9 +79,16 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
         final baseWidth = availableWidth * widget.viewportFraction;
 
         final scrollStep = baseWidth + widget.spacing;
+        _currentScrollStep = scrollStep;
 
         return NotificationListener<ScrollNotification>(
           onNotification: (ScrollNotification notification) {
+            if (notification is ScrollStartNotification) {
+              _stopAutoSlide();
+            } else if (notification is ScrollEndNotification) {
+              _startAutoSlide();
+            }
+
             if (notification is ScrollUpdateNotification) {
               final metrics = notification.metrics;
               final exactPage = metrics.pixels / scrollStep;

@@ -60,7 +60,7 @@ abstract class AppIcons {
   static const String iconRatingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String iconRecCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
 
-  // Group: BRANDS
+  // Group: BRANDS PNG
   static const String iconAstra = 'assets/icons/png/brands/icon-astra.png';
   static const String iconBlueCharge = 'assets/icons/png/brands/icon-blue-charge.png';
   static const String iconChargePlus = 'assets/icons/png/brands/icon-charge-plus.png';
@@ -79,7 +79,7 @@ abstract class AppIcons {
   static const String iconVoltron = 'assets/icons/png/brands/icon-voltron.png';
   static const String iconWuling = 'assets/icons/png/brands/icon-wuling.png';
 
-  // Group: OUTLINED
+  // Group: OUTLINED SVG
   static const String iconAddFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
   static const String iconArrange1Outlined = 'assets/icons/svg/outlined/icon-arrange-1-outlined.svg';
   static const String iconBatteryOutlined = 'assets/icons/svg/outlined/icon-battery-outlined.svg';
@@ -145,7 +145,7 @@ abstract class AppIcons {
   static const String iconWattOutlined = 'assets/icons/svg/outlined/icon-watt-outlined.svg';
   static const String iconWhatsappOutlined = 'assets/icons/svg/outlined/icon-whatsapp-outlined.svg';
 
-  // Group: SOLID
+  // Group: SOLID SVG
   static const String iconAddDocs = 'assets/icons/svg/solid/icon-add-docs.svg';
   static const String iconAddImage = 'assets/icons/svg/solid/icon-add-image.svg';
   static const String iconBatteryNotFound = 'assets/icons/svg/solid/icon-battery-not-found.svg';
@@ -218,7 +218,7 @@ abstract class AppIcons {
   static const String iconWifiUpgrade = 'assets/icons/svg/solid/icon-wifi-upgrade.svg';
   static const String iconWifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
-  // Group: COLORED
+  // Group: COLORED SVG
   static const String iconAddressLocationColored = 'assets/icons/svg/colored/icon-address-location.svg';
   static const String iconChargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String iconCheckmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
@@ -251,7 +251,7 @@ abstract class AppIcons {
   static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
-  // Group: MENU
+  // Group: MENU SVG
   static const String iconMenuBalikNama = 'assets/icons/svg/menu/icon-menu-balik-nama.svg';
   static const String iconMenuCatatMeter = 'assets/icons/svg/menu/icon-menu-catat-meter.svg';
   static const String iconMenuEbilling = 'assets/icons/svg/menu/icon-menu-ebilling.svg';

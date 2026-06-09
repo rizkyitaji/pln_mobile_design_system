@@ -27,7 +27,7 @@ class AppErrorImage extends StatelessWidget {
       padding: padding,
       decoration: BoxDecoration(borderRadius: borderRadius ?? AppRadius.zero),
       child: AppImage(
-        asset: asset ?? AppAssets.imageBackgroundHeader,
+        asset: asset ?? AppAssets.imagePlaceholderDefault,
         width: width ?? size,
         height: height ?? size,
       ),

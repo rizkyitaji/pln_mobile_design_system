@@ -1,19 +1,19 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
+import 'dart:convert';
+
+import 'package:flutter/widgets.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class AppNetworkImage extends StatelessWidget {
-  final String? url, errorImage;
+class AppMemoryImage extends StatelessWidget {
+  final String? asset, errorImage;
   final double? width, height, size;
   final EdgeInsetsGeometry margin, padding, errorMargin, errorPadding;
   final BorderRadius borderRadius;
   final Color backgroundColor;
-  final VoidCallback? onTap;
   final BoxFit fit;
 
-  const AppNetworkImage({
+  const AppMemoryImage({
     super.key,
-    this.url,
+    this.asset,
     this.width,
     this.height,
     this.size,
@@ -25,15 +25,13 @@ class AppNetworkImage extends StatelessWidget {
     this.backgroundColor = AppColors.transparent,
     this.fit = BoxFit.fill,
     this.errorImage,
-    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    var imageUrl = url ?? '';
+    var image = asset ?? '';
 
     return AppBoxCard(
-      onTap: onTap,
       width: width ?? size,
       height: height ?? size,
       margin: margin,
@@ -41,7 +39,7 @@ class AppNetworkImage extends StatelessWidget {
       borderRadius: borderRadius,
       color: backgroundColor,
       child: Visibility(
-        visible: imageUrl.isNotEmpty,
+        visible: image.isNotEmpty,
         replacement: AppErrorImage(
           asset: errorImage,
           width: width,
@@ -51,28 +49,22 @@ class AppNetworkImage extends StatelessWidget {
           margin: errorMargin,
           padding: errorPadding,
         ),
-        child: ClipRRect(
-          borderRadius: borderRadius,
-          child: CachedNetworkImage(
-            imageUrl: imageUrl,
-            width: width ?? size,
-            height: height ?? size,
-            fit: fit,
-            placeholder: (context, _) {
-              return const Center(child: AppLoadingIndicator());
-            },
-            errorWidget: (context, _, __) {
-              return AppErrorImage(
-                asset: errorImage,
-                width: width,
-                height: height,
-                size: size,
-                borderRadius: borderRadius,
-                margin: errorMargin,
-                padding: errorPadding,
-              );
-            },
-          ),
+        child: Image.memory(
+          base64Decode(image),
+          width: width ?? size,
+          height: height ?? size,
+          fit: BoxFit.fill,
+          errorBuilder: (context, _, __) {
+            return AppErrorImage(
+              asset: errorImage,
+              width: width,
+              height: height,
+              size: size,
+              borderRadius: borderRadius,
+              margin: errorMargin,
+              padding: errorPadding,
+            );
+          },
         ),
       ),
     );

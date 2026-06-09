@@ -281,8 +281,10 @@ abstract class AppAssets {
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
+  static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
+  static const imageIllustrationEmptyVehicle = '$_basePath/${AppImages.illustrationEmptyVehicle}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
@@ -313,7 +315,6 @@ abstract class AppAssets {
   static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
-  static const imageBackgroundNoImageDefault = '$_basePath/${AppImages.backgroundNoImageDefault}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
@@ -324,6 +325,7 @@ abstract class AppAssets {
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
+  static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
   static const imagePlaceholderEv = '$_basePath/${AppImages.placeholderEv}';
 

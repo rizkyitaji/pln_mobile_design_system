@@ -12,8 +12,10 @@ abstract class AppImages {
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
+  static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
+  static const String illustrationEmptyVehicle = 'assets/images/png/illustration-empty-vehicle.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
@@ -34,7 +36,7 @@ abstract class AppImages {
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
   static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
 
-  // Group: BACKGROUNDS
+  // Group: BACKGROUNDS PNG
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
@@ -48,7 +50,6 @@ abstract class AppImages {
   static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
   static const String backgroundMarketplaceHeader = 'assets/images/png/backgrounds/background-marketplace-header.png';
   static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
-  static const String backgroundNoImageDefault = 'assets/images/png/backgrounds/background-no-image-default.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
@@ -60,7 +61,10 @@ abstract class AppImages {
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 
-  // Group: PLACEHOLDERS
+  // Group: PLACEHOLDERS PNG
+  static const String placeholderDefault = 'assets/images/png/placeholders/placeholder-default.png';
+
+  // Group: PLACEHOLDERS SVG
   static const String placeholderBattery = 'assets/images/svg/placeholders/placeholder-battery.svg';
   static const String placeholderEv = 'assets/images/svg/placeholders/placeholder-ev.svg';
 }

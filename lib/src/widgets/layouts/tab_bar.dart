@@ -4,8 +4,9 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppTabBar extends StatelessWidget {
   final List<String> tabs;
   final EdgeInsetsGeometry? margin;
+  final Function(int)? onTap;
 
-  const AppTabBar({super.key, required this.tabs, this.margin});
+  const AppTabBar({super.key, required this.tabs, this.margin, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class AppTabBar extends StatelessWidget {
         animation: tabController,
         builder: (context, child) {
           return TabBar(
+            onTap: onTap,
             isScrollable: true,
             tabAlignment: TabAlignment.start,
             dividerColor: AppColors.transparent,

@@ -167,7 +167,7 @@ class AppGeneralPage extends StatelessWidget {
         if (isLoadingMore)
           const Padding(
             padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
-            child: Center(child: AppLoadingIndicator()),
+            child: Center(child: AppLoadingIndicator(size: AppSizes.s40)),
           ),
       ],
     );
