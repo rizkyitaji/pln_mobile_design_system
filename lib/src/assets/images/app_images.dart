@@ -40,6 +40,7 @@ abstract class AppImages {
 
   // Group: BACKGROUNDS PNG
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
+  static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
   static const String backgroundHeaderTripPlanner = 'assets/images/png/backgrounds/background-header-trip-planner.png';
@@ -55,6 +56,7 @@ abstract class AppImages {
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
+  static const String backgroundPageEvDetail = 'assets/images/png/backgrounds/background-page-ev-detail.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
