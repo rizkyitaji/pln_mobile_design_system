@@ -10,6 +10,7 @@ abstract class AppImages {
   static const String illustrationConnectorInitialized = 'assets/images/png/illustration-connector-initialized.png';
   static const String illustrationConnectorPlugged = 'assets/images/png/illustration-connector-plugged.png';
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
+  static const String illustrationDeleteVehicle = 'assets/images/png/illustration-delete-vehicle.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
@@ -31,6 +32,7 @@ abstract class AppImages {
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
+  static const String illustrationSuccessVehicle = 'assets/images/png/illustration-success-vehicle.png';
 
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
@@ -55,6 +57,7 @@ abstract class AppImages {
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
+  static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';

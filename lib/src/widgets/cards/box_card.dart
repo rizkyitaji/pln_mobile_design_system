@@ -43,7 +43,7 @@ class AppBoxCard extends StatelessWidget {
               ? DecorationImage(image: AssetImage(asset!), fit: BoxFit.fill)
               : null,
           borderRadius: borderRadius ?? AppRadius.rounded12,
-          color: color ?? AppColors.white,
+          color: color ?? AppColors.background,
           boxShadow: boxShadow,
           gradient: gradient,
           border: border,

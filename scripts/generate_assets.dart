@@ -33,8 +33,8 @@ void main() {
     folders: [
       'png',
       'svg',
-      'png/mascot',
       'png/backgrounds',
+      'svg/backgrounds',
       'png/placeholders',
       'svg/placeholders',
     ],

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/widgets.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
@@ -29,7 +30,22 @@ class AppMemoryImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var image = asset ?? '';
+    final String imageString = asset ?? '';
+
+    Uint8List? imageBytes;
+
+    if (imageString.isNotEmpty) {
+      try {
+        String cleanBase64 = imageString;
+        if (imageString.contains(',')) {
+          cleanBase64 = imageString.split(',').last;
+        }
+
+        imageBytes = base64Decode(cleanBase64.trim());
+      } catch (e) {
+        imageBytes = null;
+      }
+    }
 
     return AppBoxCard(
       width: width ?? size,
@@ -39,34 +55,30 @@ class AppMemoryImage extends StatelessWidget {
       borderRadius: borderRadius,
       color: backgroundColor,
       child: Visibility(
-        visible: image.isNotEmpty,
-        replacement: AppErrorImage(
-          asset: errorImage,
-          width: width,
-          height: height,
-          size: size,
-          borderRadius: borderRadius,
-          margin: errorMargin,
-          padding: errorPadding,
-        ),
+        visible: imageBytes != null,
+        replacement: _buildErrorWidget,
         child: Image.memory(
-          base64Decode(image),
+          imageBytes ?? Uint8List(0),
           width: width ?? size,
           height: height ?? size,
-          fit: BoxFit.fill,
+          fit: fit,
           errorBuilder: (context, _, __) {
-            return AppErrorImage(
-              asset: errorImage,
-              width: width,
-              height: height,
-              size: size,
-              borderRadius: borderRadius,
-              margin: errorMargin,
-              padding: errorPadding,
-            );
+            return _buildErrorWidget;
           },
         ),
       ),
+    );
+  }
+
+  Widget get _buildErrorWidget {
+    return AppErrorImage(
+      asset: errorImage,
+      width: width,
+      height: height,
+      size: size,
+      borderRadius: borderRadius,
+      margin: errorMargin,
+      padding: errorPadding,
     );
   }
 }

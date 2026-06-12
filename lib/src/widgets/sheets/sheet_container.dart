@@ -6,8 +6,9 @@ class AppSheetContainer extends StatelessWidget {
   final List<Widget> children;
   final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
-  final bool showDragHandle, expand;
+  final bool showDragHandle, expand, bottomSafeArea, usePaddingBottom;
   final ScrollPhysics? physics;
+  final Color? color;
 
   const AppSheetContainer({
     super.key,
@@ -18,6 +19,9 @@ class AppSheetContainer extends StatelessWidget {
     this.showDragHandle = true,
     this.expand = false,
     this.physics,
+    this.color,
+    this.bottomSafeArea = true,
+    this.usePaddingBottom = true,
   });
 
   @override
@@ -25,14 +29,14 @@ class AppSheetContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: AppRadius.topRounded12,
-        color: AppColors.white,
+        color: color ?? AppColors.background,
       ),
       child: SafeArea(
         top: false,
+        bottom: bottomSafeArea,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            
             AppSpacing.h16,
             Visibility(
               visible: showDragHandle,
@@ -60,7 +64,7 @@ class AppSheetContainer extends StatelessWidget {
                 child: child ?? SizedBox(),
               ),
             ),
-            AppSpacing.h16,
+            if (usePaddingBottom) AppSpacing.h16,
           ],
         ),
       ),

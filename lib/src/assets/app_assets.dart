@@ -279,6 +279,7 @@ abstract class AppAssets {
   static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
   static const imageIllustrationConnectorPlugged = '$_basePath/${AppImages.illustrationConnectorPlugged}';
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
+  static const imageIllustrationDeleteVehicle = '$_basePath/${AppImages.illustrationDeleteVehicle}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
@@ -300,6 +301,7 @@ abstract class AppAssets {
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
+  static const imageIllustrationSuccessVehicle = '$_basePath/${AppImages.illustrationSuccessVehicle}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
@@ -320,6 +322,7 @@ abstract class AppAssets {
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageLogin = '$_basePath/${AppImages.backgroundPageLogin}';
+  static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';

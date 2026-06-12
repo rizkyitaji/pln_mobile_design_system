@@ -28,6 +28,7 @@ abstract class AppSpacing {
   static Widget h20 = const SizedBox(height: AppSizes.s20);
   static Widget h24 = const SizedBox(height: AppSizes.s24);
   static Widget h32 = const SizedBox(height: AppSizes.s32);
+  static Widget h120 = const SizedBox(height: AppSizes.s120);
 
   // Sliver Spacing (Column)
   static Widget sliverSpacing12 = SliverToBoxAdapter(child: AppSpacing.h12);

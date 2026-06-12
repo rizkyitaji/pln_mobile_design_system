@@ -23,7 +23,7 @@ class AppPersistentSheet extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: borderRadius ?? AppRadius.topRounded12,
         border: border ?? Border(top: BorderSide(color: AppColors.border)),
-        color: AppColors.white,
+        color: AppColors.background,
       ),
       child: SafeArea(top: false, child: child),
     );

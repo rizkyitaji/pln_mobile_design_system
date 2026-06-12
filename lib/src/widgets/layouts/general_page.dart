@@ -72,6 +72,8 @@ class AppGeneralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var bgImage = backgroundImage ?? '';
+
     return SafeArea(
       bottom: bottomSafeArea ?? useSafeArea ?? false,
       top: topSafeArea ?? useSafeArea ?? false,
@@ -104,14 +106,19 @@ class AppGeneralPage extends StatelessWidget {
         body: Stack(
           children: [
             Visibility(
-              visible: backgroundImage != null,
-              child: Container(
-                height: backgroundImageHeight,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(backgroundImage ?? ''),
-                    fit: BoxFit.fill,
-                  ),
+              visible: bgImage.isNotEmpty,
+              child: Visibility(
+                visible: bgImage.contains('https'),
+                replacement: AppImage(
+                  asset: bgImage,
+                  width: double.infinity,
+                  height: backgroundImageHeight,
+                  fit: BoxFit.fill,
+                ),
+                child: AppNetworkImage(
+                  url: bgImage,
+                  height: backgroundImageHeight,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

@@ -196,4 +196,15 @@ class AppHelper {
       return 0;
     }
   }
+
+  static String getConnectorIcon(String? connector) {
+    connector ??= '';
+    if (connector.contains('CCS2')) {
+      return AppAssets.iconConnectorCcs2;
+    } else if (connector.contains('CHADEMO')) {
+      return AppAssets.iconConnectorChademo;
+    } else {
+      return AppAssets.iconConnectorAc;
+    }
+  }
 }

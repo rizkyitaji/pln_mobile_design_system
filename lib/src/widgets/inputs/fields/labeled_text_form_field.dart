@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppLabeledTextFormField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String label;
   final bool required;
-  final String hintText;
+  final String? hintText;
   final bool readOnly;
   final int maxLines;
   final int? minLines;
@@ -15,6 +15,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final String? counterText;
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
+  final TextCapitalization? textCapitalization;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final VoidCallback? onTap;
@@ -27,11 +28,11 @@ class AppLabeledTextFormField extends StatelessWidget {
 
   const AppLabeledTextFormField({
     super.key,
-    required this.controller,
+    this.controller,
     required this.label,
-    required this.onChanged,
+    this.onChanged,
     this.required = false,
-    required this.hintText,
+    this.hintText,
     this.readOnly = false,
     this.maxLines = 1,
     this.maxLength,
@@ -43,6 +44,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.onTap,
     this.suffixIcon,
     this.textInputAction,
+    this.textCapitalization,
     this.counterText,
     this.suffixIconConstraints,
     this.suffixLabelIcon,
@@ -59,15 +61,15 @@ class AppLabeledTextFormField extends StatelessWidget {
           Row(
             children: [
               AppFieldLabel(label: label, required: required),
-              const SizedBox(width: AppSizes.s4),
+              AppSpacing.w4,
               suffixLabelIcon ?? SizedBox(),
             ],
           ),
         ] else ...[
           AppFieldLabel(label: label, required: required),
         ],
-        const SizedBox(height: AppSizes.s8),
-        AppRoundedTextFormField(
+        AppSpacing.h8,
+        TextFormField(
           controller: controller,
           readOnly: readOnly,
           maxLines: maxLines,
@@ -75,6 +77,7 @@ class AppLabeledTextFormField extends StatelessWidget {
           maxLength: maxLength,
           keyboardType: keyboardType,
           textInputAction: textInputAction,
+          textCapitalization: textCapitalization ?? TextCapitalization.none,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           inputFormatters: inputFormatters,
           validator: validator,
@@ -87,12 +90,9 @@ class AppLabeledTextFormField extends StatelessWidget {
             prefix: prefixText != null ? Text(prefixText!) : null,
             filled: true,
             counterText: counterText,
-            fillColor: fillColor ?? AppColors.white,
+            fillColor: fillColor,
             suffixIconConstraints: suffixIconConstraints,
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: AppSizes.s16,
-              vertical: maxLines > 1 ? AppSizes.s14 : AppSizes.s12,
-            ),
+            contentPadding: EdgeInsets.all(AppSizes.s12),
             border: OutlineInputBorder(
               borderRadius: AppRadius.rounded8,
               borderSide: const BorderSide(color: AppColors.border),

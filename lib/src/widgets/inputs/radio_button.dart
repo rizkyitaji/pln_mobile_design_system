@@ -19,9 +19,9 @@ class AppRadioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final active = selected;
-    final dotColor = activeColor ?? AppColors.primaryPressed;
-    final borderColor = activeBorderColor ?? AppColors.primaryPressed;
+    final active = selected == true;
+    final dotColor = activeColor ?? AppColors.iconPrimary;
+    final borderColor = activeBorderColor ?? AppColors.iconPrimary;
     final fillColor = activeFillColor ?? AppColors.primarySubtle;
 
     return Container(
@@ -30,12 +30,12 @@ class AppRadioButton extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: (active ?? false) ? borderColor : AppColors.border,
+          color: active ? borderColor : AppColors.border,
           width: 1,
         ),
-        color: (active ?? false) ? fillColor : AppColors.white,
+        color: active ? fillColor : AppColors.white,
       ),
-      child: (active ?? false)
+      child: active
           ? Center(
               child: Container(
                 width: AppSizes.s6,

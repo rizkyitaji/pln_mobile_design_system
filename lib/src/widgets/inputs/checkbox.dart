@@ -27,8 +27,8 @@ class AppCheckbox extends StatelessWidget {
       width: size,
       height: size,
       child: Checkbox(
-        activeColor: activeColor ?? AppColors.primary,
-        splashRadius: 4.0,
+        activeColor: activeColor ?? AppColors.iconPrimary,
+        splashRadius: AppSizes.s4,
         tristate: tristate,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius),
