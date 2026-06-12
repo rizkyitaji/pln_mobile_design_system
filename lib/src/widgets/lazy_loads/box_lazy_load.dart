@@ -26,7 +26,7 @@ class AppBoxLazyLoad extends StatelessWidget {
         color: onColor
             ? AppColors.shimmerHighlightOnColor
             : AppColors.shimmerHighlight,
-        borderRadius: borderRadius ?? AppRadius.rounded8,
+        borderRadius: borderRadius ?? AppRadius.rounded4,
       ),
     );
   }

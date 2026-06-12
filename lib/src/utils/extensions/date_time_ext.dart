@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 extension DateTimeExt on DateTime? {
   /// Output: 1 Januari 2026 09:10:11
@@ -27,5 +28,19 @@ extension DateTimeExt on DateTime? {
     var date = this;
     if (date == null) return '-';
     return DateFormat('dd MMMM y', 'id_ID').format(date);
+  }
+
+  /// Output: 202601
+  String get formatYearMonth {
+    var date = this;
+    if (date == null) return '-';
+    return '${date.year}${date.month.zeroPadding}';
+  }
+
+  /// Output: Januari 2026
+  String get formatMMMMy {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('MMMM y', 'id_ID').format(date);
   }
 }
