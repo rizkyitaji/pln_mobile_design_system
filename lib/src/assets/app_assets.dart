@@ -253,6 +253,8 @@ abstract class AppAssets {
   static const iconMenuEv = '$_basePath/${AppIcons.iconMenuEv}';
   static const iconMenuEvent = '$_basePath/${AppIcons.iconMenuEvent}';
   static const iconMenuInternet = '$_basePath/${AppIcons.iconMenuInternet}';
+  static const iconMenuKomporInduksi = '$_basePath/${AppIcons.iconMenuKomporInduksi}';
+  static const iconMenuLacakPermohonan = '$_basePath/${AppIcons.iconMenuLacakPermohonan}';
   static const iconMenuListrik = '$_basePath/${AppIcons.iconMenuListrik}';
   static const iconMenuMarketplace = '$_basePath/${AppIcons.iconMenuMarketplace}';
   static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
@@ -261,6 +263,7 @@ abstract class AppAssets {
   static const iconMenuPengelolaanListrik = '$_basePath/${AppIcons.iconMenuPengelolaanListrik}';
   static const iconMenuPulsaTagihan = '$_basePath/${AppIcons.iconMenuPulsaTagihan}';
   static const iconMenuPvRooftop = '$_basePath/${AppIcons.iconMenuPvRooftop}';
+  static const iconMenuRec = '$_basePath/${AppIcons.iconMenuRec}';
   static const iconMenuSimulasiBiaya = '$_basePath/${AppIcons.iconMenuSimulasiBiaya}';
   static const iconMenuSpklu = '$_basePath/${AppIcons.iconMenuSpklu}';
   static const iconMenuSplu = '$_basePath/${AppIcons.iconMenuSplu}';
@@ -321,11 +324,13 @@ abstract class AppAssets {
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
+  static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
   static const imageBackgroundPageLogin = '$_basePath/${AppImages.backgroundPageLogin}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';
+  static const imageBackgroundSection = '$_basePath/${AppImages.backgroundSection}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';

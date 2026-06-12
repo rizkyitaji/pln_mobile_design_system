@@ -258,6 +258,8 @@ abstract class AppIcons {
   static const String iconMenuEv = 'assets/icons/svg/menu/icon-menu-ev.svg';
   static const String iconMenuEvent = 'assets/icons/svg/menu/icon-menu-event.svg';
   static const String iconMenuInternet = 'assets/icons/svg/menu/icon-menu-internet.svg';
+  static const String iconMenuKomporInduksi = 'assets/icons/svg/menu/icon-menu-kompor-induksi.svg';
+  static const String iconMenuLacakPermohonan = 'assets/icons/svg/menu/icon-menu-lacak-permohonan.svg';
   static const String iconMenuListrik = 'assets/icons/svg/menu/icon-menu-listrik.svg';
   static const String iconMenuMarketplace = 'assets/icons/svg/menu/icon-menu-marketplace.svg';
   static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
@@ -266,6 +268,7 @@ abstract class AppIcons {
   static const String iconMenuPengelolaanListrik = 'assets/icons/svg/menu/icon-menu-pengelolaan-listrik.svg';
   static const String iconMenuPulsaTagihan = 'assets/icons/svg/menu/icon-menu-pulsa-tagihan.svg';
   static const String iconMenuPvRooftop = 'assets/icons/svg/menu/icon-menu-pv-rooftop.svg';
+  static const String iconMenuRec = 'assets/icons/svg/menu/icon-menu-rec.svg';
   static const String iconMenuSimulasiBiaya = 'assets/icons/svg/menu/icon-menu-simulasi-biaya.svg';
   static const String iconMenuSpklu = 'assets/icons/svg/menu/icon-menu-spklu.svg';
   static const String iconMenuSplu = 'assets/icons/svg/menu/icon-menu-splu.svg';

@@ -9,7 +9,10 @@ class AppGeneralPage extends StatelessWidget {
   final Widget? leadingAppBar, titleAppBar, floatingActionButton;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage, title, refreshIndicatorIcon;
+  final String? backgroundImage,
+      title,
+      refreshIndicatorIcon,
+      backgroundImageUrl;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -36,6 +39,7 @@ class AppGeneralPage extends StatelessWidget {
     this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
+    this.backgroundImageUrl,
     this.children,
     this.child = const SizedBox(),
     this.persistentSheet = const SizedBox(),
@@ -120,6 +124,14 @@ class AppGeneralPage extends StatelessWidget {
                   height: backgroundImageHeight,
                   fit: BoxFit.fill,
                 ),
+              ),
+            ),
+            Visibility(
+              visible: backgroundImageUrl != null,
+              child: AppNetworkImage(
+                url: backgroundImageUrl,
+                height: backgroundImageHeight,
+                width: double.infinity,
               ),
             ),
             Padding(
