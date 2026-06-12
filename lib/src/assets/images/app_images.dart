@@ -56,11 +56,13 @@ abstract class AppImages {
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
+  static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
+  static const String backgroundSection = 'assets/images/png/backgrounds/background-section.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 
