@@ -39,6 +39,7 @@ abstract class AppIcons {
   static const String iconMoreHorizontal = 'assets/icons/svg/icon-more-horizontal.svg';
   static const String iconMoreVertical = 'assets/icons/svg/icon-more-vertical.svg';
   static const String iconMushola = 'assets/icons/svg/icon-mushola.svg';
+  static const String iconNfc = 'assets/icons/svg/icon-nfc.svg';
   static const String iconPemadaman = 'assets/icons/svg/icon-pemadaman.svg';
   static const String iconPlug2 = 'assets/icons/svg/icon-plug-2.svg';
   static const String iconPlus = 'assets/icons/svg/icon-plus.svg';
