@@ -7,6 +7,8 @@ class AppAlertCard extends StatelessWidget {
   final AppAlertType? type;
   final VoidCallback? onTap;
   final String? title, description, actionText;
+  final Color? iconColor, backgroundColor, textColor;
+  final bool? centerIcon;
   final EdgeInsetsGeometry? margin;
   final Widget? trailing;
 
@@ -19,6 +21,10 @@ class AppAlertCard extends StatelessWidget {
     this.actionText,
     this.margin,
     this.trailing,
+    this.iconColor,
+    this.backgroundColor,
+    this.textColor,
+    this.centerIcon,
   });
 
   @override
@@ -28,7 +34,9 @@ class AppAlertCard extends StatelessWidget {
       margin: margin,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: centerIcon == true
+            ? CrossAxisAlignment.center
+            : CrossAxisAlignment.start,
         children: [
           _icon,
           Expanded(
@@ -85,25 +93,25 @@ class AppAlertCard extends StatelessWidget {
       case AppAlertType.success:
         return AppImage(
           asset: AppAssets.iconCheckRounded,
-          color: AppColors.iconSuccess,
+          color: iconColor ?? AppColors.iconSuccess,
           size: AppSizes.s20,
         );
       case AppAlertType.error:
         return AppImage(
           asset: AppAssets.iconWarningRounded,
-          color: AppColors.iconError,
+          color: iconColor ?? AppColors.iconError,
           size: AppSizes.s20,
         );
       case AppAlertType.info:
         return AppImage(
           asset: AppAssets.iconInfoRounded,
-          color: AppColors.iconInfo,
+          color: iconColor ?? AppColors.iconInfo,
           size: AppSizes.s20,
         );
       case AppAlertType.warning:
         return AppImage(
           asset: AppAssets.iconWarningRounded,
-          color: AppColors.iconWarning,
+          color: iconColor ?? AppColors.iconWarning,
           size: AppSizes.s20,
         );
       default:
@@ -114,30 +122,30 @@ class AppAlertCard extends StatelessWidget {
   Color get _backgroundColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.successSubtle;
+        return backgroundColor ?? AppColors.successSubtle;
       case AppAlertType.error:
-        return AppColors.errorSubtle;
+        return backgroundColor ?? AppColors.errorSubtle;
       case AppAlertType.info:
-        return AppColors.secondarySubtle;
+        return backgroundColor ?? AppColors.secondarySubtle;
       case AppAlertType.warning:
-        return AppColors.warningSubtle;
+        return backgroundColor ?? AppColors.warningSubtle;
       default:
-        return AppColors.primarySubtle;
+        return backgroundColor ?? AppColors.primarySubtle;
     }
   }
 
   Color get _textColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.textSuccessPressed;
+        return textColor ?? AppColors.textSuccessPressed;
       case AppAlertType.error:
-        return AppColors.textError;
+        return textColor ?? AppColors.textError;
       case AppAlertType.info:
-        return AppColors.textInfo;
+        return textColor ?? AppColors.textInfo;
       case AppAlertType.warning:
-        return AppColors.textWarning;
+        return textColor ?? AppColors.textWarning;
       default:
-        return AppColors.textPrimary;
+        return textColor ?? AppColors.textPrimary;
     }
   }
 }

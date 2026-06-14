@@ -16,6 +16,7 @@ abstract class AppImages {
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
+  static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
   static const String illustrationEmptyVehicle = 'assets/images/png/illustration-empty-vehicle.png';
@@ -58,6 +59,7 @@ abstract class AppImages {
   static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
   static const String backgroundMarketplaceHeader = 'assets/images/png/backgrounds/background-marketplace-header.png';
   static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
+  static const String backgroundMiniCardVehicle = 'assets/images/png/backgrounds/background-mini-card-vehicle.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
