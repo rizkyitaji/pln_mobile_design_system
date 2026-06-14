@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 enum AppAlertType { success, error, info, warning }
@@ -10,6 +9,8 @@ class AppAlertCard extends StatelessWidget {
   final String? title, description, actionText;
   final Color? iconColor, backgroundColor, textColor;
   final bool? centerIcon;
+  final EdgeInsetsGeometry? margin;
+  final Widget? trailing;
 
   const AppAlertCard({
     super.key,
@@ -18,6 +19,8 @@ class AppAlertCard extends StatelessWidget {
     this.title,
     this.description,
     this.actionText,
+    this.margin,
+    this.trailing,
     this.iconColor,
     this.backgroundColor,
     this.textColor,
@@ -28,6 +31,7 @@ class AppAlertCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBoxCard(
       color: _backgroundColor,
+      margin: margin,
       child: Row(
         spacing: AppSizes.s12,
         crossAxisAlignment: centerIcon == true
@@ -43,7 +47,7 @@ class AppAlertCard extends StatelessWidget {
                 Visibility(
                   visible: title != null,
                   child: Text(
-                    title ?? '-',
+                    title ?? '',
                     style: context.textTheme.bodyCaptionSemiBold.copyWith(
                       color: _textColor,
                     ),
@@ -78,6 +82,7 @@ class AppAlertCard extends StatelessWidget {
               ],
             ),
           ),
+          if (trailing != null) trailing ?? AppSpacing.zero,
         ],
       ),
     );
@@ -86,40 +91,28 @@ class AppAlertCard extends StatelessWidget {
   Widget get _icon {
     switch (type) {
       case AppAlertType.success:
-        return SvgPicture.asset(
-          AppAssets.iconCheckRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(
-            iconColor ?? AppColors.iconSuccess,
-            BlendMode.srcIn,
-          ),
+        return AppImage(
+          asset: AppAssets.iconCheckRounded,
+          color: iconColor ?? AppColors.iconSuccess,
+          size: AppSizes.s20,
         );
       case AppAlertType.error:
-        return SvgPicture.asset(
-          AppAssets.iconWarningRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(
-            iconColor ?? AppColors.iconError,
-            BlendMode.srcIn,
-          ),
+        return AppImage(
+          asset: AppAssets.iconWarningRounded,
+          color: iconColor ?? AppColors.iconError,
+          size: AppSizes.s20,
         );
       case AppAlertType.info:
-        return SvgPicture.asset(
-          AppAssets.iconInfoRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(
-            iconColor ?? AppColors.iconInfo,
-            BlendMode.srcIn,
-          ),
+        return AppImage(
+          asset: AppAssets.iconInfoRounded,
+          color: iconColor ?? AppColors.iconInfo,
+          size: AppSizes.s20,
         );
       case AppAlertType.warning:
-        return SvgPicture.asset(
-          AppAssets.iconWarningRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(
-            iconColor ?? AppColors.iconWarning,
-            BlendMode.srcIn,
-          ),
+        return AppImage(
+          asset: AppAssets.iconWarningRounded,
+          color: iconColor ?? AppColors.iconWarning,
+          size: AppSizes.s20,
         );
       default:
         return SizedBox();
