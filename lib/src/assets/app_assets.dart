@@ -65,6 +65,7 @@ abstract class AppAssets {
   static const iconMarketplaceTopProduct = '$_basePath/${AppIcons.iconMarketplaceTopProduct}';
   static const iconRatingHeader = '$_basePath/${AppIcons.iconRatingHeader}';
   static const iconRecCleanEnergy = '$_basePath/${AppIcons.iconRecCleanEnergy}';
+  static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
   static const iconAstra = '$_basePath/${AppIcons.iconAstra}';
   static const iconBlueCharge = '$_basePath/${AppIcons.iconBlueCharge}';
   static const iconChargePlus = '$_basePath/${AppIcons.iconChargePlus}';
@@ -92,6 +93,7 @@ abstract class AppAssets {
   static const iconCarOutlined = '$_basePath/${AppIcons.iconCarOutlined}';
   static const iconCartOutlined = '$_basePath/${AppIcons.iconCartOutlined}';
   static const iconCcOutlined = '$_basePath/${AppIcons.iconCcOutlined}';
+  static const iconChangePowerOutlined = '$_basePath/${AppIcons.iconChangePowerOutlined}';
   static const iconChatOutlined = '$_basePath/${AppIcons.iconChatOutlined}';
   static const iconCheckRoundedOutlined = '$_basePath/${AppIcons.iconCheckRoundedOutlined}';
   static const iconCircuitBreakerOutlined = '$_basePath/${AppIcons.iconCircuitBreakerOutlined}';
@@ -134,6 +136,7 @@ abstract class AppAssets {
   static const iconProductOutlined = '$_basePath/${AppIcons.iconProductOutlined}';
   static const iconProfileOutlined = '$_basePath/${AppIcons.iconProfileOutlined}';
   static const iconQuestionOutlined = '$_basePath/${AppIcons.iconQuestionOutlined}';
+  static const iconReportOutlined = '$_basePath/${AppIcons.iconReportOutlined}';
   static const iconRewardsOutlined = '$_basePath/${AppIcons.iconRewardsOutlined}';
   static const iconRiceCookerOutlined = '$_basePath/${AppIcons.iconRiceCookerOutlined}';
   static const iconSettingsOutlined = '$_basePath/${AppIcons.iconSettingsOutlined}';
@@ -218,6 +221,7 @@ abstract class AppAssets {
   static const iconWifiUpgrade = '$_basePath/${AppIcons.iconWifiUpgrade}';
   static const iconWifi = '$_basePath/${AppIcons.iconWifi}';
   static const iconAddressLocationColored = '$_basePath/${AppIcons.iconAddressLocationColored}';
+  static const iconChargerStationWhiteColored = '$_basePath/${AppIcons.iconChargerStationWhiteColored}';
   static const iconChargerStationColored = '$_basePath/${AppIcons.iconChargerStationColored}';
   static const iconCheckmarkColored = '$_basePath/${AppIcons.iconCheckmarkColored}';
   static const iconComplaintRedColored = '$_basePath/${AppIcons.iconComplaintRedColored}';
@@ -287,6 +291,7 @@ abstract class AppAssets {
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
+  static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
   static const imageIllustrationEmptyVehicle = '$_basePath/${AppImages.illustrationEmptyVehicle}';
@@ -322,6 +327,7 @@ abstract class AppAssets {
   static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
+  static const imageBackgroundMiniCardVehicle = '$_basePath/${AppImages.backgroundMiniCardVehicle}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';

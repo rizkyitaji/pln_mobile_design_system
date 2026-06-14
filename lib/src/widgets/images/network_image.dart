@@ -10,6 +10,7 @@ class AppNetworkImage extends StatelessWidget {
   final Color backgroundColor;
   final VoidCallback? onTap;
   final BoxFit fit;
+  final Color? color;
 
   const AppNetworkImage({
     super.key,
@@ -26,6 +27,7 @@ class AppNetworkImage extends StatelessWidget {
     this.fit = BoxFit.fill,
     this.errorImage,
     this.onTap,
+    this.color,
   });
 
   @override
@@ -56,6 +58,7 @@ class AppNetworkImage extends StatelessWidget {
           child: CachedNetworkImage(
             imageUrl: imageUrl,
             width: width ?? size,
+            color: color,
             height: height ?? size,
             fit: fit,
             placeholder: (context, _) {

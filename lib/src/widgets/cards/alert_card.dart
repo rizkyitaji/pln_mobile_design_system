@@ -8,6 +8,8 @@ class AppAlertCard extends StatelessWidget {
   final AppAlertType? type;
   final VoidCallback? onTap;
   final String? title, description, actionText;
+  final Color? iconColor, backgroundColor, textColor;
+  final bool? centerIcon;
 
   const AppAlertCard({
     super.key,
@@ -16,6 +18,10 @@ class AppAlertCard extends StatelessWidget {
     this.title,
     this.description,
     this.actionText,
+    this.iconColor,
+    this.backgroundColor,
+    this.textColor,
+    this.centerIcon,
   });
 
   @override
@@ -24,7 +30,9 @@ class AppAlertCard extends StatelessWidget {
       color: _backgroundColor,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: centerIcon == true
+            ? CrossAxisAlignment.center
+            : CrossAxisAlignment.start,
         children: [
           _icon,
           Expanded(
@@ -32,10 +40,13 @@ class AppAlertCard extends StatelessWidget {
               spacing: AppSizes.s2,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title ?? '-',
-                  style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                    color: _textColor,
+                Visibility(
+                  visible: title != null,
+                  child: Text(
+                    title ?? '-',
+                    style: context.textTheme.bodyCaptionSemiBold.copyWith(
+                      color: _textColor,
+                    ),
                   ),
                 ),
                 Visibility(
@@ -78,25 +89,37 @@ class AppAlertCard extends StatelessWidget {
         return SvgPicture.asset(
           AppAssets.iconCheckRounded,
           width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconSuccess, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(
+            iconColor ?? AppColors.iconSuccess,
+            BlendMode.srcIn,
+          ),
         );
       case AppAlertType.error:
         return SvgPicture.asset(
           AppAssets.iconWarningRounded,
           width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconError, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(
+            iconColor ?? AppColors.iconError,
+            BlendMode.srcIn,
+          ),
         );
       case AppAlertType.info:
         return SvgPicture.asset(
           AppAssets.iconInfoRounded,
           width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconInfo, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(
+            iconColor ?? AppColors.iconInfo,
+            BlendMode.srcIn,
+          ),
         );
       case AppAlertType.warning:
         return SvgPicture.asset(
           AppAssets.iconWarningRounded,
           width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconWarning, BlendMode.srcIn),
+          colorFilter: ColorFilter.mode(
+            iconColor ?? AppColors.iconWarning,
+            BlendMode.srcIn,
+          ),
         );
       default:
         return SizedBox();
@@ -106,30 +129,30 @@ class AppAlertCard extends StatelessWidget {
   Color get _backgroundColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.successSubtle;
+        return backgroundColor ?? AppColors.successSubtle;
       case AppAlertType.error:
-        return AppColors.errorSubtle;
+        return backgroundColor ?? AppColors.errorSubtle;
       case AppAlertType.info:
-        return AppColors.secondarySubtle;
+        return backgroundColor ?? AppColors.secondarySubtle;
       case AppAlertType.warning:
-        return AppColors.warningSubtle;
+        return backgroundColor ?? AppColors.warningSubtle;
       default:
-        return AppColors.primarySubtle;
+        return backgroundColor ?? AppColors.primarySubtle;
     }
   }
 
   Color get _textColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.textSuccessPressed;
+        return textColor ?? AppColors.textSuccessPressed;
       case AppAlertType.error:
-        return AppColors.textError;
+        return textColor ?? AppColors.textError;
       case AppAlertType.info:
-        return AppColors.textInfo;
+        return textColor ?? AppColors.textInfo;
       case AppAlertType.warning:
-        return AppColors.textWarning;
+        return textColor ?? AppColors.textWarning;
       default:
-        return AppColors.textPrimary;
+        return textColor ?? AppColors.textPrimary;
     }
   }
 }
