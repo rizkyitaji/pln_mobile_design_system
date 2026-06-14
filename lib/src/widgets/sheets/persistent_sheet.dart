@@ -6,6 +6,7 @@ class AppPersistentSheet extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final BoxBorder? border;
   final Widget child;
+  final String? asset;
 
   const AppPersistentSheet({
     super.key,
@@ -13,6 +14,7 @@ class AppPersistentSheet extends StatelessWidget {
     this.borderRadius,
     this.border,
     this.child = const SizedBox(),
+    this.asset,
   });
 
   @override
@@ -21,9 +23,12 @@ class AppPersistentSheet extends StatelessWidget {
       width: double.infinity,
       padding: padding ?? EdgeInsets.all(AppSizes.s16),
       decoration: BoxDecoration(
+        color: AppColors.background,
         borderRadius: borderRadius ?? AppRadius.topRounded12,
         border: border ?? Border(top: BorderSide(color: AppColors.border)),
-        color: AppColors.background,
+        image: asset != null
+            ? DecorationImage(image: AssetImage(asset!), fit: BoxFit.fill)
+            : null,
       ),
       child: SafeArea(top: false, child: child),
     );

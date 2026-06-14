@@ -64,7 +64,7 @@ class AppSheetContainer extends StatelessWidget {
                 child: child ?? SizedBox(),
               ),
             ),
-            if (usePaddingBottom) AppSpacing.h16,
+            if (usePaddingBottom) context.viewInsetsBottom(AppSizes.s16),
           ],
         ),
       ),

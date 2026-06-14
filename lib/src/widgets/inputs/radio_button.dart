@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppRadioButton extends StatelessWidget {
-  final bool? selected;
+  final bool selected;
   final Color? activeColor;
   final Color? activeBorderColor;
   final Color? activeFillColor;
@@ -19,7 +19,6 @@ class AppRadioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final active = selected == true;
     final dotColor = activeColor ?? AppColors.iconPrimary;
     final borderColor = activeBorderColor ?? AppColors.iconPrimary;
     final fillColor = activeFillColor ?? AppColors.primarySubtle;
@@ -29,13 +28,10 @@ class AppRadioButton extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(
-          color: active ? borderColor : AppColors.border,
-          width: 1,
-        ),
-        color: active ? fillColor : AppColors.white,
+        border: Border.all(color: selected ? borderColor : AppColors.border),
+        color: selected ? fillColor : AppColors.white,
       ),
-      child: active
+      child: selected
           ? Center(
               child: Container(
                 width: AppSizes.s6,
