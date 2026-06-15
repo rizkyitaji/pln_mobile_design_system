@@ -38,6 +38,7 @@ abstract class AppImages {
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
   static const String illustrationSuccessVehicle = 'assets/images/png/illustration-success-vehicle.png';
+  static const String illustrationVerificationEmail = 'assets/images/png/illustration-verification-email.png';
 
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
@@ -66,7 +67,6 @@ abstract class AppImages {
   static const String backgroundPageEvDetail = 'assets/images/png/backgrounds/background-page-ev-detail.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
-  static const String backgroundPageLogin = 'assets/images/png/backgrounds/background-page-login.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
