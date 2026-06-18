@@ -30,4 +30,11 @@ extension ContextExt on BuildContext {
       Navigator.pop<T>(this, result);
     }
   }
+
+  Widget viewInsetsBottom([double height = AppSizes.zero]) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: viewInsets.bottom),
+      child: SizedBox(height: height),
+    );
+  }
 }

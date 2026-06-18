@@ -16,7 +16,7 @@ void main() {
     folders: [
       'svg',
       'png',
-      'png/brands', // Sub-folder brand baru lo
+      'png/brands',
       'svg/outlined',
       'svg/solid',
       'svg/colored',
@@ -33,8 +33,9 @@ void main() {
     folders: [
       'png',
       'svg',
-      'png/mascot',
       'png/backgrounds',
+      'svg/backgrounds',
+      'png/placeholders',
       'svg/placeholders',
     ],
     extensions: ['.png', '.svg'],
@@ -125,7 +126,16 @@ void _generateSubClass({
 
     if (files.isEmpty) continue;
 
-    final groupName = path.split('/').last.toUpperCase();
+    final normalizedPath = path.replaceAll('\\', '/');
+    final pathSegments = normalizedPath.split('/');
+    String groupName = pathSegments.last.toUpperCase();
+
+    if (pathSegments.contains('png') && groupName != 'PNG') {
+      groupName = '$groupName PNG';
+    } else if (pathSegments.contains('svg') && groupName != 'SVG') {
+      groupName = '$groupName SVG';
+    }
+
     buffer.writeln('\n  // Group: $groupName');
 
     for (var file in files) {
@@ -164,9 +174,9 @@ void _generateSubClass({
       }
 
       final varName = _toCamelCase(cleanName) + suffix;
-      final normalizedPath = file.path.replaceAll('\\', '/');
+      final finalPath = file.path.replaceAll('\\', '/');
 
-      buffer.writeln("  static const String $varName = '$normalizedPath';");
+      buffer.writeln("  static const String $varName = '$finalPath';");
     }
   }
   buffer.writeln('}');

@@ -46,6 +46,7 @@ abstract class AppAssets {
   static const iconMoreHorizontal = '$_basePath/${AppIcons.iconMoreHorizontal}';
   static const iconMoreVertical = '$_basePath/${AppIcons.iconMoreVertical}';
   static const iconMushola = '$_basePath/${AppIcons.iconMushola}';
+  static const iconNfc = '$_basePath/${AppIcons.iconNfc}';
   static const iconPemadaman = '$_basePath/${AppIcons.iconPemadaman}';
   static const iconPlug2 = '$_basePath/${AppIcons.iconPlug2}';
   static const iconPlus = '$_basePath/${AppIcons.iconPlus}';
@@ -64,6 +65,7 @@ abstract class AppAssets {
   static const iconMarketplaceTopProduct = '$_basePath/${AppIcons.iconMarketplaceTopProduct}';
   static const iconRatingHeader = '$_basePath/${AppIcons.iconRatingHeader}';
   static const iconRecCleanEnergy = '$_basePath/${AppIcons.iconRecCleanEnergy}';
+  static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
   static const iconAstra = '$_basePath/${AppIcons.iconAstra}';
   static const iconBlueCharge = '$_basePath/${AppIcons.iconBlueCharge}';
   static const iconChargePlus = '$_basePath/${AppIcons.iconChargePlus}';
@@ -91,6 +93,7 @@ abstract class AppAssets {
   static const iconCarOutlined = '$_basePath/${AppIcons.iconCarOutlined}';
   static const iconCartOutlined = '$_basePath/${AppIcons.iconCartOutlined}';
   static const iconCcOutlined = '$_basePath/${AppIcons.iconCcOutlined}';
+  static const iconChangePowerOutlined = '$_basePath/${AppIcons.iconChangePowerOutlined}';
   static const iconChatOutlined = '$_basePath/${AppIcons.iconChatOutlined}';
   static const iconCheckRoundedOutlined = '$_basePath/${AppIcons.iconCheckRoundedOutlined}';
   static const iconCircuitBreakerOutlined = '$_basePath/${AppIcons.iconCircuitBreakerOutlined}';
@@ -133,6 +136,7 @@ abstract class AppAssets {
   static const iconProductOutlined = '$_basePath/${AppIcons.iconProductOutlined}';
   static const iconProfileOutlined = '$_basePath/${AppIcons.iconProfileOutlined}';
   static const iconQuestionOutlined = '$_basePath/${AppIcons.iconQuestionOutlined}';
+  static const iconReportOutlined = '$_basePath/${AppIcons.iconReportOutlined}';
   static const iconRewardsOutlined = '$_basePath/${AppIcons.iconRewardsOutlined}';
   static const iconRiceCookerOutlined = '$_basePath/${AppIcons.iconRiceCookerOutlined}';
   static const iconSettingsOutlined = '$_basePath/${AppIcons.iconSettingsOutlined}';
@@ -217,6 +221,7 @@ abstract class AppAssets {
   static const iconWifiUpgrade = '$_basePath/${AppIcons.iconWifiUpgrade}';
   static const iconWifi = '$_basePath/${AppIcons.iconWifi}';
   static const iconAddressLocationColored = '$_basePath/${AppIcons.iconAddressLocationColored}';
+  static const iconChargerStationWhiteColored = '$_basePath/${AppIcons.iconChargerStationWhiteColored}';
   static const iconChargerStationColored = '$_basePath/${AppIcons.iconChargerStationColored}';
   static const iconCheckmarkColored = '$_basePath/${AppIcons.iconCheckmarkColored}';
   static const iconComplaintRedColored = '$_basePath/${AppIcons.iconComplaintRedColored}';
@@ -254,6 +259,8 @@ abstract class AppAssets {
   static const iconMenuEv = '$_basePath/${AppIcons.iconMenuEv}';
   static const iconMenuEvent = '$_basePath/${AppIcons.iconMenuEvent}';
   static const iconMenuInternet = '$_basePath/${AppIcons.iconMenuInternet}';
+  static const iconMenuKomporInduksi = '$_basePath/${AppIcons.iconMenuKomporInduksi}';
+  static const iconMenuLacakPermohonan = '$_basePath/${AppIcons.iconMenuLacakPermohonan}';
   static const iconMenuListrik = '$_basePath/${AppIcons.iconMenuListrik}';
   static const iconMenuMarketplace = '$_basePath/${AppIcons.iconMenuMarketplace}';
   static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
@@ -262,6 +269,7 @@ abstract class AppAssets {
   static const iconMenuPengelolaanListrik = '$_basePath/${AppIcons.iconMenuPengelolaanListrik}';
   static const iconMenuPulsaTagihan = '$_basePath/${AppIcons.iconMenuPulsaTagihan}';
   static const iconMenuPvRooftop = '$_basePath/${AppIcons.iconMenuPvRooftop}';
+  static const iconMenuRec = '$_basePath/${AppIcons.iconMenuRec}';
   static const iconMenuSimulasiBiaya = '$_basePath/${AppIcons.iconMenuSimulasiBiaya}';
   static const iconMenuSpklu = '$_basePath/${AppIcons.iconMenuSpklu}';
   static const iconMenuSplu = '$_basePath/${AppIcons.iconMenuSplu}';
@@ -279,11 +287,18 @@ abstract class AppAssets {
   static const imageIllustrationConfirmationGeneral = '$_basePath/${AppImages.illustrationConfirmationGeneral}';
   static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
   static const imageIllustrationConnectorPlugged = '$_basePath/${AppImages.illustrationConnectorPlugged}';
+  static const imageIllustrationConnectorTooFar = '$_basePath/${AppImages.illustrationConnectorTooFar}';
+  static const imageIllustrationConnectorUnavailable = '$_basePath/${AppImages.illustrationConnectorUnavailable}';
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
+  static const imageIllustrationDeleteVehicle = '$_basePath/${AppImages.illustrationDeleteVehicle}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
+  static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
+  static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
+  static const imageIllustrationEmptyVehicle = '$_basePath/${AppImages.illustrationEmptyVehicle}';
+  static const imageIllustrationEvQueue = '$_basePath/${AppImages.illustrationEvQueue}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
@@ -296,9 +311,12 @@ abstract class AppAssets {
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
+  static const imageIllustrationSpkluQueue = '$_basePath/${AppImages.illustrationSpkluQueue}';
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
+  static const imageIllustrationSuccessVehicle = '$_basePath/${AppImages.illustrationSuccessVehicle}';
+  static const imageIllustrationVerificationEmail = '$_basePath/${AppImages.illustrationVerificationEmail}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
   static const imageIllustrationEmptyStateComplaintHistory = '$_basePath/${AppImages.illustrationEmptyStateComplaintHistory}';
@@ -306,9 +324,11 @@ abstract class AppAssets {
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
   static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
   static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';
+  static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
-  static const imageBackgroundHeaderTripPlanner = '$_basePath/${AppImages.backgroundHeaderTripPlanner}';
+  static const imageBackgroundHeaderScan = '$_basePath/${AppImages.backgroundHeaderScan}';
+  static const imageBackgroundHeaderTile = '$_basePath/${AppImages.backgroundHeaderTile}';
   static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
   static const imageBackgroundIndicatorChargingCompleted = '$_basePath/${AppImages.backgroundIndicatorChargingCompleted}';
   static const imageBackgroundIndicatorChargingConnected = '$_basePath/${AppImages.backgroundIndicatorChargingConnected}';
@@ -318,17 +338,21 @@ abstract class AppAssets {
   static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
-  static const imageBackgroundNoImageDefault = '$_basePath/${AppImages.backgroundNoImageDefault}';
+  static const imageBackgroundMiniCardVehicle = '$_basePath/${AppImages.backgroundMiniCardVehicle}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
+  static const imageBackgroundPageEvDetail = '$_basePath/${AppImages.backgroundPageEvDetail}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
-  static const imageBackgroundPageLogin = '$_basePath/${AppImages.backgroundPageLogin}';
+  static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
+  static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';
+  static const imageBackgroundSection = '$_basePath/${AppImages.backgroundSection}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
+  static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
   static const imagePlaceholderEv = '$_basePath/${AppImages.placeholderEv}';
 

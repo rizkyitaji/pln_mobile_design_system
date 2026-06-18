@@ -5,11 +5,17 @@ class AppGeneralPage extends StatelessWidget {
   final VoidCallback? onBackPressed;
   final EdgeInsetsGeometry? padding;
   final List<Widget>? children, actionsAppBar;
-  final Widget child, persistentSheet;
-  final Widget? leadingAppBar, titleAppBar, floatingActionButton;
+  final Widget child;
+  final Widget? leadingAppBar,
+      titleAppBar,
+      floatingActionButton,
+      persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage, title, refreshIndicatorIcon;
+  final String? backgroundImage,
+      title,
+      refreshIndicatorIcon,
+      backgroundImageUrl;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -36,9 +42,10 @@ class AppGeneralPage extends StatelessWidget {
     this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
+    this.backgroundImageUrl,
     this.children,
     this.child = const SizedBox(),
-    this.persistentSheet = const SizedBox(),
+    this.persistentSheet,
     this.backgroundColor,
     this.appBarColor,
     this.titleColor,
@@ -72,6 +79,8 @@ class AppGeneralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var bgImage = backgroundImage ?? '';
+
     return SafeArea(
       bottom: bottomSafeArea ?? useSafeArea ?? false,
       top: topSafeArea ?? useSafeArea ?? false,
@@ -104,15 +113,28 @@ class AppGeneralPage extends StatelessWidget {
         body: Stack(
           children: [
             Visibility(
-              visible: backgroundImage != null,
-              child: Container(
-                height: backgroundImageHeight,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(backgroundImage ?? ''),
-                    fit: BoxFit.fill,
-                  ),
+              visible: bgImage.isNotEmpty,
+              child: Visibility(
+                visible: bgImage.contains('https'),
+                replacement: AppImage(
+                  asset: bgImage,
+                  width: double.infinity,
+                  height: backgroundImageHeight,
+                  fit: BoxFit.fill,
                 ),
+                child: AppNetworkImage(
+                  url: bgImage,
+                  height: backgroundImageHeight,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            Visibility(
+              visible: backgroundImageUrl != null,
+              child: AppNetworkImage(
+                url: backgroundImageUrl,
+                height: backgroundImageHeight,
+                width: double.infinity,
               ),
             ),
             Padding(
@@ -150,7 +172,8 @@ class AppGeneralPage extends StatelessWidget {
                 },
               ),
             ),
-            Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet),
+            if (persistentSheet != null)
+              Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet!),
           ],
         ),
       ),
@@ -167,8 +190,9 @@ class AppGeneralPage extends StatelessWidget {
         if (isLoadingMore)
           const Padding(
             padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
-            child: Center(child: AppLoadingIndicator()),
+            child: Center(child: AppLoadingIndicator(size: AppSizes.s40)),
           ),
+        if (persistentSheet != null) SizedBox(height: AppSizes.s120),
       ],
     );
   }

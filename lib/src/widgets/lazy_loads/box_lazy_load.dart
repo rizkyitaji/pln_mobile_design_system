@@ -5,6 +5,7 @@ class AppBoxLazyLoad extends StatelessWidget {
   final double? width, height;
   final EdgeInsetsGeometry? margin;
   final BorderRadiusGeometry? borderRadius;
+  final bool onColor;
 
   const AppBoxLazyLoad({
     super.key,
@@ -12,6 +13,7 @@ class AppBoxLazyLoad extends StatelessWidget {
     this.height,
     this.margin,
     this.borderRadius,
+    this.onColor = false,
   });
 
   @override
@@ -21,8 +23,10 @@ class AppBoxLazyLoad extends StatelessWidget {
       height: height ?? AppSizes.s24,
       margin: margin,
       decoration: BoxDecoration(
-        color: AppColors.shimmerHighlight,
-        borderRadius: borderRadius ?? AppRadius.rounded8,
+        color: onColor
+            ? AppColors.shimmerHighlightOnColor
+            : AppColors.shimmerHighlight,
+        borderRadius: borderRadius ?? AppRadius.rounded4,
       ),
     );
   }

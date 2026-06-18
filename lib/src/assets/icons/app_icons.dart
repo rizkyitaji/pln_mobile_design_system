@@ -39,6 +39,7 @@ abstract class AppIcons {
   static const String iconMoreHorizontal = 'assets/icons/svg/icon-more-horizontal.svg';
   static const String iconMoreVertical = 'assets/icons/svg/icon-more-vertical.svg';
   static const String iconMushola = 'assets/icons/svg/icon-mushola.svg';
+  static const String iconNfc = 'assets/icons/svg/icon-nfc.svg';
   static const String iconPemadaman = 'assets/icons/svg/icon-pemadaman.svg';
   static const String iconPlug2 = 'assets/icons/svg/icon-plug-2.svg';
   static const String iconPlus = 'assets/icons/svg/icon-plus.svg';
@@ -59,8 +60,9 @@ abstract class AppIcons {
   static const String iconMarketplaceTopProduct = 'assets/icons/png/icon-marketplace-top-product.png';
   static const String iconRatingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String iconRecCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
+  static const String iconSpkluStation = 'assets/icons/png/icon-spklu-station.png';
 
-  // Group: BRANDS
+  // Group: BRANDS PNG
   static const String iconAstra = 'assets/icons/png/brands/icon-astra.png';
   static const String iconBlueCharge = 'assets/icons/png/brands/icon-blue-charge.png';
   static const String iconChargePlus = 'assets/icons/png/brands/icon-charge-plus.png';
@@ -79,7 +81,7 @@ abstract class AppIcons {
   static const String iconVoltron = 'assets/icons/png/brands/icon-voltron.png';
   static const String iconWuling = 'assets/icons/png/brands/icon-wuling.png';
 
-  // Group: OUTLINED
+  // Group: OUTLINED SVG
   static const String iconAddFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
   static const String iconArrange1Outlined = 'assets/icons/svg/outlined/icon-arrange-1-outlined.svg';
   static const String iconBatteryOutlined = 'assets/icons/svg/outlined/icon-battery-outlined.svg';
@@ -90,6 +92,7 @@ abstract class AppIcons {
   static const String iconCarOutlined = 'assets/icons/svg/outlined/icon-car-outlined.svg';
   static const String iconCartOutlined = 'assets/icons/svg/outlined/icon-cart-outlined.svg';
   static const String iconCcOutlined = 'assets/icons/svg/outlined/icon-cc-outlined.svg';
+  static const String iconChangePowerOutlined = 'assets/icons/svg/outlined/icon-change-power-outlined.svg';
   static const String iconChatOutlined = 'assets/icons/svg/outlined/icon-chat-outlined.svg';
   static const String iconCheckRoundedOutlined = 'assets/icons/svg/outlined/icon-check-rounded-outlined.svg';
   static const String iconCircuitBreakerOutlined = 'assets/icons/svg/outlined/icon-circuit-breaker-outlined.svg';
@@ -132,6 +135,7 @@ abstract class AppIcons {
   static const String iconProductOutlined = 'assets/icons/svg/outlined/icon-product.svg';
   static const String iconProfileOutlined = 'assets/icons/svg/outlined/icon-profile-outlined.svg';
   static const String iconQuestionOutlined = 'assets/icons/svg/outlined/icon-question-outlined.svg';
+  static const String iconReportOutlined = 'assets/icons/svg/outlined/icon-report-outlined.svg';
   static const String iconRewardsOutlined = 'assets/icons/svg/outlined/icon-rewards-outlined.svg';
   static const String iconRiceCookerOutlined = 'assets/icons/svg/outlined/icon-rice-cooker-outlined.svg';
   static const String iconSettingsOutlined = 'assets/icons/svg/outlined/icon-settings-outlined.svg';
@@ -145,7 +149,7 @@ abstract class AppIcons {
   static const String iconWattOutlined = 'assets/icons/svg/outlined/icon-watt-outlined.svg';
   static const String iconWhatsappOutlined = 'assets/icons/svg/outlined/icon-whatsapp-outlined.svg';
 
-  // Group: SOLID
+  // Group: SOLID SVG
   static const String iconAddDocs = 'assets/icons/svg/solid/icon-add-docs.svg';
   static const String iconAddImage = 'assets/icons/svg/solid/icon-add-image.svg';
   static const String iconBatteryNotFound = 'assets/icons/svg/solid/icon-battery-not-found.svg';
@@ -218,8 +222,9 @@ abstract class AppIcons {
   static const String iconWifiUpgrade = 'assets/icons/svg/solid/icon-wifi-upgrade.svg';
   static const String iconWifi = 'assets/icons/svg/solid/icon-wifi.svg';
 
-  // Group: COLORED
+  // Group: COLORED SVG
   static const String iconAddressLocationColored = 'assets/icons/svg/colored/icon-address-location.svg';
+  static const String iconChargerStationWhiteColored = 'assets/icons/svg/colored/icon-charger-station-white.svg';
   static const String iconChargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String iconCheckmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
   static const String iconComplaintRedColored = 'assets/icons/svg/colored/icon-complaint-red.svg';
@@ -252,13 +257,15 @@ abstract class AppIcons {
   static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
-  // Group: MENU
+  // Group: MENU SVG
   static const String iconMenuBalikNama = 'assets/icons/svg/menu/icon-menu-balik-nama.svg';
   static const String iconMenuCatatMeter = 'assets/icons/svg/menu/icon-menu-catat-meter.svg';
   static const String iconMenuEbilling = 'assets/icons/svg/menu/icon-menu-ebilling.svg';
   static const String iconMenuEv = 'assets/icons/svg/menu/icon-menu-ev.svg';
   static const String iconMenuEvent = 'assets/icons/svg/menu/icon-menu-event.svg';
   static const String iconMenuInternet = 'assets/icons/svg/menu/icon-menu-internet.svg';
+  static const String iconMenuKomporInduksi = 'assets/icons/svg/menu/icon-menu-kompor-induksi.svg';
+  static const String iconMenuLacakPermohonan = 'assets/icons/svg/menu/icon-menu-lacak-permohonan.svg';
   static const String iconMenuListrik = 'assets/icons/svg/menu/icon-menu-listrik.svg';
   static const String iconMenuMarketplace = 'assets/icons/svg/menu/icon-menu-marketplace.svg';
   static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
@@ -267,6 +274,7 @@ abstract class AppIcons {
   static const String iconMenuPengelolaanListrik = 'assets/icons/svg/menu/icon-menu-pengelolaan-listrik.svg';
   static const String iconMenuPulsaTagihan = 'assets/icons/svg/menu/icon-menu-pulsa-tagihan.svg';
   static const String iconMenuPvRooftop = 'assets/icons/svg/menu/icon-menu-pv-rooftop.svg';
+  static const String iconMenuRec = 'assets/icons/svg/menu/icon-menu-rec.svg';
   static const String iconMenuSimulasiBiaya = 'assets/icons/svg/menu/icon-menu-simulasi-biaya.svg';
   static const String iconMenuSpklu = 'assets/icons/svg/menu/icon-menu-spklu.svg';
   static const String iconMenuSplu = 'assets/icons/svg/menu/icon-menu-splu.svg';

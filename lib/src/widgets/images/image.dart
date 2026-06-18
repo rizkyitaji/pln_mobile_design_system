@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
@@ -9,18 +11,20 @@ class AppImage extends StatelessWidget {
   final Color? color;
   final BoxFit? fit;
   final bool? animate, repeat, reverse;
+  final Uint8List? bytes;
 
   const AppImage({
     super.key,
     required this.asset,
     this.width,
     this.height,
-    this.size,
+    this.size = AppSizes.s24,
     this.color,
     this.fit,
     this.animate,
     this.repeat,
     this.reverse,
+    this.bytes,
   });
 
   @override

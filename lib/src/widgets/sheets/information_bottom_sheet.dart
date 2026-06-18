@@ -78,7 +78,7 @@ class AppInformationBottomSheet extends StatelessWidget {
                       child: Center(
                         child: AppImage(
                           asset: icon!,
-                          height: iconSize ?? AppSizes.s160,
+                          size: iconSize ?? AppSizes.s224,
                         ),
                       ),
                     ),

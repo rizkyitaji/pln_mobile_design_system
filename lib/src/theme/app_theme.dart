@@ -97,9 +97,9 @@ abstract class AppTheme {
     inputDecorationTheme: InputDecorationThemeData(
       filled: true,
       isDense: true,
-      fillColor: Colors.white,
+      fillColor: AppColors.background,
       labelStyle: AppTextTheme.lightTextTheme.bodyMedium.copyWith(
-        color: AppColors.black,
+        color: AppColors.textHeading,
       ),
       hintStyle: AppTextTheme.lightTextTheme.bodyMedium.copyWith(
         color: AppColors.textPlaceholder,

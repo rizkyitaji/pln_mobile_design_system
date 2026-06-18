@@ -34,7 +34,7 @@ class AppRefreshIndicator extends StatelessWidget {
                     child: AppImage(
                       asset: icon ?? AppAssets.animationLoadingPrimary,
                       animate: controller.isLoading,
-                      width: AppSizes.s40,
+                      size: AppSizes.s40,
                     ),
                   ),
                 Transform.translate(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppConfirmationBottomSheet extends StatelessWidget {
@@ -34,11 +33,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
       child: AppSheetContainer(
         children: [
           if (asset != null) ...[
-            Visibility(
-              visible: asset!.contains('svg'),
-              replacement: Image.asset(asset ?? '', height: 224.scaleWidth),
-              child: SvgPicture.asset(asset ?? '', height: 224.scaleWidth),
-            ),
+            AppImage(asset: asset ?? '', height: AppSizes.s224.scaleWidth),
             AppSpacing.h12,
           ],
           if (title != null) ...[
