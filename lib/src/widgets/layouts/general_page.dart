@@ -5,8 +5,11 @@ class AppGeneralPage extends StatelessWidget {
   final VoidCallback? onBackPressed;
   final EdgeInsetsGeometry? padding;
   final List<Widget>? children, actionsAppBar;
-  final Widget child, persistentSheet;
-  final Widget? leadingAppBar, titleAppBar, floatingActionButton;
+  final Widget child;
+  final Widget? leadingAppBar,
+      titleAppBar,
+      floatingActionButton,
+      persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
   final String? backgroundImage,
@@ -42,7 +45,7 @@ class AppGeneralPage extends StatelessWidget {
     this.backgroundImageUrl,
     this.children,
     this.child = const SizedBox(),
-    this.persistentSheet = const SizedBox(),
+    this.persistentSheet,
     this.backgroundColor,
     this.appBarColor,
     this.titleColor,
@@ -169,7 +172,8 @@ class AppGeneralPage extends StatelessWidget {
                 },
               ),
             ),
-            Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet),
+            if (persistentSheet != null)
+              Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet!),
           ],
         ),
       ),
@@ -188,6 +192,7 @@ class AppGeneralPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
             child: Center(child: AppLoadingIndicator(size: AppSizes.s40)),
           ),
+        if (persistentSheet != null) SizedBox(height: AppSizes.s120),
       ],
     );
   }
