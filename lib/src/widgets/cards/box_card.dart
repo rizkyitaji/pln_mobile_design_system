@@ -12,6 +12,7 @@ class AppBoxCard extends StatelessWidget {
   final Color? color;
   final Widget child;
   final VoidCallback? onTap;
+  final BoxFit? boxFit;
 
   const AppBoxCard({
     super.key,
@@ -27,6 +28,7 @@ class AppBoxCard extends StatelessWidget {
     this.color,
     required this.child,
     this.onTap,
+    this.boxFit,
   });
 
   @override
@@ -40,7 +42,10 @@ class AppBoxCard extends StatelessWidget {
         margin: margin,
         decoration: BoxDecoration(
           image: asset != null
-              ? DecorationImage(image: AssetImage(asset!), fit: BoxFit.fill)
+              ? DecorationImage(
+                  image: AssetImage(asset!),
+                  fit: boxFit ?? BoxFit.fill,
+                )
               : null,
           borderRadius: borderRadius ?? AppRadius.rounded12,
           color: color ?? AppColors.white,
