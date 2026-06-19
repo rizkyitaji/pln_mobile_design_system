@@ -12,7 +12,10 @@ class AppGeneralPage extends StatelessWidget {
       persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage, title, refreshIndicatorIcon;
+  final String? backgroundImage,
+      backgroundNetworkImage,
+      title,
+      refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -39,6 +42,7 @@ class AppGeneralPage extends StatelessWidget {
     this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
+    this.backgroundNetworkImage,
     this.children,
     this.child = const SizedBox(),
     this.persistentSheet,
@@ -75,8 +79,6 @@ class AppGeneralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bgImage = backgroundImage ?? '';
-
     return SafeArea(
       bottom: bottomSafeArea ?? useSafeArea ?? false,
       top: topSafeArea ?? useSafeArea ?? false,
@@ -109,21 +111,19 @@ class AppGeneralPage extends StatelessWidget {
         body: Stack(
           children: [
             Visibility(
-              visible: bgImage.isNotEmpty,
-              child: Visibility(
-                visible: bgImage.contains('https'),
-                replacement: AppImage(
-                  asset: bgImage,
-                  width: double.infinity,
-                  height: backgroundImageHeight,
-                  fit: BoxFit.fill,
-                  size: null,
-                ),
-                child: AppNetworkImage(
-                  url: bgImage,
-                  height: backgroundImageHeight,
-                  fit: BoxFit.fill,
-                ),
+              visible: backgroundNetworkImage != null,
+              replacement: AppImage(
+                asset: backgroundImage ?? '',
+                width: double.infinity,
+                height: backgroundImageHeight,
+                fit: BoxFit.fill,
+                size: null,
+              ),
+              child: AppNetworkImage(
+                url: backgroundNetworkImage,
+                height: backgroundImageHeight,
+                errorImage: backgroundImage,
+                fit: BoxFit.fill,
               ),
             ),
             Padding(
