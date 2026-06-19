@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -206,5 +207,10 @@ class AppHelper {
     } else {
       return AppAssets.iconConnectorAc;
     }
+  }
+
+  static void copyText({String? text, String? label}) {
+    Clipboard.setData(ClipboardData(text: text ?? ''));
+    AppSnackBar.show(msg: '$label berhasil disalin');
   }
 }

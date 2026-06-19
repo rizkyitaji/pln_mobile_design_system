@@ -12,10 +12,7 @@ class AppGeneralPage extends StatelessWidget {
       persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage,
-      title,
-      refreshIndicatorIcon,
-      backgroundImageUrl;
+  final String? backgroundImage, title, refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -42,7 +39,6 @@ class AppGeneralPage extends StatelessWidget {
     this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
-    this.backgroundImageUrl,
     this.children,
     this.child = const SizedBox(),
     this.persistentSheet,
@@ -121,20 +117,13 @@ class AppGeneralPage extends StatelessWidget {
                   width: double.infinity,
                   height: backgroundImageHeight,
                   fit: BoxFit.fill,
+                  size: null,
                 ),
                 child: AppNetworkImage(
                   url: bgImage,
                   height: backgroundImageHeight,
                   fit: BoxFit.fill,
                 ),
-              ),
-            ),
-            Visibility(
-              visible: backgroundImageUrl != null,
-              child: AppNetworkImage(
-                url: backgroundImageUrl,
-                height: backgroundImageHeight,
-                width: double.infinity,
               ),
             ),
             Padding(
@@ -165,6 +154,7 @@ class AppGeneralPage extends StatelessWidget {
                   return AppSheetContainer(
                     expand: true,
                     physics: physics,
+                    padding: padding,
                     showDragHandle: showDragHandle,
                     controller: scrollController,
                     children: children ?? [],
@@ -183,7 +173,14 @@ class AppGeneralPage extends StatelessWidget {
   Widget get _content {
     return ListView(
       controller: scrollController,
-      padding: padding ?? EdgeInsets.all(AppSizes.s16),
+      padding:
+          padding ??
+          EdgeInsets.only(
+            top: AppSizes.s16,
+            right: AppSizes.s16,
+            left: AppSizes.s16,
+            bottom: persistentSheet != null ? AppSizes.s120 : AppSizes.s16,
+          ),
       physics: physics ?? AlwaysScrollableScrollPhysics(),
       children: [
         child,
@@ -192,7 +189,6 @@ class AppGeneralPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
             child: Center(child: AppLoadingIndicator(size: AppSizes.s40)),
           ),
-        if (persistentSheet != null) SizedBox(height: AppSizes.s120),
       ],
     );
   }

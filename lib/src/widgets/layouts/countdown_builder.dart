@@ -6,6 +6,7 @@ class AppCountdownBuilder extends StatefulWidget {
   final DateTime? timer;
   final VoidCallback? onStop;
   final String? type, format;
+  final TextStyle? textStyle;
 
   const AppCountdownBuilder({
     super.key,
@@ -13,6 +14,7 @@ class AppCountdownBuilder extends StatefulWidget {
     this.onStop,
     this.type,
     this.format,
+    this.textStyle,
   });
 
   @override
@@ -132,9 +134,11 @@ class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
       case 'text':
         return Text(
           _formattedText(hours: hours, minutes: minutes, seconds: seconds),
-          style: context.textTheme.bodyCaptionSemiBold.copyWith(
-            color: AppColors.textWarning,
-          ),
+          style:
+              widget.textStyle ??
+              context.textTheme.bodyCaptionSemiBold.copyWith(
+                color: AppColors.textWarning,
+              ),
         );
       default:
         return const SizedBox();

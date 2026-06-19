@@ -6,11 +6,11 @@ enum AppAlertType { success, error, info, warning }
 class AppAlertCard extends StatelessWidget {
   final AppAlertType? type;
   final VoidCallback? onTap;
+  final CrossAxisAlignment crossAxisAlignment;
   final String? title, description, actionText;
   final Color? iconColor, backgroundColor, textColor;
-  final bool? centerIcon;
   final EdgeInsetsGeometry? margin;
-  final Widget? trailing;
+  final Widget? leading, trailing;
 
   const AppAlertCard({
     super.key,
@@ -20,11 +20,12 @@ class AppAlertCard extends StatelessWidget {
     this.description,
     this.actionText,
     this.margin,
+    this.leading,
     this.trailing,
     this.iconColor,
     this.backgroundColor,
     this.textColor,
-    this.centerIcon,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
   });
 
   @override
@@ -34,9 +35,7 @@ class AppAlertCard extends StatelessWidget {
       margin: margin,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: centerIcon == true
-            ? CrossAxisAlignment.center
-            : CrossAxisAlignment.start,
+        crossAxisAlignment: crossAxisAlignment,
         children: [
           _icon,
           Expanded(
@@ -115,7 +114,7 @@ class AppAlertCard extends StatelessWidget {
           size: AppSizes.s20,
         );
       default:
-        return SizedBox();
+        return leading ?? SizedBox();
     }
   }
 

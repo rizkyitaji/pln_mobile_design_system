@@ -33,7 +33,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
       child: AppSheetContainer(
         children: [
           if (asset != null) ...[
-            AppImage(asset: asset ?? '', height: AppSizes.s224.scaleWidth),
+            AppImage(asset: asset ?? '', size: AppSizes.s224),
             AppSpacing.h12,
           ],
           if (title != null) ...[

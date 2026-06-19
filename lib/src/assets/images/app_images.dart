@@ -35,6 +35,7 @@ abstract class AppImages {
   static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';
   static const String illustrationSpkluQueue = 'assets/images/png/illustration-spklu-queue.png';
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
+  static const String illustrationSuccessCharging = 'assets/images/png/illustration-success-charging.png';
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
   static const String illustrationSuccessVehicle = 'assets/images/png/illustration-success-vehicle.png';
@@ -68,10 +69,13 @@ abstract class AppImages {
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
+  static const String backgroundPageQueue = 'assets/images/png/backgrounds/background-page-queue.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
   static const String backgroundSection = 'assets/images/png/backgrounds/background-section.png';
+  static const String backgroundSummaryChargingCompleted = 'assets/images/png/backgrounds/background-summary-charging-completed.png';
+  static const String backgroundSummaryChargingFailed = 'assets/images/png/backgrounds/background-summary-charging-failed.png';
   static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
   static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 
