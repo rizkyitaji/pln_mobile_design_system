@@ -112,12 +112,15 @@ class AppGeneralPage extends StatelessWidget {
           children: [
             Visibility(
               visible: backgroundNetworkImage != null,
-              replacement: AppImage(
-                asset: backgroundImage ?? '',
-                width: double.infinity,
-                height: backgroundImageHeight,
-                fit: BoxFit.fill,
-                size: null,
+              replacement: Visibility(
+                visible: backgroundImage != null,
+                child: AppImage(
+                  asset: backgroundImage ?? '',
+                  width: double.infinity,
+                  height: backgroundImageHeight,
+                  fit: BoxFit.fill,
+                  size: null,
+                ),
               ),
               child: AppNetworkImage(
                 url: backgroundNetworkImage,
