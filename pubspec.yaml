@@ -11,6 +11,7 @@ dependencies:
   cached_network_image: ^3.4.1
   custom_refresh_indicator: ^4.0.1
   dotted_border: ^3.0.1
+  dotted_line: ^3.3.0
   flutter:
     sdk: flutter
   flutter_html: ^3.0.0

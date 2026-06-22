@@ -13,9 +13,9 @@ class AppGeneralPage extends StatelessWidget {
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
   final String? backgroundImage,
+      backgroundNetworkImage,
       title,
-      refreshIndicatorIcon,
-      backgroundImageUrl;
+      refreshIndicatorIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -42,7 +42,7 @@ class AppGeneralPage extends StatelessWidget {
     this.padding,
     this.extendBodyBehindAppBar = false,
     this.backgroundImage,
-    this.backgroundImageUrl,
+    this.backgroundNetworkImage,
     this.children,
     this.child = const SizedBox(),
     this.persistentSheet,
@@ -79,8 +79,6 @@ class AppGeneralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bgImage = backgroundImage ?? '';
-
     return SafeArea(
       bottom: bottomSafeArea ?? useSafeArea ?? false,
       top: topSafeArea ?? useSafeArea ?? false,
@@ -113,28 +111,22 @@ class AppGeneralPage extends StatelessWidget {
         body: Stack(
           children: [
             Visibility(
-              visible: bgImage.isNotEmpty,
-              child: Visibility(
-                visible: bgImage.contains('https'),
-                replacement: AppImage(
-                  asset: bgImage,
+              visible: backgroundNetworkImage != null,
+              replacement: Visibility(
+                visible: backgroundImage != null,
+                child: AppImage(
+                  asset: backgroundImage ?? '',
                   width: double.infinity,
                   height: backgroundImageHeight,
                   fit: BoxFit.fill,
-                ),
-                child: AppNetworkImage(
-                  url: bgImage,
-                  height: backgroundImageHeight,
-                  fit: BoxFit.fill,
+                  size: null,
                 ),
               ),
-            ),
-            Visibility(
-              visible: backgroundImageUrl != null,
               child: AppNetworkImage(
-                url: backgroundImageUrl,
+                url: backgroundNetworkImage,
                 height: backgroundImageHeight,
-                width: double.infinity,
+                errorImage: backgroundImage,
+                fit: BoxFit.fill,
               ),
             ),
             Padding(
@@ -165,6 +157,7 @@ class AppGeneralPage extends StatelessWidget {
                   return AppSheetContainer(
                     expand: true,
                     physics: physics,
+                    padding: padding,
                     showDragHandle: showDragHandle,
                     controller: scrollController,
                     children: children ?? [],
@@ -183,7 +176,14 @@ class AppGeneralPage extends StatelessWidget {
   Widget get _content {
     return ListView(
       controller: scrollController,
-      padding: padding ?? EdgeInsets.all(AppSizes.s16),
+      padding:
+          padding ??
+          EdgeInsets.only(
+            top: AppSizes.s16,
+            right: AppSizes.s16,
+            left: AppSizes.s16,
+            bottom: persistentSheet != null ? AppSizes.s120 : AppSizes.s16,
+          ),
       physics: physics ?? AlwaysScrollableScrollPhysics(),
       children: [
         child,
@@ -192,7 +192,6 @@ class AppGeneralPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
             child: Center(child: AppLoadingIndicator(size: AppSizes.s40)),
           ),
-        if (persistentSheet != null) SizedBox(height: AppSizes.s120),
       ],
     );
   }

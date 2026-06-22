@@ -247,6 +247,7 @@ abstract class AppAssets {
   static const iconRecItemColored = '$_basePath/${AppIcons.iconRecItemColored}';
   static const iconRecListrikColored = '$_basePath/${AppIcons.iconRecListrikColored}';
   static const iconRecUnitColored = '$_basePath/${AppIcons.iconRecUnitColored}';
+  static const iconSpkluQueueColored = '$_basePath/${AppIcons.iconSpkluQueueColored}';
   static const iconTargetColored = '$_basePath/${AppIcons.iconTargetColored}';
   static const iconThropyColored = '$_basePath/${AppIcons.iconThropyColored}';
   static const iconTileComplaintHistoryColored = '$_basePath/${AppIcons.iconTileComplaintHistoryColored}';
@@ -313,6 +314,7 @@ abstract class AppAssets {
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
   static const imageIllustrationSpkluQueue = '$_basePath/${AppImages.illustrationSpkluQueue}';
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
+  static const imageIllustrationSuccessCharging = '$_basePath/${AppImages.illustrationSuccessCharging}';
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
   static const imageIllustrationSuccessVehicle = '$_basePath/${AppImages.illustrationSuccessVehicle}';
@@ -346,10 +348,13 @@ abstract class AppAssets {
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
+  static const imageBackgroundPageQueue = '$_basePath/${AppImages.backgroundPageQueue}';
   static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';
   static const imageBackgroundSection = '$_basePath/${AppImages.backgroundSection}';
+  static const imageBackgroundSummaryChargingCompleted = '$_basePath/${AppImages.backgroundSummaryChargingCompleted}';
+  static const imageBackgroundSummaryChargingFailed = '$_basePath/${AppImages.backgroundSummaryChargingFailed}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';

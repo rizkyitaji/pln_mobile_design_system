@@ -210,7 +210,7 @@ abstract class AppColors {
   static const Color surfacePrimary = AppPalette.teal550;
 
   // --- BACKGROUND ---
-  static const Color background = AppPalette.slate50;
+  static const Color background = AppPalette.white;
   static const Color backgroundSecondary = AppPalette.slate100;
   static const Color backgroundDark = AppPalette.slate1000;
   static const Color backgroundSecondaryDark = AppPalette.sky950;

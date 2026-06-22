@@ -250,6 +250,7 @@ abstract class AppIcons {
   static const String iconRecItemColored = 'assets/icons/svg/colored/icon-rec-item.svg';
   static const String iconRecListrikColored = 'assets/icons/svg/colored/icon-rec-listrik.svg';
   static const String iconRecUnitColored = 'assets/icons/svg/colored/icon-rec-unit.svg';
+  static const String iconSpkluQueueColored = 'assets/icons/svg/colored/icon-spklu-queue.svg';
   static const String iconTargetColored = 'assets/icons/svg/colored/icon-target.svg';
   static const String iconThropyColored = 'assets/icons/svg/colored/icon-thropy.svg';
   static const String iconTileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
