@@ -12,10 +12,7 @@ class AppGeneralPage extends StatelessWidget {
       persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage,
-      backgroundNetworkImage,
-      title,
-      refreshIndicatorIcon;
+  final String? backgroundImage, backgroundNetworkImage, title;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -50,7 +47,6 @@ class AppGeneralPage extends StatelessWidget {
     this.appBarColor,
     this.titleColor,
     this.backButtonColor,
-    this.refreshIndicatorIcon,
     this.onRefresh,
     this.onBackPressed,
     this.leadingAppBar,
@@ -141,7 +137,6 @@ class AppGeneralPage extends StatelessWidget {
                 visible: onRefresh != null,
                 replacement: _content,
                 child: AppRefreshIndicator(
-                  icon: refreshIndicatorIcon,
                   onRefresh: onRefresh != null ? onRefresh! : () async {},
                   child: _content,
                 ),
