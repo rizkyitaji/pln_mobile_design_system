@@ -12,7 +12,7 @@ class AppInformationBottomSheet extends StatelessWidget {
   final ButtonStyle? buttonStyle;
   final CrossAxisAlignment crossAxisAlignment;
   final VoidCallback? onTap;
-  final bool centerTitle, showDragHandle;
+  final bool centerTitle, centerDescription, showDragHandle;
   final double? iconSize;
 
   const AppInformationBottomSheet({
@@ -34,6 +34,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.isFullScreen = false,
     this.onTap,
     this.centerTitle = true,
+    this.centerDescription = true,
     this.iconSize,
     this.showDragHandle = true,
   });
@@ -142,14 +143,27 @@ class AppInformationBottomSheet extends StatelessWidget {
                     ),
                   ],
                   if (descriptionText != null)
-                    Center(
-                      child: MarkdownBody(
+                    Visibility(
+                      visible: centerDescription,
+                      replacement: MarkdownBody(
                         data: descriptionText!,
                         styleSheet: MarkdownStyleSheet(
                           textAlign: _getWrapAlignment(),
                           p: context.textTheme.bodyMedium,
                           code: context.textTheme.bodyMedium.copyWith(
                             color: const Color(0xFFEF476F),
+                          ),
+                        ),
+                      ),
+                      child: Center(
+                        child: MarkdownBody(
+                          data: descriptionText!,
+                          styleSheet: MarkdownStyleSheet(
+                            textAlign: _getWrapAlignment(),
+                            p: context.textTheme.bodyMedium,
+                            code: context.textTheme.bodyMedium.copyWith(
+                              color: const Color(0xFFEF476F),
+                            ),
                           ),
                         ),
                       ),
@@ -218,6 +232,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     double? titleSize,
     VoidCallback? onTap,
     bool centerTitle = true,
+    bool centerDescription = true,
     double? iconSize,
     bool showDragHandle = true,
   }) async {
@@ -239,6 +254,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         useElevatedButton: useElevatedButton,
         onTap: onTap,
         centerTitle: centerTitle,
+        centerDescription: centerDescription,
         iconSize: iconSize,
         showDragHandle: showDragHandle,
       ),
