@@ -26,7 +26,8 @@ class AppGeneralPage extends StatelessWidget {
   final bool extendBodyBehindAppBar,
       automaticallyImplyLeading,
       showDragHandle,
-      isLoadingMore;
+      isLoadingMore,
+      isScrollable;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
   final ScrollPhysics? physics;
   final ScrollController? scrollController;
@@ -73,6 +74,7 @@ class AppGeneralPage extends StatelessWidget {
     this.bottomSafeArea = false,
     this.leftSafeArea = false,
     this.rightSafeArea = false,
+    this.isScrollable = true,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
   });
@@ -174,6 +176,28 @@ class AppGeneralPage extends StatelessWidget {
   }
 
   Widget get _content {
+    if (!isScrollable) {
+      return Padding(
+        padding:
+            padding ??
+            EdgeInsets.only(              
+              bottom: AppSizes.s64,
+            ),
+        child: isLoadingMore
+            ? Column(
+                children: [
+                  Expanded(child: child),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
+                    child: Center(
+                      child: AppLoadingIndicator(size: AppSizes.s40),
+                    ),
+                  ),
+                ],
+              )
+            : child,
+      );
+    }
     return ListView(
       controller: scrollController,
       padding:
