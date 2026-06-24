@@ -21,6 +21,8 @@ class AppLabeledTextFormField extends StatelessWidget {
   final VoidCallback? onTap;
   final Widget? suffixIcon;
   final BoxConstraints? suffixIconConstraints;
+  final Widget? prefixIcon;
+  final BoxConstraints? prefixIconConstraints;
   final void Function(String)? onChanged;
   final Widget? suffixLabelIcon;
   final FocusNode? focusNode;
@@ -47,6 +49,8 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.textCapitalization,
     this.counterText,
     this.suffixIconConstraints,
+    this.prefixIcon,
+    this.prefixIconConstraints,
     this.suffixLabelIcon,
     this.focusNode,
     this.fillColor,
@@ -83,10 +87,12 @@ class AppLabeledTextFormField extends StatelessWidget {
           validator: validator,
           onTap: onTap,
           onChanged: onChanged,
-          focusNode: focusNode,
-          decoration: InputDecoration(
+          focusNode: focusNode,          
+          decoration: InputDecoration(            
             hintText: hintText,
             suffixIcon: suffixIcon,
+            prefixIcon: prefixIcon,
+            prefixIconConstraints: prefixIconConstraints,
             prefix: prefixText != null ? Text(prefixText!) : null,
             filled: true,
             counterText: counterText,

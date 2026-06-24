@@ -23,7 +23,8 @@ extension ContextExt on BuildContext {
 
   double get textScale => PlatformDispatcher.instance.textScaleFactor;
 
-  AppTextTheme get textTheme => Theme.of(this).extension<AppTextTheme>()!;
+  AppTextTheme get textTheme =>
+      Theme.of(this).extension<AppTextTheme>() ?? AppTextTheme.lightTextTheme;
 
   void safePop<T extends Object?>([T? result]) {
     if (Navigator.canPop(this)) {

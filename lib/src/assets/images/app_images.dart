@@ -44,9 +44,13 @@ abstract class AppImages {
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
   static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
+  static const String illustrationEmptyStateComplaintHistory = 'assets/images/svg/illustration-empty-state-complaint-history.svg';
+  static const String litWoker = 'assets/images/svg/lit-woker.svg';
 
   // Group: BACKGROUNDS PNG
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
+  static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
+  static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';

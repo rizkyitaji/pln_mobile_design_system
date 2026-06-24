@@ -88,6 +88,7 @@ class AppRoundedTextFormField extends StatelessWidget {
   final VoidCallback? onEditingComplete;
   final ValueChanged<String>? onFieldSubmitted;
   final Color? fillColor;
+  final BorderRadius? borderRadius;
 
   const AppRoundedTextFormField({
     super.key,
@@ -172,6 +173,7 @@ class AppRoundedTextFormField extends StatelessWidget {
     this.onEditingComplete,
     this.onFieldSubmitted,
     this.fillColor,
+    this.borderRadius
   }) : assert(initialValue == null || controller == null);
 
   @override
@@ -180,13 +182,13 @@ class AppRoundedTextFormField extends StatelessWidget {
       hintText: hintText,
       labelText: labelText,
       fillColor: AppColors.white,
-      border: OutlineInputBorder(borderRadius: AppRadius.rounded8),
+      border: OutlineInputBorder(borderRadius: borderRadius ?? AppRadius.rounded8),
       enabledBorder: OutlineInputBorder(
-        borderRadius: AppRadius.rounded8,
+        borderRadius: borderRadius ?? AppRadius.rounded8,
         borderSide: const BorderSide(color: AppColors.border),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: AppRadius.rounded8,
+        borderRadius: borderRadius ?? AppRadius.rounded8,
         borderSide: const BorderSide(color: AppColors.border),
       ),
     );

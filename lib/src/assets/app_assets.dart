@@ -229,6 +229,7 @@ abstract class AppAssets {
   static const iconEvPointColored = '$_basePath/${AppIcons.iconEvPointColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.iconHandshakeColored}';
   static const iconKwhMeterColored = '$_basePath/${AppIcons.iconKwhMeterColored}';
+  static const iconLocationColored = '$_basePath/${AppIcons.iconLocationColored}';
   static const iconMarketplaceDiscussionColored = '$_basePath/${AppIcons.iconMarketplaceDiscussionColored}';
   static const iconMarketplaceOrderColored = '$_basePath/${AppIcons.iconMarketplaceOrderColored}';
   static const iconMarketplaceWishlistColored = '$_basePath/${AppIcons.iconMarketplaceWishlistColored}';
@@ -320,7 +321,11 @@ abstract class AppAssets {
   static const imageIllustrationVerificationEmail = '$_basePath/${AppImages.illustrationVerificationEmail}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
+  static const imageIllustrationEmptyStateComplaintHistory = '$_basePath/${AppImages.illustrationEmptyStateComplaintHistory}';
+  static const imageLitWoker = '$_basePath/${AppImages.litWoker}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
+  static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
+  static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';
   static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
