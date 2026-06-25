@@ -295,12 +295,14 @@ abstract class AppAssets {
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
+  static const imageIllustrationEmptyStateSelectIdpel = '$_basePath/${AppImages.illustrationEmptyStateSelectIdpel}';
   static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
   static const imageIllustrationEmptyVehicle = '$_basePath/${AppImages.illustrationEmptyVehicle}';
   static const imageIllustrationEvQueue = '$_basePath/${AppImages.illustrationEvQueue}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
+  static const imageIllustrationFlaggingRecDenom = '$_basePath/${AppImages.illustrationFlaggingRecDenom}';
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
@@ -323,6 +325,7 @@ abstract class AppAssets {
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
   static const imageIllustrationEmptyStateComplaintHistory = '$_basePath/${AppImages.illustrationEmptyStateComplaintHistory}';
   static const imageLitWoker = '$_basePath/${AppImages.litWoker}';
+  static const imageBackgroundDenom = '$_basePath/${AppImages.backgroundDenom}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
   static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
   static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';

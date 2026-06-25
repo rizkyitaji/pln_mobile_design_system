@@ -16,12 +16,14 @@ abstract class AppImages {
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
+  static const String illustrationEmptyStateSelectIdpel = 'assets/images/png/illustration-empty-state-select-idpel.png';
   static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
   static const String illustrationEmptyVehicle = 'assets/images/png/illustration-empty-vehicle.png';
   static const String illustrationEvQueue = 'assets/images/png/illustration-ev-queue.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
+  static const String illustrationFlaggingRecDenom = 'assets/images/png/illustration-flagging-rec-denom.png';
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
@@ -48,6 +50,7 @@ abstract class AppImages {
   static const String litWoker = 'assets/images/svg/lit-woker.svg';
 
   // Group: BACKGROUNDS PNG
+  static const String backgroundDenom = 'assets/images/png/backgrounds/background-denom.png';
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
   static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
