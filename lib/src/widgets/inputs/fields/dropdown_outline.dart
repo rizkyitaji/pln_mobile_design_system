@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppDropdownWidget extends StatelessWidget {
@@ -55,10 +56,7 @@ class AppDropdownWidget extends StatelessWidget {
                 label,
                 textScaler: TextScaler.noScaling,
                 style:
-                    labelStyle ??
-                    const TextStyle(                      
-                      color: AppColors.textHeading,
-                    ),
+                    labelStyle ?? const TextStyle(color: AppColors.textHeading),
               ),
               if (isMandatory) ...[
                 const Text(
@@ -102,19 +100,26 @@ class AppDropdownWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 22,
-                    color: suffixIconColor ?? AppColors.icon,
+                  SvgPicture.asset(
+                    AppAssets.iconChevronDown,
+                    width: AppSizes.s16,
+                    height: AppSizes.s16,
+                    colorFilter: ColorFilter.mode(
+                      AppColors.iconDisabled,
+                      BlendMode.srcIn,
+                    ),
                   ),
                   AppSpacing.w8,
                 ],
               ),
-              suffixIconConstraints: const BoxConstraints.expand(height: 24, width: 36),
+              suffixIconConstraints: const BoxConstraints.expand(
+                height: 24,
+                width: 36,
+              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide(
-                  color: enabledBorderColor ?? const Color(0xFFD3D8DF),
+                  color: enabledBorderColor ?? AppColors.border,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
