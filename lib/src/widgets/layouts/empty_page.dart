@@ -6,6 +6,7 @@ class AppEmptyPage extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final VoidCallback? onPressed;
   final Widget? icon;
+  final bool? showButton;
 
   const AppEmptyPage({
     super.key,
@@ -16,6 +17,7 @@ class AppEmptyPage extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.onPressed,
     this.icon,
+    this.showButton,
   });
 
   @override
@@ -46,14 +48,16 @@ class AppEmptyPage extends StatelessWidget {
               ),
             ),
             AppSpacing.h24,
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: onPressed,
-                label: Text(buttonText ?? 'Coba Lagi'),
-                icon: icon,
+            if (showButton ?? true) ...[
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: onPressed,
+                  label: Text(buttonText ?? 'Coba Lagi'),
+                  icon: icon,
+                ),
               ),
-            ),
+            ],
           ],
         ),
       ),

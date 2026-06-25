@@ -355,6 +355,7 @@ abstract class AppAssets {
   static const imageBackgroundSection = '$_basePath/${AppImages.backgroundSection}';
   static const imageBackgroundSummaryChargingCompleted = '$_basePath/${AppImages.backgroundSummaryChargingCompleted}';
   static const imageBackgroundSummaryChargingFailed = '$_basePath/${AppImages.backgroundSummaryChargingFailed}';
+  static const imageBackgroundTrackService = '$_basePath/${AppImages.backgroundTrackService}';
   static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
