@@ -188,11 +188,15 @@ class AppHelper {
     } else if (value is num) {
       return value.toInt();
     } else if (value is String) {
-      final str = value.trim();
+      final str = value.trim().replaceAll(',', '.');
       if (str.isEmpty || str == 'null' || str == '-') {
         return 0;
       }
-      return int.tryParse(str) ?? 0;
+      final parsedDouble = double.tryParse(str);
+      if (parsedDouble != null) {
+        return parsedDouble.toInt();
+      }
+      return 0;
     } else {
       return 0;
     }

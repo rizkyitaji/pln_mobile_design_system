@@ -77,7 +77,6 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
             constraints.maxWidth - (widget.paddingHorizontal * 2);
 
         final baseWidth = availableWidth * widget.viewportFraction;
-
         final scrollStep = baseWidth + widget.spacing;
         _currentScrollStep = scrollStep;
 
@@ -95,14 +94,8 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
               final newIndex = exactPage.round().clamp(0, widget.itemCount - 1);
 
               if (newIndex != _currentIndex) {
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  if (mounted) {
-                    setState(() {
-                      _currentIndex = newIndex;
-                    });
-                    widget.onPageChanged?.call(newIndex);
-                  }
-                });
+                _currentIndex = newIndex;
+                widget.onPageChanged?.call(newIndex);
               }
             }
             return false;
@@ -143,29 +136,6 @@ class SnappingScrollPhysics extends ScrollPhysics {
     );
   }
 
-  double _getTargetPixels(
-    ScrollMetrics metrics,
-    double velocity,
-    double targetPixels,
-  ) {
-    double page = targetPixels / snapSize;
-    if (velocity < -500.0) {
-      page = page.floorToDouble();
-    } else if (velocity > 500.0) {
-      page = page.ceilToDouble();
-    } else {
-      page = page.roundToDouble();
-    }
-
-    final computedTarget = page * snapSize;
-
-    if (computedTarget >= metrics.maxScrollExtent) {
-      return metrics.maxScrollExtent;
-    }
-
-    return computedTarget;
-  }
-
   @override
   Simulation? createBallisticSimulation(
     ScrollMetrics position,
@@ -176,28 +146,33 @@ class SnappingScrollPhysics extends ScrollPhysics {
       return super.createBallisticSimulation(position, velocity);
     }
 
-    final Simulation? simulation = super.createBallisticSimulation(
-      position,
-      velocity,
-    );
+    final double currentExactPage = position.pixels / snapSize;
 
-    if (simulation != null) {
-      final double targetPixels = simulation.x(double.infinity);
-      final double snapPixels = _getTargetPixels(
-        position,
-        velocity,
-        targetPixels,
-      );
+    int currentPage = currentExactPage.round();
+    int targetPage = currentPage;
 
-      if (snapPixels != targetPixels) {
-        return ScrollSpringSimulation(
-          spring,
-          position.pixels,
-          snapPixels,
-          velocity,
-        );
-      }
+    if (velocity > 400.0) {
+      targetPage = currentExactPage.floor() + 1;
+    } else if (velocity < -400.0) {
+      targetPage = currentExactPage.ceil() - 1;
+    } else {
+      targetPage = currentPage;
     }
-    return simulation;
+
+    final int maxPage = (position.maxScrollExtent / snapSize).round();
+    targetPage = targetPage.clamp(0, maxPage);
+
+    final double targetPixels = targetPage * snapSize;
+
+    if (targetPixels != position.pixels) {
+      return ScrollSpringSimulation(
+        spring,
+        position.pixels,
+        targetPixels,
+        velocity,
+      );
+    }
+
+    return null;
   }
 }
