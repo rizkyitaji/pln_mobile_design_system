@@ -71,6 +71,7 @@ abstract class AppImages {
   static const String backgroundMarketplaceHeader = 'assets/images/png/backgrounds/background-marketplace-header.png';
   static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
   static const String backgroundMiniCardVehicle = 'assets/images/png/backgrounds/background-mini-card-vehicle.png';
+  static const String backgroundOnboardingHomecharging = 'assets/images/png/backgrounds/background-onboarding-homecharging.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';

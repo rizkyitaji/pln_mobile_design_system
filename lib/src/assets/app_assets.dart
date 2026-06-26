@@ -64,6 +64,7 @@ abstract class AppAssets {
   static const iconMarketplaceOfficialStore = '$_basePath/${AppIcons.iconMarketplaceOfficialStore}';
   static const iconMarketplaceShippingDiscount = '$_basePath/${AppIcons.iconMarketplaceShippingDiscount}';
   static const iconMarketplaceTopProduct = '$_basePath/${AppIcons.iconMarketplaceTopProduct}';
+  static const iconNfcCard = '$_basePath/${AppIcons.iconNfcCard}';
   static const iconRatingHeader = '$_basePath/${AppIcons.iconRatingHeader}';
   static const iconRecCleanEnergy = '$_basePath/${AppIcons.iconRecCleanEnergy}';
   static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
@@ -224,6 +225,7 @@ abstract class AppAssets {
   static const iconAddressLocationColored = '$_basePath/${AppIcons.iconAddressLocationColored}';
   static const iconChargerStationWhiteColored = '$_basePath/${AppIcons.iconChargerStationWhiteColored}';
   static const iconChargerStationColored = '$_basePath/${AppIcons.iconChargerStationColored}';
+  static const iconCheckRoundedColored = '$_basePath/${AppIcons.iconCheckRoundedColored}';
   static const iconCheckmarkColored = '$_basePath/${AppIcons.iconCheckmarkColored}';
   static const iconComplaintRedColored = '$_basePath/${AppIcons.iconComplaintRedColored}';
   static const iconEmptyStateColored = '$_basePath/${AppIcons.iconEmptyStateColored}';
@@ -347,6 +349,7 @@ abstract class AppAssets {
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
   static const imageBackgroundMiniCardVehicle = '$_basePath/${AppImages.backgroundMiniCardVehicle}';
+  static const imageBackgroundOnboardingHomecharging = '$_basePath/${AppImages.backgroundOnboardingHomecharging}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';

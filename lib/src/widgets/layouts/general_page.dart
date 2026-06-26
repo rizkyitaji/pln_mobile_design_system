@@ -154,7 +154,9 @@ class AppGeneralPage extends StatelessWidget {
                   return AppSheetContainer(
                     expand: true,
                     physics: physics,
-                    padding: padding,
+                    padding:
+                        padding ??
+                        EdgeInsets.symmetric(horizontal: AppSizes.s16),
                     showDragHandle: showDragHandle,
                     controller: scrollController,
                     children: children ?? [],
@@ -172,26 +174,7 @@ class AppGeneralPage extends StatelessWidget {
 
   Widget get _content {
     if (!isScrollable) {
-      return Padding(
-        padding:
-            padding ??
-            EdgeInsets.only(              
-              bottom: AppSizes.s64,
-            ),
-        child: isLoadingMore
-            ? Column(
-                children: [
-                  Expanded(child: child),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: AppSizes.s16),
-                    child: Center(
-                      child: AppLoadingIndicator(size: AppSizes.s40),
-                    ),
-                  ),
-                ],
-              )
-            : child,
-      );
+      return Padding(padding: padding ?? EdgeInsets.all(16), child: child);
     }
     return ListView(
       controller: scrollController,

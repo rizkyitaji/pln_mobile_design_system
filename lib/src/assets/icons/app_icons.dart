@@ -59,6 +59,7 @@ abstract class AppIcons {
   static const String iconMarketplaceOfficialStore = 'assets/icons/png/icon-marketplace-official-store.png';
   static const String iconMarketplaceShippingDiscount = 'assets/icons/png/icon-marketplace-shipping-discount.png';
   static const String iconMarketplaceTopProduct = 'assets/icons/png/icon-marketplace-top-product.png';
+  static const String iconNfcCard = 'assets/icons/png/icon-nfc-card.png';
   static const String iconRatingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String iconRecCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
   static const String iconSpkluStation = 'assets/icons/png/icon-spklu-station.png';
@@ -227,6 +228,7 @@ abstract class AppIcons {
   static const String iconAddressLocationColored = 'assets/icons/svg/colored/icon-address-location.svg';
   static const String iconChargerStationWhiteColored = 'assets/icons/svg/colored/icon-charger-station-white.svg';
   static const String iconChargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
+  static const String iconCheckRoundedColored = 'assets/icons/svg/colored/icon-check-rounded.svg';
   static const String iconCheckmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
   static const String iconComplaintRedColored = 'assets/icons/svg/colored/icon-complaint-red.svg';
   static const String iconEmptyStateColored = 'assets/icons/svg/colored/icon-empty-state.svg';
