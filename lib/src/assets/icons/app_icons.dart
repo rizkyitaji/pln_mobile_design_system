@@ -27,6 +27,7 @@ abstract class AppIcons {
   static const String iconConnectorCcs2 = 'assets/icons/svg/icon-connector-ccs2.svg';
   static const String iconConnectorChademo = 'assets/icons/svg/icon-connector-chademo.svg';
   static const String iconConnectorGbt = 'assets/icons/svg/icon-connector-gbt.svg';
+  static const String iconCoupon = 'assets/icons/svg/icon-coupon.svg';
   static const String iconEnergy = 'assets/icons/svg/icon-energy.svg';
   static const String iconEyeOff = 'assets/icons/svg/icon-eye-off.svg';
   static const String iconEye = 'assets/icons/svg/icon-eye.svg';

@@ -34,6 +34,7 @@ abstract class AppAssets {
   static const iconConnectorCcs2 = '$_basePath/${AppIcons.iconConnectorCcs2}';
   static const iconConnectorChademo = '$_basePath/${AppIcons.iconConnectorChademo}';
   static const iconConnectorGbt = '$_basePath/${AppIcons.iconConnectorGbt}';
+  static const iconCoupon = '$_basePath/${AppIcons.iconCoupon}';
   static const iconEnergy = '$_basePath/${AppIcons.iconEnergy}';
   static const iconEyeOff = '$_basePath/${AppIcons.iconEyeOff}';
   static const iconEye = '$_basePath/${AppIcons.iconEye}';
