@@ -237,6 +237,7 @@ abstract class AppIcons {
   static const String iconMarketplaceOrderColored = 'assets/icons/svg/colored/icon-marketplace-order.svg';
   static const String iconMarketplaceWishlistColored = 'assets/icons/svg/colored/icon-marketplace-wishlist.svg';
   static const String iconMoneyColored = 'assets/icons/svg/colored/icon-money.svg';
+  static const String iconPdfColored = 'assets/icons/svg/colored/icon-pdf.svg';
   static const String iconPersonRatingColored = 'assets/icons/svg/colored/icon-person-rating.svg';
   static const String iconPinIdpelPadamColored = 'assets/icons/svg/colored/icon-pin-idpel-padam.svg';
   static const String iconPinNyalaColored = 'assets/icons/svg/colored/icon-pin-nyala.svg';
@@ -256,6 +257,7 @@ abstract class AppIcons {
   static const String iconTileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String iconUserColored = 'assets/icons/svg/colored/icon-user.svg';
   static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
+  static const String iconVoucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
   // Group: MENU SVG

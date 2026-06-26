@@ -27,6 +27,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? suffixLabelIcon;
   final FocusNode? focusNode;
   final Color? fillColor;
+  final TextStyle? style;
 
   const AppLabeledTextFormField({
     super.key,
@@ -54,6 +55,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.suffixLabelIcon,
     this.focusNode,
     this.fillColor,
+    this.style,
   });
 
   @override
@@ -76,6 +78,7 @@ class AppLabeledTextFormField extends StatelessWidget {
         TextFormField(
           controller: controller,
           readOnly: readOnly,
+          style: style,
           maxLines: maxLines,
           minLines: minLines,
           maxLength: maxLength,
@@ -87,8 +90,8 @@ class AppLabeledTextFormField extends StatelessWidget {
           validator: validator,
           onTap: onTap,
           onChanged: onChanged,
-          focusNode: focusNode,          
-          decoration: InputDecoration(            
+          focusNode: focusNode,
+          decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: suffixIcon,
             prefixIcon: prefixIcon,
@@ -109,7 +112,9 @@ class AppLabeledTextFormField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.borderPrimary),
+              borderSide: BorderSide(
+                color: readOnly ? AppColors.border : AppColors.borderPrimary,
+              ),
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: AppRadius.rounded8,

@@ -110,7 +110,7 @@ class AppAlertCard extends StatelessWidget {
       case AppAlertType.warning:
         return AppImage(
           asset: AppAssets.iconWarningRounded,
-          color: iconColor ?? AppColors.iconWarning,
+          color: iconColor ?? AppColors.iconWarningPressed,
           size: AppSizes.s20,
         );
       default:
