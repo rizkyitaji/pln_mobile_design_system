@@ -87,50 +87,6 @@ class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
     required String seconds,
   }) {
     switch (widget.type) {
-      case 'box':
-        return Row(
-          spacing: AppSizes.s4,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: AppSizes.s6,
-                horizontal: AppSizes.s8,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: AppRadius.rounded4,
-                color: AppColors.warningSubtle,
-              ),
-              child: Text(
-                minutes,
-                style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                  color: AppColors.textWarning,
-                ),
-              ),
-            ),
-            Text(
-              ':',
-              style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                color: AppColors.textWarning,
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: AppSizes.s6,
-                horizontal: AppSizes.s8,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: AppRadius.rounded4,
-                color: AppColors.warningSubtle,
-              ),
-              child: Text(
-                seconds,
-                style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                  color: AppColors.textWarning,
-                ),
-              ),
-            ),
-          ],
-        );
       case 'text':
         return Text(
           _formattedText(hours: hours, minutes: minutes, seconds: seconds),
@@ -151,6 +107,8 @@ class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
     required String seconds,
   }) {
     switch (widget.format) {
+      case 'mmmsd':
+        return '${minutes}m ${seconds}d';
       case 'mm:ss':
         return '$minutes : $seconds';
       default:

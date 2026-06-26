@@ -15,12 +15,13 @@ abstract class AppImages {
   static const String illustrationDeleteVehicle = 'assets/images/png/illustration-delete-vehicle.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
+  static const String illustrationEmptyCar = 'assets/images/png/illustration-empty-car.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
+  static const String illustrationEmptyMotorcycle = 'assets/images/png/illustration-empty-motorcycle.png';
   static const String illustrationEmptyStateSelectIdpel = 'assets/images/png/illustration-empty-state-select-idpel.png';
   static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
-  static const String illustrationEmptyVehicle = 'assets/images/png/illustration-empty-vehicle.png';
   static const String illustrationEvQueue = 'assets/images/png/illustration-ev-queue.png';
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
   static const String illustrationFlaggingRecDenom = 'assets/images/png/illustration-flagging-rec-denom.png';
@@ -54,6 +55,7 @@ abstract class AppImages {
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
   static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
+  static const String backgroundHeaderActiveCharging = 'assets/images/png/backgrounds/background-header-active-charging.png';
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
@@ -91,5 +93,6 @@ abstract class AppImages {
 
   // Group: PLACEHOLDERS SVG
   static const String placeholderBattery = 'assets/images/svg/placeholders/placeholder-battery.svg';
-  static const String placeholderEv = 'assets/images/svg/placeholders/placeholder-ev.svg';
+  static const String placeholderCar = 'assets/images/svg/placeholders/placeholder-car.svg';
+  static const String placeholderMotorcycle = 'assets/images/svg/placeholders/placeholder-motorcycle.svg';
 }

@@ -294,12 +294,13 @@ abstract class AppAssets {
   static const imageIllustrationDeleteVehicle = '$_basePath/${AppImages.illustrationDeleteVehicle}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
+  static const imageIllustrationEmptyCar = '$_basePath/${AppImages.illustrationEmptyCar}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
+  static const imageIllustrationEmptyMotorcycle = '$_basePath/${AppImages.illustrationEmptyMotorcycle}';
   static const imageIllustrationEmptyStateSelectIdpel = '$_basePath/${AppImages.illustrationEmptyStateSelectIdpel}';
   static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
-  static const imageIllustrationEmptyVehicle = '$_basePath/${AppImages.illustrationEmptyVehicle}';
   static const imageIllustrationEvQueue = '$_basePath/${AppImages.illustrationEvQueue}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFlaggingRecDenom = '$_basePath/${AppImages.illustrationFlaggingRecDenom}';
@@ -329,6 +330,7 @@ abstract class AppAssets {
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
   static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
   static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';
+  static const imageBackgroundHeaderActiveCharging = '$_basePath/${AppImages.backgroundHeaderActiveCharging}';
   static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
@@ -362,13 +364,15 @@ abstract class AppAssets {
   static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
-  static const imagePlaceholderEv = '$_basePath/${AppImages.placeholderEv}';
+  static const imagePlaceholderCar = '$_basePath/${AppImages.placeholderCar}';
+  static const imagePlaceholderMotorcycle = '$_basePath/${AppImages.placeholderMotorcycle}';
 
   // --- AppAnimations Mapping ---
   static const animationOnBoarding1 = '$_basePath/${AppAnimations.animationOnBoarding1}';
   static const animationOnBoarding2 = '$_basePath/${AppAnimations.animationOnBoarding2}';
   static const animationOnBoarding3 = '$_basePath/${AppAnimations.animationOnBoarding3}';
   static const animationCharging = '$_basePath/${AppAnimations.animationCharging}';
+  static const animationLinearProgress = '$_basePath/${AppAnimations.animationLinearProgress}';
   static const animationLoadingPrimary = '$_basePath/${AppAnimations.animationLoadingPrimary}';
   static const animationLoadingWhite = '$_basePath/${AppAnimations.animationLoadingWhite}';
 
