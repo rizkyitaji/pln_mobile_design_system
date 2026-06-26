@@ -325,6 +325,8 @@ abstract class AppAssets {
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
   static const imageIllustrationEmptyStateComplaintHistory = '$_basePath/${AppImages.illustrationEmptyStateComplaintHistory}';
   static const imageLitWoker = '$_basePath/${AppImages.litWoker}';
+  static const imageBackgroundComplaintDetail = '$_basePath/${AppImages.backgroundComplaintDetail}';
+  static const imageBackgroundComplaintHomepage = '$_basePath/${AppImages.backgroundComplaintHomepage}';
   static const imageBackgroundDenom = '$_basePath/${AppImages.backgroundDenom}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
   static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
@@ -359,8 +361,6 @@ abstract class AppAssets {
   static const imageBackgroundSummaryChargingCompleted = '$_basePath/${AppImages.backgroundSummaryChargingCompleted}';
   static const imageBackgroundSummaryChargingFailed = '$_basePath/${AppImages.backgroundSummaryChargingFailed}';
   static const imageBackgroundTrackService = '$_basePath/${AppImages.backgroundTrackService}';
-  static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
-  static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
   static const imagePlaceholderEv = '$_basePath/${AppImages.placeholderEv}';

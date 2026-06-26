@@ -50,6 +50,8 @@ abstract class AppImages {
   static const String litWoker = 'assets/images/svg/lit-woker.svg';
 
   // Group: BACKGROUNDS PNG
+  static const String backgroundComplaintDetail = 'assets/images/png/backgrounds/background-complaint-detail.png';
+  static const String backgroundComplaintHomepage = 'assets/images/png/backgrounds/background-complaint-homepage.png';
   static const String backgroundDenom = 'assets/images/png/backgrounds/background-denom.png';
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
@@ -84,8 +86,6 @@ abstract class AppImages {
   static const String backgroundSummaryChargingCompleted = 'assets/images/png/backgrounds/background-summary-charging-completed.png';
   static const String backgroundSummaryChargingFailed = 'assets/images/png/backgrounds/background-summary-charging-failed.png';
   static const String backgroundTrackService = 'assets/images/png/backgrounds/background-track-service.png';
-  static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
-  static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
 
   // Group: PLACEHOLDERS PNG
   static const String placeholderDefault = 'assets/images/png/placeholders/placeholder-default.png';
