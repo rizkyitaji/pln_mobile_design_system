@@ -33,6 +33,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final String? initialValue;
   final Widget? actionWidget;
   final double? actionWidgetSpace;
+  final TextStyle? style;
 
   const AppLabeledTextFormField({
     super.key,
@@ -66,6 +67,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.initialValue,
     this.actionWidget,
     this.actionWidgetSpace,
+    this.style,
   });
 
   @override
@@ -95,6 +97,7 @@ class AppLabeledTextFormField extends StatelessWidget {
               child: TextFormField(
                 controller: controller,
                 readOnly: readOnly,
+                style: style,
                 maxLines: maxLines,
                 minLines: minLines,
                 initialValue: initialValue,

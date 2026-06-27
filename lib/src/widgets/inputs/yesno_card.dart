@@ -11,6 +11,7 @@ class AppYesNoCard<T> extends StatelessWidget {
   final String? errorText;
   final bool? isRequired;
   final bool? isColumn;
+  final TextStyle? labelStyle;
 
   const AppYesNoCard({
     super.key,
@@ -23,6 +24,7 @@ class AppYesNoCard<T> extends StatelessWidget {
     this.errorText,
     this.isRequired,
     this.isColumn,
+    this.labelStyle,
   });
 
   @override
@@ -35,7 +37,11 @@ class AppYesNoCard<T> extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: AppFieldLabel(label: label, required: isRequired ?? false),
+              child: AppFieldLabel(
+                label: label,
+                required: isRequired ?? false,
+                style: labelStyle,
+              ),
             ),
             if (onInfoTap != null) ...[
               const SizedBox(width: AppSizes.s8),
@@ -125,9 +131,7 @@ class _YesNoOptionTile<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final borderColor = isSelected ? AppColors.borderPrimary : AppColors.border;
-    final backgroundColor = isSelected
-        ? AppColors.primarySubtle
-        : AppColors.white;
+    final backgroundColor = AppColors.white;
 
     return Container(
       decoration: BoxDecoration(
@@ -154,7 +158,6 @@ class _YesNoOptionTile<T> extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: context.textTheme.bodyMedium.copyWith(
                     color: AppColors.textHeading,
-                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                   ),
                 ),
               ),

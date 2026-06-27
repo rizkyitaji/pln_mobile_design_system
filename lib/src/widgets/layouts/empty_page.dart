@@ -7,6 +7,7 @@ class AppEmptyPage extends StatelessWidget {
   final VoidCallback? onPressed;
   final VoidCallback? onOutlinedPressed;
   final Widget? icon;
+  final bool? showButton;
 
   const AppEmptyPage({
     super.key,
@@ -17,6 +18,7 @@ class AppEmptyPage extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.onPressed,
     this.icon,
+    this.showButton,
     this.onOutlinedPressed,
     this.outlinedText,
   });
@@ -48,27 +50,30 @@ class AppEmptyPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            if (onPressed != null) ...[
-              AppSpacing.h24,
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: onPressed,
-                  label: Text(buttonText ?? 'Coba Lagi'),
-                  icon: icon,
+            AppSpacing.h24,
+            if (showButton ?? true) ...[
+              if (onPressed != null) ...[
+                AppSpacing.h24,
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: onPressed,
+                    label: Text(buttonText ?? 'Coba Lagi'),
+                    icon: icon,
+                  ),
                 ),
-              ),
-            ],
-            if (onOutlinedPressed != null) ...[
-              AppSpacing.h16,
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton.icon(
-                  onPressed: onOutlinedPressed,
-                  label: Text(outlinedText ?? 'Coba Lagi'),
-                  icon: icon,
+              ],
+              if (onOutlinedPressed != null) ...[
+                AppSpacing.h16,
+                SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton.icon(
+                    onPressed: onOutlinedPressed,
+                    label: Text(outlinedText ?? 'Coba Lagi'),
+                    icon: icon,
+                  ),
                 ),
-              ),
+              ],
             ],
           ],
         ),

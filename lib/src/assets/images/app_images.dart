@@ -53,10 +53,14 @@ abstract class AppImages {
 
   // Group: BACKGROUNDS PNG
   static const String backgroundAddIdpel = 'assets/images/png/backgrounds/background-add-idpel.png';
+  static const String backgroundBtnVoucher = 'assets/images/png/backgrounds/background-btn-voucher.png';
+  static const String backgroundComplaintDetail = 'assets/images/png/backgrounds/background-complaint-detail.png';
+  static const String backgroundComplaintHomepage = 'assets/images/png/backgrounds/background-complaint-homepage.png';
   static const String backgroundDenom = 'assets/images/png/backgrounds/background-denom.png';
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
   static const String backgroundElectricity = 'assets/images/png/backgrounds/background-electricity.png';
+  static const String backgroundEstimatePrice = 'assets/images/png/backgrounds/background-estimate-price.png';
   static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
   static const String backgroundHeaderActiveCharging = 'assets/images/png/backgrounds/background-header-active-charging.png';
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
@@ -90,8 +94,7 @@ abstract class AppImages {
   static const String backgroundSection = 'assets/images/png/backgrounds/background-section.png';
   static const String backgroundSummaryChargingCompleted = 'assets/images/png/backgrounds/background-summary-charging-completed.png';
   static const String backgroundSummaryChargingFailed = 'assets/images/png/backgrounds/background-summary-charging-failed.png';
-  static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
-  static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
+  static const String backgroundTrackService = 'assets/images/png/backgrounds/background-track-service.png';
 
   // Group: PLACEHOLDERS PNG
   static const String placeholderDefault = 'assets/images/png/placeholders/placeholder-default.png';
