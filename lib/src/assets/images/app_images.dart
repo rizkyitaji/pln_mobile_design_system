@@ -18,6 +18,7 @@ abstract class AppImages {
   static const String illustrationEmptyCar = 'assets/images/png/illustration-empty-car.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
   static const String illustrationEmptyMotorcycle = 'assets/images/png/illustration-empty-motorcycle.png';
+  static const String illustrationEmptyStateElectricity = 'assets/images/png/illustration-empty-state-electricity.png';
   static const String illustrationEmptyStateSelectIdpel = 'assets/images/png/illustration-empty-state-select-idpel.png';
   static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
@@ -51,9 +52,11 @@ abstract class AppImages {
   static const String litWoker = 'assets/images/svg/lit-woker.svg';
 
   // Group: BACKGROUNDS PNG
+  static const String backgroundAddIdpel = 'assets/images/png/backgrounds/background-add-idpel.png';
   static const String backgroundDenom = 'assets/images/png/backgrounds/background-denom.png';
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
+  static const String backgroundElectricity = 'assets/images/png/backgrounds/background-electricity.png';
   static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
   static const String backgroundHeaderActiveCharging = 'assets/images/png/backgrounds/background-header-active-charging.png';
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
@@ -80,6 +83,7 @@ abstract class AppImages {
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundPageQueue = 'assets/images/png/backgrounds/background-page-queue.png';
+  static const String backgroundPv = 'assets/images/png/backgrounds/background-pv.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';

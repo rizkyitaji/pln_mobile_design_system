@@ -19,6 +19,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final VoidCallback? onTap;
+  final void Function(String?)? onSaved;
   final Widget? suffixIcon;
   final BoxConstraints? suffixIconConstraints;
   final Widget? prefixIcon;
@@ -27,6 +28,11 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? suffixLabelIcon;
   final FocusNode? focusNode;
   final Color? fillColor;
+  final Widget? suffixLabel;
+  final InputBorder? border;
+  final String? initialValue;
+  final Widget? actionWidget;
+  final double? actionWidgetSpace;
 
   const AppLabeledTextFormField({
     super.key,
@@ -54,6 +60,12 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.suffixLabelIcon,
     this.focusNode,
     this.fillColor,
+    this.onSaved,
+    this.suffixLabel,
+    this.border,
+    this.initialValue,
+    this.actionWidget,
+    this.actionWidgetSpace,
   });
 
   @override
@@ -61,65 +73,97 @@ class AppLabeledTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (suffixLabelIcon != null) ...[
-          Row(
-            children: [
-              AppFieldLabel(label: label, required: required),
-              AppSpacing.w4,
-              suffixLabelIcon ?? SizedBox(),
-            ],
-          ),
-        ] else ...[
-          AppFieldLabel(label: label, required: required),
-        ],
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                AppFieldLabel(label: label, required: required),
+                if (suffixLabelIcon != null) ...[
+                  AppSpacing.w4,
+                  suffixLabelIcon ?? SizedBox(),
+                ],
+              ],
+            ),
+            suffixLabel ?? SizedBox(),
+          ],
+        ),
         AppSpacing.h8,
-        TextFormField(
-          controller: controller,
-          readOnly: readOnly,
-          maxLines: maxLines,
-          minLines: minLines,
-          maxLength: maxLength,
-          keyboardType: keyboardType,
-          textInputAction: textInputAction,
-          textCapitalization: textCapitalization ?? TextCapitalization.none,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          inputFormatters: inputFormatters,
-          validator: validator,
-          onTap: onTap,
-          onChanged: onChanged,
-          focusNode: focusNode,          
-          decoration: InputDecoration(            
-            hintText: hintText,
-            suffixIcon: suffixIcon,
-            prefixIcon: prefixIcon,
-            prefixIconConstraints: prefixIconConstraints,
-            prefix: prefixText != null ? Text(prefixText!) : null,
-            filled: true,
-            counterText: counterText,
-            fillColor: fillColor,
-            suffixIconConstraints: suffixIconConstraints,
-            contentPadding: EdgeInsets.all(AppSizes.s12),
-            border: OutlineInputBorder(
-              borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.border),
+        Row(
+          children: [
+            Expanded(
+              child: TextFormField(
+                controller: controller,
+                readOnly: readOnly,
+                maxLines: maxLines,
+                minLines: minLines,
+                initialValue: initialValue,
+                maxLength: maxLength,
+                keyboardType: keyboardType,
+                textInputAction: textInputAction,
+                textCapitalization:
+                    textCapitalization ?? TextCapitalization.none,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                inputFormatters: inputFormatters,
+                validator: validator,
+                onTap: onTap,
+                onChanged: onChanged,
+                focusNode: focusNode,
+                onSaved: onSaved,
+                decoration: InputDecoration(
+                  hintText: hintText,
+                  suffixIcon: suffixIcon,
+                  prefixIcon: prefixIcon,
+                  prefixIconConstraints: prefixIconConstraints,
+                  prefix: prefixText != null ? Text(prefixText!) : null,
+                  filled: true,
+                  counterText: counterText,
+                  fillColor: fillColor,
+                  suffixIconConstraints: suffixIconConstraints,
+                  contentPadding: EdgeInsets.all(AppSizes.s12),
+                  border:
+                      border ??
+                      OutlineInputBorder(
+                        borderRadius: AppRadius.rounded8,
+                        borderSide: const BorderSide(color: AppColors.border),
+                      ),
+                  enabledBorder:
+                      border ??
+                      OutlineInputBorder(
+                        borderRadius: AppRadius.rounded8,
+                        borderSide: const BorderSide(color: AppColors.border),
+                      ),
+                  focusedBorder:
+                      border ??
+                      OutlineInputBorder(
+                        borderRadius: AppRadius.rounded8,
+                        borderSide: const BorderSide(
+                          color: AppColors.borderPrimary,
+                        ),
+                      ),
+                  errorBorder:
+                      border ??
+                      OutlineInputBorder(
+                        borderRadius: AppRadius.rounded8,
+                        borderSide: const BorderSide(
+                          color: AppColors.borderError,
+                        ),
+                      ),
+                  focusedErrorBorder:
+                      border ??
+                      OutlineInputBorder(
+                        borderRadius: AppRadius.rounded8,
+                        borderSide: const BorderSide(
+                          color: AppColors.borderError,
+                        ),
+                      ),
+                ),
+              ),
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.border),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.borderPrimary),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.borderError),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderRadius: AppRadius.rounded8,
-              borderSide: const BorderSide(color: AppColors.borderError),
-            ),
-          ),
+            ...(actionWidget != null
+                ? [SizedBox(width: actionWidgetSpace), actionWidget!]
+                : []),
+          ],
         ),
       ],
     );

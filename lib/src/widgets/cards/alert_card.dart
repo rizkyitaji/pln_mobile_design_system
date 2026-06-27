@@ -11,6 +11,7 @@ class AppAlertCard extends StatelessWidget {
   final Color? iconColor, backgroundColor, textColor;
   final EdgeInsetsGeometry? margin;
   final Widget? leading, trailing;
+  final TextStyle? descriptionStyle;
 
   const AppAlertCard({
     super.key,
@@ -26,6 +27,7 @@ class AppAlertCard extends StatelessWidget {
     this.backgroundColor,
     this.textColor,
     this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.descriptionStyle,
   });
 
   @override
@@ -56,9 +58,11 @@ class AppAlertCard extends StatelessWidget {
                   visible: description != null,
                   child: Text(
                     description ?? '',
-                    style: context.textTheme.bodyCaption.copyWith(
-                      color: _textColor,
-                    ),
+                    style:
+                        descriptionStyle ??
+                        context.textTheme.bodyCaption.copyWith(
+                          color: _textColor,
+                        ),
                   ),
                 ),
                 Visibility(
