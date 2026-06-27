@@ -11,6 +11,7 @@ class AppAlertCard extends StatelessWidget {
   final Color? iconColor, backgroundColor, textColor;
   final EdgeInsetsGeometry? margin;
   final Widget? leading, trailing;
+  final bool isInline;
   final TextStyle? descriptionStyle;
   final Widget? customDescription;
 
@@ -28,6 +29,7 @@ class AppAlertCard extends StatelessWidget {
     this.backgroundColor,
     this.textColor,
     this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.isInline = false,
     this.descriptionStyle,
     this.customDescription,
   });
@@ -39,7 +41,9 @@ class AppAlertCard extends StatelessWidget {
       margin: margin,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: crossAxisAlignment,
+        crossAxisAlignment: isInline
+            ? CrossAxisAlignment.center
+            : crossAxisAlignment,
         children: [
           _icon,
           Expanded(
@@ -120,7 +124,7 @@ class AppAlertCard extends StatelessWidget {
       case AppAlertType.warning:
         return AppImage(
           asset: AppAssets.iconWarningRounded,
-          color: iconColor ?? AppColors.iconWarning,
+          color: iconColor ?? AppColors.iconWarningPressed,
           size: AppSizes.s20,
         );
       default:

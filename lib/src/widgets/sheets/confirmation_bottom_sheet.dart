@@ -41,30 +41,33 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     return PopScope(
       canPop: canPop,
       child: AppSheetContainer(
-        padding: EdgeInsets.all(AppSizes.s16),
         children: [
-          if (asset != null) ...[
-            AppImage(asset: asset ?? '', size: AppSizes.s224),
-            AppSpacing.h12,
-          ],
-          if (title != null) ...[
-            Text(
-              title ?? '',
-              textAlign: textAlign ?? TextAlign.center,
-              style: context.textTheme.headingSmall,
-            ),
-            AppSpacing.h8,
-          ],
-          if (description != null) ...[
-            Text(
-              description ?? '',
-              textAlign: textAlign ?? TextAlign.center,
-              style: context.textTheme.bodyMedium,
-            ),
-            AppSpacing.h16,
-          ],
-          if (descriptionHtml != null) ...[
-            Visibility(
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: AppSizes.s16),
+            child: Column(
+              children: [
+                if (asset != null) ...[
+                  AppImage(asset: asset ?? '', size: AppSizes.s224),
+                  AppSpacing.h12,
+                ],
+                if (title != null) ...[
+                  Text(
+                    title ?? '',
+                    textAlign: textAlign ?? TextAlign.center,
+                    style: context.textTheme.headingSmall,
+                  ),
+                  AppSpacing.h8,
+                ],
+                if (description != null) ...[
+                  Text(
+                    description ?? '',
+                    textAlign: textAlign ?? TextAlign.center,
+                    style: context.textTheme.bodyMedium,
+                  ),
+                  AppSpacing.h16,
+                ],
+                if (descriptionHtml != null) ...[
+                  Visibility(
               visible: centerDescription,
               replacement: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
@@ -81,22 +84,27 @@ class AppConfirmationBottomSheet extends StatelessWidget {
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
-                  child: MarkdownBody(
-                    data: description ?? '',
-                    styleSheet: MarkdownStyleSheet.fromTheme(
-                      ThemeData(
-                        textTheme: TextTheme(
-                          bodyMedium: context.textTheme.bodyMedium,
+                        padding: const EdgeInsets.symmetric(
+                      horizontal: AppSizes.s24,
+                    ),
+                        child: MarkdownBody(
+                          data: description ?? '',
+                          styleSheet: MarkdownStyleSheet.fromTheme(
+                            ThemeData(
+                              textTheme: TextTheme(
+                                bodyMedium: context.textTheme.bodyMedium,
+                              ),
+                            ),
+                          ).copyWith(textAlign: WrapAlignment.center),
                         ),
-                      ),
-                    ).copyWith(textAlign: WrapAlignment.center),
-                  ),
                 ),
               ),
+                  ),
+                  AppSpacing.h16,
+                ],
+              ],
             ),
-            AppSpacing.h16,
-          ],
+          ),
           AppPersistentSheet(
             child: useColumn
                 ? Column(

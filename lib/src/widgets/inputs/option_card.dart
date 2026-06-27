@@ -34,16 +34,10 @@ class AppOptionCard extends StatelessWidget {
           ),
           child: Row(
             children: [
-             AppRadioButton(selected: selected,),
+              AppRadioButton(selected: selected),
               const SizedBox(width: AppSizes.s12),
               Expanded(
-                child: Text(
-                  label,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppColors.textHeading,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
+                child: Text(label, style: context.textTheme.bodyMediumSemiBold),
               ),
             ],
           ),
