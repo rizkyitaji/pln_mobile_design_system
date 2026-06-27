@@ -11,6 +11,7 @@ class AppNetworkImage extends StatelessWidget {
   final VoidCallback? onTap;
   final BoxFit fit;
   final Color? color;
+  final Alignment alignment;
 
   const AppNetworkImage({
     super.key,
@@ -28,6 +29,7 @@ class AppNetworkImage extends StatelessWidget {
     this.errorImage,
     this.onTap,
     this.color,
+    this.alignment = Alignment.center,
   });
 
   @override
@@ -60,6 +62,7 @@ class AppNetworkImage extends StatelessWidget {
             width: width ?? size,
             color: color,
             height: height ?? size,
+            alignment: alignment,
             fit: fit,
             placeholder: (context, _) {
               return const Center(child: AppLoadingIndicator());

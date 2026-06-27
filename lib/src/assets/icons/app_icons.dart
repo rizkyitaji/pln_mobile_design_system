@@ -141,6 +141,7 @@ abstract class AppIcons {
   static const String iconReportOutlined = 'assets/icons/svg/outlined/icon-report-outlined.svg';
   static const String iconRewardsOutlined = 'assets/icons/svg/outlined/icon-rewards-outlined.svg';
   static const String iconRiceCookerOutlined = 'assets/icons/svg/outlined/icon-rice-cooker-outlined.svg';
+  static const String iconSelfieOutlined = 'assets/icons/svg/outlined/icon-selfie-outlined.svg';
   static const String iconSettingsOutlined = 'assets/icons/svg/outlined/icon-settings-outlined.svg';
   static const String iconShareOutlined = 'assets/icons/svg/outlined/icon-share-outlined.svg';
   static const String iconStarOutlined = 'assets/icons/svg/outlined/icon-star-outlined.svg';
@@ -155,6 +156,7 @@ abstract class AppIcons {
   // Group: SOLID SVG
   static const String iconAddDocs = 'assets/icons/svg/solid/icon-add-docs.svg';
   static const String iconAddImage = 'assets/icons/svg/solid/icon-add-image.svg';
+  static const String iconBarcode = 'assets/icons/svg/solid/icon-barcode.svg';
   static const String iconBatteryNotFound = 'assets/icons/svg/solid/icon-battery-not-found.svg';
   static const String iconBattery = 'assets/icons/svg/solid/icon-battery.svg';
   static const String iconCalendar = 'assets/icons/svg/solid/icon-calendar.svg';
