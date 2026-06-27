@@ -125,6 +125,7 @@ abstract class AppIcons {
   static const String iconLikeOutlined = 'assets/icons/svg/outlined/icon-like-outlined.svg';
   static const String iconLocationOutlined = 'assets/icons/svg/outlined/icon-location-outlined.svg';
   static const String iconLowBatteryOutlined = 'assets/icons/svg/outlined/icon-low-battery-outlined.svg';
+  static const String iconMoneyOutlined = 'assets/icons/svg/outlined/icon-money-outlined.svg';
   static const String iconNavigateOutlined = 'assets/icons/svg/outlined/icon-navigate-outlined.svg';
   static const String iconNotificationOutlined = 'assets/icons/svg/outlined/icon-notification-outlined.svg';
   static const String iconPackageOutlined = 'assets/icons/svg/outlined/icon-package-outlined.svg';

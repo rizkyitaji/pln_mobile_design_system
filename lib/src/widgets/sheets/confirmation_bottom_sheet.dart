@@ -12,7 +12,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
   final ButtonStyle? confirmButtonStyle, cancelButtonStyle;
   final VoidCallback? onCancel, onConfirm;
   final Widget? confirmIcon, cancelIcon;
-  final bool canPop, useColumn;
+  final bool canPop, useColumn, centerDescription, reverseButton;
   final TextAlign? textAlign;
 
   const AppConfirmationBottomSheet({
@@ -31,6 +31,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.cancelIcon,
     this.canPop = true,
     this.useColumn = false,
+    this.centerDescription = false,
+    this.reverseButton = false,
     this.textAlign,
   });
 
@@ -65,20 +67,38 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                   AppSpacing.h16,
                 ],
                 if (descriptionHtml != null) ...[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
+                  Visibility(
+              visible: centerDescription,
+              replacement: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+                child: MarkdownBody(
+                  data: description ?? '',
+                  styleSheet: MarkdownStyleSheet.fromTheme(
+                    ThemeData(
+                      textTheme: TextTheme(
+                        bodyMedium: context.textTheme.bodyMedium,
+                      ),
+                    ),
+                  ).copyWith(textAlign: WrapAlignment.center),
+                ),
+              ),
+              child: Center(
+                child: Padding(
+                        padding: const EdgeInsets.symmetric(
                       horizontal: AppSizes.s24,
                     ),
-                    child: MarkdownBody(
-                      data: description ?? '',
-                      styleSheet: MarkdownStyleSheet.fromTheme(
-                        ThemeData(
-                          textTheme: TextTheme(
-                            bodyMedium: context.textTheme.bodyMedium,
-                          ),
+                        child: MarkdownBody(
+                          data: description ?? '',
+                          styleSheet: MarkdownStyleSheet.fromTheme(
+                            ThemeData(
+                              textTheme: TextTheme(
+                                bodyMedium: context.textTheme.bodyMedium,
+                              ),
+                            ),
+                          ).copyWith(textAlign: WrapAlignment.center),
                         ),
-                      ).copyWith(textAlign: WrapAlignment.center),
-                    ),
+                ),
+              ),
                   ),
                   AppSpacing.h16,
                 ],
@@ -114,29 +134,59 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                     spacing: AppSizes.s12,
                     children: [
                       Expanded(
-                        child: OutlinedButton.icon(
-                          onPressed: onCancel ?? () => context.safePop(),
-                          style: cancelButtonStyle,
-                          icon: cancelIcon,
-                          label: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Text(
-                              cancelText ?? 'Batal',
-                              textAlign: TextAlign.center,
+                        child: Visibility(
+                          visible: reverseButton,
+                          replacement: OutlinedButton.icon(
+                            onPressed: onCancel ?? () => context.safePop(),
+                            style: cancelButtonStyle,
+                            icon: cancelIcon,
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                cancelText ?? 'Batal',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          child: ElevatedButton.icon(
+                            onPressed: onConfirm ?? () => context.safePop(true),
+                            style: confirmButtonStyle,
+                            icon: confirmIcon,
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                confirmText ?? 'Konfirmasi',
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
                       ),
                       Expanded(
-                        child: ElevatedButton.icon(
-                          onPressed: onConfirm ?? () => context.safePop(true),
-                          style: confirmButtonStyle,
-                          icon: confirmIcon,
-                          label: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Text(
-                              confirmText ?? 'Konfirmasi',
-                              textAlign: TextAlign.center,
+                        child: Visibility(
+                          visible: reverseButton,
+                          replacement: ElevatedButton.icon(
+                            onPressed: onConfirm ?? () => context.safePop(true),
+                            style: confirmButtonStyle,
+                            icon: confirmIcon,
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                confirmText ?? 'Konfirmasi',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ),
+                          child: OutlinedButton.icon(
+                            onPressed: onCancel ?? () => context.safePop(),
+                            style: cancelButtonStyle,
+                            icon: cancelIcon,
+                            label: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                cancelText ?? 'Batal',
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
@@ -165,6 +215,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     Widget? cancelIcon,
     bool canPop = true,
     bool useColumn = false,
+    bool centerDescription = false,
+    bool reverseButton = false,
     TextAlign? textAlign,
   }) {
     return showModalBottomSheet<T>(
@@ -189,6 +241,8 @@ class AppConfirmationBottomSheet extends StatelessWidget {
         cancelIcon: cancelIcon,
         canPop: canPop,
         useColumn: useColumn,
+        centerDescription: centerDescription,
+        reverseButton: reverseButton,
       ),
     );
   }

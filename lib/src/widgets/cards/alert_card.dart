@@ -12,6 +12,7 @@ class AppAlertCard extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final Widget? leading, trailing;
   final bool isInline;
+  final TextStyle? descriptionStyle;
 
   const AppAlertCard({
     super.key,
@@ -28,6 +29,7 @@ class AppAlertCard extends StatelessWidget {
     this.textColor,
     this.crossAxisAlignment = CrossAxisAlignment.start,
     this.isInline = false,
+    this.descriptionStyle,
   });
 
   @override
@@ -79,9 +81,11 @@ class AppAlertCard extends StatelessWidget {
                         visible: description != null,
                         child: Text(
                           description ?? '',
-                          style: context.textTheme.bodyCaption.copyWith(
-                            color: _textColor,
-                          ),
+                          style:
+                        descriptionStyle ??
+                        context.textTheme.bodyCaption.copyWith(
+                                color: _textColor,
+                              ),
                         ),
                       ),
                       Visibility(
