@@ -380,13 +380,8 @@ abstract class AppAssets {
   static const imageBackgroundSection = '$_basePath/${AppImages.backgroundSection}';
   static const imageBackgroundSummaryChargingCompleted = '$_basePath/${AppImages.backgroundSummaryChargingCompleted}';
   static const imageBackgroundSummaryChargingFailed = '$_basePath/${AppImages.backgroundSummaryChargingFailed}';
-<<<<<<< HEAD
   static const imageBackgroundSwacam = '$_basePath/${AppImages.backgroundSwacam}';
-  static const imageComplaintBackgroundDetail = '$_basePath/${AppImages.complaintBackgroundDetail}';
-  static const imageComplaintBackgroundHomepage2 = '$_basePath/${AppImages.complaintBackgroundHomepage2}';
-=======
   static const imageBackgroundTrackService = '$_basePath/${AppImages.backgroundTrackService}';
->>>>>>> 0c4dce925cc92bee1c23613af1ce38560667f27d
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
   static const imagePlaceholderCar = '$_basePath/${AppImages.placeholderCar}';

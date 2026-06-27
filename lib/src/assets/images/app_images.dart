@@ -97,13 +97,8 @@ abstract class AppImages {
   static const String backgroundSection = 'assets/images/png/backgrounds/background-section.png';
   static const String backgroundSummaryChargingCompleted = 'assets/images/png/backgrounds/background-summary-charging-completed.png';
   static const String backgroundSummaryChargingFailed = 'assets/images/png/backgrounds/background-summary-charging-failed.png';
-<<<<<<< HEAD
   static const String backgroundSwacam = 'assets/images/png/backgrounds/background-swacam.png';
-  static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
-  static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
-=======
   static const String backgroundTrackService = 'assets/images/png/backgrounds/background-track-service.png';
->>>>>>> 0c4dce925cc92bee1c23613af1ce38560667f27d
 
   // Group: PLACEHOLDERS PNG
   static const String placeholderDefault = 'assets/images/png/placeholders/placeholder-default.png';
