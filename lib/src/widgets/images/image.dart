@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
@@ -11,7 +9,7 @@ class AppImage extends StatelessWidget {
   final Color? color;
   final BoxFit? fit;
   final bool? animate, repeat, reverse;
-  final Uint8List? bytes;
+  final BorderRadius? borderRadius;
 
   const AppImage({
     super.key,
@@ -24,40 +22,43 @@ class AppImage extends StatelessWidget {
     this.animate,
     this.repeat,
     this.reverse,
-    this.bytes,
+    this.borderRadius,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Visibility(
-      visible: asset.contains('json'),
-      replacement: Visibility(
-        visible: asset.contains('svg'),
-        replacement: Image.asset(
+    return ClipRRect(
+      borderRadius: borderRadius ?? AppRadius.zero,
+      child: Visibility(
+        visible: asset.contains('json'),
+        replacement: Visibility(
+          visible: asset.contains('svg'),
+          replacement: Image.asset(
+            asset,
+            width: width ?? size,
+            height: height ?? size,
+            color: color,
+            fit: fit,
+          ),
+          child: SvgPicture.asset(
+            asset,
+            width: width ?? size,
+            height: height ?? size,
+            fit: fit ?? BoxFit.contain,
+            colorFilter: color != null
+                ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
+                : null,
+          ),
+        ),
+        child: Lottie.asset(
           asset,
           width: width ?? size,
           height: height ?? size,
-          color: color,
           fit: fit,
+          repeat: repeat,
+          reverse: reverse,
+          animate: animate,
         ),
-        child: SvgPicture.asset(
-          asset,
-          width: width ?? size,
-          height: height ?? size,
-          fit: fit ?? BoxFit.contain,
-          colorFilter: color != null
-              ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
-              : null,
-        ),
-      ),
-      child: Lottie.asset(
-        asset,
-        width: width ?? size,
-        height: height ?? size,
-        fit: fit,
-        repeat: repeat,
-        reverse: reverse,
-        animate: animate,
       ),
     );
   }

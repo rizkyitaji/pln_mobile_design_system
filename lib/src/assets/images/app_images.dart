@@ -28,6 +28,7 @@ abstract class AppImages {
   static const String illustrationFlaggingRecDenom = 'assets/images/png/illustration-flagging-rec-denom.png';
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
+  static const String illustrationKwhMeter = 'assets/images/png/illustration-kwh-meter.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
   static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationNikNotRegistered = 'assets/images/png/illustration-nik-not-registered.png';
@@ -44,6 +45,8 @@ abstract class AppImages {
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
   static const String illustrationSuccessVehicle = 'assets/images/png/illustration-success-vehicle.png';
   static const String illustrationVerificationEmail = 'assets/images/png/illustration-verification-email.png';
+  static const String swacam1 = 'assets/images/png/swacam-1.png';
+  static const String swacam2 = 'assets/images/png/swacam-2.png';
 
   // Group: SVG
   static const String illustrationComplaintDetailHeaderBack = 'assets/images/svg/illustration-complaint-detail-header-back.svg';
@@ -94,7 +97,13 @@ abstract class AppImages {
   static const String backgroundSection = 'assets/images/png/backgrounds/background-section.png';
   static const String backgroundSummaryChargingCompleted = 'assets/images/png/backgrounds/background-summary-charging-completed.png';
   static const String backgroundSummaryChargingFailed = 'assets/images/png/backgrounds/background-summary-charging-failed.png';
+<<<<<<< HEAD
+  static const String backgroundSwacam = 'assets/images/png/backgrounds/background-swacam.png';
+  static const String complaintBackgroundDetail = 'assets/images/png/backgrounds/complaint-background-detail.png';
+  static const String complaintBackgroundHomepage2 = 'assets/images/png/backgrounds/complaint-background-homepage-2.png';
+=======
   static const String backgroundTrackService = 'assets/images/png/backgrounds/background-track-service.png';
+>>>>>>> 0c4dce925cc92bee1c23613af1ce38560667f27d
 
   // Group: PLACEHOLDERS PNG
   static const String placeholderDefault = 'assets/images/png/placeholders/placeholder-default.png';
