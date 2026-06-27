@@ -16,10 +16,10 @@ class AppSliderButton extends StatefulWidget {
     required this.text,
     required this.onCompleted,
     this.completedText,
-    this.backgroundColor = const Color(0xFF5CC1C6),
-    this.activeBackgroundColor = const Color(0xFF438A94),
+    this.backgroundColor = AppColors.primary,
+    this.activeBackgroundColor = AppColors.primaryPressed,
     this.handleColor = AppColors.white,
-    this.iconColor = const Color(0xFF43A2A4),
+    this.iconColor = AppColors.iconPrimary,
     this.textStyle,
   });
 
@@ -27,9 +27,46 @@ class AppSliderButton extends StatefulWidget {
   State<AppSliderButton> createState() => _AppSliderButtonState();
 }
 
-class _AppSliderButtonState extends State<AppSliderButton> {
+class _AppSliderButtonState extends State<AppSliderButton>
+    with SingleTickerProviderStateMixin {
   double _dragPosition = 0.0;
   bool _isCompleted = false;
+
+  late AnimationController _animController;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+    );
+    _animation = Tween<double>(begin: 0.0, end: 0.0).animate(_animController);
+  }
+
+  @override
+  void dispose() {
+    _animController.dispose();
+    super.dispose();
+  }
+
+  void _animateReset(double fromPosition) {
+    _animation =
+        Tween<double>(begin: fromPosition, end: 0.0).animate(
+          CurvedAnimation(parent: _animController, curve: Curves.easeOutCubic),
+        )..addListener(() {
+          setState(() {
+            _dragPosition = _animation.value;
+          });
+        });
+
+    setState(() {
+      _isCompleted = false;
+    });
+
+    _animController.forward(from: 0.0);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +80,7 @@ class _AppSliderButtonState extends State<AppSliderButton> {
             constraints.maxWidth - handleSize - (paddingValue * 2);
 
         final String currentText = _isCompleted
-            ? (widget.completedText ?? 'Pengisian daya berakhir')
+            ? (widget.completedText ?? widget.text)
             : widget.text;
 
         final double currentActiveWidth = _isCompleted
@@ -87,14 +124,12 @@ class _AppSliderButtonState extends State<AppSliderButton> {
                 ),
               ),
               Positioned(
-                left: _isCompleted
-                    ? maxDragDistance + paddingValue
-                    : _dragPosition + paddingValue,
+                left: _dragPosition + paddingValue,
                 top: paddingValue,
                 bottom: paddingValue,
                 child: GestureDetector(
                   onHorizontalDragUpdate: (details) {
-                    if (_isCompleted) return;
+                    if (_isCompleted || _animController.isAnimating) return;
                     setState(() {
                       _dragPosition += details.delta.dx;
                       if (_dragPosition < 0) _dragPosition = 0;
@@ -103,18 +138,23 @@ class _AppSliderButtonState extends State<AppSliderButton> {
                       }
                     });
                   },
-                  onHorizontalDragEnd: (details) {
-                    if (_isCompleted) return;
+                  onHorizontalDragEnd: (details) async {
+                    if (_isCompleted || _animController.isAnimating) return;
+
                     if (_dragPosition >= maxDragDistance * 0.85) {
                       setState(() {
                         _dragPosition = maxDragDistance;
                         _isCompleted = true;
                       });
+
                       widget.onCompleted();
+
+                      await Future.delayed(const Duration(milliseconds: 500));
+                      if (mounted && _isCompleted) {
+                        _animateReset(maxDragDistance);
+                      }
                     } else {
-                      setState(() {
-                        _dragPosition = 0.0;
-                      });
+                      _animateReset(_dragPosition);
                     }
                   },
                   child: Container(

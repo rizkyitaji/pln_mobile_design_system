@@ -34,12 +34,7 @@ class AppOptionCard extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Icon(
-                selected
-                    ? Icons.radio_button_checked_rounded
-                    : Icons.radio_button_unchecked_rounded,
-                color: selected ? AppColors.primary : AppColors.iconDisabled,
-              ),
+             AppRadioButton(selected: selected,),
               const SizedBox(width: AppSizes.s12),
               Expanded(
                 child: Text(
