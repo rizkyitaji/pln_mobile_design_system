@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppEmptyPage extends StatelessWidget {
-  final String? asset, title, description, buttonText;
+  final String? asset, title, description, buttonText, outlinedText;
   final EdgeInsetsGeometry padding;
   final VoidCallback? onPressed;
+  final VoidCallback? onOutlinedPressed;
   final Widget? icon;
 
   const AppEmptyPage({
@@ -16,6 +17,8 @@ class AppEmptyPage extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.onPressed,
     this.icon,
+    this.onOutlinedPressed,
+    this.outlinedText,
   });
 
   @override
@@ -45,15 +48,28 @@ class AppEmptyPage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            AppSpacing.h24,
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: onPressed,
-                label: Text(buttonText ?? 'Coba Lagi'),
-                icon: icon,
+            if (onPressed != null) ...[
+              AppSpacing.h24,
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: onPressed,
+                  label: Text(buttonText ?? 'Coba Lagi'),
+                  icon: icon,
+                ),
               ),
-            ),
+            ],
+            if (onOutlinedPressed != null) ...[
+              AppSpacing.h16,
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: onOutlinedPressed,
+                  label: Text(outlinedText ?? 'Coba Lagi'),
+                  icon: icon,
+                ),
+              ),
+            ],
           ],
         ),
       ),

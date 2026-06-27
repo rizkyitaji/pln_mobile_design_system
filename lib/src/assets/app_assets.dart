@@ -124,6 +124,7 @@ abstract class AppAssets {
   static const iconLikeOutlined = '$_basePath/${AppIcons.iconLikeOutlined}';
   static const iconLocationOutlined = '$_basePath/${AppIcons.iconLocationOutlined}';
   static const iconLowBatteryOutlined = '$_basePath/${AppIcons.iconLowBatteryOutlined}';
+  static const iconMoneyOutlined = '$_basePath/${AppIcons.iconMoneyOutlined}';
   static const iconNavigateOutlined = '$_basePath/${AppIcons.iconNavigateOutlined}';
   static const iconNotificationOutlined = '$_basePath/${AppIcons.iconNotificationOutlined}';
   static const iconPackageOutlined = '$_basePath/${AppIcons.iconPackageOutlined}';
@@ -294,6 +295,7 @@ abstract class AppAssets {
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
+  static const imageIllustrationEmptyStateElectricity = '$_basePath/${AppImages.illustrationEmptyStateElectricity}';
   static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';
   static const imageIllustrationEmptyState = '$_basePath/${AppImages.illustrationEmptyState}';
@@ -320,7 +322,9 @@ abstract class AppAssets {
   static const imageIllustrationVerificationEmail = '$_basePath/${AppImages.illustrationVerificationEmail}';
   static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
   static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
+  static const imageBackgroundAddIdpel = '$_basePath/${AppImages.backgroundAddIdpel}';
   static const imageBackgroundDigitCt = '$_basePath/${AppImages.backgroundDigitCt}';
+  static const imageBackgroundElectricity = '$_basePath/${AppImages.backgroundElectricity}';
   static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
@@ -344,6 +348,7 @@ abstract class AppAssets {
   static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundPageQueue = '$_basePath/${AppImages.backgroundPageQueue}';
+  static const imageBackgroundPv = '$_basePath/${AppImages.backgroundPv}';
   static const imageBackgroundRatingComplaint = '$_basePath/${AppImages.backgroundRatingComplaint}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';
   static const imageBackgroundRecProduct = '$_basePath/${AppImages.backgroundRecProduct}';

@@ -16,6 +16,7 @@ abstract class AppImages {
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
+  static const String illustrationEmptyStateElectricity = 'assets/images/png/illustration-empty-state-electricity.png';
   static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
   static const String illustrationEmptyState = 'assets/images/png/illustration-empty-state.png';
@@ -46,7 +47,9 @@ abstract class AppImages {
   static const String illustrationComplaintDetailHeaderFront = 'assets/images/svg/illustration-complaint-detail-header-front.svg';
 
   // Group: BACKGROUNDS PNG
+  static const String backgroundAddIdpel = 'assets/images/png/backgrounds/background-add-idpel.png';
   static const String backgroundDigitCt = 'assets/images/png/backgrounds/background-digit-ct.png';
+  static const String backgroundElectricity = 'assets/images/png/backgrounds/background-electricity.png';
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
@@ -70,6 +73,7 @@ abstract class AppImages {
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundPageQueue = 'assets/images/png/backgrounds/background-page-queue.png';
+  static const String backgroundPv = 'assets/images/png/backgrounds/background-pv.png';
   static const String backgroundRatingComplaint = 'assets/images/png/backgrounds/background-rating-complaint.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
   static const String backgroundRecProduct = 'assets/images/png/backgrounds/background-rec-product.png';
