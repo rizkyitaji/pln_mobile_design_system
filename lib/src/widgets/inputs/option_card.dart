@@ -5,19 +5,21 @@ class AppOptionCard extends StatelessWidget {
   final String label;
   final bool selected;
   final VoidCallback onTap;
+  final bool disabled;
 
   const AppOptionCard({
     super.key,
     required this.label,
     required this.selected,
     required this.onTap,
+    this.disabled = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: disabled ? AppColors.disabled : AppColors.white,
         borderRadius: AppRadius.rounded12,
         border: Border.all(
           color: selected ? AppColors.borderPrimary : AppColors.border,
@@ -26,7 +28,7 @@ class AppOptionCard extends StatelessWidget {
       ),
       child: InkWell(
         borderRadius: AppRadius.rounded12,
-        onTap: onTap,
+        onTap: disabled ? null : onTap,
         child: Ink(
           padding: const EdgeInsets.symmetric(
             horizontal: AppSizes.s16,

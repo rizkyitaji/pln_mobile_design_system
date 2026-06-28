@@ -8,6 +8,7 @@ class AppEmptyPage extends StatelessWidget {
   final VoidCallback? onOutlinedPressed;
   final Widget? icon;
   final bool? showButton;
+  final Widget? customDescription;
 
   const AppEmptyPage({
     super.key,
@@ -21,6 +22,7 @@ class AppEmptyPage extends StatelessWidget {
     this.showButton,
     this.onOutlinedPressed,
     this.outlinedText,
+    this.customDescription
   });
 
   @override
@@ -41,10 +43,10 @@ class AppEmptyPage extends StatelessWidget {
               style: context.textTheme.headingSmall,
               textAlign: TextAlign.center,
             ),
-            AppSpacing.h8,
+            AppSpacing.h8,            
             Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSizes.s16),
-              child: Text(
+              child: customDescription ?? Text(
                 description ?? 'Silakan coba lagi dalam beberapa saat',
                 style: context.textTheme.bodyMedium,
                 textAlign: TextAlign.center,

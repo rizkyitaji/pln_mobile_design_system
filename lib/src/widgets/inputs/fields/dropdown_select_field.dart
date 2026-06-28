@@ -20,7 +20,11 @@ class AppDropdownSelectField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AppFieldLabel(label: label, required: required),
+        AppFieldLabel(
+          label: label,
+          required: required,
+          style: context.textTheme.bodyMediumSemiBold,
+        ),
         const SizedBox(height: AppSizes.s8),
         InkWell(
           onTap: onTap,
