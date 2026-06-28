@@ -39,7 +39,7 @@ class AppDropdownSelectField extends StatelessWidget {
               children: [
                 Text(
                   value,
-                  style: context.textTheme.bodyMedium.copyWith(
+                  style: context.textTheme.bodyMediumMed.copyWith(
                     color: AppColors.textHeading,
                   ),
                 ),
