@@ -16,6 +16,12 @@ extension DateTimeExt on DateTime? {
     return DateFormat('dd MMMM y, HH:mm', 'id_ID').format(date);
   }
 
+  String get formatddMMMMyHHmmWIB {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('dd MMMM y, HH:mm WIB', 'id_ID').format(date);
+  }
+
   /// Output: 09:10
   String get formatHHmm {
     var date = this;
