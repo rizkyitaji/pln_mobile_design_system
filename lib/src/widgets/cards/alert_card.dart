@@ -13,6 +13,7 @@ class AppAlertCard extends StatelessWidget {
   final Widget? leading, trailing;
   final bool isInline;
   final TextStyle? descriptionStyle;
+  final Widget? customDescription;
 
   const AppAlertCard({
     super.key,
@@ -30,6 +31,7 @@ class AppAlertCard extends StatelessWidget {
     this.crossAxisAlignment = CrossAxisAlignment.start,
     this.isInline = false,
     this.descriptionStyle,
+    this.customDescription,
   });
 
   @override
@@ -39,74 +41,59 @@ class AppAlertCard extends StatelessWidget {
       margin: margin,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: isInline ? CrossAxisAlignment.center : crossAxisAlignment,
+        crossAxisAlignment: isInline
+            ? CrossAxisAlignment.center
+            : crossAxisAlignment,
         children: [
           _icon,
           Expanded(
-            child: isInline
-                ? InkWell(
-                    onTap: onTap,
-                    child: RichText(
-                      text: TextSpan(
-                        text: description != null ? '$description ' : '',
-                        style: context.textTheme.bodyCaption.copyWith(
-                          color: _textColor,
-                        ),
-                        children: [
-                          if (actionText != null)
-                            TextSpan(
-                              text: actionText!,
-                              style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                                color: _textColor,
-                              ),
-                            ),
-                        ],
-                      ),
+            child: Column(
+              spacing: AppSizes.s2,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Visibility(
+                  visible: title != null,
+                  child: Text(
+                    title ?? '',
+                    style: context.textTheme.bodyCaptionSemiBold.copyWith(
+                      color: _textColor,
                     ),
-                  )
-                : Column(
-                    spacing: AppSizes.s2,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Visibility(
-                        visible: title != null,
-                        child: Text(
-                          title ?? '',
-                          style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                            color: _textColor,
-                          ),
-                        ),
-                      ),
-                      Visibility(
-                        visible: description != null,
-                        child: Text(
-                          description ?? '',
-                          style:
+                  ),
+                ),
+                Visibility(
+                  visible: description != null,
+                  child: Text(
+                    description ?? '',
+                    style:
                         descriptionStyle ??
                         context.textTheme.bodyCaption.copyWith(
-                                color: _textColor,
-                              ),
+                          color: _textColor,
                         ),
-                      ),
-                      Visibility(
-                        visible: onTap != null,
-                        child: InkWell(
-                          onTap: onTap,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: AppSizes.s8,
-                            ),
-                            child: Text(
-                              actionText ?? 'OK',
-                              style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                                color: AppColors.textPrimary,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
+                ),
+                Visibility(
+                  visible: customDescription != null,
+                  child: customDescription ?? AppSpacing.zero,
+                ),
+                Visibility(
+                  visible: onTap != null,
+                  child: InkWell(
+                    onTap: onTap,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: AppSizes.s8,
+                      ),
+                      child: Text(
+                        actionText ?? 'OK',
+                        style: context.textTheme.bodyCaptionSemiBold.copyWith(
+                          color: AppColors.textPrimary,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           if (trailing != null) trailing ?? AppSpacing.zero,
         ],

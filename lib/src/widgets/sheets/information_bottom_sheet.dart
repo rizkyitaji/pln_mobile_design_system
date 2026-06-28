@@ -14,6 +14,8 @@ class AppInformationBottomSheet extends StatelessWidget {
   final VoidCallback? onTap;
   final bool centerTitle, centerDescription, showDragHandle;
   final double? iconSize;
+  final Function(String, String?, String)? onTapLink;
+  final bool? loading;
 
   const AppInformationBottomSheet({
     super.key,
@@ -37,6 +39,8 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.centerDescription = true,
     this.iconSize,
     this.showDragHandle = true,
+    this.onTapLink,
+    this.loading,
   });
 
   WrapAlignment _getWrapAlignment() {
@@ -68,95 +72,91 @@ class AppInformationBottomSheet extends StatelessWidget {
               : MainAxisAlignment.start,
           mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  if (icon != null) ...[
-                    Container(
-                      padding: const EdgeInsets.all(AppSizes.s16),
-                      child: Center(
-                        child: AppImage(
-                          asset: icon!,
-                          size: iconSize ?? AppSizes.s224,
-                        ),
-                      ),
-                    ),
-                    AppSpacing.h16,
-                  ],
-                  if (title != null) ...[
-                    if (enableCloseButton) ...[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            title.toString(),
-                            style: context.textTheme.headingSmall.copyWith(
-                              color: titleColor,
-                            ),
-                          ),
-                          AppBackButton(icon: AppAssets.iconClose),
-                        ],
-                      ),
-                      AppSpacing.h16,
-                    ] else ...[
-                      Visibility(
-                        visible: centerTitle,
-                        replacement: Text(
-                          title.toString(),
-                          textAlign: _getWrapAlignment() == WrapAlignment.center
-                              ? TextAlign.center
-                              : TextAlign.start,
-                          style: context.textTheme.headingSmall.copyWith(
-                            color: titleColor,
-                          ),
-                        ),
+            Visibility(
+              visible: !(loading ?? false),
+              replacement: SizedBox(
+                height: AppSizes.s100,
+                child: AppLoadingIndicator(),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (icon != null) ...[
+                      Container(
+                        padding: const EdgeInsets.all(AppSizes.s16),
                         child: Center(
-                          child: Text(
-                            title.toString(),
-                            textAlign: TextAlign.center,
-                            style: context.textTheme.headingSmall.copyWith(
-                              color: titleColor,
-                            ),
+                          child: AppImage(
+                            asset: icon!,
+                            size: iconSize ?? AppSizes.s224,
                           ),
                         ),
                       ),
                       AppSpacing.h16,
                     ],
-                  ],
-                  if (highlight != null) ...[highlight!, AppSpacing.h12],
-                  if (descriptionHtml != null) ...[
-                    Html(
-                      data: descriptionHtml,
-                      style: {
-                        'body': Style(
-                          margin: Margins.zero,
-                          padding: HtmlPaddings.zero,
-                          textAlign: textAlign ?? TextAlign.center,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black,
-                          fontSize: FontSize.medium,
-                          lineHeight: LineHeight.number(1.3),
+                    if (title != null) ...[
+                      if (enableCloseButton) ...[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              title.toString(),
+                              style: context.textTheme.headingSmall.copyWith(
+                                color: titleColor,
+                              ),
+                            ),
+                            AppBackButton(icon: AppAssets.iconClose),
+                          ],
                         ),
-                      },
-                    ),
-                  ],
-                  if (descriptionText != null)
-                    Visibility(
-                      visible: centerDescription,
-                      replacement: MarkdownBody(
-                        data: descriptionText!,
-                        styleSheet: MarkdownStyleSheet(
-                          textAlign: _getWrapAlignment(),
-                          p: context.textTheme.bodyMedium,
-                          code: context.textTheme.bodyMedium.copyWith(
-                            color: const Color(0xFFEF476F),
+                        AppSpacing.h16,
+                      ] else ...[
+                        Visibility(
+                          visible: centerTitle,
+                          replacement: Text(
+                            title.toString(),
+                            textAlign:
+                                _getWrapAlignment() == WrapAlignment.center
+                                ? TextAlign.center
+                                : TextAlign.start,
+                            style: context.textTheme.headingSmall.copyWith(
+                              color: titleColor,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              title.toString(),
+                              textAlign: TextAlign.center,
+                              style: context.textTheme.headingSmall.copyWith(
+                                color: titleColor,
+                              ),
+                            ),
                           ),
                         ),
+                        AppSpacing.h16,
+                      ],
+                    ],
+                    if (highlight != null) ...[highlight!, AppSpacing.h12],
+                    if (descriptionHtml != null) ...[
+                      Html(
+                        data: descriptionHtml,
+                        style: {
+                          'body': Style(
+                            margin: Margins.zero,
+                            padding: HtmlPaddings.zero,
+                            textAlign: textAlign ?? TextAlign.center,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black,
+                            fontSize: FontSize.medium,
+                            lineHeight: LineHeight.number(1.3),
+                          ),
+                        },
                       ),
-                      child: Center(
-                        child: MarkdownBody(
+                    ],
+                    if (descriptionText != null)
+                      Visibility(
+                        visible: centerDescription,
+                        replacement: MarkdownBody(
                           data: descriptionText!,
                           styleSheet: MarkdownStyleSheet(
                             textAlign: _getWrapAlignment(),
@@ -165,18 +165,34 @@ class AppInformationBottomSheet extends StatelessWidget {
                               color: const Color(0xFFEF476F),
                             ),
                           ),
+                          onTapLink: onTapLink,
+                        ),
+                        child: Center(
+                          child: MarkdownBody(
+                            data: descriptionText!,
+                            styleSheet: MarkdownStyleSheet(
+                              textAlign: _getWrapAlignment(),
+                              p: context.textTheme.bodyMedium,
+                              code: context.textTheme.bodyMedium.copyWith(
+                                color: const Color(0xFFEF476F),
+                              ),
+                            ),
+                            onTapLink: onTapLink,
+                          ),
                         ),
                       ),
-                    ),
-                  if (more != null) ...[AppSpacing.h12, more!],
-                ],
+                    if (more != null) ...[AppSpacing.h12, more!],
+                  ],
+                ),
               ),
             ),
             AppSpacing.h16,
             AppPersistentSheet(
               child: useElevatedButton
                   ? ElevatedButton(
-                      onPressed: onTap ?? () => context.safePop(true),
+                      onPressed: !(loading ?? false)
+                          ? (onTap ?? () => context.safePop(true))
+                          : null,
                       style: buttonStyle,
                       child: Center(
                         child: Padding(
@@ -191,7 +207,9 @@ class AppInformationBottomSheet extends StatelessWidget {
                       ),
                     )
                   : OutlinedButton(
-                      onPressed: onTap ?? () => context.safePop(true),
+                      onPressed: !(loading ?? false)
+                          ? (onTap ?? () => context.safePop(true))
+                          : null,
                       style: buttonStyle,
                       child: Center(
                         child: Padding(
@@ -235,6 +253,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     bool centerDescription = true,
     double? iconSize,
     bool showDragHandle = true,
+    Function(String, String?, String)? onTapLink,
   }) async {
     final information = await showModalBottomSheet<bool>(
       context: context,
@@ -257,6 +276,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         centerDescription: centerDescription,
         iconSize: iconSize,
         showDragHandle: showDragHandle,
+        onTapLink: onTapLink,
       ),
       isDismissible: isDismissible,
       enableDrag: isDraggable,
