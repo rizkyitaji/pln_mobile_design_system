@@ -34,11 +34,13 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? actionWidget;
   final double? actionWidgetSpace;
   final TextStyle? style;
+  final TextStyle? labelStyle;
 
   const AppLabeledTextFormField({
     super.key,
     this.controller,
     required this.label,
+    this.labelStyle,
     this.onChanged,
     this.required = false,
     this.hintText,
@@ -80,7 +82,11 @@ class AppLabeledTextFormField extends StatelessWidget {
           children: [
             Row(
               children: [
-                AppFieldLabel(label: label, required: required),
+                AppFieldLabel(
+                  label: label,
+                  required: required,
+                  style: labelStyle,
+                ),
                 if (suffixLabelIcon != null) ...[
                   AppSpacing.w4,
                   suffixLabelIcon ?? SizedBox(),

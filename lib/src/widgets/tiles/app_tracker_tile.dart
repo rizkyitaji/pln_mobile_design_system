@@ -49,12 +49,7 @@ class AppTrackerTile extends StatelessWidget {
                 ),
               ),
               if (!isLast)
-                Expanded(
-                  child: Container(
-                    width: 1,
-                    color: AppColors.border,
-                  ),
-                ),
+                Expanded(child: Container(width: 1, color: AppColors.border)),
             ],
           ),
           const SizedBox(width: AppSizes.s12),
@@ -72,8 +67,8 @@ class AppTrackerTile extends StatelessWidget {
                 const SizedBox(height: AppSizes.s4),
                 Text(
                   desc,
-                  style: context.textTheme.bodySmall.copyWith(
-                    color: AppColors.textMuted,
+                  style: context.textTheme.bodyCaption.copyWith(
+                    color: AppColors.textCaption,
                     fontSize: descFontSize,
                   ),
                 ),
