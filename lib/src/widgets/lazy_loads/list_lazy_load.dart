@@ -7,18 +7,26 @@ class AppListLazyLoad extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
   final Widget? separator;
 
-  const AppListLazyLoad.tile({super.key, this.itemCount = 5, this.padding, this.separator})
-    : _isCard = false;
+  const AppListLazyLoad.tile({
+    super.key,
+    this.itemCount = 5,
+    this.padding,
+    this.separator,
+  }) : _isCard = false;
 
-  const AppListLazyLoad.card({super.key, this.itemCount = 5, this.padding, this.separator})
-    : _isCard = true;
+  const AppListLazyLoad.card({
+    super.key,
+    this.itemCount = 5,
+    this.padding,
+    this.separator,
+  }) : _isCard = true;
 
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: true,
-      padding: padding,
       itemCount: itemCount,
+      padding: padding ?? EdgeInsets.zero,
       physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return _isCard ? const AppCardLazyLoad() : const AppTileLazyLoad();

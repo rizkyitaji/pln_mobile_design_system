@@ -234,6 +234,10 @@ abstract class AppColors {
   static const Color textDiscount = AppPalette.orange600;
   static const Color iconDiscount = AppPalette.orange500;
 
+  // --- RATING ---
+  static const Color rated = AppPalette.yellow500;
+  static const Color unrated = AppPalette.slate300;
+
   // --------------------------------------------- GRADIENT COLORS ---------------------------------------------
 
   static const LinearGradient progressIndicatorGradient = LinearGradient(

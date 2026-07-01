@@ -48,39 +48,24 @@ class AppAlertCard extends StatelessWidget {
           _icon,
           Expanded(
             child: isInline
-                ? Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: AppSizes.s4,
-                    children: [
-                      if (title != null)
-                        Text(
-                          title!,
-                          style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                            color: _textColor,
-                          ),
+                ? InkWell(
+                    onTap: onTap,
+                    child: RichText(
+                      text: TextSpan(
+                        text: description != null ? '$description ' : '',
+                        style: context.textTheme.bodyCaption.copyWith(
+                          color: _textColor,
                         ),
-                      if (description != null)
-                        Text(
-                          description!,
-                          style:
-                              descriptionStyle ??
-                              context.textTheme.bodyCaption.copyWith(
-                                color: _textColor,
-                              ),
-                        ),
-                      if (customDescription != null) customDescription!,
-                      if (onTap != null)
-                        InkWell(
-                          onTap: onTap,
-                          child: Text(
-                            actionText ?? 'OK',
-                            style:
-                                context.textTheme.bodyCaptionSemiBold.copyWith(
-                              color: AppColors.textPrimary,
+                        children: [
+                          if (actionText != null)
+                            TextSpan(
+                              text: actionText!,
+                              style: context.textTheme.bodyCaptionSemiBold
+                                  .copyWith(color: _textColor),
                             ),
-                          ),
-                        ),
-                    ],
+                        ],
+                      ),
+                    ),
                   )
                 : Column(
                     spacing: AppSizes.s2,
@@ -121,9 +106,7 @@ class AppAlertCard extends StatelessWidget {
                             child: Text(
                               actionText ?? 'OK',
                               style: context.textTheme.bodyCaptionSemiBold
-                                  .copyWith(
-                                color: AppColors.textPrimary,
-                              ),
+                                  .copyWith(color: AppColors.textPrimary),
                             ),
                           ),
                         ),
