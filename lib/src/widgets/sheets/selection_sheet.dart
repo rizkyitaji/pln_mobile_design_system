@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
-class MasterSelectionModal<T> extends StatefulWidget {
+class AppSelectionSheet<T> extends StatefulWidget {
   final String title;
   final String searchHint;
   final String sectionTitle;
@@ -12,7 +12,7 @@ class MasterSelectionModal<T> extends StatefulWidget {
   final bool Function(T? selected, T item) isSelected;
   final VoidCallback? onRetry;
 
-  const MasterSelectionModal({
+  const AppSelectionSheet({
     super.key,
     required this.title,
     required this.searchHint,
@@ -26,11 +26,11 @@ class MasterSelectionModal<T> extends StatefulWidget {
   });
 
   @override
-  State<MasterSelectionModal<T>> createState() =>
-      _MasterSelectionModalState<T>();
+  State<AppSelectionSheet<T>> createState() =>
+      _AppSelectionSheetState<T>();
 }
 
-class _MasterSelectionModalState<T> extends State<MasterSelectionModal<T>> {
+class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
   final TextEditingController _searchController = TextEditingController();
 
   @override
