@@ -15,8 +15,8 @@ class AppRadioButton extends StatelessWidget {
     this.activeColor,
     this.activeBorderColor,
     this.activeFillColor,
-    this.size = AppSizes.s16,
-    this.borderWidth = AppSizes.s2,
+    this.size = AppSizes.s24,
+    this.borderWidth = 1,
   });
 
   @override
@@ -28,6 +28,7 @@ class AppRadioButton extends StatelessWidget {
     return Container(
       width: size,
       height: size,
+      padding: EdgeInsets.all(AppSizes.s6),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
@@ -39,8 +40,6 @@ class AppRadioButton extends StatelessWidget {
       child: selected
           ? Center(
               child: Container(
-                width: AppSizes.s6,
-                height: AppSizes.s6,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: dotColor,

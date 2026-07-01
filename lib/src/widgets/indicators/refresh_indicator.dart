@@ -33,8 +33,8 @@ class AppRefreshIndicator extends StatelessWidget {
                   Positioned(
                     top: paddingTop * controller.value,
                     child: AppCircleCard(
-                      size: AppSizes.s40,
                       elevation: AppSizes.s2,
+                      borderColor: AppColors.border,
                       child: AppImage(
                         asset: AppAssets.animationLoadingPrimary,
                         animate: controller.isLoading,

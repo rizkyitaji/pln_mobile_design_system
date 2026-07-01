@@ -3,14 +3,17 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppCircleCard extends StatelessWidget {
   final double size, elevation;
-  final Color color;
+  final Color color, borderColor;
+  final EdgeInsetsGeometry? padding;
   final Widget? child;
 
   const AppCircleCard({
     super.key,
     this.elevation = AppSizes.zero,
-    this.size = AppSizes.s24,
+    this.size = AppSizes.s40,
     this.color = AppColors.white,
+    this.borderColor = AppColors.transparent,
+    this.padding,
     this.child,
   });
 
@@ -22,9 +25,9 @@ class AppCircleCard extends StatelessWidget {
       child: Material(
         color: color,
         elevation: elevation,
-        shape: CircleBorder(),
+        shape: CircleBorder(side: BorderSide(color: borderColor)),
         child: Container(
-          padding: EdgeInsets.all(AppSizes.s4),
+          padding: padding ?? EdgeInsets.all(AppSizes.s4),
           alignment: Alignment.center,
           child: child,
         ),

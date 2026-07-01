@@ -3,12 +3,7 @@ import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppConfirmationBottomSheet extends StatelessWidget {
-  final String? asset,
-      title,
-      description,
-      descriptionHtml,
-      cancelText,
-      confirmText;
+  final String? asset, title, description, cancelText, confirmText;
   final ButtonStyle? confirmButtonStyle, cancelButtonStyle;
   final VoidCallback? onCancel, onConfirm;
   final Widget? confirmIcon, cancelIcon;
@@ -20,7 +15,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.asset,
     this.title,
     this.description,
-    this.descriptionHtml,
     this.cancelText,
     this.confirmText,
     this.onCancel,
@@ -42,35 +36,33 @@ class AppConfirmationBottomSheet extends StatelessWidget {
       canPop: canPop,
       child: AppSheetContainer(
         children: [
+          if (asset != null) ...[
+            AppImage(asset: asset ?? '', size: AppSizes.s224),
+            AppSpacing.h12,
+          ],
+          if (title != null) ...[
+            Text(
+              title ?? '',
+              textAlign: textAlign ?? TextAlign.center,
+              style: context.textTheme.headingSmall,
+            ),
+            AppSpacing.h8,
+          ],
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: AppSizes.s16),
-            child: Column(
-              children: [
-                if (asset != null) ...[
-                  AppImage(asset: asset ?? '', size: AppSizes.s224),
-                  AppSpacing.h12,
-                ],
-                if (title != null) ...[
-                  Text(
-                    title ?? '',
-                    textAlign: textAlign ?? TextAlign.center,
-                    style: context.textTheme.headingSmall,
-                  ),
-                  AppSpacing.h8,
-                ],
-                if (description != null) ...[
-                  Text(
-                    description ?? '',
-                    textAlign: textAlign ?? TextAlign.center,
-                    style: context.textTheme.bodyMedium,
-                  ),
-                  AppSpacing.h16,
-                ],
-                if (descriptionHtml != null) ...[
-                  Visibility(
+            padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+            child: Visibility(
               visible: centerDescription,
-              replacement: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+              replacement: MarkdownBody(
+                data: description ?? '',
+                styleSheet: MarkdownStyleSheet.fromTheme(
+                  ThemeData(
+                    textTheme: TextTheme(
+                      bodyMedium: context.textTheme.bodyMedium,
+                    ),
+                  ),
+                ).copyWith(textAlign: WrapAlignment.center),
+              ),
+              child: Center(
                 child: MarkdownBody(
                   data: description ?? '',
                   styleSheet: MarkdownStyleSheet.fromTheme(
@@ -82,29 +74,9 @@ class AppConfirmationBottomSheet extends StatelessWidget {
                   ).copyWith(textAlign: WrapAlignment.center),
                 ),
               ),
-              child: Center(
-                child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                      horizontal: AppSizes.s24,
-                    ),
-                        child: MarkdownBody(
-                          data: description ?? '',
-                          styleSheet: MarkdownStyleSheet.fromTheme(
-                            ThemeData(
-                              textTheme: TextTheme(
-                                bodyMedium: context.textTheme.bodyMedium,
-                              ),
-                            ),
-                          ).copyWith(textAlign: WrapAlignment.center),
-                        ),
-                ),
-              ),
-                  ),
-                  AppSpacing.h16,
-                ],
-              ],
             ),
           ),
+          AppSpacing.h16,
           AppPersistentSheet(
             child: useColumn
                 ? Column(
@@ -204,7 +176,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     String? asset,
     String? title,
     String? description,
-    String? descriptionHtml,
     String? cancelText,
     String? confirmText,
     VoidCallback? onCancel,
@@ -229,7 +200,6 @@ class AppConfirmationBottomSheet extends StatelessWidget {
         asset: asset,
         title: title,
         description: description,
-        descriptionHtml: descriptionHtml,
         textAlign: textAlign,
         cancelText: cancelText,
         confirmText: confirmText,

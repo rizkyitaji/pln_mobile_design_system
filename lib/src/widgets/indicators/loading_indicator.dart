@@ -4,20 +4,25 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppLoadingIndicator extends StatelessWidget {
   final double size;
   final bool primary;
+  final EdgeInsetsGeometry padding;
 
   const AppLoadingIndicator({
     super.key,
     this.size = AppSizes.s24,
     this.primary = true,
+    this.padding = EdgeInsets.zero,
   });
 
   @override
   Widget build(BuildContext context) {
-    return AppImage(
-      asset: primary
-          ? AppAssets.animationLoadingPrimary
-          : AppAssets.animationLoadingWhite,
-      size: size,
+    return Padding(
+      padding: padding,
+      child: AppImage(
+        asset: primary
+            ? AppAssets.animationLoadingPrimary
+            : AppAssets.animationLoadingWhite,
+        size: size,
+      ),
     );
   }
 }

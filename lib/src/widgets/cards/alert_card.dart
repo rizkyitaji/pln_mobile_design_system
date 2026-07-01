@@ -47,53 +47,72 @@ class AppAlertCard extends StatelessWidget {
         children: [
           _icon,
           Expanded(
-            child: Column(
-              spacing: AppSizes.s2,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Visibility(
-                  visible: title != null,
-                  child: Text(
-                    title ?? '',
-                    style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                      color: _textColor,
-                    ),
-                  ),
-                ),
-                Visibility(
-                  visible: description != null,
-                  child: Text(
-                    description ?? '',
-                    style:
-                        descriptionStyle ??
-                        context.textTheme.bodyCaption.copyWith(
+            child: isInline
+                ? InkWell(
+                    onTap: onTap,
+                    child: RichText(
+                      text: TextSpan(
+                        text: description != null ? '$description ' : '',
+                        style: context.textTheme.bodyCaption.copyWith(
                           color: _textColor,
                         ),
-                  ),
-                ),
-                Visibility(
-                  visible: customDescription != null,
-                  child: customDescription ?? AppSpacing.zero,
-                ),
-                Visibility(
-                  visible: onTap != null,
-                  child: InkWell(
-                    onTap: onTap,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: AppSizes.s8,
-                      ),
-                      child: Text(
-                        actionText ?? 'OK',
-                        style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                          color: AppColors.textPrimary,
-                        ),
+                        children: [
+                          if (actionText != null)
+                            TextSpan(
+                              text: actionText!,
+                              style: context.textTheme.bodyCaptionSemiBold
+                                  .copyWith(color: _textColor),
+                            ),
+                        ],
                       ),
                     ),
+                  )
+                : Column(
+                    spacing: AppSizes.s2,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Visibility(
+                        visible: title != null,
+                        child: Text(
+                          title ?? '',
+                          style: context.textTheme.bodyCaptionSemiBold.copyWith(
+                            color: _textColor,
+                          ),
+                        ),
+                      ),
+                      Visibility(
+                        visible: description != null,
+                        child: Text(
+                          description ?? '',
+                          style:
+                              descriptionStyle ??
+                              context.textTheme.bodyCaption.copyWith(
+                                color: _textColor,
+                              ),
+                        ),
+                      ),
+                      Visibility(
+                        visible: customDescription != null,
+                        child: customDescription ?? AppSpacing.zero,
+                      ),
+                      Visibility(
+                        visible: onTap != null,
+                        child: InkWell(
+                          onTap: onTap,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: AppSizes.s8,
+                            ),
+                            child: Text(
+                              actionText ?? 'OK',
+                              style: context.textTheme.bodyCaptionSemiBold
+                                  .copyWith(color: AppColors.textPrimary),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
           ),
           if (trailing != null) trailing ?? AppSpacing.zero,
         ],

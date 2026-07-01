@@ -12,7 +12,7 @@ class AppGeneralPage extends StatelessWidget {
       persistentSheet;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
-  final String? backgroundImage, backgroundNetworkImage, title;
+  final String? backgroundImage, backgroundNetworkImage, title, backButtonIcon;
   final Color? backgroundColor, appBarColor, backButtonColor, titleColor;
   final double? initialChildSize,
       minChildSize,
@@ -73,6 +73,7 @@ class AppGeneralPage extends StatelessWidget {
     this.isScrollable = true,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
+    this.backButtonIcon,
   });
 
   @override
@@ -92,6 +93,7 @@ class AppGeneralPage extends StatelessWidget {
               (automaticallyImplyLeading
                   ? AppBackButton(
                       color: backButtonColor,
+                      icon: backButtonIcon,
                       onPressed: onBackPressed,
                     )
                   : null),
@@ -174,7 +176,10 @@ class AppGeneralPage extends StatelessWidget {
 
   Widget get _content {
     if (!isScrollable) {
-      return Padding(padding: padding ?? EdgeInsets.all(16), child: child);
+      return Padding(
+        padding: padding ?? EdgeInsets.all(AppSizes.s16),
+        child: child,
+      );
     }
     return ListView(
       controller: scrollController,

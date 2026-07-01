@@ -16,7 +16,7 @@ class AppCheckbox extends StatelessWidget {
     this.onChanged,
     this.activeColor,
     this.size = AppSizes.s16,
-    this.borderWidth = AppSizes.s2,
+    this.borderWidth = 1,
     this.borderRadius = AppSizes.s4,
     this.tristate = false,
   });
