@@ -16,6 +16,7 @@ extension DateTimeExt on DateTime? {
     return DateFormat('dd MMMM y, HH:mm', 'id_ID').format(date);
   }
 
+  /// Output: 01 Januari 2026, 09:10 WIB
   String get formatddMMMMyHHmmWIB {
     var date = this;
     if (date == null) return '-';
@@ -48,5 +49,19 @@ extension DateTimeExt on DateTime? {
     var date = this;
     if (date == null) return '-';
     return DateFormat('MMMM y', 'id_ID').format(date);
+  }
+
+  String get toDayTimeline {
+    var date = this;
+    if (date == null) return '-';
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final yesterday = DateTime(now.year, now.month, now.day - 1);
+    final dateToCheck = DateTime(date.year, date.month, date.day);
+
+    if (dateToCheck == today) return 'Hari Ini';
+    if (dateToCheck == yesterday) return 'Kemarin';
+
+    return date.formatddMMMMy;
   }
 }
