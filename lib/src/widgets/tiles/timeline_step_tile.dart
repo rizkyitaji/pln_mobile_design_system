@@ -50,7 +50,7 @@ class AppTimelineStepTile extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: AppSizes.s12,
+                  height: content != null ? AppSizes.s18 : AppSizes.s12,
                   child: showTopConnector
                       ? Container(
                           width: 1,
@@ -83,7 +83,7 @@ class AppTimelineStepTile extends StatelessWidget {
                 ),
                 SizedBox(height: AppSizes.s4),
                 SizedBox(
-                  height: AppSizes.s12,
+                  height: content != null ? AppSizes.s18 : AppSizes.s12,
                   child: showBottomConnector
                       ? Container(
                           width: 1,
@@ -132,10 +132,7 @@ class AppTimelineStepTile extends StatelessWidget {
                     ),
                   ],
                 ),
-                if (content != null) ...[
-                  const SizedBox(height: AppSizes.s8),
-                  content!,
-                ],
+                if (content != null) ...[content!],
               ],
             ),
           ),
