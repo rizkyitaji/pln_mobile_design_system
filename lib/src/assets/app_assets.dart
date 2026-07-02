@@ -58,6 +58,7 @@ abstract class AppAssets {
   static const iconSearch = '$_basePath/${AppIcons.iconSearch}';
   static const iconSort = '$_basePath/${AppIcons.iconSort}';
   static const iconSwap2 = '$_basePath/${AppIcons.iconSwap2}';
+  static const iconTagihan = '$_basePath/${AppIcons.iconTagihan}';
   static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
   static const iconMarketplaceFlashSale = '$_basePath/${AppIcons.iconMarketplaceFlashSale}';
@@ -238,6 +239,7 @@ abstract class AppAssets {
   static const iconEmptyStateColored = '$_basePath/${AppIcons.iconEmptyStateColored}';
   static const iconEvPointColored = '$_basePath/${AppIcons.iconEvPointColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.iconHandshakeColored}';
+  static const iconHomeChargingColored = '$_basePath/${AppIcons.iconHomeChargingColored}';
   static const iconKwhMeterColored = '$_basePath/${AppIcons.iconKwhMeterColored}';
   static const iconLocationColored = '$_basePath/${AppIcons.iconLocationColored}';
   static const iconMarketplaceDiscussionColored = '$_basePath/${AppIcons.iconMarketplaceDiscussionColored}';

@@ -51,6 +51,7 @@ abstract class AppIcons {
   static const String iconSearch = 'assets/icons/svg/icon-search.svg';
   static const String iconSort = 'assets/icons/svg/icon-sort.svg';
   static const String iconSwap2 = 'assets/icons/svg/icon-swap-2.svg';
+  static const String iconTagihan = 'assets/icons/svg/icon-tagihan.svg';
   static const String iconToilet = 'assets/icons/svg/icon-toilet.svg';
   static const String iconWarningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
@@ -241,6 +242,7 @@ abstract class AppIcons {
   static const String iconEmptyStateColored = 'assets/icons/svg/colored/icon-empty-state.svg';
   static const String iconEvPointColored = 'assets/icons/svg/colored/icon-ev-point.svg';
   static const String iconHandshakeColored = 'assets/icons/svg/colored/icon-handshake.svg';
+  static const String iconHomeChargingColored = 'assets/icons/svg/colored/icon-home-charging.svg';
   static const String iconKwhMeterColored = 'assets/icons/svg/colored/icon-kwh-meter.svg';
   static const String iconLocationColored = 'assets/icons/svg/colored/icon-location.svg';
   static const String iconMarketplaceDiscussionColored = 'assets/icons/svg/colored/icon-marketplace-discussion.svg';
