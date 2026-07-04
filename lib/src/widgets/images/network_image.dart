@@ -73,6 +73,7 @@ class AppNetworkImage extends StatelessWidget {
                 width: width,
                 height: height,
                 size: size,
+                fit: fit,
                 borderRadius: borderRadius,
                 margin: errorMargin,
                 padding: errorPadding,

@@ -128,6 +128,7 @@ abstract class AppAssets {
   static const iconLikeOutlined = '$_basePath/${AppIcons.iconLikeOutlined}';
   static const iconLocationOutlined = '$_basePath/${AppIcons.iconLocationOutlined}';
   static const iconLowBatteryOutlined = '$_basePath/${AppIcons.iconLowBatteryOutlined}';
+  static const iconMerchantCourierOutlined = '$_basePath/${AppIcons.iconMerchantCourierOutlined}';
   static const iconMoneyOutlined = '$_basePath/${AppIcons.iconMoneyOutlined}';
   static const iconNavigateOutlined = '$_basePath/${AppIcons.iconNavigateOutlined}';
   static const iconNotificationOutlined = '$_basePath/${AppIcons.iconNotificationOutlined}';
@@ -147,6 +148,7 @@ abstract class AppAssets {
   static const iconSelfieOutlined = '$_basePath/${AppIcons.iconSelfieOutlined}';
   static const iconSettingsOutlined = '$_basePath/${AppIcons.iconSettingsOutlined}';
   static const iconShareOutlined = '$_basePath/${AppIcons.iconShareOutlined}';
+  static const iconShieldOutlined = '$_basePath/${AppIcons.iconShieldOutlined}';
   static const iconSolarBatteryOutlined = '$_basePath/${AppIcons.iconSolarBatteryOutlined}';
   static const iconStarOutlined = '$_basePath/${AppIcons.iconStarOutlined}';
   static const iconTagihanOutlined = '$_basePath/${AppIcons.iconTagihanOutlined}';

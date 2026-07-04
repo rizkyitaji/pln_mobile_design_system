@@ -6,6 +6,7 @@ class AppErrorImage extends StatelessWidget {
   final double? width, height, size;
   final EdgeInsetsGeometry? margin, padding;
   final BorderRadius? borderRadius;
+  final BoxFit? fit;
 
   const AppErrorImage({
     super.key,
@@ -16,6 +17,7 @@ class AppErrorImage extends StatelessWidget {
     this.margin,
     this.padding,
     this.borderRadius,
+    this.fit,
   });
 
   @override
@@ -30,6 +32,7 @@ class AppErrorImage extends StatelessWidget {
         asset: asset ?? AppAssets.imagePlaceholderDefault,
         width: width ?? size,
         height: height ?? size,
+        fit: fit,
       ),
     );
   }
