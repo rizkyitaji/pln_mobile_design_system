@@ -127,6 +127,7 @@ abstract class AppIcons {
   static const String iconLikeOutlined = 'assets/icons/svg/outlined/icon-like-outlined.svg';
   static const String iconLocationOutlined = 'assets/icons/svg/outlined/icon-location-outlined.svg';
   static const String iconLowBatteryOutlined = 'assets/icons/svg/outlined/icon-low-battery-outlined.svg';
+  static const String iconMerchantCourierOutlined = 'assets/icons/svg/outlined/icon-merchant-courier.svg';
   static const String iconMoneyOutlined = 'assets/icons/svg/outlined/icon-money-outlined.svg';
   static const String iconNavigateOutlined = 'assets/icons/svg/outlined/icon-navigate-outlined.svg';
   static const String iconNotificationOutlined = 'assets/icons/svg/outlined/icon-notification-outlined.svg';
@@ -146,6 +147,7 @@ abstract class AppIcons {
   static const String iconSelfieOutlined = 'assets/icons/svg/outlined/icon-selfie-outlined.svg';
   static const String iconSettingsOutlined = 'assets/icons/svg/outlined/icon-settings-outlined.svg';
   static const String iconShareOutlined = 'assets/icons/svg/outlined/icon-share-outlined.svg';
+  static const String iconShieldOutlined = 'assets/icons/svg/outlined/icon-shield-outlined.svg';
   static const String iconSolarBatteryOutlined = 'assets/icons/svg/outlined/icon-solar-battery-outlined.svg';
   static const String iconStarOutlined = 'assets/icons/svg/outlined/icon-star-outlined.svg';
   static const String iconTagihanOutlined = 'assets/icons/svg/outlined/icon-tagihan-outlined.svg';
