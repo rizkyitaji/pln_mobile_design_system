@@ -90,13 +90,10 @@ class AppInformationBottomSheet extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (icon != null) ...[
-                      Container(
-                        padding: const EdgeInsets.all(AppSizes.s16),
-                        child: Center(
-                          child: AppImage(
-                            asset: icon!,
-                            size: iconSize ?? AppSizes.s224,
-                          ),
+                      Center(
+                        child: AppImage(
+                          asset: icon!,
+                          size: iconSize ?? AppSizes.s224,
                         ),
                       ),
                       AppSpacing.h16,
