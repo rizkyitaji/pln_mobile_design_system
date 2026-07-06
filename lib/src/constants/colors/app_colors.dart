@@ -151,6 +151,7 @@ abstract class AppColors {
 
   // --- BORDER DEFAULT ---
   static const Color border = AppPalette.slate200;
+  static const Color borderSubtle = AppPalette.slate100;
   static const Color borderOnColor = AppPalette.slate200;
   static final Color borderOnColorAlpha = AppPalette.slate50.withValues(
     alpha: 0.20,
