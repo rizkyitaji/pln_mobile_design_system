@@ -6,7 +6,8 @@ class AppRadioButton extends StatelessWidget {
   final Color? activeColor;
   final Color? activeBorderColor;
   final Color? activeFillColor;
-  final double size;  
+  final double size;
+  final double? padding;
 
   const AppRadioButton({
     super.key,
@@ -14,7 +15,8 @@ class AppRadioButton extends StatelessWidget {
     this.activeColor,
     this.activeBorderColor,
     this.activeFillColor,
-    this.size = AppSizes.s24,    
+    this.size = AppSizes.s24,
+    this.padding,
   });
 
   @override
@@ -26,12 +28,10 @@ class AppRadioButton extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      padding: EdgeInsets.all(AppSizes.s6),
+      padding: EdgeInsets.all(padding ?? AppSizes.s6),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(
-          color: selected ? borderColor : AppColors.border,          
-        ),
+        border: Border.all(color: selected ? borderColor : AppColors.border),
         color: selected ? fillColor : AppColors.white,
       ),
       child: selected

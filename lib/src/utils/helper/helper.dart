@@ -217,4 +217,13 @@ class AppHelper {
     Clipboard.setData(ClipboardData(text: text ?? ''));
     AppSnackBar.show(msg: '$label berhasil disalin');
   }
+
+  static void nextFocus(
+    BuildContext context,
+    FocusNode currentFocus,
+    FocusNode nextFocus,
+  ) {
+    currentFocus.unfocus();
+    FocusScope.of(context).requestFocus(nextFocus);
+  }
 }
