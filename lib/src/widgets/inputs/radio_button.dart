@@ -4,6 +4,7 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppRadioButton extends StatelessWidget {
   final bool selected;
   final Color activeColor, fillColor, disabledColor;
+  final double? padding;
   final double size;
 
   const AppRadioButton({
@@ -13,6 +14,7 @@ class AppRadioButton extends StatelessWidget {
     this.fillColor = AppColors.primarySubtle,
     this.disabledColor = AppColors.background,
     this.size = AppSizes.s24,
+    this.padding,
   });
 
   @override
@@ -20,7 +22,7 @@ class AppRadioButton extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(padding ?? 5),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(color: selected ? activeColor : AppColors.border),
