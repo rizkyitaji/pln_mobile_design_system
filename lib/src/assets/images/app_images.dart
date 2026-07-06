@@ -12,7 +12,8 @@ abstract class AppImages {
   static const String illustrationConnectorTooFar = 'assets/images/png/illustration-connector-too-far.png';
   static const String illustrationConnectorUnavailable = 'assets/images/png/illustration-connector-unavailable.png';
   static const String illustrationConnectorUnplugged = 'assets/images/png/illustration-connector-unplugged.png';
-  static const String illustrationDeleteVehicle = 'assets/images/png/illustration-delete-vehicle.png';
+  static const String illustrationDeleteCar = 'assets/images/png/illustration-delete-car.png';
+  static const String illustrationDeleteMotorcycle = 'assets/images/png/illustration-delete-motorcycle.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyCar = 'assets/images/png/illustration-empty-car.png';
@@ -44,10 +45,11 @@ abstract class AppImages {
   static const String illustrationSpbklu = 'assets/images/png/illustration-spbklu.png';
   static const String illustrationSpkluQueue = 'assets/images/png/illustration-spklu-queue.png';
   static const String illustrationStopCharging = 'assets/images/png/illustration-stop-charging.png';
+  static const String illustrationSuccessCar = 'assets/images/png/illustration-success-car.png';
   static const String illustrationSuccessCharging = 'assets/images/png/illustration-success-charging.png';
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
+  static const String illustrationSuccessMotorcycle = 'assets/images/png/illustration-success-motorcycle.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
-  static const String illustrationSuccessVehicle = 'assets/images/png/illustration-success-vehicle.png';
   static const String illustrationTripPlanner = 'assets/images/png/illustration-trip-planner.png';
   static const String illustrationUnactivatedNfc = 'assets/images/png/illustration-unactivated-nfc.png';
   static const String illustrationUnsupportedCard = 'assets/images/png/illustration-unsupported-card.png';
