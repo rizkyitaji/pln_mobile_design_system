@@ -12,6 +12,7 @@ class AppNetworkImage extends StatelessWidget {
   final BoxFit fit;
   final Color? color;
   final Alignment alignment;
+  final Widget? errorWidget;
 
   const AppNetworkImage({
     super.key,
@@ -30,6 +31,7 @@ class AppNetworkImage extends StatelessWidget {
     this.onTap,
     this.color,
     this.alignment = Alignment.center,
+    this.errorWidget,
   });
 
   @override
@@ -46,15 +48,17 @@ class AppNetworkImage extends StatelessWidget {
       color: backgroundColor,
       child: Visibility(
         visible: imageUrl.isNotEmpty,
-        replacement: AppErrorImage(
-          asset: errorImage,
-          width: width,
-          height: height,
-          size: size,
-          borderRadius: borderRadius,
-          margin: errorMargin,
-          padding: errorPadding,
-        ),
+        replacement:
+            errorWidget ??
+            AppErrorImage(
+              asset: errorImage,
+              width: width,
+              height: height,
+              size: size,
+              borderRadius: borderRadius,
+              margin: errorMargin,
+              padding: errorPadding,
+            ),
         child: ClipRRect(
           borderRadius: borderRadius,
           child: CachedNetworkImage(
@@ -68,15 +72,17 @@ class AppNetworkImage extends StatelessWidget {
               return const Center(child: AppLoadingIndicator());
             },
             errorWidget: (context, _, __) {
-              return AppErrorImage(
-                asset: errorImage,
-                width: width,
-                height: height,
-                size: size,
-                borderRadius: borderRadius,
-                margin: errorMargin,
-                padding: errorPadding,
-              );
+              return errorWidget ??
+                  AppErrorImage(
+                    asset: errorImage,
+                    width: width,
+                    height: height,
+                    size: size,
+                    fit: fit,
+                    borderRadius: borderRadius,
+                    margin: errorMargin,
+                    padding: errorPadding,
+                  );
             },
           ),
         ),

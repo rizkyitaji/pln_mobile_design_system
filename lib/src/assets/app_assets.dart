@@ -61,6 +61,7 @@ abstract class AppAssets {
   static const iconTagihan = '$_basePath/${AppIcons.iconTagihan}';
   static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
+  static const iconMarketplaceFeatureProductLarge = '$_basePath/${AppIcons.iconMarketplaceFeatureProductLarge}';
   static const iconMarketplaceFlashSale = '$_basePath/${AppIcons.iconMarketplaceFlashSale}';
   static const iconMarketplaceIncentive = '$_basePath/${AppIcons.iconMarketplaceIncentive}';
   static const iconMarketplaceOfficialStore = '$_basePath/${AppIcons.iconMarketplaceOfficialStore}';
@@ -128,6 +129,7 @@ abstract class AppAssets {
   static const iconLikeOutlined = '$_basePath/${AppIcons.iconLikeOutlined}';
   static const iconLocationOutlined = '$_basePath/${AppIcons.iconLocationOutlined}';
   static const iconLowBatteryOutlined = '$_basePath/${AppIcons.iconLowBatteryOutlined}';
+  static const iconMerchantCourierOutlined = '$_basePath/${AppIcons.iconMerchantCourierOutlined}';
   static const iconMoneyOutlined = '$_basePath/${AppIcons.iconMoneyOutlined}';
   static const iconNavigateOutlined = '$_basePath/${AppIcons.iconNavigateOutlined}';
   static const iconNotificationOutlined = '$_basePath/${AppIcons.iconNotificationOutlined}';
@@ -147,6 +149,7 @@ abstract class AppAssets {
   static const iconSelfieOutlined = '$_basePath/${AppIcons.iconSelfieOutlined}';
   static const iconSettingsOutlined = '$_basePath/${AppIcons.iconSettingsOutlined}';
   static const iconShareOutlined = '$_basePath/${AppIcons.iconShareOutlined}';
+  static const iconShieldOutlined = '$_basePath/${AppIcons.iconShieldOutlined}';
   static const iconSolarBatteryOutlined = '$_basePath/${AppIcons.iconSolarBatteryOutlined}';
   static const iconStarOutlined = '$_basePath/${AppIcons.iconStarOutlined}';
   static const iconTagihanOutlined = '$_basePath/${AppIcons.iconTagihanOutlined}';
@@ -306,7 +309,8 @@ abstract class AppAssets {
   static const imageIllustrationConnectorTooFar = '$_basePath/${AppImages.illustrationConnectorTooFar}';
   static const imageIllustrationConnectorUnavailable = '$_basePath/${AppImages.illustrationConnectorUnavailable}';
   static const imageIllustrationConnectorUnplugged = '$_basePath/${AppImages.illustrationConnectorUnplugged}';
-  static const imageIllustrationDeleteVehicle = '$_basePath/${AppImages.illustrationDeleteVehicle}';
+  static const imageIllustrationDeleteCar = '$_basePath/${AppImages.illustrationDeleteCar}';
+  static const imageIllustrationDeleteMotorcycle = '$_basePath/${AppImages.illustrationDeleteMotorcycle}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyCar = '$_basePath/${AppImages.illustrationEmptyCar}';
@@ -338,10 +342,11 @@ abstract class AppAssets {
   static const imageIllustrationSpbklu = '$_basePath/${AppImages.illustrationSpbklu}';
   static const imageIllustrationSpkluQueue = '$_basePath/${AppImages.illustrationSpkluQueue}';
   static const imageIllustrationStopCharging = '$_basePath/${AppImages.illustrationStopCharging}';
+  static const imageIllustrationSuccessCar = '$_basePath/${AppImages.illustrationSuccessCar}';
   static const imageIllustrationSuccessCharging = '$_basePath/${AppImages.illustrationSuccessCharging}';
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
+  static const imageIllustrationSuccessMotorcycle = '$_basePath/${AppImages.illustrationSuccessMotorcycle}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
-  static const imageIllustrationSuccessVehicle = '$_basePath/${AppImages.illustrationSuccessVehicle}';
   static const imageIllustrationTripPlanner = '$_basePath/${AppImages.illustrationTripPlanner}';
   static const imageIllustrationUnactivatedNfc = '$_basePath/${AppImages.illustrationUnactivatedNfc}';
   static const imageIllustrationUnsupportedCard = '$_basePath/${AppImages.illustrationUnsupportedCard}';

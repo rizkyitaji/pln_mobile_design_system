@@ -3,43 +3,37 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppRadioButton extends StatelessWidget {
   final bool selected;
-  final Color? activeColor;
-  final Color? activeBorderColor;
-  final Color? activeFillColor;
-  final double size;  
+  final Color activeColor, fillColor, disabledColor;
+  final double? padding;
+  final double size;
 
   const AppRadioButton({
     super.key,
     this.selected = false,
-    this.activeColor,
-    this.activeBorderColor,
-    this.activeFillColor,
-    this.size = AppSizes.s24,    
+    this.activeColor = AppColors.iconPrimary,
+    this.fillColor = AppColors.primarySubtle,
+    this.disabledColor = AppColors.background,
+    this.size = AppSizes.s24,
+    this.padding,
   });
 
   @override
   Widget build(BuildContext context) {
-    final dotColor = activeColor ?? AppColors.iconPrimary;
-    final borderColor = activeBorderColor ?? AppColors.iconPrimary;
-    final fillColor = activeFillColor ?? AppColors.primarySubtle;
-
     return Container(
       width: size,
       height: size,
-      padding: EdgeInsets.all(AppSizes.s6),
+      padding: EdgeInsets.all(padding ?? 5),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(
-          color: selected ? borderColor : AppColors.border,          
-        ),
-        color: selected ? fillColor : AppColors.white,
+        border: Border.all(color: selected ? activeColor : AppColors.border),
+        color: selected ? fillColor : disabledColor,
       ),
       child: selected
           ? Center(
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: dotColor,
+                  color: activeColor,
                 ),
               ),
             )
