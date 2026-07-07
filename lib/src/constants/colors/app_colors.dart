@@ -151,6 +151,7 @@ abstract class AppColors {
 
   // --- BORDER DEFAULT ---
   static const Color border = AppPalette.slate200;
+  static const Color borderSubtle = AppPalette.slate100;
   static const Color borderOnColor = AppPalette.slate200;
   static final Color borderOnColorAlpha = AppPalette.slate50.withValues(
     alpha: 0.20,
@@ -206,8 +207,11 @@ abstract class AppColors {
 
   // --------------------------------------------- OTHER COLORS ---------------------------------------------
 
+  // --- SURFACE ---
+  static const Color surfacePrimary = AppPalette.teal550;
+
   // --- BACKGROUND ---
-  static const Color background = AppPalette.slate50;
+  static const Color background = AppPalette.white;
   static const Color backgroundSecondary = AppPalette.slate100;
   static const Color backgroundDark = AppPalette.slate1000;
   static const Color backgroundSecondaryDark = AppPalette.sky950;
@@ -231,6 +235,10 @@ abstract class AppColors {
   static const Color textDiscount = AppPalette.orange600;
   static const Color iconDiscount = AppPalette.orange500;
 
+  // --- RATING ---
+  static const Color rated = AppPalette.yellow500;
+  static const Color unrated = AppPalette.slate300;
+
   // --------------------------------------------- GRADIENT COLORS ---------------------------------------------
 
   static const LinearGradient progressIndicatorGradient = LinearGradient(
@@ -251,4 +259,6 @@ abstract class AppColors {
     ],
     stops: [0.0, 0.45, 0.75, 0.85, 1.0],
   );
+
+  static const Color iconDefaultLemon = AppPalette.lemon200;
 }

@@ -3,36 +3,43 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppSheetContainer extends StatelessWidget {
   final Widget? child;
+  final double? height;
   final List<Widget> children;
   final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
-  final bool showDragHandle, expand;
+  final bool showDragHandle, expand, bottomSafeArea, usePaddingBottom;
   final ScrollPhysics? physics;
+  final Color? color;
 
   const AppSheetContainer({
     super.key,
     this.child,
+    this.height,
     this.padding,
     this.controller,
     this.children = const [],
     this.showDragHandle = true,
     this.expand = false,
     this.physics,
+    this.color,
+    this.bottomSafeArea = true,
+    this.usePaddingBottom = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: height,
       decoration: BoxDecoration(
         borderRadius: AppRadius.topRounded12,
-        color: AppColors.white,
+        color: color ?? AppColors.background,
       ),
       child: SafeArea(
         top: false,
+        bottom: bottomSafeArea,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            
             AppSpacing.h16,
             Visibility(
               visible: showDragHandle,
@@ -57,10 +64,10 @@ class AppSheetContainer extends StatelessWidget {
               ),
               child: Padding(
                 padding: padding ?? EdgeInsets.zero,
-                child: child ?? SizedBox(),
+                child: child ?? const SizedBox(),
               ),
             ),
-            AppSpacing.h16,
+            if (usePaddingBottom) context.viewInsetsBottom(AppSizes.s16),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -187,13 +188,42 @@ class AppHelper {
     } else if (value is num) {
       return value.toInt();
     } else if (value is String) {
-      final str = value.trim();
+      final str = value.trim().replaceAll(',', '.');
       if (str.isEmpty || str == 'null' || str == '-') {
         return 0;
       }
-      return int.tryParse(str) ?? 0;
+      final parsedDouble = double.tryParse(str);
+      if (parsedDouble != null) {
+        return parsedDouble.toInt();
+      }
+      return 0;
     } else {
       return 0;
     }
+  }
+
+  static String getConnectorIcon(String? connector) {
+    connector ??= '';
+    if (connector.contains('CCS2')) {
+      return AppAssets.iconConnectorCcs2;
+    } else if (connector.contains('CHADEMO')) {
+      return AppAssets.iconConnectorChademo;
+    } else {
+      return AppAssets.iconConnectorAc;
+    }
+  }
+
+  static void copyText({String? text, String? label}) {
+    Clipboard.setData(ClipboardData(text: text ?? ''));
+    AppSnackBar.show(msg: '$label berhasil disalin');
+  }
+
+  static void nextFocus(
+    BuildContext context,
+    FocusNode currentFocus,
+    FocusNode nextFocus,
+  ) {
+    currentFocus.unfocus();
+    FocusScope.of(context).requestFocus(nextFocus);
   }
 }

@@ -1,19 +1,18 @@
 import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lottie/lottie.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppRefreshIndicator extends StatelessWidget {
   final Future<void> Function() onRefresh;
-  final String? icon;
+  final bool transform;
   final Widget child;
 
   const AppRefreshIndicator({
     super.key,
     required this.onRefresh,
     required this.child,
-    this.icon,
+    this.transform = false,
   });
 
   @override
@@ -29,18 +28,26 @@ class AppRefreshIndicator extends StatelessWidget {
             return Stack(
               alignment: Alignment.topCenter,
               children: [
+                if (!transform) child,
                 if (controller.isLoading || controller.value > 0)
                   Positioned(
                     top: paddingTop * controller.value,
-                    child: Lottie.asset(
-                      icon ?? AppAssets.animationLoadingPrimary,
-                      animate: controller.isLoading,
-                      width: AppSizes.s40,
+                    child: AppCircleCard(
+                      elevation: AppSizes.s2,
+                      borderColor: AppColors.border,
+                      child: AppImage(
+                        asset: AppAssets.animationLoadingPrimary,
+                        animate: controller.isLoading,
+                        size: AppSizes.s32,
+                      ),
                     ),
                   ),
-                Transform.translate(
-                  offset: Offset(0, (paddingTop * 3) * controller.value),
-                  child: child,
+                Visibility(
+                  visible: transform,
+                  child: Transform.translate(
+                    offset: Offset(0, (paddingTop * 3) * controller.value),
+                    child: child,
+                  ),
                 ),
               ],
             );

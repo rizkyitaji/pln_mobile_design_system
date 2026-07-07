@@ -9,6 +9,8 @@ abstract class AppAnimations {
 
   // Group: LOTTIE
   static const String animationCharging = 'assets/animations/lottie/animation-charging.json';
+  static const String animationLinearProgress = 'assets/animations/lottie/animation-linear-progress.json';
   static const String animationLoadingPrimary = 'assets/animations/lottie/animation-loading-primary.json';
   static const String animationLoadingWhite = 'assets/animations/lottie/animation-loading-white.json';
+  static const String animationNfc = 'assets/animations/lottie/animation-nfc.json';
 }

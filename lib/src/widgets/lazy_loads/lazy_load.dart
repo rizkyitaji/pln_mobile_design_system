@@ -3,7 +3,7 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 import 'package:shimmer/shimmer.dart';
 
 class AppLazyLoad extends StatelessWidget {
-  final bool visible;
+  final bool visible, onColor;
   final Widget onLoad, child;
 
   const AppLazyLoad({
@@ -11,6 +11,7 @@ class AppLazyLoad extends StatelessWidget {
     required this.visible,
     required this.onLoad,
     required this.child,
+    this.onColor = false,
   });
 
   @override
@@ -19,7 +20,9 @@ class AppLazyLoad extends StatelessWidget {
       visible: visible,
       replacement: child,
       child: Shimmer.fromColors(
-        baseColor: AppColors.shimmerBase,
+        baseColor: onColor
+            ? AppColors.shimmerBaseOnColor
+            : AppColors.shimmerBase,
         highlightColor: AppColors.shimmerHighlight,
         child: onLoad,
       ),

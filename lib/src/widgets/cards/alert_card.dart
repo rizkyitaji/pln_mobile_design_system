@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 enum AppAlertType { success, error, info, warning }
@@ -7,7 +6,14 @@ enum AppAlertType { success, error, info, warning }
 class AppAlertCard extends StatelessWidget {
   final AppAlertType? type;
   final VoidCallback? onTap;
+  final CrossAxisAlignment crossAxisAlignment;
   final String? title, description, actionText;
+  final Color? iconColor, backgroundColor, textColor;
+  final EdgeInsetsGeometry? margin;
+  final Widget? leading, trailing;
+  final bool isInline;
+  final TextStyle? descriptionStyle;
+  final Widget? customDescription;
 
   const AppAlertCard({
     super.key,
@@ -16,57 +22,99 @@ class AppAlertCard extends StatelessWidget {
     this.title,
     this.description,
     this.actionText,
+    this.margin,
+    this.leading,
+    this.trailing,
+    this.iconColor,
+    this.backgroundColor,
+    this.textColor,
+    this.crossAxisAlignment = CrossAxisAlignment.start,
+    this.isInline = false,
+    this.descriptionStyle,
+    this.customDescription,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBoxCard(
       color: _backgroundColor,
+      margin: margin,
       child: Row(
         spacing: AppSizes.s12,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: isInline
+            ? CrossAxisAlignment.center
+            : crossAxisAlignment,
         children: [
           _icon,
           Expanded(
-            child: Column(
-              spacing: AppSizes.s2,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title ?? '-',
-                  style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                    color: _textColor,
-                  ),
-                ),
-                Visibility(
-                  visible: description != null,
-                  child: Text(
-                    description ?? '',
-                    style: context.textTheme.bodyCaption.copyWith(
-                      color: _textColor,
-                    ),
-                  ),
-                ),
-                Visibility(
-                  visible: onTap != null,
-                  child: InkWell(
+            child: isInline
+                ? InkWell(
                     onTap: onTap,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: AppSizes.s8,
+                    child: RichText(
+                      text: TextSpan(
+                        text: description != null ? '$description ' : '',
+                        style: context.textTheme.bodyCaption.copyWith(
+                          color: _textColor,
+                        ),
+                        children: [
+                          if (actionText != null)
+                            TextSpan(
+                              text: actionText!,
+                              style: context.textTheme.bodyCaptionSemiBold
+                                  .copyWith(color: _textColor),
+                            ),
+                        ],
                       ),
-                      child: Text(
-                        actionText ?? 'OK',
-                        style: context.textTheme.bodyCaptionSemiBold.copyWith(
-                          color: AppColors.textPrimary,
+                    ),
+                  )
+                : Column(
+                    spacing: AppSizes.s2,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Visibility(
+                        visible: title != null,
+                        child: Text(
+                          title ?? '',
+                          style: context.textTheme.bodyCaptionSemiBold.copyWith(
+                            color: _textColor,
+                          ),
                         ),
                       ),
-                    ),
+                      Visibility(
+                        visible: description != null,
+                        child: Text(
+                          description ?? '',
+                          style:
+                              descriptionStyle ??
+                              context.textTheme.bodyCaption.copyWith(
+                                color: _textColor,
+                              ),
+                        ),
+                      ),
+                      Visibility(
+                        visible: customDescription != null,
+                        child: customDescription ?? AppSpacing.zero,
+                      ),
+                      Visibility(
+                        visible: onTap != null,
+                        child: InkWell(
+                          onTap: onTap,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: AppSizes.s8,
+                            ),
+                            child: Text(
+                              actionText ?? 'OK',
+                              style: context.textTheme.bodyCaptionSemiBold
+                                  .copyWith(color: AppColors.textPrimary),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
           ),
+          if (trailing != null) trailing ?? AppSpacing.zero,
         ],
       ),
     );
@@ -75,61 +123,61 @@ class AppAlertCard extends StatelessWidget {
   Widget get _icon {
     switch (type) {
       case AppAlertType.success:
-        return SvgPicture.asset(
-          AppAssets.iconCheckRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconSuccess, BlendMode.srcIn),
+        return AppImage(
+          asset: AppAssets.iconCheckRounded,
+          color: iconColor ?? AppColors.iconSuccess,
+          size: AppSizes.s20,
         );
       case AppAlertType.error:
-        return SvgPicture.asset(
-          AppAssets.iconWarningRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconError, BlendMode.srcIn),
+        return AppImage(
+          asset: AppAssets.iconWarningRounded,
+          color: iconColor ?? AppColors.iconError,
+          size: AppSizes.s20,
         );
       case AppAlertType.info:
-        return SvgPicture.asset(
-          AppAssets.iconInfoRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconInfo, BlendMode.srcIn),
+        return AppImage(
+          asset: AppAssets.iconInfoRounded,
+          color: iconColor ?? AppColors.iconInfo,
+          size: AppSizes.s20,
         );
       case AppAlertType.warning:
-        return SvgPicture.asset(
-          AppAssets.iconWarningRounded,
-          width: AppSizes.s20,
-          colorFilter: ColorFilter.mode(AppColors.iconWarning, BlendMode.srcIn),
+        return AppImage(
+          asset: AppAssets.iconWarningRounded,
+          color: iconColor ?? AppColors.iconWarningPressed,
+          size: AppSizes.s20,
         );
       default:
-        return SizedBox();
+        return leading ?? SizedBox();
     }
   }
 
   Color get _backgroundColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.successSubtle;
+        return backgroundColor ?? AppColors.successSubtle;
       case AppAlertType.error:
-        return AppColors.errorSubtle;
+        return backgroundColor ?? AppColors.errorSubtle;
       case AppAlertType.info:
-        return AppColors.secondarySubtle;
+        return backgroundColor ?? AppColors.secondarySubtle;
       case AppAlertType.warning:
-        return AppColors.warningSubtle;
+        return backgroundColor ?? AppColors.warningSubtle;
       default:
-        return AppColors.primarySubtle;
+        return backgroundColor ?? AppColors.primarySubtle;
     }
   }
 
   Color get _textColor {
     switch (type) {
       case AppAlertType.success:
-        return AppColors.textSuccessPressed;
+        return textColor ?? AppColors.textSuccessPressed;
       case AppAlertType.error:
-        return AppColors.textError;
+        return textColor ?? AppColors.textError;
       case AppAlertType.info:
-        return AppColors.textInfo;
+        return textColor ?? AppColors.textInfo;
       case AppAlertType.warning:
-        return AppColors.textWarning;
+        return textColor ?? AppColors.textWarning;
       default:
-        return AppColors.textPrimary;
+        return textColor ?? AppColors.textPrimary;
     }
   }
 }

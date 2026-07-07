@@ -23,11 +23,19 @@ extension ContextExt on BuildContext {
 
   double get textScale => PlatformDispatcher.instance.textScaleFactor;
 
-  AppTextTheme get textTheme => Theme.of(this).extension<AppTextTheme>()!;
+  AppTextTheme get textTheme =>
+      Theme.of(this).extension<AppTextTheme>() ?? AppTextTheme.lightTextTheme;
 
   void safePop<T extends Object?>([T? result]) {
     if (Navigator.canPop(this)) {
       Navigator.pop<T>(this, result);
     }
+  }
+
+  Widget viewInsetsBottom([double height = AppSizes.zero]) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: viewInsets.bottom),
+      child: SizedBox(height: height),
+    );
   }
 }
