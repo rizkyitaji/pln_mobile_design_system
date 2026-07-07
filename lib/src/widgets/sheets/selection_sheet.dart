@@ -26,8 +26,7 @@ class AppSelectionSheet<T> extends StatefulWidget {
   });
 
   @override
-  State<AppSelectionSheet<T>> createState() =>
-      _AppSelectionSheetState<T>();
+  State<AppSelectionSheet<T>> createState() => _AppSelectionSheetState<T>();
 }
 
 class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
@@ -43,11 +42,10 @@ class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
   Widget build(BuildContext context) {
     final textTheme = context.textTheme;
     final query = _searchController.text.trim().toLowerCase();
-    final filteredItems =
-        widget.items.where((item) {
-          final label = widget.itemLabel(item).toLowerCase();
-          return query.isEmpty || label.contains(query);
-        }).toList();
+    final filteredItems = widget.items.where((item) {
+      final label = widget.itemLabel(item).toLowerCase();
+      return query.isEmpty || label.contains(query);
+    }).toList();
 
     final bodyHeight =
         MediaQuery.sizeOf(context).height -
@@ -124,7 +122,7 @@ class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
                       Icons.check_circle_rounded,
                       color: AppColors.iconSuccess,
                     ),
-                    border: Border.all(color: AppColors.borderSuccess),
+                    border: Border.all(color: AppColors.textPrimary),
                     backgroundColor: AppColors.successSubtle,
                     onTap: () => Navigator.pop(context, widget.selectedItem),
                   ),
@@ -180,8 +178,8 @@ class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
 
                       return ListView.separated(
                         itemCount: filteredItems.length,
-                        separatorBuilder:
-                            (_, __) => const SizedBox(height: AppSizes.s12),
+                        separatorBuilder: (_, __) =>
+                            const SizedBox(height: AppSizes.s12),
                         itemBuilder: (context, index) {
                           final item = filteredItems[index];
                           final active = widget.isSelected(
@@ -193,21 +191,22 @@ class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
                             title: widget.itemLabel(item),
                             titleTextStyle: textTheme.bodyLarge.copyWith(
                               color: AppColors.textHeading,
-                              fontWeight:
-                                  active ? FontWeight.w700 : FontWeight.w500,
+                              fontWeight: active
+                                  ? FontWeight.w700
+                                  : FontWeight.w500,
                             ),
-                            trailing:
-                                AppRadioButton(selected: active,),
+                            trailing: AppRadioButton(
+                              selected: active,
+                              size: AppSizes.s20,
+                            ),
                             border: Border.all(
-                              color:
-                                  active
-                                      ? AppColors.borderPrimary
-                                      : AppColors.border,
+                              color: active
+                                  ? AppColors.borderPrimary
+                                  : AppColors.border,
                             ),
-                            backgroundColor:
-                                active
-                                    ? AppColors.primarySubtle
-                                    : AppColors.white,
+                            backgroundColor: active
+                                ? AppColors.primarySubtle
+                                : AppColors.white,
                             onTap: () => Navigator.pop(context, item),
                           );
                         },
