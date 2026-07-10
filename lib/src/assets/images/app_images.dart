@@ -31,6 +31,7 @@ abstract class AppImages {
   static const String illustrationHomecharging = 'assets/images/png/illustration-homecharging.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
   static const String illustrationKwhMeter = 'assets/images/png/illustration-kwh-meter.png';
+  static const String illustrationLiveChat = 'assets/images/png/illustration-live-chat.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
   static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationMascotHalo = 'assets/images/png/illustration-mascot-halo.png';
