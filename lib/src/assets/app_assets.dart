@@ -242,6 +242,7 @@ abstract class AppAssets {
   static const iconEmptyStateColored = '$_basePath/${AppIcons.iconEmptyStateColored}';
   static const iconEvCarColored = '$_basePath/${AppIcons.iconEvCarColored}';
   static const iconEvPointColored = '$_basePath/${AppIcons.iconEvPointColored}';
+  static const iconFreeShippingColored = '$_basePath/${AppIcons.iconFreeShippingColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.iconHandshakeColored}';
   static const iconHomeChargingColored = '$_basePath/${AppIcons.iconHomeChargingColored}';
   static const iconKwhMeterColored = '$_basePath/${AppIcons.iconKwhMeterColored}';
@@ -329,6 +330,7 @@ abstract class AppAssets {
   static const imageIllustrationHomecharging = '$_basePath/${AppImages.illustrationHomecharging}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationKwhMeter = '$_basePath/${AppImages.illustrationKwhMeter}';
+  static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
