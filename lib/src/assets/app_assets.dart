@@ -240,6 +240,7 @@ abstract class AppAssets {
   static const iconCheckmarkColored = '$_basePath/${AppIcons.iconCheckmarkColored}';
   static const iconComplaintRedColored = '$_basePath/${AppIcons.iconComplaintRedColored}';
   static const iconEmptyStateColored = '$_basePath/${AppIcons.iconEmptyStateColored}';
+  static const iconEvCarColored = '$_basePath/${AppIcons.iconEvCarColored}';
   static const iconEvPointColored = '$_basePath/${AppIcons.iconEvPointColored}';
   static const iconHandshakeColored = '$_basePath/${AppIcons.iconHandshakeColored}';
   static const iconHomeChargingColored = '$_basePath/${AppIcons.iconHomeChargingColored}';
