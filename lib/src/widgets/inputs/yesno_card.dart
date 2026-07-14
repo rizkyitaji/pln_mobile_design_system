@@ -12,6 +12,7 @@ class AppYesNoCard<T> extends StatelessWidget {
   final bool? isRequired;
   final bool? isColumn;
   final TextStyle? labelStyle;
+  final Key? infoKey;
 
   const AppYesNoCard({
     super.key,
@@ -25,6 +26,7 @@ class AppYesNoCard<T> extends StatelessWidget {
     this.isRequired,
     this.isColumn,
     this.labelStyle,
+    this.infoKey,
   });
 
   @override
@@ -46,6 +48,7 @@ class AppYesNoCard<T> extends StatelessWidget {
             if (onInfoTap != null) ...[
               const SizedBox(width: AppSizes.s8),
               GestureDetector(
+                key: infoKey,
                 onTap: onInfoTap,
                 child: const Icon(
                   Icons.info_outline_rounded,
