@@ -9,7 +9,7 @@ class AppAlertCard extends StatelessWidget {
   final CrossAxisAlignment crossAxisAlignment;
   final String? title, description, actionText;
   final Color? iconColor, backgroundColor, textColor;
-  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? margin, padding;
   final Widget? leading, trailing;
   final bool isInline;
   final TextStyle? descriptionStyle;
@@ -23,6 +23,7 @@ class AppAlertCard extends StatelessWidget {
     this.description,
     this.actionText,
     this.margin,
+    this.padding,
     this.leading,
     this.trailing,
     this.iconColor,
@@ -37,6 +38,7 @@ class AppAlertCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBoxCard(
+      padding: padding,
       color: _backgroundColor,
       margin: margin,
       child: Row(

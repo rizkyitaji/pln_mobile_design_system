@@ -7,7 +7,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
   final Widget? customChild;
   final VoidCallback? onTap;
   final String? buttonText;
-  final bool showActionButton;
+  final bool showActionButton, showCloseButton;
   final double? padding;
 
   const AppGeneralBottomSheet({
@@ -18,6 +18,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
     this.onTap,
     this.buttonText,
     this.showActionButton = true,
+    this.showCloseButton = true,
     this.padding,
   });
 
@@ -42,7 +43,9 @@ class AppGeneralBottomSheet extends StatelessWidget {
                         style: context.textTheme.bodyLargeSemiBold,
                       ),
                     ),
-                    AppBackButton(icon: AppAssets.iconClose),
+                    if (showCloseButton) ...[
+                      AppBackButton(icon: AppAssets.iconClose),
+                    ],
                   ],
                 ),
               ),

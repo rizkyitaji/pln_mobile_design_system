@@ -70,7 +70,7 @@ class AppUploadField extends StatelessWidget {
                   SizedBox(
                     width: 36,
                     height: 36,
-                    child: CircularProgressIndicator(strokeWidth: 3),
+                    child: AppLoadingIndicator(),
                   ),
             ),
           ),

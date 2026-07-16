@@ -34,13 +34,14 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? actionWidget;
   final double? actionWidgetSpace;
   final TextStyle? style;
-  final TextStyle? labelStyle;
+  final TextStyle? labelStyle, hintStyle;
 
   const AppLabeledTextFormField({
     super.key,
     this.controller,
     required this.label,
     this.labelStyle,
+    this.hintStyle,
     this.onChanged,
     this.required = false,
     this.hintText,
@@ -121,6 +122,7 @@ class AppLabeledTextFormField extends StatelessWidget {
                 onSaved: onSaved,
                 decoration: InputDecoration(
                   hintText: hintText,
+                  hintStyle: hintStyle,
                   suffixIcon: suffixIcon,
                   prefixIcon: prefixIcon,
                   prefixIconConstraints: prefixIconConstraints,
