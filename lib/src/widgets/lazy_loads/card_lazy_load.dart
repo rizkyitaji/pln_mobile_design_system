@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppCardLazyLoad extends StatelessWidget {
-  const AppCardLazyLoad({super.key});
+  final bool useLeading;
+  final double? leadingSize;
+
+  const AppCardLazyLoad({super.key, this.useLeading = true, this.leadingSize});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,11 @@ class AppCardLazyLoad extends StatelessWidget {
       child: Row(
         spacing: AppSizes.s12,
         children: [
-          AppBoxLazyLoad(width: AppSizes.s64, height: AppSizes.s56),
+          if (useLeading)
+            AppBoxLazyLoad(
+              width: leadingSize ?? AppSizes.s64,
+              height: leadingSize ?? AppSizes.s56,
+            ),
           Expanded(
             child: Column(
               spacing: AppSizes.s8,

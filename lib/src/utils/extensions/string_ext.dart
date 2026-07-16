@@ -1,17 +1,17 @@
 extension StringExt on String? {
   DateTime? get toDateTime {
-    String date = this ?? '';
-    if (date.isEmpty || date == 'null') return null;
+    if (this == null || this == 'null' || this!.trim().isEmpty) return null;
 
-    String cleanedDate = date.trim();
+    String cleanedDate = this!.trim();
 
     if (cleanedDate.contains('+')) {
       cleanedDate = cleanedDate.split('+').first;
     }
 
-    cleanedDate = cleanedDate.replaceAll('Z', '').replaceAll('z', '');
-
-    cleanedDate = cleanedDate.replaceAll('T', ' ');
+    cleanedDate = cleanedDate
+        .replaceAll('Z', '')
+        .replaceAll('z', '')
+        .replaceAll('T', ' ');
 
     return DateTime.tryParse(cleanedDate);
   }

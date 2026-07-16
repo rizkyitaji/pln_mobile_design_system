@@ -329,6 +329,7 @@ abstract class AppAssets {
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationHomecharging = '$_basePath/${AppImages.illustrationHomecharging}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
+  static const imageIllustrationInvalidLicensePlate = '$_basePath/${AppImages.illustrationInvalidLicensePlate}';
   static const imageIllustrationKwhMeter = '$_basePath/${AppImages.illustrationKwhMeter}';
   static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
