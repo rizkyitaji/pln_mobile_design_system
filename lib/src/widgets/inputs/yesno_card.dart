@@ -152,7 +152,7 @@ class _YesNoOptionTile<T> extends StatelessWidget {
           ),
           child: Row(
             children: [
-              AppRadioButton(selected: isSelected, size: AppSizes.s20),
+              AppRadioButton(selected: isSelected),
               const SizedBox(width: AppSizes.s12),
               Expanded(
                 child: Text(

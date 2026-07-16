@@ -41,7 +41,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.isFullScreen = false,
     this.onTap,
     this.centerTitle = true,
-    this.centerDescription = true,
+    this.centerDescription = false,
     this.iconSize,
     this.showDragHandle = true,
     this.onTapLink,
@@ -101,12 +101,14 @@ class AppInformationBottomSheet extends StatelessWidget {
                     if (title != null) ...[
                       if (enableCloseButton) ...[
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          spacing: AppSizes.s12,
                           children: [
-                            Text(
-                              title.toString(),
-                              style: context.textTheme.headingSmall.copyWith(
-                                color: titleColor,
+                            Expanded(
+                              child: Text(
+                                title.toString(),
+                                style: context.textTheme.headingSmall.copyWith(
+                                  color: titleColor,
+                                ),
                               ),
                             ),
                             AppBackButton(icon: AppAssets.iconClose),

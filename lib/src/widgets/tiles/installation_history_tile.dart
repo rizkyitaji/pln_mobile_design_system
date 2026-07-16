@@ -86,9 +86,8 @@ class AppInstallationHistoryTile extends StatelessWidget {
             ],
           ),
 
-          Padding(
+          const AppDottedLine(
             padding: EdgeInsets.symmetric(vertical: AppSizes.s8),
-            child: const AppDottedLine(),
           ),
 
           // --- Middle Section: Detail Info ---
@@ -140,9 +139,8 @@ class AppInstallationHistoryTile extends StatelessWidget {
             ],
           ),
 
-          Padding(
+          const AppDottedLine(
             padding: EdgeInsets.symmetric(vertical: AppSizes.s12),
-            child: const AppDottedLine(),
           ),
 
           // --- Bottom Section: Status & Action Button ---

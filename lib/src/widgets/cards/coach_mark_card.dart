@@ -169,6 +169,7 @@ class AppCoachMarkStepper extends StatelessWidget {
                     ),
                   ),
                   Row(
+                    spacing: AppSizes.s12,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Visibility(
@@ -188,12 +189,12 @@ class AppCoachMarkStepper extends StatelessWidget {
                           ),
                         ),
                       ),
-                      AppSpacing.w12,
-                      _buildTextButton(
-                        context: context,
-                        text: isLastStep ? doneText : nextText,
-                        onTap: onTapButtonRight,
-                      ),
+                      if (onTapButtonRight != null)
+                        _buildTextButton(
+                          context: context,
+                          text: isLastStep ? doneText : nextText,
+                          onTap: onTapButtonRight,
+                        ),
                     ],
                   ),
                 ],
