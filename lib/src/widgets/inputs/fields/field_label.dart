@@ -6,11 +6,18 @@ class AppFieldLabel extends StatelessWidget {
   final bool required;
   final TextStyle? style;
 
-  const AppFieldLabel({super.key, required this.label, this.required = false, this.style});
+  const AppFieldLabel({
+    super.key,
+    required this.label,
+    this.required = false,
+    this.style,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = style ?? context.textTheme.bodyMediumMed;
+    final textStyle =
+        style ??
+        context.textTheme.bodyMediumMed.copyWith(color: AppColors.textHeading);
 
     return RichText(
       text: TextSpan(

@@ -34,7 +34,6 @@ class AppUploadField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     final effectiveOnTap = loading ? null : onTap;
     final effectiveBorderRadius = borderRadius ?? AppRadius.rounded12;
     final showActionButton = image != null || showAddButton;
@@ -54,7 +53,7 @@ class AppUploadField extends StatelessWidget {
               ),
           ],
         ),
-        const SizedBox(height: AppSizes.s8),
+        AppSpacing.h8,
         if (loading) ...[
           Container(
             width: double.infinity,
@@ -70,7 +69,7 @@ class AppUploadField extends StatelessWidget {
                   SizedBox(
                     width: 36,
                     height: 36,
-                    child: CircularProgressIndicator(strokeWidth: 3),
+                    child: AppLoadingIndicator(),
                   ),
             ),
           ),
@@ -108,18 +107,17 @@ class AppUploadField extends StatelessWidget {
                   borderRadius: effectiveBorderRadius,
                 ),
                 child: Row(
+                  spacing: AppSizes.s8,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(
-                      Icons.cloud_upload_outlined,
+                    AppImage(
+                      asset: AppAssets.iconUploadOutlined,
                       color: AppColors.iconPrimary,
                     ),
-                    const SizedBox(width: AppSizes.s8),
                     Text(
                       uploadLabel,
-                      style: textTheme.titleMedium?.copyWith(
+                      style: context.textTheme.bodyMediumSemiBold.copyWith(
                         color: AppColors.textPrimary,
-                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ],

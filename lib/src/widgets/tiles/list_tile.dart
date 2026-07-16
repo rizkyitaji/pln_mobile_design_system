@@ -12,6 +12,7 @@ class AppListTile extends StatelessWidget {
   final Color? backgroundColor;
   final BoxBorder? border;
   final BorderRadiusGeometry? borderRadius;
+  final bool selected;
 
   const AppListTile({
     super.key,
@@ -25,13 +26,19 @@ class AppListTile extends StatelessWidget {
     this.subtitleTextStyle,
     this.border,
     this.borderRadius,
+    this.selected = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBoxCard(
       onTap: onTap,
-      border: border ?? Border.all(color: AppColors.border),
+      border:
+          border ??
+          Border.all(
+            color: selected ? AppColors.borderPrimary : AppColors.border,
+            width: selected ? 2 : 1,
+          ),
       borderRadius: borderRadius,
       child: Row(
         spacing: AppSizes.s12,
@@ -42,9 +49,15 @@ class AppListTile extends StatelessWidget {
               spacing: AppSizes.s2,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: titleTextStyle),
-                if (subtitle != null) ...[
-                  Text(subtitle.toString(), style: subtitleTextStyle),
+                Text(
+                  title,
+                  style: titleTextStyle ?? context.textTheme.bodyMedium,
+                ),
+                if (subtitle != null && (subtitle ?? '').isNotEmpty) ...[
+                  Text(
+                    subtitle.toString(),
+                    style: subtitleTextStyle ?? context.textTheme.bodyCaption,
+                  ),
                 ],
               ],
             ),

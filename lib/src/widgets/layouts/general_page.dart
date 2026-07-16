@@ -9,7 +9,8 @@ class AppGeneralPage extends StatelessWidget {
   final Widget? leadingAppBar,
       titleAppBar,
       floatingActionButton,
-      persistentSheet;
+      persistentSheet,
+      flexibleSpace;
   final PreferredSizeWidget? bottomAppBar;
   final Future<void> Function()? onRefresh;
   final String? backgroundImage, backgroundNetworkImage, title, backButtonIcon;
@@ -24,15 +25,13 @@ class AppGeneralPage extends StatelessWidget {
       automaticallyImplyLeading,
       showDragHandle,
       isLoadingMore,
-      isScrollable;
+      isScrollable,
+      useSafeArea,
+      topSafeArea;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
   final ScrollPhysics? physics;
   final ScrollController? scrollController;
-  final bool? useSafeArea,
-      topSafeArea,
-      bottomSafeArea,
-      leftSafeArea,
-      rightSafeArea;
+  final bool? bottomSafeArea, leftSafeArea, rightSafeArea;
 
   const AppGeneralPage({
     super.key,
@@ -65,24 +64,25 @@ class AppGeneralPage extends StatelessWidget {
     this.titleSpacing,
     this.scrollController,
     this.isLoadingMore = false,
-    this.useSafeArea = false,
+    this.useSafeArea = true,
     this.topSafeArea = false,
-    this.bottomSafeArea = false,
-    this.leftSafeArea = false,
-    this.rightSafeArea = false,
+    this.bottomSafeArea,
+    this.leftSafeArea,
+    this.rightSafeArea,
     this.isScrollable = true,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
     this.backButtonIcon,
+    this.flexibleSpace,
   });
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      bottom: bottomSafeArea ?? useSafeArea ?? false,
-      top: topSafeArea ?? useSafeArea ?? false,
-      left: leftSafeArea ?? useSafeArea ?? false,
-      right: rightSafeArea ?? useSafeArea ?? false,
+      top: topSafeArea,
+      bottom: bottomSafeArea ?? useSafeArea,
+      left: leftSafeArea ?? useSafeArea,
+      right: rightSafeArea ?? useSafeArea,
       child: Scaffold(
         extendBodyBehindAppBar: extendBodyBehindAppBar,
         appBar: AppBar(
@@ -104,6 +104,7 @@ class AppGeneralPage extends StatelessWidget {
           ),
           bottom: bottomAppBar,
           actions: actionsAppBar,
+          flexibleSpace: flexibleSpace,
         ),
         backgroundColor: backgroundColor,
         floatingActionButton: floatingActionButton,
@@ -124,6 +125,7 @@ class AppGeneralPage extends StatelessWidget {
               ),
               child: AppNetworkImage(
                 url: backgroundNetworkImage,
+                width: double.infinity,
                 height: backgroundImageHeight,
                 errorImage: backgroundImage,
                 fit: BoxFit.fill,

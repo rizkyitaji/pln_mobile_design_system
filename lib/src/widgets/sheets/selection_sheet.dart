@@ -195,10 +195,7 @@ class _AppSelectionSheetState<T> extends State<AppSelectionSheet<T>> {
                                   ? FontWeight.w700
                                   : FontWeight.w500,
                             ),
-                            trailing: AppRadioButton(
-                              selected: active,
-                              size: AppSizes.s20,
-                            ),
+                            trailing: AppRadioButton(selected: active),
                             border: Border.all(
                               color: active
                                   ? AppColors.borderPrimary
