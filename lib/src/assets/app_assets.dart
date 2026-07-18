@@ -113,6 +113,7 @@ abstract class AppAssets {
   static const iconEditOutlined = '$_basePath/${AppIcons.iconEditOutlined}';
   static const iconEmailOutlined = '$_basePath/${AppIcons.iconEmailOutlined}';
   static const iconEvChargerOutlined = '$_basePath/${AppIcons.iconEvChargerOutlined}';
+  static const iconFileOutlined = '$_basePath/${AppIcons.iconFileOutlined}';
   static const iconFilterOutlined = '$_basePath/${AppIcons.iconFilterOutlined}';
   static const iconFlagOutlined = '$_basePath/${AppIcons.iconFlagOutlined}';
   static const iconGroupOutlined = '$_basePath/${AppIcons.iconGroupOutlined}';
@@ -151,6 +152,7 @@ abstract class AppAssets {
   static const iconShareOutlined = '$_basePath/${AppIcons.iconShareOutlined}';
   static const iconShieldOutlined = '$_basePath/${AppIcons.iconShieldOutlined}';
   static const iconSolarBatteryOutlined = '$_basePath/${AppIcons.iconSolarBatteryOutlined}';
+  static const iconSolarPowerOutlined = '$_basePath/${AppIcons.iconSolarPowerOutlined}';
   static const iconStarOutlined = '$_basePath/${AppIcons.iconStarOutlined}';
   static const iconTagihanOutlined = '$_basePath/${AppIcons.iconTagihanOutlined}';
   static const iconTransactionOutlined = '$_basePath/${AppIcons.iconTransactionOutlined}';
