@@ -402,6 +402,8 @@ abstract class AppAssets {
   static const imageBackgroundIndicatorChargingConnecting = '$_basePath/${AppImages.backgroundIndicatorChargingConnecting}';
   static const imageBackgroundIndicatorChargingDisconnected = '$_basePath/${AppImages.backgroundIndicatorChargingDisconnected}';
   static const imageBackgroundIndicatorChargingIdle = '$_basePath/${AppImages.backgroundIndicatorChargingIdle}';
+  static const imageBackgroundInvFooter = '$_basePath/${AppImages.backgroundInvFooter}';
+  static const imageBackgroundInvHeader = '$_basePath/${AppImages.backgroundInvHeader}';
   static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
