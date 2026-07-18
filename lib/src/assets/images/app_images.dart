@@ -107,6 +107,8 @@ abstract class AppImages {
   static const String backgroundIndicatorChargingConnecting = 'assets/images/png/backgrounds/background-indicator-charging-connecting.png';
   static const String backgroundIndicatorChargingDisconnected = 'assets/images/png/backgrounds/background-indicator-charging-disconnected.png';
   static const String backgroundIndicatorChargingIdle = 'assets/images/png/backgrounds/background-indicator-charging-idle.png';
+  static const String backgroundInvFooter = 'assets/images/png/backgrounds/background-inv-footer.png';
+  static const String backgroundInvHeader = 'assets/images/png/backgrounds/background-inv-header.png';
   static const String backgroundLaunchImage = 'assets/images/png/backgrounds/background-launch-image.png';
   static const String backgroundMarketplaceHeader = 'assets/images/png/backgrounds/background-marketplace-header.png';
   static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
