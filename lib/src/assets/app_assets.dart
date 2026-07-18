@@ -447,6 +447,7 @@ abstract class AppAssets {
   static const animationOnBoarding3 = '$_basePath/${AppAnimations.animationOnBoarding3}';
   static const animationCharging = '$_basePath/${AppAnimations.animationCharging}';
   static const animationLinearProgress = '$_basePath/${AppAnimations.animationLinearProgress}';
+  static const animationLoadingMobi = '$_basePath/${AppAnimations.animationLoadingMobi}';
   static const animationLoadingPrimary = '$_basePath/${AppAnimations.animationLoadingPrimary}';
   static const animationLoadingWhite = '$_basePath/${AppAnimations.animationLoadingWhite}';
   static const animationNfc = '$_basePath/${AppAnimations.animationNfc}';

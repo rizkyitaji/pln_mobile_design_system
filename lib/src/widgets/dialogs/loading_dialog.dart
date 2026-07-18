@@ -13,13 +13,7 @@ class AppLoadingDialog extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AppBoxCard(
-            padding: const EdgeInsets.all(AppSizes.s16),
-            child: AppImage(
-              asset: AppAssets.animationLoadingPrimary,
-              size: AppSizes.s50,
-            ),
-          ),
+          AppImage(asset: AppAssets.animationLoadingMobi, size: 160.scaleWidth),
         ],
       ),
     );

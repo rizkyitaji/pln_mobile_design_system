@@ -215,7 +215,11 @@ class AppHelper {
 
   static void copyText({String? text, String? label}) {
     Clipboard.setData(ClipboardData(text: text ?? ''));
-    AppSnackBar.show(msg: '$label berhasil disalin');
+    AppSnackBar.show(
+      msg: '$label berhasil disalin',
+      position: AppSnackBarPosition.top,
+      type: AppSnackBarType.success,
+    );
   }
 
   static void nextFocus(

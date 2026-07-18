@@ -17,11 +17,7 @@ class AppMenuCard extends StatelessWidget {
     return AppBoxCard(
       onTap: onTap,
       color: AppColors.primarySubtle,
-      padding: EdgeInsets.only(
-        left: AppSizes.s6,
-        right: AppSizes.s6,
-        bottom: AppSizes.s6,
-      ),
+      padding: EdgeInsets.only(left: 3, right: 3, bottom: AppSizes.s6),
       child: Column(
         children: [
           AppImage(asset: asset, size: AppSizes.s56),
