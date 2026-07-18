@@ -23,18 +23,14 @@ extension NumExt on num? {
     return toString().padLeft(2, '0');
   }
 
-  String toIDR({int decimalDigits = 0, String symbol = 'Rp '}) {
+  String toIDR({String symbol = 'Rp '}) {
     if (this == null) return '${symbol}0';
 
-    return NumberFormat.currency(
-      locale: 'id_ID',
-      symbol: symbol,
-      decimalDigits: decimalDigits,
-    ).format(this);
+    return NumberFormat('$symbol#,###.##', "id_ID").format(this);
   }
 
   String toNumericFormat() {
     if (this == null) return '0';
-    return NumberFormat.decimalPattern('id_ID').format(this);
+    return NumberFormat('#,###.##', 'id_ID').format(this);
   }
 }
