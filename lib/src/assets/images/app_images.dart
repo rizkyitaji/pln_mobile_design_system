@@ -37,9 +37,17 @@ abstract class AppImages {
   static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationMascotHalo = 'assets/images/png/illustration-mascot-halo.png';
   static const String illustrationNikNotRegistered = 'assets/images/png/illustration-nik-not-registered.png';
+  static const String illustrationOnBoardingLpv1 = 'assets/images/png/illustration-on-boarding-lic-pv-1.png';
+  static const String illustrationOnBoardingLpv2 = 'assets/images/png/illustration-on-boarding-lic-pv-2.png';
+  static const String illustrationOnBoardingLpv3 = 'assets/images/png/illustration-on-boarding-lic-pv-3.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
+  static const String illustrationOnBoardingPv = 'assets/images/png/illustration-on-boarding-pv.png';
+  static const String illustrationOnBoardingSubPv1 = 'assets/images/png/illustration-on-boarding-sub-pv-1.png';
+  static const String illustrationOnBoardingSubPv2 = 'assets/images/png/illustration-on-boarding-sub-pv-2.png';
+  static const String illustrationOnBoardingSubPv3 = 'assets/images/png/illustration-on-boarding-sub-pv-3.png';
   static const String illustrationPhoneDuplicate = 'assets/images/png/illustration-phone-duplicate.png';
   static const String illustrationPluggedElectricity = 'assets/images/png/illustration-plugged-electricity.png';
+  static const String illustrationPvHome = 'assets/images/png/illustration-pv-home.png';
   static const String illustrationRecOnboarding = 'assets/images/png/illustration-rec-onboarding.png';
   static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';
   static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';

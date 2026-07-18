@@ -336,9 +336,17 @@ abstract class AppAssets {
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
   static const imageIllustrationNikNotRegistered = '$_basePath/${AppImages.illustrationNikNotRegistered}';
+  static const imageIllustrationOnBoardingLpv1 = '$_basePath/${AppImages.illustrationOnBoardingLpv1}';
+  static const imageIllustrationOnBoardingLpv2 = '$_basePath/${AppImages.illustrationOnBoardingLpv2}';
+  static const imageIllustrationOnBoardingLpv3 = '$_basePath/${AppImages.illustrationOnBoardingLpv3}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
+  static const imageIllustrationOnBoardingPv = '$_basePath/${AppImages.illustrationOnBoardingPv}';
+  static const imageIllustrationOnBoardingSubPv1 = '$_basePath/${AppImages.illustrationOnBoardingSubPv1}';
+  static const imageIllustrationOnBoardingSubPv2 = '$_basePath/${AppImages.illustrationOnBoardingSubPv2}';
+  static const imageIllustrationOnBoardingSubPv3 = '$_basePath/${AppImages.illustrationOnBoardingSubPv3}';
   static const imageIllustrationPhoneDuplicate = '$_basePath/${AppImages.illustrationPhoneDuplicate}';
   static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
+  static const imageIllustrationPvHome = '$_basePath/${AppImages.illustrationPvHome}';
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
