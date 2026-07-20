@@ -275,6 +275,7 @@ abstract class AppAssets {
   static const iconUserColored = '$_basePath/${AppIcons.iconUserColored}';
   static const iconVerificationColored = '$_basePath/${AppIcons.iconVerificationColored}';
   static const iconVoucherColored = '$_basePath/${AppIcons.iconVoucherColored}';
+  static const iconWalletColored = '$_basePath/${AppIcons.iconWalletColored}';
   static const iconWhatsappColored = '$_basePath/${AppIcons.iconWhatsappColored}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.iconMenuBalikNama}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.iconMenuCatatMeter}';
