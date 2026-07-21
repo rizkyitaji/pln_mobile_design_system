@@ -10,11 +10,11 @@ class AppLoadingDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: canPop,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          AppImage(asset: AppAssets.animationLoadingMobi, size: 160.scaleWidth),
-        ],
+      child: Center(
+        child: AppImage(
+          asset: AppAssets.animationLoadingMobi,
+          size: AppSizes.s160.scaleWidth,
+        ),
       ),
     );
   }
