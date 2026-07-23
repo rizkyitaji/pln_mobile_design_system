@@ -288,6 +288,7 @@ abstract class AppAssets {
   static const iconMenuListrik = '$_basePath/${AppIcons.iconMenuListrik}';
   static const iconMenuMarketplace = '$_basePath/${AppIcons.iconMenuMarketplace}';
   static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
+  static const iconMenuNontaglis = '$_basePath/${AppIcons.iconMenuNontaglis}';
   static const iconMenuPasangBaru = '$_basePath/${AppIcons.iconMenuPasangBaru}';
   static const iconMenuPengaduan = '$_basePath/${AppIcons.iconMenuPengaduan}';
   static const iconMenuPengelolaanListrik = '$_basePath/${AppIcons.iconMenuPengelolaanListrik}';

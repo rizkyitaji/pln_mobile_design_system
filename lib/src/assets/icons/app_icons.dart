@@ -293,6 +293,7 @@ abstract class AppIcons {
   static const String iconMenuListrik = 'assets/icons/svg/menu/icon-menu-listrik.svg';
   static const String iconMenuMarketplace = 'assets/icons/svg/menu/icon-menu-marketplace.svg';
   static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
+  static const String iconMenuNontaglis = 'assets/icons/svg/menu/icon-menu-nontaglis.svg';
   static const String iconMenuPasangBaru = 'assets/icons/svg/menu/icon-menu-pasang-baru.svg';
   static const String iconMenuPengaduan = 'assets/icons/svg/menu/icon-menu-pengaduan.svg';
   static const String iconMenuPengelolaanListrik = 'assets/icons/svg/menu/icon-menu-pengelolaan-listrik.svg';
