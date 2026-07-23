@@ -176,9 +176,11 @@ class AppInstallationHistoryTile extends StatelessWidget {
                   ? ElevatedButton(
                       onPressed: onTap,
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: AppSizes.s16,
-                          vertical: AppSizes.s8,
+                        padding: EdgeInsets.fromLTRB(
+                          AppSizes.s16,
+                          0,
+                          AppSizes.s16,
+                          AppSizes.s4,
                         ),
                       ),
                       child: Text(buttonText),
@@ -186,9 +188,11 @@ class AppInstallationHistoryTile extends StatelessWidget {
                   : OutlinedButton(
                       onPressed: onTap,
                       style: OutlinedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: AppSizes.s16,
-                          vertical: AppSizes.s8,
+                        padding: EdgeInsets.fromLTRB(
+                          AppSizes.s16,
+                          0,
+                          AppSizes.s16,
+                          AppSizes.s4,
                         ),
                       ),
                       child: Text(buttonText),
