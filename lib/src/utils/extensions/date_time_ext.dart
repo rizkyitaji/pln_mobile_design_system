@@ -58,6 +58,12 @@ extension DateTimeExt on DateTime? {
     return DateFormat('MMMM y', 'id_ID').format(date);
   }
 
+  String toFormat(String format) {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat(format, 'id_ID').format(date);
+  }
+
   String get toDayTimeline {
     var date = this;
     if (date == null) return '-';

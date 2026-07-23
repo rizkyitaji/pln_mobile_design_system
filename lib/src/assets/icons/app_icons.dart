@@ -112,6 +112,7 @@ abstract class AppIcons {
   static const String iconEditOutlined = 'assets/icons/svg/outlined/icon-edit-outlined.svg';
   static const String iconEmailOutlined = 'assets/icons/svg/outlined/icon-email-outlined.svg';
   static const String iconEvChargerOutlined = 'assets/icons/svg/outlined/icon-ev-charger-outlined.svg';
+  static const String iconFileOutlined = 'assets/icons/svg/outlined/icon-file-outlined.svg';
   static const String iconFilterOutlined = 'assets/icons/svg/outlined/icon-filter-outlined.svg';
   static const String iconFlagOutlined = 'assets/icons/svg/outlined/icon-flag-outlined.svg';
   static const String iconGroupOutlined = 'assets/icons/svg/outlined/icon-group-outlined.svg';
@@ -150,6 +151,7 @@ abstract class AppIcons {
   static const String iconShareOutlined = 'assets/icons/svg/outlined/icon-share-outlined.svg';
   static const String iconShieldOutlined = 'assets/icons/svg/outlined/icon-shield-outlined.svg';
   static const String iconSolarBatteryOutlined = 'assets/icons/svg/outlined/icon-solar-battery-outlined.svg';
+  static const String iconSolarPowerOutlined = 'assets/icons/svg/outlined/icon-solar-power-outlined.svg';
   static const String iconStarOutlined = 'assets/icons/svg/outlined/icon-star-outlined.svg';
   static const String iconTagihanOutlined = 'assets/icons/svg/outlined/icon-tagihan-outlined.svg';
   static const String iconTransactionOutlined = 'assets/icons/svg/outlined/icon-transaction-outlined.svg';
@@ -276,6 +278,7 @@ abstract class AppIcons {
   static const String iconUserColored = 'assets/icons/svg/colored/icon-user.svg';
   static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
   static const String iconVoucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
+  static const String iconWalletColored = 'assets/icons/svg/colored/icon-wallet.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
   // Group: MENU SVG

@@ -113,6 +113,7 @@ abstract class AppAssets {
   static const iconEditOutlined = '$_basePath/${AppIcons.iconEditOutlined}';
   static const iconEmailOutlined = '$_basePath/${AppIcons.iconEmailOutlined}';
   static const iconEvChargerOutlined = '$_basePath/${AppIcons.iconEvChargerOutlined}';
+  static const iconFileOutlined = '$_basePath/${AppIcons.iconFileOutlined}';
   static const iconFilterOutlined = '$_basePath/${AppIcons.iconFilterOutlined}';
   static const iconFlagOutlined = '$_basePath/${AppIcons.iconFlagOutlined}';
   static const iconGroupOutlined = '$_basePath/${AppIcons.iconGroupOutlined}';
@@ -151,6 +152,7 @@ abstract class AppAssets {
   static const iconShareOutlined = '$_basePath/${AppIcons.iconShareOutlined}';
   static const iconShieldOutlined = '$_basePath/${AppIcons.iconShieldOutlined}';
   static const iconSolarBatteryOutlined = '$_basePath/${AppIcons.iconSolarBatteryOutlined}';
+  static const iconSolarPowerOutlined = '$_basePath/${AppIcons.iconSolarPowerOutlined}';
   static const iconStarOutlined = '$_basePath/${AppIcons.iconStarOutlined}';
   static const iconTagihanOutlined = '$_basePath/${AppIcons.iconTagihanOutlined}';
   static const iconTransactionOutlined = '$_basePath/${AppIcons.iconTransactionOutlined}';
@@ -273,6 +275,7 @@ abstract class AppAssets {
   static const iconUserColored = '$_basePath/${AppIcons.iconUserColored}';
   static const iconVerificationColored = '$_basePath/${AppIcons.iconVerificationColored}';
   static const iconVoucherColored = '$_basePath/${AppIcons.iconVoucherColored}';
+  static const iconWalletColored = '$_basePath/${AppIcons.iconWalletColored}';
   static const iconWhatsappColored = '$_basePath/${AppIcons.iconWhatsappColored}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.iconMenuBalikNama}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.iconMenuCatatMeter}';
@@ -336,9 +339,17 @@ abstract class AppAssets {
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
   static const imageIllustrationNikNotRegistered = '$_basePath/${AppImages.illustrationNikNotRegistered}';
+  static const imageIllustrationOnBoardingLpv1 = '$_basePath/${AppImages.illustrationOnBoardingLpv1}';
+  static const imageIllustrationOnBoardingLpv2 = '$_basePath/${AppImages.illustrationOnBoardingLpv2}';
+  static const imageIllustrationOnBoardingLpv3 = '$_basePath/${AppImages.illustrationOnBoardingLpv3}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
+  static const imageIllustrationOnBoardingPv = '$_basePath/${AppImages.illustrationOnBoardingPv}';
+  static const imageIllustrationOnBoardingSubPv1 = '$_basePath/${AppImages.illustrationOnBoardingSubPv1}';
+  static const imageIllustrationOnBoardingSubPv2 = '$_basePath/${AppImages.illustrationOnBoardingSubPv2}';
+  static const imageIllustrationOnBoardingSubPv3 = '$_basePath/${AppImages.illustrationOnBoardingSubPv3}';
   static const imageIllustrationPhoneDuplicate = '$_basePath/${AppImages.illustrationPhoneDuplicate}';
   static const imageIllustrationPluggedElectricity = '$_basePath/${AppImages.illustrationPluggedElectricity}';
+  static const imageIllustrationPvHome = '$_basePath/${AppImages.illustrationPvHome}';
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
@@ -437,6 +448,7 @@ abstract class AppAssets {
   static const animationOnBoarding3 = '$_basePath/${AppAnimations.animationOnBoarding3}';
   static const animationCharging = '$_basePath/${AppAnimations.animationCharging}';
   static const animationLinearProgress = '$_basePath/${AppAnimations.animationLinearProgress}';
+  static const animationLoadingMobi = '$_basePath/${AppAnimations.animationLoadingMobi}';
   static const animationLoadingPrimary = '$_basePath/${AppAnimations.animationLoadingPrimary}';
   static const animationLoadingWhite = '$_basePath/${AppAnimations.animationLoadingWhite}';
   static const animationNfc = '$_basePath/${AppAnimations.animationNfc}';
