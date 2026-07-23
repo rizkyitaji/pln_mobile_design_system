@@ -169,6 +169,9 @@ class AppInformationBottomSheet extends StatelessWidget {
                             code: context.textTheme.bodyMedium.copyWith(
                               color: const Color(0xFFEF476F),
                             ),
+                            a: context.textTheme.bodyMedium.copyWith(
+                              color: AppColors.textPrimary,
+                            ),
                           ),
                           onTapLink: onTapLink,
                         ),
@@ -180,6 +183,9 @@ class AppInformationBottomSheet extends StatelessWidget {
                               p: context.textTheme.bodyMedium,
                               code: context.textTheme.bodyMedium.copyWith(
                                 color: const Color(0xFFEF476F),
+                              ),
+                              a: context.textTheme.bodyMedium.copyWith(
+                                color: AppColors.textPrimary,
                               ),
                             ),
                             onTapLink: onTapLink,

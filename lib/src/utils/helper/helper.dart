@@ -204,7 +204,9 @@ class AppHelper {
 
   static String getConnectorIcon(String? connector) {
     connector ??= '';
-    if (connector.contains('CCS2')) {
+    if (connector.contains('Stop Kontak')) {
+      return AppAssets.iconPowerSocketOutlined;
+    } else if (connector.contains('CCS2')) {
       return AppAssets.iconConnectorCcs2;
     } else if (connector.contains('CHADEMO')) {
       return AppAssets.iconConnectorChademo;
@@ -215,7 +217,11 @@ class AppHelper {
 
   static void copyText({String? text, String? label}) {
     Clipboard.setData(ClipboardData(text: text ?? ''));
-    AppSnackBar.show(msg: '$label berhasil disalin');
+    AppSnackBar.show(
+      msg: '$label berhasil disalin',
+      position: AppSnackBarPosition.top,
+      type: AppSnackBarType.success,
+    );
   }
 
   static void nextFocus(

@@ -134,6 +134,7 @@ class _AppContentItemState extends State<AppContentItem>
   Widget get _buildMainContent {
     final labelTrailing = widget.labelTrailing;
     final valueTrailing = widget.valueTrailing;
+    final children = widget.children ?? [];
 
     switch (widget.type) {
       case ContentItemType.row:
@@ -151,11 +152,16 @@ class _AppContentItemState extends State<AppContentItem>
                         widget.labelStyle ??
                         context.textTheme.bodyCaptionMedium,
                   ),
-                  if (labelTrailing != null)
+                  if (labelTrailing != null) labelTrailing,
+                  if (children.isNotEmpty)
                     AnimatedRotation(
                       turns: _isExpanded ? 0.5 : 0.0,
                       duration: const Duration(milliseconds: 250),
-                      child: labelTrailing,
+                      child: AppImage(
+                        asset: AppAssets.iconChevronDown,
+                        color: AppColors.iconSubtle,
+                        size: AppSizes.s14,
+                      ),
                     ),
                 ],
               ),
@@ -184,11 +190,16 @@ class _AppContentItemState extends State<AppContentItem>
                   widget.label ?? '-',
                   style: widget.labelStyle ?? context.textTheme.bodyCaption,
                 ),
-                if (labelTrailing != null)
+                if (labelTrailing != null) labelTrailing,
+                if (children.isNotEmpty)
                   AnimatedRotation(
                     turns: _isExpanded ? 0.5 : 0.0,
                     duration: const Duration(milliseconds: 250),
-                    child: labelTrailing,
+                    child: AppImage(
+                      asset: AppAssets.iconChevronDown,
+                      color: AppColors.iconSubtle,
+                      size: AppSizes.s14,
+                    ),
                   ),
               ],
             ),
@@ -203,11 +214,16 @@ class _AppContentItemState extends State<AppContentItem>
                         context.textTheme.bodyMediumSemiBold,
                   ),
                 ),
-                if (valueTrailing != null)
+                if (valueTrailing != null) valueTrailing,
+                if (children.isNotEmpty)
                   AnimatedRotation(
                     turns: _isExpanded ? 0.5 : 0.0,
                     duration: const Duration(milliseconds: 250),
-                    child: valueTrailing,
+                    child: AppImage(
+                      asset: AppAssets.iconChevronDown,
+                      color: AppColors.iconSubtle,
+                      size: AppSizes.s14,
+                    ),
                   ),
               ],
             ),
