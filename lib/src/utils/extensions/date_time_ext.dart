@@ -2,6 +2,13 @@ import 'package:intl/intl.dart';
 import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 extension DateTimeExt on DateTime? {
+  /// Output: Senin, 01 Januari 2026
+  String get formatEEEEddMMMMy {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('EEEE, dd MMMM y', 'id_ID').format(date);
+  }
+
   /// Output: 1 Januari 2026 09:10:11
   String get formatdMMMMyHHmmss {
     var date = this;

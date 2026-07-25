@@ -73,18 +73,15 @@ class AppAlertCard extends StatelessWidget {
                     spacing: AppSizes.s2,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Visibility(
-                        visible: title != null,
-                        child: Text(
+                      if (title != null)
+                        Text(
                           title ?? '',
                           style: context.textTheme.bodyCaptionSemiBold.copyWith(
                             color: _textColor,
                           ),
                         ),
-                      ),
-                      Visibility(
-                        visible: description != null,
-                        child: Text(
+                      if (description != null)
+                        Text(
                           description ?? '',
                           style:
                               descriptionStyle ??
@@ -92,14 +89,9 @@ class AppAlertCard extends StatelessWidget {
                                 color: _textColor,
                               ),
                         ),
-                      ),
-                      Visibility(
-                        visible: customDescription != null,
-                        child: customDescription ?? AppSpacing.zero,
-                      ),
-                      Visibility(
-                        visible: onTap != null,
-                        child: InkWell(
+                      customDescription ?? AppSpacing.zero,
+                      if (onTap != null)
+                        InkWell(
                           onTap: onTap,
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
@@ -112,7 +104,6 @@ class AppAlertCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ),
                     ],
                   ),
           ),
@@ -149,7 +140,7 @@ class AppAlertCard extends StatelessWidget {
           size: AppSizes.s20,
         );
       default:
-        return leading ?? SizedBox();
+        return leading ?? AppSpacing.zero;
     }
   }
 

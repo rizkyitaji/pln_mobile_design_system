@@ -12,7 +12,8 @@ class AppInformationBottomSheet extends StatelessWidget {
       isFullScreen,
       centerTitle,
       centerDescription,
-      showDragHandle;
+      showDragHandle,
+      usePersistentSheet;
   final TextAlign? textAlign;
   final Widget? more, highlight, persistentSheet;
   final ButtonStyle? buttonStyle;
@@ -47,6 +48,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.onTapLink,
     this.loading,
     this.persistentSheet,
+    this.usePersistentSheet = true,
   });
 
   WrapAlignment _getWrapAlignment() {
@@ -198,44 +200,45 @@ class AppInformationBottomSheet extends StatelessWidget {
               ),
             ),
             AppSpacing.h16,
-            persistentSheet ??
-                AppPersistentSheet(
-                  child: useElevatedButton
-                      ? ElevatedButton(
-                          onPressed: !(loading ?? false)
-                              ? (onTap ?? () => context.safePop(true))
-                              : null,
-                          style: buttonStyle,
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppSizes.s10,
+            if (usePersistentSheet)
+              persistentSheet ??
+                  AppPersistentSheet(
+                    child: useElevatedButton
+                        ? ElevatedButton(
+                            onPressed: !(loading ?? false)
+                                ? (onTap ?? () => context.safePop(true))
+                                : null,
+                            style: buttonStyle,
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: AppSizes.s10,
+                                ),
+                                child: Text(
+                                  buttonText ?? 'Oke, Mengerti',
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
-                              child: Text(
-                                buttonText ?? 'Oke, Mengerti',
-                                textAlign: TextAlign.center,
+                            ),
+                          )
+                        : OutlinedButton(
+                            onPressed: !(loading ?? false)
+                                ? (onTap ?? () => context.safePop(true))
+                                : null,
+                            style: buttonStyle,
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: AppSizes.s10,
+                                ),
+                                child: Text(
+                                  buttonText ?? 'Oke, Mengerti',
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
                           ),
-                        )
-                      : OutlinedButton(
-                          onPressed: !(loading ?? false)
-                              ? (onTap ?? () => context.safePop(true))
-                              : null,
-                          style: buttonStyle,
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: AppSizes.s10,
-                              ),
-                              child: Text(
-                                buttonText ?? 'Oke, Mengerti',
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ),
-                        ),
-                ),
+                  ),
           ],
         ),
       ),
@@ -267,6 +270,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     bool showDragHandle = true,
     Function(String, String?, String)? onTapLink,
     Widget? persistentSheet,
+    bool usePersistentSheet = true,
   }) async {
     final information = await showModalBottomSheet<bool>(
       context: context,
@@ -291,6 +295,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         showDragHandle: showDragHandle,
         onTapLink: onTapLink,
         persistentSheet: persistentSheet,
+        usePersistentSheet: usePersistentSheet,
       ),
       isDismissible: isDismissible,
       enableDrag: isDraggable,

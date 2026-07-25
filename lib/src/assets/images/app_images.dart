@@ -107,6 +107,7 @@ abstract class AppImages {
   static const String backgroundHeaderCarbon = 'assets/images/png/backgrounds/background-header-carbon.png';
   static const String backgroundHeaderCharging = 'assets/images/png/backgrounds/background-header-charging.png';
   static const String backgroundHeaderChat = 'assets/images/png/backgrounds/background-header-chat.png';
+  static const String backgroundHeaderIconcash = 'assets/images/png/backgrounds/background-header-iconcash.png';
   static const String backgroundHeaderScan = 'assets/images/png/backgrounds/background-header-scan.png';
   static const String backgroundHeaderTile = 'assets/images/png/backgrounds/background-header-tile.png';
   static const String backgroundHeader = 'assets/images/png/backgrounds/background-header.png';
@@ -122,12 +123,14 @@ abstract class AppImages {
   static const String backgroundMarketplaceOpenMerchant = 'assets/images/png/backgrounds/background-marketplace-open-merchant.png';
   static const String backgroundMiniCardVehicle = 'assets/images/png/backgrounds/background-mini-card-vehicle.png';
   static const String backgroundOnboardingHomecharging = 'assets/images/png/backgrounds/background-onboarding-homecharging.png';
+  static const String backgroundPageBillPayment = 'assets/images/png/backgrounds/background-page-bill-payment.png';
   static const String backgroundPageChargingCompleted = 'assets/images/png/backgrounds/background-page-charging-completed.png';
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvDetail = 'assets/images/png/backgrounds/background-page-ev-detail.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
+  static const String backgroundPageIconcash = 'assets/images/png/backgrounds/background-page-iconcash.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundPageQueue = 'assets/images/png/backgrounds/background-page-queue.png';
   static const String backgroundPv = 'assets/images/png/backgrounds/background-pv.png';

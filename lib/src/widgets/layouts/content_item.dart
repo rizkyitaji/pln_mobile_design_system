@@ -168,11 +168,19 @@ class _AppContentItemState extends State<AppContentItem>
             ),
             Expanded(
               flex: widget.flex,
-              child: Text(
-                widget.value ?? '-',
-                textAlign: TextAlign.end,
-                style:
-                    widget.valueStyle ?? context.textTheme.bodyCaptionSemiBold,
+              child: Row(
+                spacing: AppSizes.s4,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    widget.value ?? '-',
+                    textAlign: TextAlign.end,
+                    style:
+                        widget.valueStyle ??
+                        context.textTheme.bodyCaptionSemiBold,
+                  ),
+                  if (valueTrailing != null) valueTrailing,
+                ],
               ),
             ),
           ],

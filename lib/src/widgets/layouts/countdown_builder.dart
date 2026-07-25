@@ -23,40 +23,51 @@ class AppCountdownBuilder extends StatefulWidget {
 
 class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
   bool _hasStopped = false;
-  bool _disposed = false;
 
   @override
-  void dispose() {
-    _disposed = true;
-    super.dispose();
+  void didUpdateWidget(covariant AppCountdownBuilder oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Jika timer berubah atau di-reset jadi null, reset flag _hasStopped
+    if (oldWidget.timer != widget.timer) {
+      _hasStopped = false;
+    }
   }
 
   void _triggerStop() {
-    if (_hasStopped || _disposed) return;
+    // Jika timer null, DILARANG TRIGGER onStop!
+    if (_hasStopped || !mounted || widget.timer == null) return;
     _hasStopped = true;
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!_disposed) widget.onStop?.call();
+      if (mounted && widget.timer != null) {
+        widget.onStop?.call();
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_disposed) return const SizedBox();
-
     final timer = widget.timer;
+
+    // Jika timer yg dipasang null, matikan widget & hilangkan dari tree
     if (timer == null) return const SizedBox();
+
+    final now = DateTime.now();
+    final remaining = timer.difference(now);
+
+    // Cek jika saat dibuka, timer memang sudah kedaluwarsa
+    if (remaining <= Duration.zero) {
+      _triggerStop();
+      return _countdown(hours: '00', minutes: '00', seconds: '00');
+    }
 
     return TimerBuilder.scheduled(
       [timer],
       builder: (context) {
-        if (_disposed) return const SizedBox();
+        final current = DateTime.now();
+        final currentRemaining = timer.difference(current);
 
-        final now = DateTime.now();
-        final remaining = timer.difference(now);
-        final stop = remaining <= Duration.zero;
-
-        if (stop) {
+        if (currentRemaining <= Duration.zero) {
           _triggerStop();
           return _countdown(hours: '00', minutes: '00', seconds: '00');
         }
@@ -65,10 +76,13 @@ class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
           const Duration(seconds: 1),
           alignment: Duration.zero,
           builder: (context) {
-            if (_disposed) return const SizedBox();
+            final periodicCurrent = DateTime.now();
+            final periodicRemaining = timer.difference(periodicCurrent);
 
-            final current = DateTime.now();
-            final periodicRemaining = timer.difference(current);
+            if (periodicRemaining <= Duration.zero) {
+              _triggerStop();
+              return _countdown(hours: '00', minutes: '00', seconds: '00');
+            }
 
             return _countdown(
               hours: periodicRemaining.format('hh'),

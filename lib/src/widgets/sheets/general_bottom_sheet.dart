@@ -40,9 +40,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
                     style: context.textTheme.bodyLargeSemiBold,
                   ),
                 ),
-                    if (showCloseButton) ...[
-                  AppBackButton(icon: AppAssets.iconClose),
-                    ],
+                if (showCloseButton) AppBackButton(icon: AppAssets.iconClose),
               ],
             ),
           ),

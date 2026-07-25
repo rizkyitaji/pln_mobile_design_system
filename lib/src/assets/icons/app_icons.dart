@@ -301,10 +301,11 @@ abstract class AppIcons {
   static const String iconMenuPvRooftop = 'assets/icons/svg/menu/icon-menu-pv-rooftop.svg';
   static const String iconMenuRec = 'assets/icons/svg/menu/icon-menu-rec.svg';
   static const String iconMenuSimulasiBiaya = 'assets/icons/svg/menu/icon-menu-simulasi-biaya.svg';
+  static const String iconMenuSpkluR2 = 'assets/icons/svg/menu/icon-menu-spklu-r2.svg';
   static const String iconMenuSpklu = 'assets/icons/svg/menu/icon-menu-spklu.svg';
   static const String iconMenuSplu = 'assets/icons/svg/menu/icon-menu-splu.svg';
+  static const String iconMenuTagihanListrik = 'assets/icons/svg/menu/icon-menu-tagihan-listrik.svg';
   static const String iconMenuTambahDayaSementara = 'assets/icons/svg/menu/icon-menu-tambah-daya-sementara.svg';
-  static const String iconMenuTitikPengisian = 'assets/icons/svg/menu/icon-menu-titik-pengisian.svg';
   static const String iconMenuTokenPembayaran = 'assets/icons/svg/menu/icon-menu-token-pembayaran.svg';
   static const String iconMenuTripPlanner = 'assets/icons/svg/menu/icon-menu-trip-planner.svg';
   static const String iconMenuTukarBaterai = 'assets/icons/svg/menu/icon-menu-tukar-baterai.svg';
