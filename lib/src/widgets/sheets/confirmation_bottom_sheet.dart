@@ -41,10 +41,13 @@ class AppConfirmationBottomSheet extends StatelessWidget {
             AppSpacing.h12,
           ],
           if (title != null) ...[
-            Text(
-              title ?? '',
-              textAlign: textAlign ?? TextAlign.center,
-              style: context.textTheme.headingSmall,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppSizes.s24),
+              child: Text(
+                title ?? '',
+                textAlign: textAlign ?? TextAlign.center,
+                style: context.textTheme.headingSmall,
+              ),
             ),
             AppSpacing.h8,
           ],

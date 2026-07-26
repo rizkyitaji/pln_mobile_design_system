@@ -4,7 +4,6 @@ export 'content_title.dart';
 export 'countdown_builder.dart';
 export 'dotted_line.dart';
 export 'empty_page.dart';
-export 'filter_chip.dart';
 export 'general_page.dart';
 export 'scanner_view.dart';
 export 'tab_bar.dart';

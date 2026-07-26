@@ -11,6 +11,7 @@ class AppContentItem extends StatefulWidget {
   final int flex;
   final List<Widget>? children;
   final bool initiallyExpanded;
+  final TextAlign? textAlign;
 
   const AppContentItem({
     super.key,
@@ -24,6 +25,7 @@ class AppContentItem extends StatefulWidget {
     this.type = ContentItemType.row,
     this.children,
     this.initiallyExpanded = false,
+    this.textAlign,
   });
 
   @override
@@ -174,7 +176,7 @@ class _AppContentItemState extends State<AppContentItem>
                 children: [
                   Text(
                     widget.value ?? '-',
-                    textAlign: TextAlign.end,
+                    textAlign: widget.textAlign ?? TextAlign.end,
                     style:
                         widget.valueStyle ??
                         context.textTheme.bodyCaptionSemiBold,

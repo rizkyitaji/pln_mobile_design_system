@@ -3,6 +3,7 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 
 class AppContentTitle extends StatelessWidget {
   final String text;
+  final String? tailText;
   final VoidCallback? onPressed;
   final EdgeInsetsGeometry padding;
   final Color? titleColor;
@@ -13,6 +14,7 @@ class AppContentTitle extends StatelessWidget {
     this.onPressed,
     this.padding = EdgeInsets.zero,
     this.titleColor,
+    this.tailText,
   });
 
   @override
@@ -29,15 +31,16 @@ class AppContentTitle extends StatelessWidget {
               ),
             ),
           ),
-          TextButton(
-            onPressed: onPressed,
-            style: TextButton.styleFrom(
-              padding: EdgeInsets.zero,
-              shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded4),
-              textStyle: context.textTheme.bodyMediumSemiBold,
+          if (onPressed != null)
+            TextButton(
+              onPressed: onPressed,
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded4),
+                textStyle: context.textTheme.bodyMediumSemiBold,
+              ),
+              child: Text(tailText ?? 'Lihat Semua'),
             ),
-            child: Text('Lihat Semua'),
-          ),
         ],
       ),
     );

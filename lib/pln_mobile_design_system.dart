@@ -18,6 +18,7 @@ export 'src/utils/helper/index.dart';
 
 export 'src/widgets/buttons/index.dart';
 export 'src/widgets/cards/index.dart';
+export 'src/widgets/chips/index.dart';
 export 'src/widgets/dialogs/index.dart';
 export 'src/widgets/inputs/index.dart';
 export 'src/widgets/images/index.dart';

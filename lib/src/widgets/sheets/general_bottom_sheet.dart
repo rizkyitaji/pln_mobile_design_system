@@ -71,6 +71,8 @@ class AppGeneralBottomSheet extends StatelessWidget {
 
   static Future<T?> show<T>(
     BuildContext context, {
+    bool isDismissable = true,
+    bool enableDrag = true,
     required String title,
     String? message,
     Widget? child,
@@ -82,8 +84,8 @@ class AppGeneralBottomSheet extends StatelessWidget {
   }) {
     return showModalBottomSheet<T>(
       context: context,
-      isDismissible: false,
-      enableDrag: false,
+      isDismissible: isDismissable,
+      enableDrag: enableDrag,
       isScrollControlled: true,
       builder: (context) {
         return AppGeneralBottomSheet(

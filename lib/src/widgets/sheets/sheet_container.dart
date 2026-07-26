@@ -7,6 +7,7 @@ class AppSheetContainer extends StatelessWidget {
   final List<Widget> children;
   final ScrollController? controller;
   final EdgeInsetsGeometry? padding;
+  final BorderRadiusGeometry? borderRadius;
   final bool showDragHandle, expand, bottomSafeArea, usePaddingBottom;
   final ScrollPhysics? physics;
   final Color? color;
@@ -24,6 +25,7 @@ class AppSheetContainer extends StatelessWidget {
     this.color,
     this.bottomSafeArea = true,
     this.usePaddingBottom = true,
+    this.borderRadius,
   });
 
   @override
@@ -31,7 +33,7 @@ class AppSheetContainer extends StatelessWidget {
     return Container(
       height: height,
       decoration: BoxDecoration(
-        borderRadius: AppRadius.topRounded12,
+        borderRadius: borderRadius ?? AppRadius.topRounded12,
         color: color ?? AppColors.background,
       ),
       child: SafeArea(

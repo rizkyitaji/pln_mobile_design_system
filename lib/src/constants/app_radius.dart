@@ -28,6 +28,8 @@ abstract class AppRadius {
       BorderRadius.vertical(top: Radius.circular(AppRadius.sm));
   static BorderRadius get topRounded16 =>
       BorderRadius.vertical(top: Radius.circular(AppRadius.md));
+  static BorderRadius get topRounded32 =>
+      BorderRadius.vertical(top: Radius.circular(AppRadius.xl));
   static BorderRadius get leftRounded4 =>
       BorderRadius.horizontal(left: Radius.circular(AppRadius.xxs));
 }

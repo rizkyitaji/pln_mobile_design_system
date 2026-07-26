@@ -6,6 +6,8 @@ class AppFilterChip extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final bool selected;
+  final EdgeInsetsGeometry? padding;
+  final BorderRadiusGeometry? borderRadius;
 
   const AppFilterChip({
     super.key,
@@ -13,6 +15,8 @@ class AppFilterChip extends StatelessWidget {
     required this.label,
     this.onPressed,
     this.selected = false,
+    this.padding,
+    this.borderRadius,
   });
 
   @override
@@ -20,12 +24,17 @@ class AppFilterChip extends StatelessWidget {
     return OutlinedButton.icon(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        padding: EdgeInsets.symmetric(
-          horizontal: AppSizes.s16,
-          vertical: AppSizes.s8,
-        ),
+        padding:
+            padding ??
+            EdgeInsets.symmetric(
+              horizontal: AppSizes.s16,
+              vertical: AppSizes.s8,
+            ),
         side: BorderSide(
           color: selected ? AppColors.borderPrimary : AppColors.border,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: borderRadius ?? AppRadius.rounded32,
         ),
         foregroundColor: selected
             ? AppColors.textPrimary
