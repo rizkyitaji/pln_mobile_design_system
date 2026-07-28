@@ -13,7 +13,6 @@ class AppLoadingMobiIndicator extends StatelessWidget {
         width: width,
         child: Column(
           children: <Widget>[
-            AppLoadingIndicator(),
             AppImage(
               asset: AppAssets.animationLoadingMobi,
               size: AppSizes.s100.scaleWidth,
