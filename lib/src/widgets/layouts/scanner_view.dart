@@ -21,7 +21,7 @@ class AppScannerView extends StatefulWidget {
 }
 
 class _AppScannerViewState extends State<AppScannerView>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late AnimationController _animationController;
   late Animation<double> _animation;
 
@@ -41,20 +41,43 @@ class _AppScannerViewState extends State<AppScannerView>
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
+
     _animationController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
     )..repeat(reverse: true);
+
     _animation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
   }
 
   @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (!_controller.value.isInitialized) return;
+
+    if (state == AppLifecycleState.inactive ||
+        state == AppLifecycleState.paused) {
+      _controller.stop();
+    } else if (state == AppLifecycleState.resumed) {
+      _controller.start();
+    }
+  }
+
+  @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _animationController.dispose();
-    _controller.dispose();
+    _stopAndDispose();
     super.dispose();
+  }
+
+  Future<void> _stopAndDispose() async {
+    try {
+      await _controller.stop();
+    } catch (_) {}
+    _controller.dispose();
   }
 
   @override

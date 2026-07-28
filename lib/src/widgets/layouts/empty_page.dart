@@ -7,7 +7,7 @@ class AppEmptyPage extends StatelessWidget {
   final VoidCallback? onPressed;
   final VoidCallback? onOutlinedPressed;
   final Widget? icon;
-  final bool? showButton;
+  final bool showTitle, showDescription;
   final Widget? customDescription;
 
   const AppEmptyPage({
@@ -19,10 +19,11 @@ class AppEmptyPage extends StatelessWidget {
     this.padding = EdgeInsets.zero,
     this.onPressed,
     this.icon,
-    this.showButton,
+    this.showTitle = true,
+    this.showDescription = true,
     this.onOutlinedPressed,
     this.outlinedText,
-    this.customDescription
+    this.customDescription,
   });
 
   @override
@@ -37,45 +38,49 @@ class AppEmptyPage extends StatelessWidget {
               asset: asset ?? AppAssets.imageIllustrationEmptyData,
               size: AppSizes.s224,
             ),
-            AppSpacing.h12,
-            Text(
-              title ?? 'Tidak dapat memuat data',
-              style: context.textTheme.headingSmall,
-              textAlign: TextAlign.center,
-            ),
-            AppSpacing.h8,            
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppSizes.s16),
-              child: customDescription ?? Text(
-                description ?? 'Silakan coba lagi dalam beberapa saat',
-                style: context.textTheme.bodyMedium,
+            if (showTitle) ...[
+              AppSpacing.h12,
+              Text(
+                title ?? 'Tidak dapat memuat data',
+                style: context.textTheme.headingSmall,
                 textAlign: TextAlign.center,
               ),
-            ),
-            AppSpacing.h24,
-            if (showButton ?? true) ...[
-              if (onPressed != null) ...[
-                AppSpacing.h24,
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: onPressed,
-                    label: Text(buttonText ?? 'Coba Lagi'),
-                    icon: icon,
-                  ),
+            ],
+            if (showDescription) ...[
+              AppSpacing.h8,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: AppSizes.s16),
+                child:
+                    customDescription ??
+                    Text(
+                      description ?? 'Silakan coba lagi dalam beberapa saat',
+                      style: context.textTheme.bodyMedium,
+                      textAlign: TextAlign.center,
+                    ),
+              ),
+            ],
+            AppSpacing.h8,
+            if (onPressed != null) ...[
+              AppSpacing.h16,
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: onPressed,
+                  label: Text(buttonText ?? 'Coba Lagi'),
+                  icon: icon,
                 ),
-              ],
-              if (onOutlinedPressed != null) ...[
-                AppSpacing.h16,
-                SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton.icon(
-                    onPressed: onOutlinedPressed,
-                    label: Text(outlinedText ?? 'Coba Lagi'),
-                    icon: icon,
-                  ),
+              ),
+            ],
+            if (onOutlinedPressed != null) ...[
+              AppSpacing.h16,
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: onOutlinedPressed,
+                  label: Text(outlinedText ?? 'Coba Lagi'),
+                  icon: icon,
                 ),
-              ],
+              ),
             ],
           ],
         ),

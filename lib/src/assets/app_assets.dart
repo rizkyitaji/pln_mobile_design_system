@@ -296,10 +296,11 @@ abstract class AppAssets {
   static const iconMenuPvRooftop = '$_basePath/${AppIcons.iconMenuPvRooftop}';
   static const iconMenuRec = '$_basePath/${AppIcons.iconMenuRec}';
   static const iconMenuSimulasiBiaya = '$_basePath/${AppIcons.iconMenuSimulasiBiaya}';
+  static const iconMenuSpkluR2 = '$_basePath/${AppIcons.iconMenuSpkluR2}';
   static const iconMenuSpklu = '$_basePath/${AppIcons.iconMenuSpklu}';
   static const iconMenuSplu = '$_basePath/${AppIcons.iconMenuSplu}';
+  static const iconMenuTagihanListrik = '$_basePath/${AppIcons.iconMenuTagihanListrik}';
   static const iconMenuTambahDayaSementara = '$_basePath/${AppIcons.iconMenuTambahDayaSementara}';
-  static const iconMenuTitikPengisian = '$_basePath/${AppIcons.iconMenuTitikPengisian}';
   static const iconMenuTokenPembayaran = '$_basePath/${AppIcons.iconMenuTokenPembayaran}';
   static const iconMenuTripPlanner = '$_basePath/${AppIcons.iconMenuTripPlanner}';
   static const iconMenuTukarBaterai = '$_basePath/${AppIcons.iconMenuTukarBaterai}';
@@ -407,6 +408,7 @@ abstract class AppAssets {
   static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
   static const imageBackgroundHeaderChat = '$_basePath/${AppImages.backgroundHeaderChat}';
+  static const imageBackgroundHeaderIconcash = '$_basePath/${AppImages.backgroundHeaderIconcash}';
   static const imageBackgroundHeaderScan = '$_basePath/${AppImages.backgroundHeaderScan}';
   static const imageBackgroundHeaderTile = '$_basePath/${AppImages.backgroundHeaderTile}';
   static const imageBackgroundHeader = '$_basePath/${AppImages.backgroundHeader}';
@@ -422,12 +424,14 @@ abstract class AppAssets {
   static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
   static const imageBackgroundMiniCardVehicle = '$_basePath/${AppImages.backgroundMiniCardVehicle}';
   static const imageBackgroundOnboardingHomecharging = '$_basePath/${AppImages.backgroundOnboardingHomecharging}';
+  static const imageBackgroundPageBillPayment = '$_basePath/${AppImages.backgroundPageBillPayment}';
   static const imageBackgroundPageChargingCompleted = '$_basePath/${AppImages.backgroundPageChargingCompleted}';
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvDetail = '$_basePath/${AppImages.backgroundPageEvDetail}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
+  static const imageBackgroundPageIconcash = '$_basePath/${AppImages.backgroundPageIconcash}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundPageQueue = '$_basePath/${AppImages.backgroundPageQueue}';
   static const imageBackgroundPv = '$_basePath/${AppImages.backgroundPv}';

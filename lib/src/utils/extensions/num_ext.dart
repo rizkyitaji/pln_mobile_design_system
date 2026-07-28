@@ -23,7 +23,7 @@ extension NumExt on num? {
     return toString().padLeft(2, '0');
   }
 
-  String toIDR({String symbol = 'Rp '}) {
+  String toIDR({String symbol = 'Rp'}) {
     if (this == null) return '${symbol}0';
 
     return NumberFormat('$symbol#,###.##', "id_ID").format(this);

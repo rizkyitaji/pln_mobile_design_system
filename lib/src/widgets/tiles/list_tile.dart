@@ -12,6 +12,7 @@ class AppListTile extends StatelessWidget {
   final Color? backgroundColor;
   final BoxBorder? border;
   final BorderRadiusGeometry? borderRadius;
+  final EdgeInsetsGeometry? padding;
   final bool selected;
 
   const AppListTile({
@@ -26,6 +27,7 @@ class AppListTile extends StatelessWidget {
     this.subtitleTextStyle,
     this.border,
     this.borderRadius,
+    this.padding,
     this.selected = false,
   });
 
@@ -39,6 +41,7 @@ class AppListTile extends StatelessWidget {
             color: selected ? AppColors.borderPrimary : AppColors.border,
             width: selected ? 2 : 1,
           ),
+      padding: padding,
       borderRadius: borderRadius,
       child: Row(
         spacing: AppSizes.s12,
