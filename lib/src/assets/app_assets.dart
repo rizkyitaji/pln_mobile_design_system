@@ -323,6 +323,7 @@ abstract class AppAssets {
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
   static const imageIllustrationEmptyMotorcycle = '$_basePath/${AppImages.illustrationEmptyMotorcycle}';
   static const imageIllustrationEmptyStateElectricity = '$_basePath/${AppImages.illustrationEmptyStateElectricity}';
+  static const imageIllustrationEmptyStateHistory = '$_basePath/${AppImages.illustrationEmptyStateHistory}';
   static const imageIllustrationEmptyStateSelectIdpel = '$_basePath/${AppImages.illustrationEmptyStateSelectIdpel}';
   static const imageIllustrationEmptyStateSpklu = '$_basePath/${AppImages.illustrationEmptyStateSpklu}';
   static const imageIllustrationEmptyStateWishlist = '$_basePath/${AppImages.illustrationEmptyStateWishlist}';

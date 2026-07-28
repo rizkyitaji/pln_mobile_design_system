@@ -20,6 +20,7 @@ abstract class AppImages {
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
   static const String illustrationEmptyMotorcycle = 'assets/images/png/illustration-empty-motorcycle.png';
   static const String illustrationEmptyStateElectricity = 'assets/images/png/illustration-empty-state-electricity.png';
+  static const String illustrationEmptyStateHistory = 'assets/images/png/illustration-empty-state-history.png';
   static const String illustrationEmptyStateSelectIdpel = 'assets/images/png/illustration-empty-state-select-idpel.png';
   static const String illustrationEmptyStateSpklu = 'assets/images/png/illustration-empty-state-spklu.png';
   static const String illustrationEmptyStateWishlist = 'assets/images/png/illustration-empty-state-wishlist.png';
