@@ -9,6 +9,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
   final Widget? confirmIcon, cancelIcon;
   final bool canPop, useColumn, centerDescription, reverseButton;
   final TextAlign? textAlign;
+  final Function(String, String?, String)? onTapLink;
 
   const AppConfirmationBottomSheet({
     super.key,
@@ -28,6 +29,7 @@ class AppConfirmationBottomSheet extends StatelessWidget {
     this.centerDescription = false,
     this.reverseButton = false,
     this.textAlign,
+    this.onTapLink,
   });
 
   @override
@@ -57,24 +59,32 @@ class AppConfirmationBottomSheet extends StatelessWidget {
               visible: centerDescription,
               replacement: MarkdownBody(
                 data: description ?? '',
-                styleSheet: MarkdownStyleSheet.fromTheme(
-                  ThemeData(
-                    textTheme: TextTheme(
-                      bodyMedium: context.textTheme.bodyMedium,
-                    ),
+                styleSheet: MarkdownStyleSheet(
+                  textAlign: WrapAlignment.center,
+                  p: context.textTheme.bodyMedium,
+                  code: context.textTheme.bodyMedium.copyWith(
+                    color: const Color(0xFFEF476F),
                   ),
-                ).copyWith(textAlign: WrapAlignment.center),
+                  a: context.textTheme.bodyMedium.copyWith(
+                    color: AppColors.textPrimary,
+                  ),
+                ),
+                onTapLink: onTapLink,
               ),
               child: Center(
                 child: MarkdownBody(
                   data: description ?? '',
-                  styleSheet: MarkdownStyleSheet.fromTheme(
-                    ThemeData(
-                      textTheme: TextTheme(
-                        bodyMedium: context.textTheme.bodyMedium,
-                      ),
+                  styleSheet: MarkdownStyleSheet(
+                    textAlign: WrapAlignment.center,
+                    p: context.textTheme.bodyMedium,
+                    code: context.textTheme.bodyMedium.copyWith(
+                      color: const Color(0xFFEF476F),
                     ),
-                  ).copyWith(textAlign: WrapAlignment.center),
+                    a: context.textTheme.bodyMedium.copyWith(
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                  onTapLink: onTapLink,
                 ),
               ),
             ),
