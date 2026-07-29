@@ -153,7 +153,7 @@ class AppInformationBottomSheet extends StatelessWidget {
                             padding: HtmlPaddings.zero,
                             textAlign: textAlign ?? TextAlign.center,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color: AppColors.textBody,
                             fontSize: FontSize.medium,
                             lineHeight: LineHeight.number(1.3),
                           ),

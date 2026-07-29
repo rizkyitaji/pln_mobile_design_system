@@ -310,6 +310,7 @@ abstract class AppAssets {
   // --- AppImages Mapping ---
   static const imageBannerFaq = '$_basePath/${AppImages.bannerFaq}';
   static const imageIllustrationBannerConfirmation = '$_basePath/${AppImages.illustrationBannerConfirmation}';
+  static const imageIllustrationBlockLocationGeneral = '$_basePath/${AppImages.illustrationBlockLocationGeneral}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
   static const imageIllustrationConfirmationGeneral = '$_basePath/${AppImages.illustrationConfirmationGeneral}';
   static const imageIllustrationConnectorInitialized = '$_basePath/${AppImages.illustrationConnectorInitialized}';
@@ -340,9 +341,11 @@ abstract class AppAssets {
   static const imageIllustrationKwhMeter = '$_basePath/${AppImages.illustrationKwhMeter}';
   static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
+  static const imageIllustrationMaintenanceGeneral = '$_basePath/${AppImages.illustrationMaintenanceGeneral}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
   static const imageIllustrationNikNotRegistered = '$_basePath/${AppImages.illustrationNikNotRegistered}';
+  static const imageIllustrationNoInternetGeneral = '$_basePath/${AppImages.illustrationNoInternetGeneral}';
   static const imageIllustrationOnBoardingLpv1 = '$_basePath/${AppImages.illustrationOnBoardingLpv1}';
   static const imageIllustrationOnBoardingLpv2 = '$_basePath/${AppImages.illustrationOnBoardingLpv2}';
   static const imageIllustrationOnBoardingLpv3 = '$_basePath/${AppImages.illustrationOnBoardingLpv3}';
@@ -371,6 +374,7 @@ abstract class AppAssets {
   static const imageIllustrationUnactivatedNfc = '$_basePath/${AppImages.illustrationUnactivatedNfc}';
   static const imageIllustrationUnsupportedCard = '$_basePath/${AppImages.illustrationUnsupportedCard}';
   static const imageIllustrationUnsupportedNfc = '$_basePath/${AppImages.illustrationUnsupportedNfc}';
+  static const imageIllustrationUpdateAppsGeneral = '$_basePath/${AppImages.illustrationUpdateAppsGeneral}';
   static const imageIllustrationVerificationEmail = '$_basePath/${AppImages.illustrationVerificationEmail}';
   static const imageIllustrationWarningCard = '$_basePath/${AppImages.illustrationWarningCard}';
   static const imageIllustrationWarningMotorcycle = '$_basePath/${AppImages.illustrationWarningMotorcycle}';
