@@ -163,7 +163,9 @@ class AppCoachMarkStepper extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      stepProgressText,
+                      currentStep == 0 && totalSteps == 0
+                          ? ''
+                          : stepProgressText,
                       textScaler: TextScaler.noScaling,
                       style: context.textTheme.bodySmallMedium,
                     ),

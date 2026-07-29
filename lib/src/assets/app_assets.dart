@@ -39,6 +39,7 @@ abstract class AppAssets {
   static const iconEyeOff = '$_basePath/${AppIcons.iconEyeOff}';
   static const iconEye = '$_basePath/${AppIcons.iconEye}';
   static const iconFood = '$_basePath/${AppIcons.iconFood}';
+  static const iconForum = '$_basePath/${AppIcons.iconForum}';
   static const iconGreenEnergy1 = '$_basePath/${AppIcons.iconGreenEnergy1}';
   static const iconGreenEnergy = '$_basePath/${AppIcons.iconGreenEnergy}';
   static const iconHandClick = '$_basePath/${AppIcons.iconHandClick}';
