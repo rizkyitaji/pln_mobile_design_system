@@ -38,6 +38,8 @@ abstract class AppAssets {
   static const iconEnergy = '$_basePath/${AppIcons.iconEnergy}';
   static const iconEyeOff = '$_basePath/${AppIcons.iconEyeOff}';
   static const iconEye = '$_basePath/${AppIcons.iconEye}';
+  static const iconFacilityDefault = '$_basePath/${AppIcons.iconFacilityDefault}';
+  static const iconFacilityLounge = '$_basePath/${AppIcons.iconFacilityLounge}';
   static const iconFood = '$_basePath/${AppIcons.iconFood}';
   static const iconForum = '$_basePath/${AppIcons.iconForum}';
   static const iconGreenEnergy1 = '$_basePath/${AppIcons.iconGreenEnergy1}';
