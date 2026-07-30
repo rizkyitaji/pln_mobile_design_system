@@ -50,6 +50,7 @@ abstract class AppAssets {
   static const iconMoreVertical = '$_basePath/${AppIcons.iconMoreVertical}';
   static const iconMushola = '$_basePath/${AppIcons.iconMushola}';
   static const iconNfc = '$_basePath/${AppIcons.iconNfc}';
+  static const iconOfficerLocation = '$_basePath/${AppIcons.iconOfficerLocation}';
   static const iconPemadaman = '$_basePath/${AppIcons.iconPemadaman}';
   static const iconPlug2 = '$_basePath/${AppIcons.iconPlug2}';
   static const iconPlus = '$_basePath/${AppIcons.iconPlus}';
