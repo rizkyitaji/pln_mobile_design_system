@@ -6,6 +6,7 @@ class AppChoiceChip extends StatelessWidget {
   final String label;
   final Function(bool)? onSelected;
   final Widget? leading;
+  final bool useTransparentBackground;
 
   const AppChoiceChip({
     super.key,
@@ -13,6 +14,7 @@ class AppChoiceChip extends StatelessWidget {
     required this.label,
     this.onSelected,
     this.leading,
+    this.useTransparentBackground = false,
   });
 
   @override
@@ -24,10 +26,18 @@ class AppChoiceChip extends StatelessWidget {
         vertical: AppSizes.s8,
       ),
       border: Border.all(
-        color: selected ? AppColors.borderPrimary : AppColors.border,
+        color: selected
+            ? AppColors.borderPrimary
+            : useTransparentBackground
+            ? AppColors.borderOnColor.withValues(alpha: 0.2)
+            : AppColors.border,
       ),
       borderRadius: AppRadius.rounded32,
-      color: selected ? AppColors.primarySubtle : AppColors.background,
+      color: selected
+          ? AppColors.primarySubtle
+          : useTransparentBackground
+          ? AppColors.transparent
+          : AppColors.background,
       child: Row(
         spacing: AppSizes.s8,
         mainAxisSize: MainAxisSize.min,
@@ -36,7 +46,11 @@ class AppChoiceChip extends StatelessWidget {
           Text(
             label,
             style: context.textTheme.bodyCaptionSemiBold.copyWith(
-              color: selected ? AppColors.textPrimary : AppColors.textCaption,
+              color: selected
+                  ? AppColors.textPrimary
+                  : useTransparentBackground
+                  ? AppColors.white
+                  : AppColors.textCaption,
             ),
           ),
         ],
