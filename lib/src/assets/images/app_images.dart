@@ -37,6 +37,7 @@ abstract class AppImages {
   static const String illustrationLiveChat = 'assets/images/png/illustration-live-chat.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
   static const String illustrationMaintenanceGeneral = 'assets/images/png/illustration-maintenance-general.png';
+  static const String illustrationMaintenanceListriqu = 'assets/images/png/illustration-maintenance-listriqu.png';
   static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationMascotHalo = 'assets/images/png/illustration-mascot-halo.png';
   static const String illustrationNikNotRegistered = 'assets/images/png/illustration-nik-not-registered.png';

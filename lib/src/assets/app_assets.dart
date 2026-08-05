@@ -343,6 +343,7 @@ abstract class AppAssets {
   static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
   static const imageIllustrationMaintenanceGeneral = '$_basePath/${AppImages.illustrationMaintenanceGeneral}';
+  static const imageIllustrationMaintenanceListriqu = '$_basePath/${AppImages.illustrationMaintenanceListriqu}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
   static const imageIllustrationNikNotRegistered = '$_basePath/${AppImages.illustrationNikNotRegistered}';
