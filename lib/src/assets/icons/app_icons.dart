@@ -31,6 +31,8 @@ abstract class AppIcons {
   static const String iconEnergy = 'assets/icons/svg/icon-energy.svg';
   static const String iconEyeOff = 'assets/icons/svg/icon-eye-off.svg';
   static const String iconEye = 'assets/icons/svg/icon-eye.svg';
+  static const String iconFacilityDefault = 'assets/icons/svg/icon-facility-default.svg';
+  static const String iconFacilityLounge = 'assets/icons/svg/icon-facility-lounge.svg';
   static const String iconFood = 'assets/icons/svg/icon-food.svg';
   static const String iconForum = 'assets/icons/svg/icon-forum.svg';
   static const String iconGreenEnergy1 = 'assets/icons/svg/icon-green-energy-1.svg';
@@ -278,8 +280,6 @@ abstract class AppIcons {
   static const String iconThropyColored = 'assets/icons/svg/colored/icon-thropy.svg';
   static const String iconTileComplaintHistoryColored = 'assets/icons/svg/colored/icon-tile-complaint-history.svg';
   static const String iconUserColored = 'assets/icons/svg/colored/icon-user.svg';
-  static const String iconVerificationColored = 'assets/icons/svg/colored/icon-verification.svg';
-  static const String iconVoucherColored = 'assets/icons/svg/colored/icon-voucher.svg';
   static const String iconWalletColored = 'assets/icons/svg/colored/icon-wallet.svg';
   static const String iconWhatsappColored = 'assets/icons/svg/colored/icon-whatsapp-colored.svg';
 
