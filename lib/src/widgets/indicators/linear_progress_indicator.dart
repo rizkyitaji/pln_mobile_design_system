@@ -35,15 +35,17 @@ class AppLinearProgressIndicator extends StatelessWidget {
 
           return Align(
             alignment: Alignment.centerLeft,
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-              width: progressWidth,
-              height: minHeight,
-              decoration: BoxDecoration(
-                color: gradient != null ? null : color ?? AppColors.primary,
-                gradient: gradient,
-                borderRadius: borderRadius,
+            child: ClipRRect(
+              borderRadius: borderRadius,
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                width: progressWidth,
+                height: minHeight,
+                decoration: BoxDecoration(
+                  color: gradient != null ? null : color ?? AppColors.primary,
+                  gradient: gradient,
+                ),
               ),
             ),
           );
