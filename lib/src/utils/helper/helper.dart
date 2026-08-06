@@ -221,6 +221,7 @@ class AppHelper {
       msg: '$label berhasil disalin',
       position: AppSnackBarPosition.top,
       type: AppSnackBarType.success,
+      height: kToolbarHeight,
     );
   }
 
