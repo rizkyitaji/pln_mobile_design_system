@@ -119,23 +119,25 @@ class AppInstallationHistoryTile extends StatelessWidget {
                   ),
                 ],
               ),
-              AppSpacing.h8,
-              Row(
-                children: [
-                  AppImage(
-                    asset: AppAssets.iconTagihanOutlined,
-                    size: AppSizes.s16,
-                    color: AppColors.icon,
-                  ),
-                  AppSpacing.w8,
-                  Expanded(
-                    child: Text(
-                      amount.toIDR(),
-                      style: context.textTheme.bodyCaptionMedium,
+              if (amount != null) ...[
+                AppSpacing.h8,
+                Row(
+                  children: [
+                    AppImage(
+                      asset: AppAssets.iconTagihanOutlined,
+                      size: AppSizes.s16,
+                      color: AppColors.icon,
                     ),
-                  ),
-                ],
-              ),
+                    AppSpacing.w8,
+                    Expanded(
+                      child: Text(
+                        amount.toIDR(),
+                        style: context.textTheme.bodyCaptionMedium,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ],
           ),
 
