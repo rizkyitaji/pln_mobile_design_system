@@ -4,6 +4,7 @@ abstract class AppImages {
 
   // Group: PNG
   static const String bannerFaq = 'assets/images/png/banner-faq.png';
+  static const String flagIndonesia = 'assets/images/png/flag-indonesia.png';
   static const String illustrationBlockLocationGeneral = 'assets/images/png/illustration-block-location-general.png';
   static const String illustrationCarGeneral = 'assets/images/png/illustration-car-general.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';

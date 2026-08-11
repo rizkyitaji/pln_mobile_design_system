@@ -75,7 +75,7 @@ class _AppDatePickerSheetState extends State<AppDatePickerSheet> {
     final firstOfMonth = DateTime(_focusedMonth.year, _focusedMonth.month, 1);
     final startOffset = (firstOfMonth.weekday + 6) % 7; // Monday as first day
     final startDate = firstOfMonth.subtract(Duration(days: startOffset));
-    return List.generate(42, (index) => startDate.add(Duration(days: index)));
+    return List.generate(35, (index) => startDate.add(Duration(days: index)));
   }
 
   void _onDateTap(DateTime date) {
@@ -188,9 +188,7 @@ class _AppDatePickerSheetState extends State<AppDatePickerSheet> {
                         child: Text(
                           '${date.day}',
                           style: textTheme.bodyLarge?.copyWith(
-                            color: !inMonth
-                                ? AppColors.textDisabled
-                                : !selectable
+                            color: (!inMonth || !selectable)
                                 ? AppColors.textOnDisabled
                                 : isSelected
                                 ? AppColors.textOnColorHeading

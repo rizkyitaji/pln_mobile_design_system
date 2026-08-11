@@ -196,9 +196,7 @@ class _AppDatePickerSheetState extends State<AppDatePickerSheet> {
                   child: Text(
                     '${date.day}',
                     style: textTheme.bodyLarge?.copyWith(
-                      color: !inMonth
-                          ? AppColors.textDisabled
-                          : !selectable
+                      color: (!inMonth || !selectable)
                           ? AppColors.textOnDisabled
                           : selected
                           ? AppColors.textOnColorHeading
