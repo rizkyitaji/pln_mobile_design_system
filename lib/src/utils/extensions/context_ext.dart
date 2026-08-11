@@ -21,6 +21,8 @@ extension ContextExt on BuildContext {
   bool get isPortrait => orientation == Orientation.portrait;
   bool get isLandscape => orientation == Orientation.landscape;
 
+  double get devicePixelRatio => mediaQuery.devicePixelRatio;
+
   double get textScale => PlatformDispatcher.instance.textScaleFactor;
 
   AppTextTheme get textTheme =>

@@ -174,12 +174,14 @@ class _AppContentItemState extends State<AppContentItem>
                 spacing: AppSizes.s4,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    widget.value ?? '-',
-                    textAlign: widget.textAlign ?? TextAlign.end,
-                    style:
-                        widget.valueStyle ??
-                        context.textTheme.bodyCaptionSemiBold,
+                  Expanded(
+                    child: Text(
+                      widget.value ?? '-',
+                      textAlign: widget.textAlign ?? TextAlign.end,
+                      style:
+                          widget.valueStyle ??
+                          context.textTheme.bodyCaptionSemiBold,
+                    ),
                   ),
                   if (valueTrailing != null) valueTrailing,
                 ],
