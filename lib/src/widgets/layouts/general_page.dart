@@ -78,100 +78,116 @@ class AppGeneralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: topSafeArea,
-      bottom: bottomSafeArea ?? useSafeArea,
-      left: leftSafeArea ?? useSafeArea,
-      right: rightSafeArea ?? useSafeArea,
-      child: Scaffold(
-        extendBodyBehindAppBar: extendBodyBehindAppBar,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          titleSpacing: titleSpacing,
-          leading:
-              leadingAppBar ??
-              (automaticallyImplyLeading
-                  ? AppBackButton(
-                      color: backButtonColor,
-                      icon: backButtonIcon,
-                      onPressed: onBackPressed,
-                    )
-                  : null),
-          backgroundColor: appBarColor,
-          title: titleAppBar ?? Text(title ?? ''),
-          titleTextStyle: context.textTheme.headingSmall.copyWith(
-            color: titleColor,
-          ),
-          bottom: bottomAppBar,
-          actions: actionsAppBar,
-          flexibleSpace: flexibleSpace,
+    return Scaffold(
+      extendBodyBehindAppBar: extendBodyBehindAppBar,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        titleSpacing: titleSpacing,
+        leading:
+            leadingAppBar ??
+            (automaticallyImplyLeading
+                ? AppBackButton(
+                    color: backButtonColor,
+                    icon: backButtonIcon,
+                    onPressed: onBackPressed,
+                  )
+                : null),
+        backgroundColor: appBarColor,
+        title: titleAppBar ?? Text(title ?? ''),
+        titleTextStyle: context.textTheme.headingSmall.copyWith(
+          color: titleColor,
         ),
-        backgroundColor: backgroundColor,
-        floatingActionButton: floatingActionButton,
-        floatingActionButtonLocation: floatingActionButtonLocation,
-        body: Stack(
-          children: [
-            Visibility(
-              visible: backgroundNetworkImage != null,
-              replacement: Visibility(
-                visible: backgroundImage != null,
-                child: AppImage(
-                  asset: backgroundImage ?? '',
-                  width: double.infinity,
-                  height: backgroundImageHeight,
-                  fit: BoxFit.fill,
-                  size: null,
-                ),
-              ),
-              child: AppNetworkImage(
-                url: backgroundNetworkImage,
+        bottom: bottomAppBar,
+        actions: actionsAppBar,
+        flexibleSpace: flexibleSpace,
+      ),
+      backgroundColor: backgroundColor,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
+      body: Stack(
+        children: [
+          Visibility(
+            visible: backgroundNetworkImage != null,
+            replacement: Visibility(
+              visible: backgroundImage != null,
+              child: AppImage(
+                asset: backgroundImage ?? '',
                 width: double.infinity,
                 height: backgroundImageHeight,
-                errorImage: backgroundImage,
                 fit: BoxFit.fill,
+                size: null,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                top:
-                    paddingTop ??
-                    (extendBodyBehindAppBar
-                        ? context.paddingTop + kToolbarHeight
-                        : 0),
+            child: AppNetworkImage(
+              url: backgroundNetworkImage,
+              width: double.infinity,
+              height: backgroundImageHeight,
+              errorImage: backgroundImage,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top:
+                  paddingTop ??
+                  (extendBodyBehindAppBar
+                      ? context.paddingTop + kToolbarHeight
+                      : 0),
+            ),
+            child: Visibility(
+              visible: onRefresh != null,
+              replacement: SafeArea(
+                top: topSafeArea,
+                bottom: bottomSafeArea ?? useSafeArea,
+                left: leftSafeArea ?? useSafeArea,
+                right: rightSafeArea ?? useSafeArea,
+                child: _content,
               ),
-              child: Visibility(
-                visible: onRefresh != null,
-                replacement: _content,
-                child: AppRefreshIndicator(
-                  onRefresh: onRefresh != null ? onRefresh! : () async {},
+              child: AppRefreshIndicator(
+                onRefresh: onRefresh != null ? onRefresh! : () async {},
+                child: SafeArea(
+                  top: topSafeArea,
+                  bottom: bottomSafeArea ?? useSafeArea,
+                  left: leftSafeArea ?? useSafeArea,
+                  right: rightSafeArea ?? useSafeArea,
                   child: _content,
                 ),
               ),
             ),
-            Visibility(
-              visible: children != null,
-              child: DraggableScrollableSheet(
-                initialChildSize: initialChildSize ?? 0.2,
-                minChildSize: minChildSize ?? 0.2,
-                maxChildSize: maxChildSize ?? 0.88,
-                builder: (context, scrollController) {
-                  return AppSheetContainer(
-                    expand: true,
-                    physics: physics,
-                    padding:
-                        padding ??
-                        EdgeInsets.symmetric(horizontal: AppSizes.s16),
-                    showDragHandle: showDragHandle,
-                    controller: scrollController,
-                    children: children ?? [],
-                  );
-                },
+          ),
+          Visibility(
+            visible: children != null,
+            child: DraggableScrollableSheet(
+              initialChildSize: initialChildSize ?? 0.2,
+              minChildSize: minChildSize ?? 0.2,
+              maxChildSize: maxChildSize ?? 0.88,
+              builder: (context, scrollController) {
+                return AppSheetContainer(
+                  expand: true,
+                  physics: physics,
+                  padding:
+                      padding ?? EdgeInsets.symmetric(horizontal: AppSizes.s16),
+                  showDragHandle: showDragHandle,
+                  controller: scrollController,
+                  children: children ?? [],
+                );
+              },
+            ),
+          ),
+          if (persistentSheet != null)
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: SafeArea(
+                top: topSafeArea,
+                bottom: bottomSafeArea ?? useSafeArea,
+                left: leftSafeArea ?? useSafeArea,
+                right: rightSafeArea ?? useSafeArea,
+                child: persistentSheet!,
               ),
             ),
-            if (persistentSheet != null)
-              Positioned(bottom: 0, left: 0, right: 0, child: persistentSheet!),
-          ],
-        ),
+        ],
       ),
     );
   }
