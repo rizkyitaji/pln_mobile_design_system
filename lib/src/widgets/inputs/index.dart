@@ -7,6 +7,7 @@ export 'fields/rounded_text_form_field.dart';
 export 'fields/upload_field.dart';
 export 'fields/dropdown_select_field.dart';
 export 'fields/dropdown_outline.dart';
+export 'fields/phone_text_form_field.dart';
 export 'option_card.dart';
 export 'radio_button.dart';
 export 'yesno_card.dart';

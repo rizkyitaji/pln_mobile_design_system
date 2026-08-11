@@ -310,6 +310,7 @@ abstract class AppAssets {
 
   // --- AppImages Mapping ---
   static const imageBannerFaq = '$_basePath/${AppImages.bannerFaq}';
+  static const imageFlagIndonesia = '$_basePath/${AppImages.flagIndonesia}';
   static const imageIllustrationBlockLocationGeneral = '$_basePath/${AppImages.illustrationBlockLocationGeneral}';
   static const imageIllustrationCarGeneral = '$_basePath/${AppImages.illustrationCarGeneral}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
