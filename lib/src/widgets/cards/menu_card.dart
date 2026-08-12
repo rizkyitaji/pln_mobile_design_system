@@ -85,6 +85,7 @@ class AppMenuCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: context.textTheme.bodyCaptionMedium.copyWith(
               color: AppColors.textHeading,
+              letterSpacing: -0.2
             ),
           ),
         ],

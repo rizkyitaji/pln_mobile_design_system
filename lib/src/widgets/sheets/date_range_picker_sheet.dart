@@ -315,11 +315,13 @@ class _AppDateRangePickerSheetState extends State<AppDateRangePickerSheet> {
                     child: Text(
                       '${date.day}',
                       style: textTheme.bodyLarge?.copyWith(
-                        color: (!inMonth || !selectable)
-                            ? AppColors.textOnDisabled
-                            : isSelected
-                                ? AppColors.textOnColorHeading
-                                : AppColors.textHeading,
+                        color: isSelected
+                            ? AppColors.textOnColorHeading
+                            : !selectable
+                                ? AppColors.textOnDisabled
+                                : !inMonth
+                                    ? AppColors.textDisabled
+                                    : AppColors.textHeading,
                         fontWeight:
                             isSelected ? FontWeight.w700 : FontWeight.w500,
                       ),
