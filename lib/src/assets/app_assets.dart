@@ -77,6 +77,7 @@ abstract class AppAssets {
   static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
   static const iconAstra = '$_basePath/${AppIcons.iconAstra}';
   static const iconBlueCharge = '$_basePath/${AppIcons.iconBlueCharge}';
+  static const iconCazgo = '$_basePath/${AppIcons.iconCazgo}';
   static const iconChargePlus = '$_basePath/${AppIcons.iconChargePlus}';
   static const iconDayaGreen = '$_basePath/${AppIcons.iconDayaGreen}';
   static const iconHvt = '$_basePath/${AppIcons.iconHvt}';

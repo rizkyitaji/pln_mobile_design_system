@@ -7,7 +7,7 @@ class AppMenuCard extends StatelessWidget {
   final Color? color;
   final String? badgeText;
   final Color? badgeColor;
-  final Widget? badge;
+  final Widget? badge, child;
   final double? iconSize;
 
   const AppMenuCard({
@@ -20,6 +20,7 @@ class AppMenuCard extends StatelessWidget {
     this.badgeColor,
     this.badge,
     this.iconSize,
+    this.child,
   });
 
   @override
@@ -41,7 +42,12 @@ class AppMenuCard extends StatelessWidget {
                   borderRadius: AppRadius.rounded12,
                 ),
                 alignment: Alignment.center,
-                child: AppImage(asset: asset, size: iconSize ?? AppSizes.s56),
+                child: Column(
+                  children: [
+                    AppImage(asset: asset, size: iconSize ?? AppSizes.s56),
+                    child ?? AppSpacing.zero,
+                  ],
+                ),
               ),
               if (badge != null)
                 Positioned(
@@ -85,7 +91,7 @@ class AppMenuCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: context.textTheme.bodyCaptionMedium.copyWith(
               color: AppColors.textHeading,
-              letterSpacing: -0.2
+              letterSpacing: -0.2,
             ),
           ),
         ],

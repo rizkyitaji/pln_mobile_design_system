@@ -64,9 +64,18 @@ class AppSheetContainer extends StatelessWidget {
                 replacement: _listView,
                 child: Expanded(child: _listView),
               ),
-              child: Padding(
-                padding: padding ?? EdgeInsets.zero,
-                child: child ?? const SizedBox(),
+              child: Visibility(
+                visible: expand,
+                replacement: Padding(
+                  padding: padding ?? EdgeInsets.zero,
+                  child: child ?? const SizedBox(),
+                ),
+                child: Expanded(
+                  child: Padding(
+                    padding: padding ?? EdgeInsets.zero,
+                    child: child ?? const SizedBox(),
+                  ),
+                ),
               ),
             ),
             if (usePaddingBottom) context.viewInsetsBottom(AppSizes.s16),
