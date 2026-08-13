@@ -32,9 +32,23 @@ class AliasNameInputFormatter extends TextInputFormatter {
       return _regExp.hasMatch(char);
     }).join();
 
+    final formatted = _toTitleCase(filtered);
+
     return TextEditingValue(
-      text: filtered,
+      text: formatted,
       selection: TextSelection.collapsed(offset: filtered.length),
     );
+  }
+
+  String _toTitleCase(String text) {
+    if (text.isEmpty) return text;
+
+    return text
+        .split(' ')
+        .map((word) {
+          if (word.isEmpty) return word;
+          return '${word[0].toUpperCase()}${word.substring(1).toLowerCase()}';
+        })
+        .join(' ');
   }
 }
