@@ -28,7 +28,9 @@ class AppCarouselIndicator extends StatelessWidget {
               right: AppSizes.s4,
             ),
             decoration: BoxDecoration(
-              color: color ?? AppColors.primaryPressed,
+              color: (color ?? AppColors.primaryPressed).withValues(
+                alpha: index == currentIndex ? 1 : 0.6,
+              ),
               borderRadius: AppRadius.rounded32,
             ),
           );
