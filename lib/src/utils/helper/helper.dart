@@ -229,4 +229,21 @@ class AppHelper {
     currentFocus.unfocus();
     FocusScope.of(context).requestFocus(nextFocus);
   }
+
+  static DateTime? toDateTime(String? date) {
+    if (date == null || date == 'null' || date.trim().isEmpty) return null;
+
+    String cleanedDate = date.trim();
+
+    if (cleanedDate.contains('+')) {
+      cleanedDate = cleanedDate.split('+').first;
+    }
+
+    cleanedDate = cleanedDate
+        .replaceAll('Z', '')
+        .replaceAll('z', '')
+        .replaceAll('T', ' ');
+
+    return DateTime.tryParse(cleanedDate);
+  }
 }

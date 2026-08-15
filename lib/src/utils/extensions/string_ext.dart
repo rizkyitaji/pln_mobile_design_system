@@ -1,21 +1,4 @@
 extension StringExt on String? {
-  DateTime? get toDateTime {
-    if (this == null || this == 'null' || this!.trim().isEmpty) return null;
-
-    String cleanedDate = this!.trim();
-
-    if (cleanedDate.contains('+')) {
-      cleanedDate = cleanedDate.split('+').first;
-    }
-
-    cleanedDate = cleanedDate
-        .replaceAll('Z', '')
-        .replaceAll('z', '')
-        .replaceAll('T', ' ');
-
-    return DateTime.tryParse(cleanedDate);
-  }
-
   bool get isStandardImage {
     final str = this ?? '';
     final lowerCasePath = str.toLowerCase();
