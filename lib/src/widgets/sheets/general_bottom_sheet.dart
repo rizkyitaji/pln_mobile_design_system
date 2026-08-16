@@ -4,10 +4,10 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 class AppGeneralBottomSheet extends StatelessWidget {
   final String title;
   final String? message;
-  final Widget? child, persistentSheet;
+  final Widget? child, action, persistentSheet;
   final VoidCallback? onTap;
   final String? buttonText;
-  final bool showActionButton, showCloseButton;
+  final bool showAction, showPersistentSheet;
   final double? padding;
 
   const AppGeneralBottomSheet({
@@ -17,10 +17,11 @@ class AppGeneralBottomSheet extends StatelessWidget {
     this.child,
     this.onTap,
     this.buttonText,
-    this.showActionButton = true,
-    this.showCloseButton = true,
     this.padding,
+    this.action,
+    this.showAction = true,
     this.persistentSheet,
+    this.showPersistentSheet = true,
   });
 
   @override
@@ -40,7 +41,8 @@ class AppGeneralBottomSheet extends StatelessWidget {
                     style: context.textTheme.bodyLargeSemiBold,
                   ),
                 ),
-                if (showCloseButton) AppBackButton(icon: AppAssets.iconClose),
+                if (showAction)
+                  action ?? AppBackButton(icon: AppAssets.iconClose),
               ],
             ),
           ),
@@ -53,7 +55,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
                     ? Text(message!, style: context.textTheme.bodyMedium)
                     : const SizedBox.shrink()),
           ),
-          if (showActionButton) ...[
+          if (showPersistentSheet) ...[
             AppSpacing.h16,
             AppPersistentSheet(
               child:
@@ -78,9 +80,11 @@ class AppGeneralBottomSheet extends StatelessWidget {
     Widget? child,
     VoidCallback? onTap,
     String? buttonText,
-    bool showActionButton = true,
     double? padding,
+    Widget? action,
+    bool showAction = true,
     Widget? persistentSheet,
+    bool showPersistentSheet = true,
   }) {
     return showModalBottomSheet<T>(
       context: context,
@@ -93,9 +97,11 @@ class AppGeneralBottomSheet extends StatelessWidget {
           message: message,
           onTap: onTap,
           buttonText: buttonText,
-          showActionButton: showActionButton,
-          persistentSheet: persistentSheet,
           padding: padding,
+          action: action,
+          showAction: showAction,
+          persistentSheet: persistentSheet,
+          showPersistentSheet: showPersistentSheet,
           child: child,
         );
       },
