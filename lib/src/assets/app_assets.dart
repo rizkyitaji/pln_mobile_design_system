@@ -360,6 +360,7 @@ abstract class AppAssets {
   static const imageIllustrationPvHome = '$_basePath/${AppImages.illustrationPvHome}';
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
+  static const imageIllustrationShieldGeneral = '$_basePath/${AppImages.illustrationShieldGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
   static const imageIllustrationSpbkluActivationSuccess = '$_basePath/${AppImages.illustrationSpbkluActivationSuccess}';
   static const imageIllustrationSpbkluActivation = '$_basePath/${AppImages.illustrationSpbkluActivation}';

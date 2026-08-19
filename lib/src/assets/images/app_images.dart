@@ -53,6 +53,7 @@ abstract class AppImages {
   static const String illustrationPvHome = 'assets/images/png/illustration-pv-home.png';
   static const String illustrationRecOnboarding = 'assets/images/png/illustration-rec-onboarding.png';
   static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';
+  static const String illustrationShieldGeneral = 'assets/images/png/illustration-shield-general.png';
   static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';
   static const String illustrationSpbkluActivationSuccess = 'assets/images/png/illustration-spbklu-activation-success.png';
   static const String illustrationSpbkluActivation = 'assets/images/png/illustration-spbklu-activation.png';
