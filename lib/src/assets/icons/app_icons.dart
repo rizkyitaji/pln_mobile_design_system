@@ -74,6 +74,7 @@ abstract class AppIcons {
   // Group: BRANDS PNG
   static const String iconAstra = 'assets/icons/png/brands/icon-astra.png';
   static const String iconBlueCharge = 'assets/icons/png/brands/icon-blue-charge.png';
+  static const String iconCazgo = 'assets/icons/png/brands/icon-cazgo.png';
   static const String iconChargePlus = 'assets/icons/png/brands/icon-charge-plus.png';
   static const String iconDayaGreen = 'assets/icons/png/brands/icon-daya-green.png';
   static const String iconHvt = 'assets/icons/png/brands/icon-hvt.png';

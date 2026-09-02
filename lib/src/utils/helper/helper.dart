@@ -4,12 +4,6 @@ import 'package:pln_mobile_design_system/pln_mobile_design_system.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppHelper {
-  static void safePop<T extends Object?>(BuildContext context, [T? result]) {
-    if (Navigator.canPop(context)) {
-      Navigator.pop<T>(context, result);
-    }
-  }
-
   static bool emailValidation(String text, {bool fromIdPel = false}) {
     if (fromIdPel) return false;
 
@@ -155,6 +149,8 @@ class AppHelper {
         return AppAssets.iconWuling;
       case 'igreen+':
         return AppAssets.iconIGreenPlus;
+      case 'cazgo':
+        return AppAssets.iconCazgo;
       default:
         return AppAssets.iconMenuSpklu;
     }
@@ -232,5 +228,22 @@ class AppHelper {
   ) {
     currentFocus.unfocus();
     FocusScope.of(context).requestFocus(nextFocus);
+  }
+
+  static DateTime? toDateTime(String? date) {
+    if (date == null || date == 'null' || date.trim().isEmpty) return null;
+
+    String cleanedDate = date.trim();
+
+    if (cleanedDate.contains('+')) {
+      cleanedDate = cleanedDate.split('+').first;
+    }
+
+    cleanedDate = cleanedDate
+        .replaceAll('Z', '')
+        .replaceAll('z', '')
+        .replaceAll('T', ' ');
+
+    return DateTime.tryParse(cleanedDate);
   }
 }

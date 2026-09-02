@@ -77,6 +77,7 @@ abstract class AppAssets {
   static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
   static const iconAstra = '$_basePath/${AppIcons.iconAstra}';
   static const iconBlueCharge = '$_basePath/${AppIcons.iconBlueCharge}';
+  static const iconCazgo = '$_basePath/${AppIcons.iconCazgo}';
   static const iconChargePlus = '$_basePath/${AppIcons.iconChargePlus}';
   static const iconDayaGreen = '$_basePath/${AppIcons.iconDayaGreen}';
   static const iconHvt = '$_basePath/${AppIcons.iconHvt}';
@@ -359,6 +360,7 @@ abstract class AppAssets {
   static const imageIllustrationPvHome = '$_basePath/${AppImages.illustrationPvHome}';
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
+  static const imageIllustrationShieldGeneral = '$_basePath/${AppImages.illustrationShieldGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
   static const imageIllustrationSpbkluActivationSuccess = '$_basePath/${AppImages.illustrationSpbkluActivationSuccess}';
   static const imageIllustrationSpbkluActivation = '$_basePath/${AppImages.illustrationSpbkluActivation}';
