@@ -8,6 +8,9 @@ class AppLabeledTextFormField extends StatelessWidget {
   final bool required;
   final String? hintText;
   final bool readOnly;
+  final bool? enableInteractiveSelection;
+  final bool? canRequestFocus;
+  final EditableTextContextMenuBuilder? contextMenuBuilder;
   final int maxLines;
   final int? minLines;
   final int? maxLength;
@@ -34,7 +37,9 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? actionWidget;
   final double? actionWidgetSpace;
   final TextStyle? style;
-  final TextStyle? labelStyle, hintStyle;
+  final TextStyle? labelStyle, hintStyle, errorStyle, helperStyle;
+  final int? errorMaxLines;
+  final String? helperText;
 
   const AppLabeledTextFormField({
     super.key,
@@ -46,6 +51,9 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.required = false,
     this.hintText,
     this.readOnly = false,
+    this.enableInteractiveSelection,
+    this.canRequestFocus,
+    this.contextMenuBuilder,
     this.maxLines = 1,
     this.maxLength,
     this.minLines,
@@ -71,6 +79,10 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.actionWidget,
     this.actionWidgetSpace,
     this.style,
+    this.errorStyle,
+    this.errorMaxLines,
+    this.helperText,
+    this.helperStyle,
   });
 
   @override
@@ -99,11 +111,19 @@ class AppLabeledTextFormField extends StatelessWidget {
         ),
         AppSpacing.h8,
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: TextFormField(
                 controller: controller,
                 readOnly: readOnly,
+                enableInteractiveSelection:
+                    enableInteractiveSelection ?? !readOnly,
+                canRequestFocus: canRequestFocus ?? !readOnly,
+                contextMenuBuilder: contextMenuBuilder ??
+                    (readOnly && enableInteractiveSelection != true
+                        ? (context, editableTextState) => const SizedBox.shrink()
+                        : null),
                 style: style,
                 maxLines: maxLines,
                 minLines: minLines,
@@ -121,6 +141,13 @@ class AppLabeledTextFormField extends StatelessWidget {
                 focusNode: focusNode,
                 onSaved: onSaved,
                 decoration: InputDecoration(
+                  errorMaxLines: errorMaxLines ?? 3,
+                  errorStyle: errorStyle,
+                  helperText: helperText,
+                  helperStyle: helperStyle ??
+                      AppTextTheme.lightTextTheme.bodyCaption.copyWith(
+                        color: AppColors.textInfo,
+                      ),
                   hintText: hintText,
                   hintStyle: hintStyle,
                   suffixIcon: suffixIcon,

@@ -7,3 +7,4 @@ export 'empty_page.dart';
 export 'general_page.dart';
 export 'scanner_view.dart';
 export 'tab_bar.dart';
+export 'text_divider.dart';

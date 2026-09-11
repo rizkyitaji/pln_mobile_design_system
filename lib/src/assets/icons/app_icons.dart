@@ -248,6 +248,7 @@ abstract class AppIcons {
   static const String iconChargerStationColored = 'assets/icons/svg/colored/icon-charger-station.svg';
   static const String iconCheckRoundedColored = 'assets/icons/svg/colored/icon-check-rounded.svg';
   static const String iconCheckmarkColored = 'assets/icons/svg/colored/icon-checkmark.svg';
+  static const String iconClockColored = 'assets/icons/svg/colored/icon-clock.svg';
   static const String iconComplaintRedColored = 'assets/icons/svg/colored/icon-complaint-red.svg';
   static const String iconEmptyStateColored = 'assets/icons/svg/colored/icon-empty-state.svg';
   static const String iconEvCarColored = 'assets/icons/svg/colored/icon-ev-car.svg';
