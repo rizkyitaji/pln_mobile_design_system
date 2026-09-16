@@ -62,6 +62,7 @@ abstract class AppAssets {
   static const iconSearch = '$_basePath/${AppIcons.iconSearch}';
   static const iconSort = '$_basePath/${AppIcons.iconSort}';
   static const iconSwap2 = '$_basePath/${AppIcons.iconSwap2}';
+  static const iconSwapBattery = '$_basePath/${AppIcons.iconSwapBattery}';
   static const iconTagihan = '$_basePath/${AppIcons.iconTagihan}';
   static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
@@ -282,6 +283,7 @@ abstract class AppAssets {
   static const iconWalletColored = '$_basePath/${AppIcons.iconWalletColored}';
   static const iconWhatsappColored = '$_basePath/${AppIcons.iconWhatsappColored}';
   static const iconMenuBalikNama = '$_basePath/${AppIcons.iconMenuBalikNama}';
+  static const iconMenuBpjs = '$_basePath/${AppIcons.iconMenuBpjs}';
   static const iconMenuCatatMeter = '$_basePath/${AppIcons.iconMenuCatatMeter}';
   static const iconMenuEbilling = '$_basePath/${AppIcons.iconMenuEbilling}';
   static const iconMenuEv = '$_basePath/${AppIcons.iconMenuEv}';
@@ -293,10 +295,13 @@ abstract class AppAssets {
   static const iconMenuMarketplace = '$_basePath/${AppIcons.iconMenuMarketplace}';
   static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
   static const iconMenuNontaglis = '$_basePath/${AppIcons.iconMenuNontaglis}';
+  static const iconMenuPaketData = '$_basePath/${AppIcons.iconMenuPaketData}';
   static const iconMenuPasangBaru = '$_basePath/${AppIcons.iconMenuPasangBaru}';
+  static const iconMenuPdam = '$_basePath/${AppIcons.iconMenuPdam}';
   static const iconMenuPengaduan = '$_basePath/${AppIcons.iconMenuPengaduan}';
   static const iconMenuPengelolaanListrik = '$_basePath/${AppIcons.iconMenuPengelolaanListrik}';
   static const iconMenuPulsaTagihan = '$_basePath/${AppIcons.iconMenuPulsaTagihan}';
+  static const iconMenuPulsa = '$_basePath/${AppIcons.iconMenuPulsa}';
   static const iconMenuPvRooftop = '$_basePath/${AppIcons.iconMenuPvRooftop}';
   static const iconMenuRec = '$_basePath/${AppIcons.iconMenuRec}';
   static const iconMenuSimulasiBiaya = '$_basePath/${AppIcons.iconMenuSimulasiBiaya}';

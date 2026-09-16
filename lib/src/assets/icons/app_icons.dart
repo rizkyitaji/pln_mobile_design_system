@@ -55,6 +55,7 @@ abstract class AppIcons {
   static const String iconSearch = 'assets/icons/svg/icon-search.svg';
   static const String iconSort = 'assets/icons/svg/icon-sort.svg';
   static const String iconSwap2 = 'assets/icons/svg/icon-swap-2.svg';
+  static const String iconSwapBattery = 'assets/icons/svg/icon-swap-battery.svg';
   static const String iconTagihan = 'assets/icons/svg/icon-tagihan.svg';
   static const String iconToilet = 'assets/icons/svg/icon-toilet.svg';
   static const String iconWarningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
@@ -287,6 +288,7 @@ abstract class AppIcons {
 
   // Group: MENU SVG
   static const String iconMenuBalikNama = 'assets/icons/svg/menu/icon-menu-balik-nama.svg';
+  static const String iconMenuBpjs = 'assets/icons/svg/menu/icon-menu-bpjs.svg';
   static const String iconMenuCatatMeter = 'assets/icons/svg/menu/icon-menu-catat-meter.svg';
   static const String iconMenuEbilling = 'assets/icons/svg/menu/icon-menu-ebilling.svg';
   static const String iconMenuEv = 'assets/icons/svg/menu/icon-menu-ev.svg';
@@ -298,10 +300,13 @@ abstract class AppIcons {
   static const String iconMenuMarketplace = 'assets/icons/svg/menu/icon-menu-marketplace.svg';
   static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
   static const String iconMenuNontaglis = 'assets/icons/svg/menu/icon-menu-nontaglis.svg';
+  static const String iconMenuPaketData = 'assets/icons/svg/menu/icon-menu-paket-data.svg';
   static const String iconMenuPasangBaru = 'assets/icons/svg/menu/icon-menu-pasang-baru.svg';
+  static const String iconMenuPdam = 'assets/icons/svg/menu/icon-menu-pdam.svg';
   static const String iconMenuPengaduan = 'assets/icons/svg/menu/icon-menu-pengaduan.svg';
   static const String iconMenuPengelolaanListrik = 'assets/icons/svg/menu/icon-menu-pengelolaan-listrik.svg';
   static const String iconMenuPulsaTagihan = 'assets/icons/svg/menu/icon-menu-pulsa-tagihan.svg';
+  static const String iconMenuPulsa = 'assets/icons/svg/menu/icon-menu-pulsa.svg';
   static const String iconMenuPvRooftop = 'assets/icons/svg/menu/icon-menu-pv-rooftop.svg';
   static const String iconMenuRec = 'assets/icons/svg/menu/icon-menu-rec.svg';
   static const String iconMenuSimulasiBiaya = 'assets/icons/svg/menu/icon-menu-simulasi-biaya.svg';
