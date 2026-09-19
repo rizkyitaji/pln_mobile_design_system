@@ -25,6 +25,9 @@ class AppPhoneTextFormField extends StatelessWidget {
   final String? counterText;
   final Color? fillColor;
   final InputBorder? border;
+  final bool? enabled;
+  final bool? enableInteractiveSelection;
+  final EditableTextContextMenuBuilder? contextMenuBuilder;
 
   const AppPhoneTextFormField({
     super.key,
@@ -33,6 +36,9 @@ class AppPhoneTextFormField extends StatelessWidget {
     this.required = false,
     this.hintText = '81234567891',
     this.readOnly = false,
+    this.enabled,
+    this.enableInteractiveSelection,
+    this.contextMenuBuilder,
     this.countryCode = '+62',
     this.flagWidget,
     this.maxDigits = 15,
@@ -69,6 +75,9 @@ class AppPhoneTextFormField extends StatelessWidget {
       required: required,
       hintText: hintText,
       readOnly: readOnly,
+      enabled: enabled,
+      enableInteractiveSelection: enableInteractiveSelection,
+      contextMenuBuilder: contextMenuBuilder,
       keyboardType: TextInputType.phone,
       initialValue: initialValue,
       focusNode: focusNode,

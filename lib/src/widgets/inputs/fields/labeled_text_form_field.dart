@@ -8,6 +8,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final bool required;
   final String? hintText;
   final bool readOnly;
+  final bool? enabled;
   final bool? enableInteractiveSelection;
   final bool? canRequestFocus;
   final EditableTextContextMenuBuilder? contextMenuBuilder;
@@ -51,6 +52,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.required = false,
     this.hintText,
     this.readOnly = false,
+    this.enabled,
     this.enableInteractiveSelection,
     this.canRequestFocus,
     this.contextMenuBuilder,
@@ -117,13 +119,19 @@ class AppLabeledTextFormField extends StatelessWidget {
               child: TextFormField(
                 controller: controller,
                 readOnly: readOnly,
+                enabled: enabled,
                 enableInteractiveSelection:
                     enableInteractiveSelection ?? !readOnly,
                 canRequestFocus: canRequestFocus ?? !readOnly,
                 contextMenuBuilder: contextMenuBuilder ??
-                    (readOnly && enableInteractiveSelection != true
-                        ? (context, editableTextState) => const SizedBox.shrink()
-                        : null),
+                    (enableInteractiveSelection == false ||
+                            (readOnly && enableInteractiveSelection != true)
+                        ? (context, editableTextState) =>
+                            const SizedBox.shrink()
+                        : (context, editableTextState) =>
+                            AdaptiveTextSelectionToolbar.editableText(
+                              editableTextState: editableTextState,
+                            )),
                 style: style,
                 maxLines: maxLines,
                 minLines: minLines,
