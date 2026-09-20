@@ -340,6 +340,7 @@ abstract class AppAssets {
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFlaggingRecDenom = '$_basePath/${AppImages.illustrationFlaggingRecDenom}';
   static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
+  static const imageIllustrationFormSuccessGeneral = '$_basePath/${AppImages.illustrationFormSuccessGeneral}';
   static const imageIllustrationHomecharging = '$_basePath/${AppImages.illustrationHomecharging}';
   static const imageIllustrationInactiveNfc = '$_basePath/${AppImages.illustrationInactiveNfc}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';

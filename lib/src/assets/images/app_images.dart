@@ -27,6 +27,7 @@ abstract class AppImages {
   static const String illustrationFailedGeneral = 'assets/images/png/illustration-failed-general.png';
   static const String illustrationFlaggingRecDenom = 'assets/images/png/illustration-flagging-rec-denom.png';
   static const String illustrationFormCancelGeneral = 'assets/images/png/illustration-form-cancel-general.png';
+  static const String illustrationFormSuccessGeneral = 'assets/images/png/illustration-form-success-general.png';
   static const String illustrationHomecharging = 'assets/images/png/illustration-homecharging.png';
   static const String illustrationInactiveNfc = 'assets/images/png/illustration-inactive-nfc.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
