@@ -13,6 +13,7 @@ class AppNetworkImage extends StatelessWidget {
   final Color? color;
   final Alignment alignment;
   final Widget? errorWidget;
+  final BoxBorder? border;
 
   const AppNetworkImage({
     super.key,
@@ -32,6 +33,7 @@ class AppNetworkImage extends StatelessWidget {
     this.color,
     this.alignment = Alignment.center,
     this.errorWidget,
+    this.border,
   });
 
   @override
@@ -46,6 +48,7 @@ class AppNetworkImage extends StatelessWidget {
       padding: padding,
       borderRadius: borderRadius,
       color: backgroundColor,
+      border: border,
       child: Visibility(
         visible: imageUrl.isNotEmpty,
         replacement:

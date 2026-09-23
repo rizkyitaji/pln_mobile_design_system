@@ -31,7 +31,10 @@ class AppGeneralPage extends StatelessWidget {
   final FloatingActionButtonLocation? floatingActionButtonLocation;
   final ScrollPhysics? physics;
   final ScrollController? scrollController;
-  final bool? bottomSafeArea, leftSafeArea, rightSafeArea;
+  final bool? bottomSafeArea,
+      leftSafeArea,
+      rightSafeArea,
+      resizeToAvoidBottomInset;
 
   const AppGeneralPage({
     super.key,
@@ -74,12 +77,14 @@ class AppGeneralPage extends StatelessWidget {
     this.floatingActionButtonLocation,
     this.backButtonIcon,
     this.flexibleSpace,
+    this.resizeToAvoidBottomInset,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: extendBodyBehindAppBar,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         titleSpacing: titleSpacing,
@@ -209,7 +214,9 @@ class AppGeneralPage extends StatelessWidget {
             left: AppSizes.s16,
             bottom: persistentSheet != null ? AppSizes.s120 : AppSizes.s16,
           ),
-      physics: physics ?? AlwaysScrollableScrollPhysics(),
+      physics:
+          physics ??
+          AlwaysScrollableScrollPhysics(parent: ClampingScrollPhysics()),
       children: [
         child,
         if (isLoadingMore)
