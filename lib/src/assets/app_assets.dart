@@ -45,6 +45,7 @@ abstract class AppAssets {
   static const iconGreenEnergy1 = '$_basePath/${AppIcons.iconGreenEnergy1}';
   static const iconGreenEnergy = '$_basePath/${AppIcons.iconGreenEnergy}';
   static const iconHandClick = '$_basePath/${AppIcons.iconHandClick}';
+  static const iconInsurance = '$_basePath/${AppIcons.iconInsurance}';
   static const iconLogin = '$_basePath/${AppIcons.iconLogin}';
   static const iconMaps = '$_basePath/${AppIcons.iconMaps}';
   static const iconMinus = '$_basePath/${AppIcons.iconMinus}';

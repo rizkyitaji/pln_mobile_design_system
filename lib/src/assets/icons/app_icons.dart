@@ -38,6 +38,7 @@ abstract class AppIcons {
   static const String iconGreenEnergy1 = 'assets/icons/svg/icon-green-energy-1.svg';
   static const String iconGreenEnergy = 'assets/icons/svg/icon-green-energy.svg';
   static const String iconHandClick = 'assets/icons/svg/icon-hand-click.svg';
+  static const String iconInsurance = 'assets/icons/svg/icon-insurance.svg';
   static const String iconLogin = 'assets/icons/svg/icon-login.svg';
   static const String iconMaps = 'assets/icons/svg/icon-maps.svg';
   static const String iconMinus = 'assets/icons/svg/icon-minus.svg';
