@@ -51,6 +51,13 @@ extension DateTimeExt on DateTime? {
     return DateFormat('dd MMMM y', 'id_ID').format(date);
   }
 
+  /// Output: 01 Jan 2026
+  String get formatddMMMy {
+    var date = this;
+    if (date == null) return '-';
+    return DateFormat('dd MMM y', 'id_ID').format(date);
+  }
+
   /// Output: 202601
   String get formatYearMonth {
     var date = this;
