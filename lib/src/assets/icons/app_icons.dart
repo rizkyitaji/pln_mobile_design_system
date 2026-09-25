@@ -87,6 +87,7 @@ abstract class AppIcons {
   static const String iconParkingPlus = 'assets/icons/png/brands/icon-parking-plus.png';
   static const String iconPlnMobile = 'assets/icons/png/brands/icon-pln-mobile.png';
   static const String iconPln = 'assets/icons/png/brands/icon-pln.png';
+  static const String iconRheCharge = 'assets/icons/png/brands/icon-rhe-charge.jpeg';
   static const String iconStarvo = 'assets/icons/png/brands/icon-starvo.png';
   static const String iconTerraCharge = 'assets/icons/png/brands/icon-terra-charge.png';
   static const String iconToyota = 'assets/icons/png/brands/icon-toyota.png';

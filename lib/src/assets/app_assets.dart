@@ -90,6 +90,7 @@ abstract class AppAssets {
   static const iconParkingPlus = '$_basePath/${AppIcons.iconParkingPlus}';
   static const iconPlnMobile = '$_basePath/${AppIcons.iconPlnMobile}';
   static const iconPln = '$_basePath/${AppIcons.iconPln}';
+  static const iconRheCharge = '$_basePath/${AppIcons.iconRheCharge}';
   static const iconStarvo = '$_basePath/${AppIcons.iconStarvo}';
   static const iconTerraCharge = '$_basePath/${AppIcons.iconTerraCharge}';
   static const iconToyota = '$_basePath/${AppIcons.iconToyota}';

@@ -151,6 +151,8 @@ class AppHelper {
         return AppAssets.iconIGreenPlus;
       case 'cazgo':
         return AppAssets.iconCazgo;
+      case 'rhe charge':
+        return AppAssets.iconRheCharge;
       default:
         return AppAssets.iconMenuSpklu;
     }
