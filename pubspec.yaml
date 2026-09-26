@@ -42,6 +42,7 @@ flutter:
     - assets/fonts/
     - assets/icons/png/
     - assets/icons/png/brands/
+    - assets/icons/png/menu/
     - assets/icons/svg/
     - assets/icons/svg/colored/
     - assets/icons/svg/menu/

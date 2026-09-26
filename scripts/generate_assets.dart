@@ -17,6 +17,7 @@ void main() {
       'svg',
       'png',
       'png/brands',
+      'png/menu',
       'svg/outlined',
       'svg/solid',
       'svg/colored',

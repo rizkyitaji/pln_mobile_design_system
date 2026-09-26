@@ -96,6 +96,8 @@ abstract class AppAssets {
   static const iconToyota = '$_basePath/${AppIcons.iconToyota}';
   static const iconVoltron = '$_basePath/${AppIcons.iconVoltron}';
   static const iconWuling = '$_basePath/${AppIcons.iconWuling}';
+  static const iconMenuTambahDayaSementaraNew = '$_basePath/${AppIcons.iconMenuTambahDayaSementaraNew}';
+  static const iconMenuTokenPembayaranNew = '$_basePath/${AppIcons.iconMenuTokenPembayaranNew}';
   static const iconAddFriendsOutlined = '$_basePath/${AppIcons.iconAddFriendsOutlined}';
   static const iconArrange1Outlined = '$_basePath/${AppIcons.iconArrange1Outlined}';
   static const iconBatteryOutlined = '$_basePath/${AppIcons.iconBatteryOutlined}';

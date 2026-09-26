@@ -94,6 +94,10 @@ abstract class AppIcons {
   static const String iconVoltron = 'assets/icons/png/brands/icon-voltron.png';
   static const String iconWuling = 'assets/icons/png/brands/icon-wuling.png';
 
+  // Group: MENU PNG
+  static const String iconMenuTambahDayaSementaraNew = 'assets/icons/png/menu/icon-menu-tambah-daya-sementara-new.png';
+  static const String iconMenuTokenPembayaranNew = 'assets/icons/png/menu/icon-menu-token-pembayaran-new.png';
+
   // Group: OUTLINED SVG
   static const String iconAddFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
   static const String iconArrange1Outlined = 'assets/icons/svg/outlined/icon-arrange-1-outlined.svg';
