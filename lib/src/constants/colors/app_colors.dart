@@ -217,6 +217,7 @@ abstract class AppColors {
   static const Color backgroundSecondaryDark = AppPalette.sky950;
   static const Color backgroundSnackbar = AppPalette.slate700;
   static const Color backgroundIndicator = AppPalette.sky1050;
+  static const Color backgroundIcon = AppPalette.blue50;
 
   // --- SHIMMER DEFAULT ---
   static const Color shimmerBase = AppPalette.slate200;

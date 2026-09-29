@@ -95,8 +95,49 @@ abstract class AppIcons {
   static const String iconWuling = 'assets/icons/png/brands/icon-wuling.png';
 
   // Group: MENU PNG
+  static const String iconAddonIconnetNew = 'assets/icons/png/menu/icon-addon-iconnet-new.png';
+  static const String iconMenuBalikNamaNew = 'assets/icons/png/menu/icon-menu-balik-nama-new.png';
+  static const String iconMenuBerlanggananIconnetNew = 'assets/icons/png/menu/icon-menu-berlangganan-iconnet-new.png';
+  static const String iconMenuCatatMeterNew = 'assets/icons/png/menu/icon-menu-catat-meter-new.png';
+  static const String iconMenuCekJangkauanNew = 'assets/icons/png/menu/icon-menu-cek-jangkauan-new.png';
+  static const String iconMenuDiskusiNew = 'assets/icons/png/menu/icon-menu-diskusi-new.png';
+  static const String iconMenuEbillingNew = 'assets/icons/png/menu/icon-menu-ebilling-new.png';
+  static const String iconMenuEvNew = 'assets/icons/png/menu/icon-menu-ev-new.png';
+  static const String iconMenuEventNew = 'assets/icons/png/menu/icon-menu-event-new.png';
+  static const String iconMenuFaqNew = 'assets/icons/png/menu/icon-menu-faq-new.png';
+  static const String iconMenuHomeChargingNew = 'assets/icons/png/menu/icon-menu-home-charging-new.png';
+  static const String iconMenuHubungiKamiNew = 'assets/icons/png/menu/icon-menu-hubungi-kami-new.png';
+  static const String iconMenuIconnetProgressNew = 'assets/icons/png/menu/icon-menu-iconnet-progress-new.png';
+  static const String iconMenuInternetNew = 'assets/icons/png/menu/icon-menu-internet-new.png';
+  static const String iconMenuKelolaIconnetNew = 'assets/icons/png/menu/icon-menu-kelola-iconnet-new.png';
+  static const String iconMenuKomporInduksiNew = 'assets/icons/png/menu/icon-menu-kompor-induksi-new.png';
+  static const String iconMenuLacakPermohonanNew = 'assets/icons/png/menu/icon-menu-lacak-permohonan-new.png';
+  static const String iconMenuListrikNew = 'assets/icons/png/menu/icon-menu-listrik-new.png';
+  static const String iconMenuMarketplaceNew = 'assets/icons/png/menu/icon-menu-marketplace-new.png';
+  static const String iconMenuMoreNew = 'assets/icons/png/menu/icon-menu-more-new.png';
+  static const String iconMenuNontaglisNew = 'assets/icons/png/menu/icon-menu-nontaglis-new.png';
+  static const String iconMenuPasangBaruNew = 'assets/icons/png/menu/icon-menu-pasang-baru-new.png';
+  static const String iconMenuPdamNew = 'assets/icons/png/menu/icon-menu-pdam-new.png';
+  static const String iconMenuPengaduanNew = 'assets/icons/png/menu/icon-menu-pengaduan-new.png';
+  static const String iconMenuPengelolaanListrikNew = 'assets/icons/png/menu/icon-menu-pengelolaan-listrik-new.png';
+  static const String iconMenuPesananNew = 'assets/icons/png/menu/icon-menu-pesanan-new.png';
+  static const String iconMenuPulsaNew = 'assets/icons/png/menu/icon-menu-pulsa-new.png';
+  static const String iconMenuPulsaTagihanNew = 'assets/icons/png/menu/icon-menu-pulsa-tagihan-new.png';
+  static const String iconMenuPvRooftopNew = 'assets/icons/png/menu/icon-menu-pv-rooftop-new.png';
+  static const String iconMenuRecNew = 'assets/icons/png/menu/icon-menu-rec-new.png';
+  static const String iconMenuSimulasiBiayaNew = 'assets/icons/png/menu/icon-menu-simulasi-biaya-new.png';
+  static const String iconMenuSpkluAntreNew = 'assets/icons/png/menu/icon-menu-spklu-antre-new.png';
+  static const String iconMenuSpkluNew = 'assets/icons/png/menu/icon-menu-spklu-new.png';
+  static const String iconMenuSpkluR2New = 'assets/icons/png/menu/icon-menu-spklu-r2-new.png';
+  static const String iconMenuSpluNew = 'assets/icons/png/menu/icon-menu-splu-new.png';
   static const String iconMenuTambahDayaSementaraNew = 'assets/icons/png/menu/icon-menu-tambah-daya-sementara-new.png';
   static const String iconMenuTokenPembayaranNew = 'assets/icons/png/menu/icon-menu-token-pembayaran-new.png';
+  static const String iconMenuTripPlannerNew = 'assets/icons/png/menu/icon-menu-trip-planner-new.png';
+  static const String iconMenuTukarBateraiNew = 'assets/icons/png/menu/icon-menu-tukar-baterai-new.png';
+  static const String iconMenuUbahDayaNew = 'assets/icons/png/menu/icon-menu-ubah-daya-new.png';
+  static const String iconMenuUpgradeAccountNew = 'assets/icons/png/menu/icon-menu-upgrade-account-new.png';
+  static const String iconMenuUpgradeIconnetNew = 'assets/icons/png/menu/icon-menu-upgrade-iconnet-new.png';
+  static const String iconMenuWishlistNew = 'assets/icons/png/menu/icon-menu-wishlist-new.png';
 
   // Group: OUTLINED SVG
   static const String iconAddFriendsOutlined = 'assets/icons/svg/outlined/icon-add-friends-outlined.svg';
