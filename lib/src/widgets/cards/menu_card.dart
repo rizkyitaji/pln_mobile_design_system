@@ -8,7 +8,7 @@ class AppMenuCard extends StatelessWidget {
   final String? badgeText;
   final Color? badgeColor;
   final Widget? badge, child;
-  final double? iconSize;
+  final double? iconSize, width, height;
 
   const AppMenuCard({
     super.key,
@@ -21,6 +21,8 @@ class AppMenuCard extends StatelessWidget {
     this.badge,
     this.iconSize,
     this.child,
+    this.width,
+    this.height,
   });
 
   @override
@@ -36,7 +38,8 @@ class AppMenuCard extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Container(
-                width: AppSizes.s56,
+                width: width ?? AppSizes.s56,
+                height: height ?? AppSizes.s56,
                 decoration: BoxDecoration(
                   color: color ?? AppColors.primarySubtle,
                   borderRadius: AppRadius.rounded12,
