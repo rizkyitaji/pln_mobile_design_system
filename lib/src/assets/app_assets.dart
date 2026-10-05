@@ -64,7 +64,6 @@ abstract class AppAssets {
   static const iconSort = '$_basePath/${AppIcons.iconSort}';
   static const iconSwap2 = '$_basePath/${AppIcons.iconSwap2}';
   static const iconSwapBattery = '$_basePath/${AppIcons.iconSwapBattery}';
-  static const iconTagihan = '$_basePath/${AppIcons.iconTagihan}';
   static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
   static const iconMarketplaceFeatureProductLarge = '$_basePath/${AppIcons.iconMarketplaceFeatureProductLarge}';
@@ -117,6 +116,7 @@ abstract class AppAssets {
   static const iconMenuMarketplaceNew = '$_basePath/${AppIcons.iconMenuMarketplaceNew}';
   static const iconMenuMoreNew = '$_basePath/${AppIcons.iconMenuMoreNew}';
   static const iconMenuNontaglisNew = '$_basePath/${AppIcons.iconMenuNontaglisNew}';
+  static const iconMenuPaketDataNew = '$_basePath/${AppIcons.iconMenuPaketDataNew}';
   static const iconMenuPasangBaruNew = '$_basePath/${AppIcons.iconMenuPasangBaruNew}';
   static const iconMenuPdamNew = '$_basePath/${AppIcons.iconMenuPdamNew}';
   static const iconMenuPengaduanNew = '$_basePath/${AppIcons.iconMenuPengaduanNew}';
@@ -340,7 +340,6 @@ abstract class AppAssets {
   static const iconMenuMarketplace = '$_basePath/${AppIcons.iconMenuMarketplace}';
   static const iconMenuMore = '$_basePath/${AppIcons.iconMenuMore}';
   static const iconMenuNontaglis = '$_basePath/${AppIcons.iconMenuNontaglis}';
-  static const iconMenuPaketData = '$_basePath/${AppIcons.iconMenuPaketData}';
   static const iconMenuPasangBaru = '$_basePath/${AppIcons.iconMenuPasangBaru}';
   static const iconMenuPdam = '$_basePath/${AppIcons.iconMenuPdam}';
   static const iconMenuPengaduan = '$_basePath/${AppIcons.iconMenuPengaduan}';

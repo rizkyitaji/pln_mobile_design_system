@@ -154,7 +154,7 @@ class AppHelper {
       case 'rhe charge':
         return AppAssets.iconRheCharge;
       default:
-        return AppAssets.iconMenuSpklu;
+        return AppAssets.iconMenuSpkluNew;
     }
   }
 

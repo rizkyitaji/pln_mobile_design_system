@@ -57,13 +57,11 @@ class AppInstallationHistoryTile extends StatelessWidget {
         children: [
           // --- Top Section: Service Type & Date ---
           Row(
+            spacing: AppSizes.s4,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppImage(
-                asset: serviceIcon ?? AppAssets.iconMenuPasangBaru,
-                size: AppSizes.s24,
-              ),
-              AppSpacing.w4,
+              if (serviceIcon != null)
+                AppImage(asset: serviceIcon!, size: AppSizes.s24),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
