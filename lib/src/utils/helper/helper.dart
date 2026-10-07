@@ -235,17 +235,16 @@ class AppHelper {
   static DateTime? toDateTime(String? date) {
     if (date == null || date == 'null' || date.trim().isEmpty) return null;
 
-    String cleanedDate = date.trim();
-
-    if (cleanedDate.contains('+')) {
-      cleanedDate = cleanedDate.split('+').first;
+    try {
+      String cleanedDate = date.trim();
+      DateTime? parsed = DateTime.tryParse(cleanedDate);
+      if (parsed != null) {
+        return parsed.toLocal();
+      }
+      cleanedDate = cleanedDate.replaceAll(' ', 'T');
+      return DateTime.tryParse(cleanedDate)?.toLocal();
+    } catch (_) {
+      return null;
     }
-
-    cleanedDate = cleanedDate
-        .replaceAll('Z', '')
-        .replaceAll('z', '')
-        .replaceAll('T', ' ');
-
-    return DateTime.tryParse(cleanedDate);
   }
 }
