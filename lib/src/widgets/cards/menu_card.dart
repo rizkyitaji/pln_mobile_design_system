@@ -41,7 +41,7 @@ class AppMenuCard extends StatelessWidget {
                 width: width ?? AppSizes.s56,
                 height: height ?? AppSizes.s56,
                 decoration: BoxDecoration(
-                  color: color ?? AppColors.primarySubtle,
+                  color: color ?? AppColors.backgroundIcon,
                   borderRadius: AppRadius.rounded12,
                 ),
                 alignment: Alignment.center,
