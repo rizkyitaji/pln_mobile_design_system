@@ -57,7 +57,6 @@ abstract class AppIcons {
   static const String iconSort = 'assets/icons/svg/icon-sort.svg';
   static const String iconSwap2 = 'assets/icons/svg/icon-swap-2.svg';
   static const String iconSwapBattery = 'assets/icons/svg/icon-swap-battery.svg';
-  static const String iconTagihan = 'assets/icons/svg/icon-tagihan.svg';
   static const String iconToilet = 'assets/icons/svg/icon-toilet.svg';
   static const String iconWarningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
@@ -116,6 +115,7 @@ abstract class AppIcons {
   static const String iconMenuMarketplaceNew = 'assets/icons/png/menu/icon-menu-marketplace-new.png';
   static const String iconMenuMoreNew = 'assets/icons/png/menu/icon-menu-more-new.png';
   static const String iconMenuNontaglisNew = 'assets/icons/png/menu/icon-menu-nontaglis-new.png';
+  static const String iconMenuPaketDataNew = 'assets/icons/png/menu/icon-menu-paket-data-new.png';
   static const String iconMenuPasangBaruNew = 'assets/icons/png/menu/icon-menu-pasang-baru-new.png';
   static const String iconMenuPdamNew = 'assets/icons/png/menu/icon-menu-pdam-new.png';
   static const String iconMenuPengaduanNew = 'assets/icons/png/menu/icon-menu-pengaduan-new.png';
@@ -347,7 +347,6 @@ abstract class AppIcons {
   static const String iconMenuMarketplace = 'assets/icons/svg/menu/icon-menu-marketplace.svg';
   static const String iconMenuMore = 'assets/icons/svg/menu/icon-menu-more.svg';
   static const String iconMenuNontaglis = 'assets/icons/svg/menu/icon-menu-nontaglis.svg';
-  static const String iconMenuPaketData = 'assets/icons/svg/menu/icon-menu-paket-data.svg';
   static const String iconMenuPasangBaru = 'assets/icons/svg/menu/icon-menu-pasang-baru.svg';
   static const String iconMenuPdam = 'assets/icons/svg/menu/icon-menu-pdam.svg';
   static const String iconMenuPengaduan = 'assets/icons/svg/menu/icon-menu-pengaduan.svg';
