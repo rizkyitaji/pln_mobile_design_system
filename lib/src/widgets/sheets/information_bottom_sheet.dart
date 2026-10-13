@@ -22,6 +22,7 @@ class AppInformationBottomSheet extends StatelessWidget {
   final double? iconSize;
   final Function(String, String?, String)? onTapLink;
   final bool? loading;
+  final Map<String, MarkdownElementBuilder>? markdownBuilders;
 
   const AppInformationBottomSheet({
     super.key,
@@ -42,13 +43,14 @@ class AppInformationBottomSheet extends StatelessWidget {
     this.isFullScreen = false,
     this.onTap,
     this.centerTitle = true,
-    this.centerDescription = false,
+    this.centerDescription = true,
     this.iconSize,
     this.showDragHandle = true,
     this.onTapLink,
     this.loading,
     this.persistentSheet,
     this.usePersistentSheet = true,
+    this.markdownBuilders,
   });
 
   WrapAlignment _getWrapAlignment() {
@@ -165,7 +167,18 @@ class AppInformationBottomSheet extends StatelessWidget {
                         visible: centerDescription,
                         replacement: MarkdownBody(
                           data: descriptionText!,
+                          builders: markdownBuilders ?? {},
                           styleSheet: MarkdownStyleSheet(
+                            listIndent: markdownBuilders != null ? 0 : null,
+                            listBullet: markdownBuilders != null
+                                ? TextStyle(
+                                    fontSize: 0,
+                                    color: Colors.transparent,
+                                  )
+                                : null,
+                            listBulletPadding: markdownBuilders != null
+                                ? EdgeInsets.zero
+                                : null,
                             textAlign: _getWrapAlignment(),
                             p: context.textTheme.bodyMedium,
                             code: context.textTheme.bodyMedium.copyWith(
@@ -180,7 +193,18 @@ class AppInformationBottomSheet extends StatelessWidget {
                         child: Center(
                           child: MarkdownBody(
                             data: descriptionText!,
+                            builders: markdownBuilders ?? {},
                             styleSheet: MarkdownStyleSheet(
+                              listIndent: markdownBuilders != null ? 0 : null,
+                              listBullet: markdownBuilders != null
+                                  ? TextStyle(
+                                      fontSize: 0,
+                                      color: Colors.transparent,
+                                    )
+                                  : null,
+                              listBulletPadding: markdownBuilders != null
+                                  ? EdgeInsets.zero
+                                  : null,
                               textAlign: _getWrapAlignment(),
                               p: context.textTheme.bodyMedium,
                               code: context.textTheme.bodyMedium.copyWith(
@@ -271,6 +295,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     Function(String, String?, String)? onTapLink,
     Widget? persistentSheet,
     bool usePersistentSheet = true,
+    Map<String, MarkdownElementBuilder>? markdownBuilders,
   }) async {
     final information = await showModalBottomSheet<bool>(
       context: context,
@@ -296,6 +321,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         onTapLink: onTapLink,
         persistentSheet: persistentSheet,
         usePersistentSheet: usePersistentSheet,
+        markdownBuilders: markdownBuilders,
       ),
       isDismissible: isDismissible,
       enableDrag: isDraggable,
