@@ -459,6 +459,7 @@ abstract class AppAssets {
   static const imageBackgroundElectricityService = '$_basePath/${AppImages.backgroundElectricityService}';
   static const imageBackgroundElectricity = '$_basePath/${AppImages.backgroundElectricity}';
   static const imageBackgroundEstimatePrice = '$_basePath/${AppImages.backgroundEstimatePrice}';
+  static const imageBackgroundEstove = '$_basePath/${AppImages.backgroundEstove}';
   static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';
   static const imageBackgroundHcDiscountAvailable = '$_basePath/${AppImages.backgroundHcDiscountAvailable}';
   static const imageBackgroundHcDiscountUnavailable = '$_basePath/${AppImages.backgroundHcDiscountUnavailable}';

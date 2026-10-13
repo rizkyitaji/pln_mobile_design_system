@@ -105,6 +105,7 @@ abstract class AppImages {
   static const String backgroundElectricityService = 'assets/images/png/backgrounds/background-electricity-service.png';
   static const String backgroundElectricity = 'assets/images/png/backgrounds/background-electricity.png';
   static const String backgroundEstimatePrice = 'assets/images/png/backgrounds/background-estimate-price.png';
+  static const String backgroundEstove = 'assets/images/png/backgrounds/background-estove.png';
   static const String backgroundGiveRating = 'assets/images/png/backgrounds/background-give-rating.png';
   static const String backgroundHcDiscountAvailable = 'assets/images/png/backgrounds/background-hc-discount-available.png';
   static const String backgroundHcDiscountUnavailable = 'assets/images/png/backgrounds/background-hc-discount-unavailable.png';
