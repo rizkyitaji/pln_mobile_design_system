@@ -27,7 +27,7 @@ class AppCircleCard extends StatelessWidget {
         elevation: elevation,
         shape: CircleBorder(side: BorderSide(color: borderColor)),
         child: Container(
-          padding: padding ?? EdgeInsets.all(AppSizes.s4),
+          padding: padding ?? EdgeInsets.zero,
           alignment: Alignment.center,
           child: child,
         ),

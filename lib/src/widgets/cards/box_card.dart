@@ -13,6 +13,7 @@ class AppBoxCard extends StatelessWidget {
   final Widget child;
   final VoidCallback? onTap;
   final BoxFit? boxFit;
+  final Alignment? alignment;
 
   const AppBoxCard({
     super.key,
@@ -29,6 +30,7 @@ class AppBoxCard extends StatelessWidget {
     required this.child,
     this.onTap,
     this.boxFit,
+    this.alignment,
   });
 
   @override
@@ -40,6 +42,7 @@ class AppBoxCard extends StatelessWidget {
         height: height,
         padding: padding ?? EdgeInsets.all(AppSizes.s12),
         margin: margin,
+        alignment: alignment,
         decoration: BoxDecoration(
           image: asset != null
               ? DecorationImage(
