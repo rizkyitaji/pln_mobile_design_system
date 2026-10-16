@@ -66,6 +66,7 @@ abstract class AppAssets {
   static const iconSwapBattery = '$_basePath/${AppIcons.iconSwapBattery}';
   static const iconToilet = '$_basePath/${AppIcons.iconToilet}';
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
+  static const iconBannerEstove = '$_basePath/${AppIcons.iconBannerEstove}';
   static const iconMarketplaceFeatureProductLarge = '$_basePath/${AppIcons.iconMarketplaceFeatureProductLarge}';
   static const iconMarketplaceFlashSale = '$_basePath/${AppIcons.iconMarketplaceFlashSale}';
   static const iconMarketplaceIncentive = '$_basePath/${AppIcons.iconMarketplaceIncentive}';

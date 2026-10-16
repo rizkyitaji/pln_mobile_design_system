@@ -61,6 +61,7 @@ abstract class AppIcons {
   static const String iconWarningRounded = 'assets/icons/svg/icon-warning-rounded.svg';
 
   // Group: PNG
+  static const String iconBannerEstove = 'assets/icons/png/icon-banner-estove.png';
   static const String iconMarketplaceFeatureProductLarge = 'assets/icons/png/icon-marketplace-feature-product-large.png';
   static const String iconMarketplaceFlashSale = 'assets/icons/png/icon-marketplace-flash-sale.png';
   static const String iconMarketplaceIncentive = 'assets/icons/png/icon-marketplace-incentive.png';
