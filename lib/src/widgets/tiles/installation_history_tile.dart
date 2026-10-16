@@ -29,6 +29,10 @@ class AppInstallationHistoryTile extends StatelessWidget {
   final bool isPrimaryButton;
   final VoidCallback? onTap;
 
+  // AMi H
+  final String? amiODAStatus;
+  final String? amiODAstatusLabel;
+
   const AppInstallationHistoryTile({
     super.key,
     this.serviceLabel,
@@ -45,6 +49,8 @@ class AppInstallationHistoryTile extends StatelessWidget {
     required this.buttonText,
     this.isPrimaryButton = false,
     this.onTap,
+    this.amiODAStatus,
+    this.amiODAstatusLabel,
   });
 
   @override
@@ -87,6 +93,48 @@ class AppInstallationHistoryTile extends StatelessWidget {
           const AppDottedLine(
             padding: EdgeInsets.symmetric(vertical: AppSizes.s8),
           ),
+
+          //  AMI H
+          if (amiODAStatus?.isNotEmpty == true &&
+              amiODAstatusLabel?.isNotEmpty == true)
+            AppBoxCard(
+              borderRadius: AppRadius.rounded12,
+              color: amiODAStatus == 'success'
+                  ? AppColors.secondarySubtle
+                  : amiODAStatus == 'failed'
+                  ? AppColors.errorSubtle
+                  : AppColors.warningSubtle,
+              margin: const EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              child: Row(
+                spacing: 10,
+                children: [
+                  AppImage(
+                    asset: amiODAStatus == 'success'
+                        ? AppAssets.iconInfoRounded
+                        : AppAssets.iconWarningRounded,
+                    color: amiODAStatus == 'success'
+                        ? AppColors.iconInfo
+                        : amiODAStatus == 'failed'
+                        ? AppColors.iconError
+                        : AppColors.iconWarningPressed,
+                    size: 20,
+                  ),
+                  Flexible(
+                    child: Text(
+                      amiODAstatusLabel ?? '-',
+                      style: context.textTheme.bodyCaptionMedium.copyWith(
+                        color: amiODAStatus == 'success'
+                            ? AppColors.textInfo
+                            : amiODAStatus == 'failed'
+                            ? AppColors.textError
+                            : AppColors.textWarning,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
           // --- Middle Section: Detail Info ---
           Column(
