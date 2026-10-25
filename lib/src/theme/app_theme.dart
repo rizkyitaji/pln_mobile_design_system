@@ -10,7 +10,7 @@ abstract class AppTheme {
     scaffoldBackgroundColor: AppColors.background,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     extensions: <ThemeExtension<dynamic>>[AppTextTheme.lightTextTheme],
-    dividerTheme: DividerThemeData(color: AppColors.border),
+    dividerTheme: DividerThemeData(color: AppColors.borderSubtle),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: AppRadius.rounded),

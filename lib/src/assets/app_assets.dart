@@ -488,6 +488,7 @@ abstract class AppAssets {
   static const imageBackgroundPageChargingConnected = '$_basePath/${AppImages.backgroundPageChargingConnected}';
   static const imageBackgroundPageChargingDisconnected = '$_basePath/${AppImages.backgroundPageChargingDisconnected}';
   static const imageBackgroundPageEvDetail = '$_basePath/${AppImages.backgroundPageEvDetail}';
+  static const imageBackgroundPageEvTap = '$_basePath/${AppImages.backgroundPageEvTap}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
   static const imageBackgroundPageIconcash = '$_basePath/${AppImages.backgroundPageIconcash}';

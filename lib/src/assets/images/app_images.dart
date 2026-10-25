@@ -134,6 +134,7 @@ abstract class AppImages {
   static const String backgroundPageChargingConnected = 'assets/images/png/backgrounds/background-page-charging-connected.png';
   static const String backgroundPageChargingDisconnected = 'assets/images/png/backgrounds/background-page-charging-disconnected.png';
   static const String backgroundPageEvDetail = 'assets/images/png/backgrounds/background-page-ev-detail.png';
+  static const String backgroundPageEvTap = 'assets/images/png/backgrounds/background-page-ev-tap.png';
   static const String backgroundPageEvds = 'assets/images/png/backgrounds/background-page-evds.png';
   static const String backgroundPageHome = 'assets/images/png/backgrounds/background-page-home.png';
   static const String backgroundPageIconcash = 'assets/images/png/backgrounds/background-page-iconcash.png';
