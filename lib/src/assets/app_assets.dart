@@ -494,6 +494,7 @@ abstract class AppAssets {
   static const imageBackgroundPageIconcash = '$_basePath/${AppImages.backgroundPageIconcash}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundPageQueue = '$_basePath/${AppImages.backgroundPageQueue}';
+  static const imageBackgroundPageSuccess = '$_basePath/${AppImages.backgroundPageSuccess}';
   static const imageBackgroundPv = '$_basePath/${AppImages.backgroundPv}';
   static const imageBackgroundRating = '$_basePath/${AppImages.backgroundRating}';
   static const imageBackgroundRecHeader = '$_basePath/${AppImages.backgroundRecHeader}';

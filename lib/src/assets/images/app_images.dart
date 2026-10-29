@@ -140,6 +140,7 @@ abstract class AppImages {
   static const String backgroundPageIconcash = 'assets/images/png/backgrounds/background-page-iconcash.png';
   static const String backgroundPageMyEv = 'assets/images/png/backgrounds/background-page-my-ev.png';
   static const String backgroundPageQueue = 'assets/images/png/backgrounds/background-page-queue.png';
+  static const String backgroundPageSuccess = 'assets/images/png/backgrounds/background-page-success.png';
   static const String backgroundPv = 'assets/images/png/backgrounds/background-pv.png';
   static const String backgroundRating = 'assets/images/png/backgrounds/background-rating.png';
   static const String backgroundRecHeader = 'assets/images/png/backgrounds/background-rec-header.png';
