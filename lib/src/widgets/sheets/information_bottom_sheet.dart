@@ -182,7 +182,7 @@ class AppInformationBottomSheet extends StatelessWidget {
                             textAlign: _getWrapAlignment(),
                             p: context.textTheme.bodyMedium,
                             code: context.textTheme.bodyMedium.copyWith(
-                              color: const Color(0xFFEF476F),
+                              color: AppColors.textError,
                             ),
                             a: context.textTheme.bodyMedium.copyWith(
                               color: AppColors.textPrimary,
