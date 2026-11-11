@@ -18,6 +18,7 @@ abstract class AppImages {
   static const String illustrationDeleteCar = 'assets/images/png/illustration-delete-car.png';
   static const String illustrationDeleteMotorcycle = 'assets/images/png/illustration-delete-motorcycle.png';
   static const String illustrationDeviceBlock = 'assets/images/png/illustration-device-block.png';
+  static const String illustrationElectronicCard = 'assets/images/png/illustration-electronic-card.png';
   static const String illustrationEmailDuplicate = 'assets/images/png/illustration-email-duplicate.png';
   static const String illustrationEmptyData = 'assets/images/png/illustration-empty-data.png';
   static const String illustrationEmptyIdpel = 'assets/images/png/illustration-empty-idpel.png';
@@ -41,9 +42,9 @@ abstract class AppImages {
   static const String illustrationMascotHalo = 'assets/images/png/illustration-mascot-halo.png';
   static const String illustrationMotorcycleGeneral = 'assets/images/png/illustration-motorcycle-general.png';
   static const String illustrationNoInternetGeneral = 'assets/images/png/illustration-no-internet-general.png';
-  static const String illustrationOnBoardingLpv1 = 'assets/images/png/illustration-on-boarding-lic-pv-1.png';
-  static const String illustrationOnBoardingLpv2 = 'assets/images/png/illustration-on-boarding-lic-pv-2.png';
-  static const String illustrationOnBoardingLpv3 = 'assets/images/png/illustration-on-boarding-lic-pv-3.png';
+  static const String illustrationOnBoardingLicPv1 = 'assets/images/png/illustration-on-boarding-lic-pv-1.png';
+  static const String illustrationOnBoardingLicPv2 = 'assets/images/png/illustration-on-boarding-lic-pv-2.png';
+  static const String illustrationOnBoardingLicPv3 = 'assets/images/png/illustration-on-boarding-lic-pv-3.png';
   static const String illustrationOnBoardingLogin = 'assets/images/png/illustration-on-boarding-login.png';
   static const String illustrationOnBoardingPv = 'assets/images/png/illustration-on-boarding-pv.png';
   static const String illustrationOnBoardingSubPv1 = 'assets/images/png/illustration-on-boarding-sub-pv-1.png';
