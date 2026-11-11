@@ -6,6 +6,10 @@ class AppOptionCard extends StatelessWidget {
   final bool selected;
   final VoidCallback onTap;
   final bool disabled;
+  final TextStyle? labelStyle;
+  final Widget? description;
+  final double? verticalPadding, horizontalPadding;
+  final BorderRadius? radius;
 
   const AppOptionCard({
     super.key,
@@ -13,6 +17,11 @@ class AppOptionCard extends StatelessWidget {
     required this.selected,
     required this.onTap,
     this.disabled = false,
+    this.labelStyle,
+    this.description,
+    this.verticalPadding,
+    this.horizontalPadding,
+    this.radius,
   });
 
   @override
@@ -20,26 +29,34 @@ class AppOptionCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: disabled ? AppColors.disabled : AppColors.white,
-        borderRadius: AppRadius.rounded12,
+        borderRadius: radius ?? AppRadius.rounded12,
         border: Border.all(
           color: selected ? AppColors.borderPrimary : AppColors.border,
           width: selected ? 2 : 1,
         ),
       ),
       child: InkWell(
-        borderRadius: AppRadius.rounded12,
+        borderRadius: radius ?? AppRadius.rounded12,
         onTap: disabled ? null : onTap,
         child: Ink(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSizes.s16,
-            vertical: AppSizes.s14,
+          padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding ?? AppSizes.s16,
+            vertical: verticalPadding ?? AppSizes.s14,
           ),
           child: Row(
             children: [
               AppRadioButton(selected: selected),
               const SizedBox(width: AppSizes.s12),
               Expanded(
-                child: Text(label, style: context.textTheme.bodyMediumSemiBold),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(label, style: labelStyle ?? context.textTheme.bodyMediumSemiBold),
+                    if (description != null)
+                      const SizedBox(height: AppSizes.s4),
+                    if (description != null) description ?? const SizedBox.shrink(),
+                  ],
+                ),
               ),
             ],
           ),

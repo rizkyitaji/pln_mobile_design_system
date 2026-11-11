@@ -28,5 +28,6 @@ export 'src/widgets/lazy_loads/index.dart';
 export 'src/widgets/tiles/index.dart';
 export 'src/widgets/sheets/index.dart';
 export 'src/widgets/snackbar/index.dart';
+export 'src/widgets/animations/index.dart';
 
 export 'package:pin_code_fields/pin_code_fields.dart';

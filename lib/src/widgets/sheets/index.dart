@@ -7,4 +7,5 @@ export 'general_bottom_sheet.dart';
 export 'selection_sheet.dart';
 export 'date_range_picker_sheet.dart';
 export 'date_picker_sheet.dart';
+export 'document_info_bottom_sheet.dart';
 export 'success_bottom_sheet.dart';

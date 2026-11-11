@@ -363,6 +363,7 @@ abstract class AppAssets {
   // --- AppImages Mapping ---
   static const imageBannerFaq = '$_basePath/${AppImages.bannerFaq}';
   static const imageFlagIndonesia = '$_basePath/${AppImages.flagIndonesia}';
+  static const imageIllustrationBangunan = '$_basePath/${AppImages.illustrationBangunan}';
   static const imageIllustrationBlockLocationGeneral = '$_basePath/${AppImages.illustrationBlockLocationGeneral}';
   static const imageIllustrationCarGeneral = '$_basePath/${AppImages.illustrationCarGeneral}';
   static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
@@ -391,6 +392,8 @@ abstract class AppAssets {
   static const imageIllustrationInactiveNfc = '$_basePath/${AppImages.illustrationInactiveNfc}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationInvalidLicensePlate = '$_basePath/${AppImages.illustrationInvalidLicensePlate}';
+  static const imageIllustrationKartuKeluarga = '$_basePath/${AppImages.illustrationKartuKeluarga}';
+  static const imageIllustrationKtp = '$_basePath/${AppImages.illustrationKtp}';
   static const imageIllustrationKwhMeter = '$_basePath/${AppImages.illustrationKwhMeter}';
   static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
@@ -413,6 +416,7 @@ abstract class AppAssets {
   static const imageIllustrationPvHome = '$_basePath/${AppImages.illustrationPvHome}';
   static const imageIllustrationRecOnboarding = '$_basePath/${AppImages.illustrationRecOnboarding}';
   static const imageIllustrationSadGeneral = '$_basePath/${AppImages.illustrationSadGeneral}';
+  static const imageIllustrationSelfieKtp = '$_basePath/${AppImages.illustrationSelfieKtp}';
   static const imageIllustrationShieldGeneral = '$_basePath/${AppImages.illustrationShieldGeneral}';
   static const imageIllustrationSmileGeneral = '$_basePath/${AppImages.illustrationSmileGeneral}';
   static const imageIllustrationSpbkluActivationSuccess = '$_basePath/${AppImages.illustrationSpbkluActivationSuccess}';
