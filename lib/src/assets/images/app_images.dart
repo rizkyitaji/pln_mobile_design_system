@@ -5,6 +5,7 @@ abstract class AppImages {
   // Group: PNG
   static const String bannerFaq = 'assets/images/png/banner-faq.png';
   static const String flagIndonesia = 'assets/images/png/flag-indonesia.png';
+  static const String illustrationBangunan = 'assets/images/png/illustration-bangunan.png';
   static const String illustrationBlockLocationGeneral = 'assets/images/png/illustration-block-location-general.png';
   static const String illustrationCarGeneral = 'assets/images/png/illustration-car-general.png';
   static const String illustrationComplaintSuccess = 'assets/images/png/illustration-complaint-success.png';
@@ -32,6 +33,8 @@ abstract class AppImages {
   static const String illustrationInactiveNfc = 'assets/images/png/illustration-inactive-nfc.png';
   static const String illustrationInformationGeneral = 'assets/images/png/illustration-information-general.png';
   static const String illustrationInvalidLicensePlate = 'assets/images/png/illustration-invalid-license-plate.png';
+  static const String illustrationKartuKeluarga = 'assets/images/png/illustration-kartu-keluarga.png';
+  static const String illustrationKtp = 'assets/images/png/illustration-ktp.png';
   static const String illustrationKwhMeter = 'assets/images/png/illustration-kwh-meter.png';
   static const String illustrationLiveChat = 'assets/images/png/illustration-live-chat.png';
   static const String illustrationLocationGeneral = 'assets/images/png/illustration-location-general.png';
@@ -54,6 +57,7 @@ abstract class AppImages {
   static const String illustrationPvHome = 'assets/images/png/illustration-pv-home.png';
   static const String illustrationRecOnboarding = 'assets/images/png/illustration-rec-onboarding.png';
   static const String illustrationSadGeneral = 'assets/images/png/illustration-sad-general.png';
+  static const String illustrationSelfieKtp = 'assets/images/png/illustration-selfie-ktp.png';
   static const String illustrationShieldGeneral = 'assets/images/png/illustration-shield-general.png';
   static const String illustrationSmileGeneral = 'assets/images/png/illustration-smile-general.png';
   static const String illustrationSpbkluActivationSuccess = 'assets/images/png/illustration-spbklu-activation-success.png';

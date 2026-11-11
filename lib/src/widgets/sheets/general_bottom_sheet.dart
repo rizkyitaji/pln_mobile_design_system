@@ -7,7 +7,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
   final Widget? child, action, persistentSheet;
   final VoidCallback? onTap;
   final String? buttonText;
-  final bool showAction, showPersistentSheet;
+  final bool showAction, showPersistentSheet, showDragHandle;
   final double? padding;
 
   const AppGeneralBottomSheet({
@@ -22,11 +22,13 @@ class AppGeneralBottomSheet extends StatelessWidget {
     this.showAction = true,
     this.persistentSheet,
     this.showPersistentSheet = true,
+    this.showDragHandle = true,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppSheetContainer(
+      showDragHandle: showDragHandle,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -85,6 +87,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
     bool showAction = true,
     Widget? persistentSheet,
     bool showPersistentSheet = true,
+    bool showDragHandle = true,
   }) {
     return showModalBottomSheet<T>(
       context: context,
@@ -102,6 +105,7 @@ class AppGeneralBottomSheet extends StatelessWidget {
           showAction: showAction,
           persistentSheet: persistentSheet,
           showPersistentSheet: showPersistentSheet,
+          showDragHandle: showDragHandle,
           child: child,
         );
       },

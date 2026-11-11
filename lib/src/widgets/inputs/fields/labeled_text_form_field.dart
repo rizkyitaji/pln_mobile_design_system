@@ -123,15 +123,16 @@ class AppLabeledTextFormField extends StatelessWidget {
                 enableInteractiveSelection:
                     enableInteractiveSelection ?? !readOnly,
                 canRequestFocus: canRequestFocus ?? !readOnly,
-                contextMenuBuilder: contextMenuBuilder ??
+                contextMenuBuilder:
+                    contextMenuBuilder ??
                     (enableInteractiveSelection == false ||
                             (readOnly && enableInteractiveSelection != true)
                         ? (context, editableTextState) =>
-                            const SizedBox.shrink()
+                              const SizedBox.shrink()
                         : (context, editableTextState) =>
-                            AdaptiveTextSelectionToolbar.editableText(
-                              editableTextState: editableTextState,
-                            )),
+                              AdaptiveTextSelectionToolbar.editableText(
+                                editableTextState: editableTextState,
+                              )),
                 style: style,
                 maxLines: maxLines,
                 minLines: minLines,
@@ -152,10 +153,12 @@ class AppLabeledTextFormField extends StatelessWidget {
                   errorMaxLines: errorMaxLines ?? 3,
                   errorStyle: errorStyle,
                   helperText: helperText,
-                  helperStyle: helperStyle ??
-                      AppTextTheme.lightTextTheme.bodyCaption.copyWith(
+                  helperStyle:
+                      helperStyle ??
+                      AppTextTheme.lightTextTheme.bodySmallMedium.copyWith(
                         color: AppColors.textInfo,
                       ),
+                  helperMaxLines: 2,
                   hintText: hintText,
                   hintStyle: hintStyle,
                   suffixIcon: suffixIcon,
