@@ -47,6 +47,7 @@ abstract class AppAssets {
   static const iconHandClick = '$_basePath/${AppIcons.iconHandClick}';
   static const iconInsurance = '$_basePath/${AppIcons.iconInsurance}';
   static const iconLogin = '$_basePath/${AppIcons.iconLogin}';
+  static const iconLogout = '$_basePath/${AppIcons.iconLogout}';
   static const iconMaps = '$_basePath/${AppIcons.iconMaps}';
   static const iconMinus = '$_basePath/${AppIcons.iconMinus}';
   static const iconMoreHorizontal = '$_basePath/${AppIcons.iconMoreHorizontal}';

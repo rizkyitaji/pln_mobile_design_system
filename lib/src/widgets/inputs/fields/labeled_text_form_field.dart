@@ -41,6 +41,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final TextStyle? labelStyle, hintStyle, errorStyle, helperStyle;
   final int? errorMaxLines;
   final String? helperText;
+  final AutovalidateMode? autovalidateMode;
 
   const AppLabeledTextFormField({
     super.key,
@@ -85,6 +86,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.errorMaxLines,
     this.helperText,
     this.helperStyle,
+    this.autovalidateMode,
   });
 
   @override
@@ -142,7 +144,8 @@ class AppLabeledTextFormField extends StatelessWidget {
                 textInputAction: textInputAction,
                 textCapitalization:
                     textCapitalization ?? TextCapitalization.none,
-                autovalidateMode: AutovalidateMode.onUserInteraction,
+                autovalidateMode:
+                    autovalidateMode ?? AutovalidateMode.onUserInteraction,
                 inputFormatters: inputFormatters,
                 validator: validator,
                 onTap: onTap,
