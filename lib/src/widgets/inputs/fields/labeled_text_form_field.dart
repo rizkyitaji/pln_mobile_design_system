@@ -38,6 +38,7 @@ class AppLabeledTextFormField extends StatelessWidget {
   final Widget? actionWidget;
   final double? actionWidgetSpace;
   final TextStyle? style;
+  final String? errorText;
   final TextStyle? labelStyle, hintStyle, errorStyle, helperStyle;
   final int? errorMaxLines;
   final String? helperText;
@@ -81,6 +82,7 @@ class AppLabeledTextFormField extends StatelessWidget {
     this.actionWidget,
     this.actionWidgetSpace,
     this.style,
+    this.errorText,
     this.errorStyle,
     this.errorMaxLines,
     this.helperText,
@@ -89,6 +91,8 @@ class AppLabeledTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hasError = errorText != null && errorText!.isNotEmpty;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -151,14 +155,11 @@ class AppLabeledTextFormField extends StatelessWidget {
                 onSaved: onSaved,
                 decoration: InputDecoration(
                   errorMaxLines: errorMaxLines ?? 3,
-                  errorStyle: errorStyle,
-                  helperText: helperText,
-                  helperStyle:
-                      helperStyle ??
-                      AppTextTheme.lightTextTheme.bodySmallMedium.copyWith(
-                        color: AppColors.textInfo,
+                  errorStyle:
+                      errorStyle ??
+                      context.textTheme.bodyCaption.copyWith(
+                        color: AppColors.textError,
                       ),
-                  helperMaxLines: 2,
                   hintText: hintText,
                   hintStyle: hintStyle,
                   suffixIcon: suffixIcon,
@@ -174,20 +175,27 @@ class AppLabeledTextFormField extends StatelessWidget {
                       border ??
                       OutlineInputBorder(
                         borderRadius: AppRadius.rounded8,
-                        borderSide: const BorderSide(color: AppColors.border),
+                        borderSide: BorderSide(
+                          color: hasError ? AppColors.borderError : AppColors.border,
+                        ),
                       ),
                   enabledBorder:
                       border ??
                       OutlineInputBorder(
                         borderRadius: AppRadius.rounded8,
-                        borderSide: const BorderSide(color: AppColors.border),
+                        borderSide: BorderSide(
+                          color: hasError ? AppColors.borderError : AppColors.border,
+                        ),
                       ),
                   focusedBorder:
                       border ??
                       OutlineInputBorder(
                         borderRadius: AppRadius.rounded8,
-                        borderSide: const BorderSide(
-                          color: AppColors.borderPrimary,
+                        borderSide: BorderSide(
+                          color:
+                              hasError
+                                  ? AppColors.borderError
+                                  : AppColors.borderPrimary,
                         ),
                       ),
                   errorBorder:
@@ -214,6 +222,25 @@ class AppLabeledTextFormField extends StatelessWidget {
                 : []),
           ],
         ),
+        if (hasError) ...[
+          AppSpacing.h4,
+          Text(
+            errorText!,
+            style: errorStyle ??
+                context.textTheme.bodyCaption.copyWith(
+                  color: AppColors.textError,
+                ),
+          ),
+        ] else if (helperText != null && helperText!.isNotEmpty) ...[
+          AppSpacing.h4,
+          Text(
+            helperText!,
+            style: helperStyle ??
+                context.textTheme.bodyCaption.copyWith(
+                  color: AppColors.textInfo,
+                ),
+          ),
+        ],
       ],
     );
   }

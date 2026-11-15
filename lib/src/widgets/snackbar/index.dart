@@ -355,7 +355,7 @@ class AppSnackBar {
             AppSizes.s16,
             AppSizes.zero,
             AppSizes.s16,
-            AppSizes.s32,
+            position == AppSnackBarPosition.top ? paddingBottom : AppSizes.s32,
           ),
           behavior: SnackBarBehavior.floating,
           backgroundColor: AppColors.backgroundSnackbar,

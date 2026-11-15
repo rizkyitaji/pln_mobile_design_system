@@ -65,10 +65,7 @@ class _ShakeAnimationState extends State<ShakeAnimation>
     );
 
     _offsetAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.elasticIn,
-      ),
+      CurvedAnimation(parent: _animationController, curve: Curves.linear),
     );
 
     widget.controller?._attach(this);
@@ -98,8 +95,7 @@ class _ShakeAnimationState extends State<ShakeAnimation>
     // Creates a damped oscillation effect
     final progress = animationValue;
     final damping = 1.0 - progress;
-    final sinValue =
-        damping * sin(widget.shakeCount * 2 * 3.14159 * progress);
+    final sinValue = damping * sin(widget.shakeCount * 2 * 3.14159 * progress);
     return widget.shakeOffset * sinValue;
   }
 
@@ -140,5 +136,3 @@ class ShakeAnimationController {
   /// Returns true if the controller is attached to a [ShakeAnimation] widget.
   bool get isAttached => _state != null;
 }
-
-
