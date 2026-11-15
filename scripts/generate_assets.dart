@@ -144,22 +144,8 @@ void _generateSubClass({
       processedFiles.add(file.path);
 
       final fileName = file.uri.pathSegments.last;
-      String rawName = fileName.split('.').first;
-
-      String cleanName = rawName;
-      if (RegExp(
-        r'^(icon|ic|img|animation)[-_][a-zA-Z0-9]+',
-      ).hasMatch(rawName)) {
-        cleanName = rawName;
-      } else {
-        cleanName = rawName
-            .replaceAll('icon-', '')
-            .replaceAll('ic-', '')
-            .replaceAll('ic_', '')
-            .replaceAll('img-', '')
-            .replaceAll('img_', '')
-            .replaceAll('animation-', '');
-      }
+      final rawName = fileName.split('.').first;
+      final cleanName = rawName;
 
       String suffix = '';
 

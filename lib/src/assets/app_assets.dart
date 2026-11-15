@@ -47,6 +47,7 @@ abstract class AppAssets {
   static const iconHandClick = '$_basePath/${AppIcons.iconHandClick}';
   static const iconInsurance = '$_basePath/${AppIcons.iconInsurance}';
   static const iconLogin = '$_basePath/${AppIcons.iconLogin}';
+  static const iconLogout = '$_basePath/${AppIcons.iconLogout}';
   static const iconMaps = '$_basePath/${AppIcons.iconMaps}';
   static const iconMinus = '$_basePath/${AppIcons.iconMinus}';
   static const iconMoreHorizontal = '$_basePath/${AppIcons.iconMoreHorizontal}';
@@ -377,6 +378,7 @@ abstract class AppAssets {
   static const imageIllustrationDeleteCar = '$_basePath/${AppImages.illustrationDeleteCar}';
   static const imageIllustrationDeleteMotorcycle = '$_basePath/${AppImages.illustrationDeleteMotorcycle}';
   static const imageIllustrationDeviceBlock = '$_basePath/${AppImages.illustrationDeviceBlock}';
+  static const imageIllustrationElectronicCard = '$_basePath/${AppImages.illustrationElectronicCard}';
   static const imageIllustrationEmailDuplicate = '$_basePath/${AppImages.illustrationEmailDuplicate}';
   static const imageIllustrationEmptyData = '$_basePath/${AppImages.illustrationEmptyData}';
   static const imageIllustrationEmptyIdpel = '$_basePath/${AppImages.illustrationEmptyIdpel}';
@@ -402,9 +404,9 @@ abstract class AppAssets {
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
   static const imageIllustrationMotorcycleGeneral = '$_basePath/${AppImages.illustrationMotorcycleGeneral}';
   static const imageIllustrationNoInternetGeneral = '$_basePath/${AppImages.illustrationNoInternetGeneral}';
-  static const imageIllustrationOnBoardingLpv1 = '$_basePath/${AppImages.illustrationOnBoardingLpv1}';
-  static const imageIllustrationOnBoardingLpv2 = '$_basePath/${AppImages.illustrationOnBoardingLpv2}';
-  static const imageIllustrationOnBoardingLpv3 = '$_basePath/${AppImages.illustrationOnBoardingLpv3}';
+  static const imageIllustrationOnBoardingLicPv1 = '$_basePath/${AppImages.illustrationOnBoardingLicPv1}';
+  static const imageIllustrationOnBoardingLicPv2 = '$_basePath/${AppImages.illustrationOnBoardingLicPv2}';
+  static const imageIllustrationOnBoardingLicPv3 = '$_basePath/${AppImages.illustrationOnBoardingLicPv3}';
   static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imageIllustrationOnBoardingPv = '$_basePath/${AppImages.illustrationOnBoardingPv}';
   static const imageIllustrationOnBoardingSubPv1 = '$_basePath/${AppImages.illustrationOnBoardingSubPv1}';

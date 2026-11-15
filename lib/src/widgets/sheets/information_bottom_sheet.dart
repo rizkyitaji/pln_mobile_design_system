@@ -71,10 +71,154 @@ class AppInformationBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final contentWidget = Visibility(
+      visible: !(loading ?? false),
+      replacement: SizedBox(
+        height: AppSizes.s100,
+        child: AppLoadingIndicator(),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (icon != null) ...[
+              Center(
+                child: AppImage(
+                  asset: icon!,
+                  size: iconSize ?? AppSizes.s224,
+                ),
+              ),
+              AppSpacing.h16,
+            ],
+            if (title != null) ...[
+              if (enableCloseButton) ...[
+                Row(
+                  spacing: AppSizes.s12,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        title.toString(),
+                        style: context.textTheme.headingSmall.copyWith(
+                          color: titleColor,
+                        ),
+                      ),
+                    ),
+                    AppBackButton(icon: AppAssets.iconClose),
+                  ],
+                ),
+                AppSpacing.h16,
+              ] else ...[
+                Visibility(
+                  visible: centerTitle,
+                  replacement: Text(
+                    title.toString(),
+                    textAlign:
+                        _getWrapAlignment() == WrapAlignment.center
+                        ? TextAlign.center
+                        : TextAlign.start,
+                    style: context.textTheme.headingSmall.copyWith(
+                      color: titleColor,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      title.toString(),
+                      textAlign: TextAlign.center,
+                      style: context.textTheme.headingSmall.copyWith(
+                        color: titleColor,
+                      ),
+                    ),
+                  ),
+                ),
+                AppSpacing.h16,
+              ],
+            ],
+            if (highlight != null) ...[highlight!, AppSpacing.h12],
+            if (descriptionHtml != null) ...[
+              Html(
+                data: descriptionHtml,
+                style: {
+                  'body': Style(
+                    margin: Margins.zero,
+                    padding: HtmlPaddings.zero,
+                    textAlign: textAlign ?? TextAlign.center,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.textBody,
+                    fontSize: FontSize.medium,
+                    lineHeight: LineHeight.number(1.3),
+                  ),
+                },
+              ),
+            ],
+            if (descriptionText != null)
+              Visibility(
+                visible: centerDescription,
+                replacement: MarkdownBody(
+                  data: descriptionText!,
+                  builders: markdownBuilders ?? {},
+                  styleSheet: MarkdownStyleSheet(
+                    listIndent: markdownBuilders != null ? 0 : null,
+                    listBullet: markdownBuilders != null
+                        ? TextStyle(
+                            fontSize: 0,
+                            color: Colors.transparent,
+                          )
+                        : null,
+                    listBulletPadding: markdownBuilders != null
+                        ? EdgeInsets.zero
+                        : null,
+                    textAlign: _getWrapAlignment(),
+                    p: context.textTheme.bodyMedium,
+                    code: context.textTheme.bodyMedium.copyWith(
+                      color: AppColors.textError,
+                    ),
+                    a: context.textTheme.bodyMedium.copyWith(
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                  onTapLink: onTapLink,
+                ),
+                child: Center(
+                  child: MarkdownBody(
+                    data: descriptionText!,
+                    builders: markdownBuilders ?? {},
+                    styleSheet: MarkdownStyleSheet(
+                      listIndent: markdownBuilders != null ? 0 : null,
+                      listBullet: markdownBuilders != null
+                          ? TextStyle(
+                              fontSize: 0,
+                              color: Colors.transparent,
+                            )
+                          : null,
+                      listBulletPadding: markdownBuilders != null
+                          ? EdgeInsets.zero
+                          : null,
+                      textAlign: _getWrapAlignment(),
+                      p: context.textTheme.bodyMedium,
+                      code: context.textTheme.bodyMedium.copyWith(
+                        color: const Color(0xFFEF476F),
+                      ),
+                      a: context.textTheme.bodyMedium.copyWith(
+                        color: AppColors.textPrimary,
+                      ),
+                    ),
+                    onTapLink: onTapLink,
+                  ),
+                ),
+              ),
+            if (more != null) ...[AppSpacing.h12, more!],
+          ],
+        ),
+      ),
+    );
+
     return PopScope(
       canPop: willPop,
       child: AppSheetContainer(
         showDragHandle: showDragHandle,
+        height: isFullScreen ? MediaQuery.of(context).size.height * 0.9 : null,
+        expand: isFullScreen,
         child: Column(
           crossAxisAlignment: crossAxisAlignment,
           mainAxisAlignment: isFullScreen
@@ -82,147 +226,17 @@ class AppInformationBottomSheet extends StatelessWidget {
               : MainAxisAlignment.start,
           mainAxisSize: isFullScreen ? MainAxisSize.max : MainAxisSize.min,
           children: [
-            Visibility(
-              visible: !(loading ?? false),
-              replacement: SizedBox(
-                height: AppSizes.s100,
-                child: AppLoadingIndicator(),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppSizes.s16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (icon != null) ...[
-                      Center(
-                        child: AppImage(
-                          asset: icon!,
-                          size: iconSize ?? AppSizes.s224,
-                        ),
-                      ),
-                      AppSpacing.h16,
-                    ],
-                    if (title != null) ...[
-                      if (enableCloseButton) ...[
-                        Row(
-                          spacing: AppSizes.s12,
-                          children: [
-                            Expanded(
-                              child: Text(
-                                title.toString(),
-                                style: context.textTheme.headingSmall.copyWith(
-                                  color: titleColor,
-                                ),
-                              ),
-                            ),
-                            AppBackButton(icon: AppAssets.iconClose),
-                          ],
-                        ),
-                        AppSpacing.h16,
-                      ] else ...[
-                        Visibility(
-                          visible: centerTitle,
-                          replacement: Text(
-                            title.toString(),
-                            textAlign:
-                                _getWrapAlignment() == WrapAlignment.center
-                                ? TextAlign.center
-                                : TextAlign.start,
-                            style: context.textTheme.headingSmall.copyWith(
-                              color: titleColor,
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              title.toString(),
-                              textAlign: TextAlign.center,
-                              style: context.textTheme.headingSmall.copyWith(
-                                color: titleColor,
-                              ),
-                            ),
-                          ),
-                        ),
-                        AppSpacing.h16,
-                      ],
-                    ],
-                    if (highlight != null) ...[highlight!, AppSpacing.h12],
-                    if (descriptionHtml != null) ...[
-                      Html(
-                        data: descriptionHtml,
-                        style: {
-                          'body': Style(
-                            margin: Margins.zero,
-                            padding: HtmlPaddings.zero,
-                            textAlign: textAlign ?? TextAlign.center,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.textBody,
-                            fontSize: FontSize.medium,
-                            lineHeight: LineHeight.number(1.3),
-                          ),
-                        },
-                      ),
-                    ],
-                    if (descriptionText != null)
-                      Visibility(
-                        visible: centerDescription,
-                        replacement: MarkdownBody(
-                          data: descriptionText!,
-                          builders: markdownBuilders ?? {},
-                          styleSheet: MarkdownStyleSheet(
-                            listIndent: markdownBuilders != null ? 0 : null,
-                            listBullet: markdownBuilders != null
-                                ? TextStyle(
-                                    fontSize: 0,
-                                    color: Colors.transparent,
-                                  )
-                                : null,
-                            listBulletPadding: markdownBuilders != null
-                                ? EdgeInsets.zero
-                                : null,
-                            textAlign: _getWrapAlignment(),
-                            p: context.textTheme.bodyMedium,
-                            code: context.textTheme.bodyMedium.copyWith(
-                              color: AppColors.textError,
-                            ),
-                            a: context.textTheme.bodyMedium.copyWith(
-                              color: AppColors.textPrimary,
-                            ),
-                          ),
-                          onTapLink: onTapLink,
-                        ),
-                        child: Center(
-                          child: MarkdownBody(
-                            data: descriptionText!,
-                            builders: markdownBuilders ?? {},
-                            styleSheet: MarkdownStyleSheet(
-                              listIndent: markdownBuilders != null ? 0 : null,
-                              listBullet: markdownBuilders != null
-                                  ? TextStyle(
-                                      fontSize: 0,
-                                      color: Colors.transparent,
-                                    )
-                                  : null,
-                              listBulletPadding: markdownBuilders != null
-                                  ? EdgeInsets.zero
-                                  : null,
-                              textAlign: _getWrapAlignment(),
-                              p: context.textTheme.bodyMedium,
-                              code: context.textTheme.bodyMedium.copyWith(
-                                color: const Color(0xFFEF476F),
-                              ),
-                              a: context.textTheme.bodyMedium.copyWith(
-                                color: AppColors.textPrimary,
-                              ),
-                            ),
-                            onTapLink: onTapLink,
-                          ),
-                        ),
-                      ),
-                    if (more != null) ...[AppSpacing.h12, more!],
-                  ],
+            if (isFullScreen)
+              Expanded(
+                child: Center(
+                  child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    child: contentWidget,
+                  ),
                 ),
-              ),
-            ),
+              )
+            else
+              contentWidget,
             AppSpacing.h16,
             if (usePersistentSheet)
               persistentSheet ??
@@ -286,6 +300,7 @@ class AppInformationBottomSheet extends StatelessWidget {
     ButtonStyle? buttonStyle,
     bool enableCloseButton = false,
     bool useElevatedButton = true,
+    bool isFullScreen = false,
     double? titleSize,
     VoidCallback? onTap,
     bool centerTitle = true,
@@ -313,6 +328,7 @@ class AppInformationBottomSheet extends StatelessWidget {
         buttonStyle: buttonStyle,
         enableCloseButton: enableCloseButton,
         useElevatedButton: useElevatedButton,
+        isFullScreen: isFullScreen,
         onTap: onTap,
         centerTitle: centerTitle,
         centerDescription: centerDescription,
