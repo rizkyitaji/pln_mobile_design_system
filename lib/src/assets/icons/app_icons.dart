@@ -64,17 +64,15 @@ abstract class AppIcons {
   // Group: PNG
   static const String iconBannerEstove = 'assets/icons/png/icon-banner-estove.png';
   static const String iconMarketplaceFeatureProductLarge = 'assets/icons/png/icon-marketplace-feature-product-large.png';
-  static const String iconMarketplaceFlashSale = 'assets/icons/png/icon-marketplace-flash-sale.png';
-  static const String iconMarketplaceIncentive = 'assets/icons/png/icon-marketplace-incentive.png';
   static const String iconMarketplaceOfficialStore = 'assets/icons/png/icon-marketplace-official-store.png';
   static const String iconMarketplaceShippingDiscount = 'assets/icons/png/icon-marketplace-shipping-discount.png';
   static const String iconMarketplaceTopProduct = 'assets/icons/png/icon-marketplace-top-product.png';
   static const String iconNfcCard = 'assets/icons/png/icon-nfc-card.png';
   static const String iconRatingHeader = 'assets/icons/png/icon-rating-header.png';
   static const String iconRecCleanEnergy = 'assets/icons/png/icon-rec-clean-energy.png';
-  static const String iconSpkluStation = 'assets/icons/png/icon-spklu-station.png';
 
   // Group: BRANDS PNG
+  static const String iconAristaPower = 'assets/icons/png/brands/icon-arista-power.jpeg';
   static const String iconAstra = 'assets/icons/png/brands/icon-astra.png';
   static const String iconBlueCharge = 'assets/icons/png/brands/icon-blue-charge.png';
   static const String iconCazgo = 'assets/icons/png/brands/icon-cazgo.png';
@@ -86,7 +84,6 @@ abstract class AppIcons {
   static const String iconIndomobil = 'assets/icons/png/brands/icon-indomobil.png';
   static const String iconLexus = 'assets/icons/png/brands/icon-lexus.png';
   static const String iconParkingPlus = 'assets/icons/png/brands/icon-parking-plus.png';
-  static const String iconPlnMobile = 'assets/icons/png/brands/icon-pln-mobile.png';
   static const String iconPln = 'assets/icons/png/brands/icon-pln.png';
   static const String iconRheCharge = 'assets/icons/png/brands/icon-rhe-charge.jpeg';
   static const String iconStarvo = 'assets/icons/png/brands/icon-starvo.png';
@@ -96,21 +93,13 @@ abstract class AppIcons {
   static const String iconWuling = 'assets/icons/png/brands/icon-wuling.png';
 
   // Group: MENU PNG
-  static const String iconAddonIconnetNew = 'assets/icons/png/menu/icon-addon-iconnet-new.png';
   static const String iconMenuBalikNamaNew = 'assets/icons/png/menu/icon-menu-balik-nama-new.png';
-  static const String iconMenuBerlanggananIconnetNew = 'assets/icons/png/menu/icon-menu-berlangganan-iconnet-new.png';
   static const String iconMenuCatatMeterNew = 'assets/icons/png/menu/icon-menu-catat-meter-new.png';
-  static const String iconMenuCekJangkauanNew = 'assets/icons/png/menu/icon-menu-cek-jangkauan-new.png';
   static const String iconMenuDiskusiNew = 'assets/icons/png/menu/icon-menu-diskusi-new.png';
   static const String iconMenuEbillingNew = 'assets/icons/png/menu/icon-menu-ebilling-new.png';
   static const String iconMenuEvNew = 'assets/icons/png/menu/icon-menu-ev-new.png';
   static const String iconMenuEventNew = 'assets/icons/png/menu/icon-menu-event-new.png';
-  static const String iconMenuFaqNew = 'assets/icons/png/menu/icon-menu-faq-new.png';
-  static const String iconMenuHomeChargingNew = 'assets/icons/png/menu/icon-menu-home-charging-new.png';
-  static const String iconMenuHubungiKamiNew = 'assets/icons/png/menu/icon-menu-hubungi-kami-new.png';
-  static const String iconMenuIconnetProgressNew = 'assets/icons/png/menu/icon-menu-iconnet-progress-new.png';
   static const String iconMenuInternetNew = 'assets/icons/png/menu/icon-menu-internet-new.png';
-  static const String iconMenuKelolaIconnetNew = 'assets/icons/png/menu/icon-menu-kelola-iconnet-new.png';
   static const String iconMenuKomporInduksiNew = 'assets/icons/png/menu/icon-menu-kompor-induksi-new.png';
   static const String iconMenuLacakPermohonanNew = 'assets/icons/png/menu/icon-menu-lacak-permohonan-new.png';
   static const String iconMenuListrikNew = 'assets/icons/png/menu/icon-menu-listrik-new.png';
@@ -128,7 +117,6 @@ abstract class AppIcons {
   static const String iconMenuPvRooftopNew = 'assets/icons/png/menu/icon-menu-pv-rooftop-new.png';
   static const String iconMenuRecNew = 'assets/icons/png/menu/icon-menu-rec-new.png';
   static const String iconMenuSimulasiBiayaNew = 'assets/icons/png/menu/icon-menu-simulasi-biaya-new.png';
-  static const String iconMenuSpkluAntreNew = 'assets/icons/png/menu/icon-menu-spklu-antre-new.png';
   static const String iconMenuSpkluNew = 'assets/icons/png/menu/icon-menu-spklu-new.png';
   static const String iconMenuSpkluR2New = 'assets/icons/png/menu/icon-menu-spklu-r2-new.png';
   static const String iconMenuSpluNew = 'assets/icons/png/menu/icon-menu-splu-new.png';
@@ -137,8 +125,6 @@ abstract class AppIcons {
   static const String iconMenuTripPlannerNew = 'assets/icons/png/menu/icon-menu-trip-planner-new.png';
   static const String iconMenuTukarBateraiNew = 'assets/icons/png/menu/icon-menu-tukar-baterai-new.png';
   static const String iconMenuUbahDayaNew = 'assets/icons/png/menu/icon-menu-ubah-daya-new.png';
-  static const String iconMenuUpgradeAccountNew = 'assets/icons/png/menu/icon-menu-upgrade-account-new.png';
-  static const String iconMenuUpgradeIconnetNew = 'assets/icons/png/menu/icon-menu-upgrade-iconnet-new.png';
   static const String iconMenuWishlistNew = 'assets/icons/png/menu/icon-menu-wishlist-new.png';
 
   // Group: OUTLINED SVG

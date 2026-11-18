@@ -69,15 +69,13 @@ abstract class AppAssets {
   static const iconWarningRounded = '$_basePath/${AppIcons.iconWarningRounded}';
   static const iconBannerEstove = '$_basePath/${AppIcons.iconBannerEstove}';
   static const iconMarketplaceFeatureProductLarge = '$_basePath/${AppIcons.iconMarketplaceFeatureProductLarge}';
-  static const iconMarketplaceFlashSale = '$_basePath/${AppIcons.iconMarketplaceFlashSale}';
-  static const iconMarketplaceIncentive = '$_basePath/${AppIcons.iconMarketplaceIncentive}';
   static const iconMarketplaceOfficialStore = '$_basePath/${AppIcons.iconMarketplaceOfficialStore}';
   static const iconMarketplaceShippingDiscount = '$_basePath/${AppIcons.iconMarketplaceShippingDiscount}';
   static const iconMarketplaceTopProduct = '$_basePath/${AppIcons.iconMarketplaceTopProduct}';
   static const iconNfcCard = '$_basePath/${AppIcons.iconNfcCard}';
   static const iconRatingHeader = '$_basePath/${AppIcons.iconRatingHeader}';
   static const iconRecCleanEnergy = '$_basePath/${AppIcons.iconRecCleanEnergy}';
-  static const iconSpkluStation = '$_basePath/${AppIcons.iconSpkluStation}';
+  static const iconAristaPower = '$_basePath/${AppIcons.iconAristaPower}';
   static const iconAstra = '$_basePath/${AppIcons.iconAstra}';
   static const iconBlueCharge = '$_basePath/${AppIcons.iconBlueCharge}';
   static const iconCazgo = '$_basePath/${AppIcons.iconCazgo}';
@@ -89,7 +87,6 @@ abstract class AppAssets {
   static const iconIndomobil = '$_basePath/${AppIcons.iconIndomobil}';
   static const iconLexus = '$_basePath/${AppIcons.iconLexus}';
   static const iconParkingPlus = '$_basePath/${AppIcons.iconParkingPlus}';
-  static const iconPlnMobile = '$_basePath/${AppIcons.iconPlnMobile}';
   static const iconPln = '$_basePath/${AppIcons.iconPln}';
   static const iconRheCharge = '$_basePath/${AppIcons.iconRheCharge}';
   static const iconStarvo = '$_basePath/${AppIcons.iconStarvo}';
@@ -97,21 +94,13 @@ abstract class AppAssets {
   static const iconToyota = '$_basePath/${AppIcons.iconToyota}';
   static const iconVoltron = '$_basePath/${AppIcons.iconVoltron}';
   static const iconWuling = '$_basePath/${AppIcons.iconWuling}';
-  static const iconAddonIconnetNew = '$_basePath/${AppIcons.iconAddonIconnetNew}';
   static const iconMenuBalikNamaNew = '$_basePath/${AppIcons.iconMenuBalikNamaNew}';
-  static const iconMenuBerlanggananIconnetNew = '$_basePath/${AppIcons.iconMenuBerlanggananIconnetNew}';
   static const iconMenuCatatMeterNew = '$_basePath/${AppIcons.iconMenuCatatMeterNew}';
-  static const iconMenuCekJangkauanNew = '$_basePath/${AppIcons.iconMenuCekJangkauanNew}';
   static const iconMenuDiskusiNew = '$_basePath/${AppIcons.iconMenuDiskusiNew}';
   static const iconMenuEbillingNew = '$_basePath/${AppIcons.iconMenuEbillingNew}';
   static const iconMenuEvNew = '$_basePath/${AppIcons.iconMenuEvNew}';
   static const iconMenuEventNew = '$_basePath/${AppIcons.iconMenuEventNew}';
-  static const iconMenuFaqNew = '$_basePath/${AppIcons.iconMenuFaqNew}';
-  static const iconMenuHomeChargingNew = '$_basePath/${AppIcons.iconMenuHomeChargingNew}';
-  static const iconMenuHubungiKamiNew = '$_basePath/${AppIcons.iconMenuHubungiKamiNew}';
-  static const iconMenuIconnetProgressNew = '$_basePath/${AppIcons.iconMenuIconnetProgressNew}';
   static const iconMenuInternetNew = '$_basePath/${AppIcons.iconMenuInternetNew}';
-  static const iconMenuKelolaIconnetNew = '$_basePath/${AppIcons.iconMenuKelolaIconnetNew}';
   static const iconMenuKomporInduksiNew = '$_basePath/${AppIcons.iconMenuKomporInduksiNew}';
   static const iconMenuLacakPermohonanNew = '$_basePath/${AppIcons.iconMenuLacakPermohonanNew}';
   static const iconMenuListrikNew = '$_basePath/${AppIcons.iconMenuListrikNew}';
@@ -129,7 +118,6 @@ abstract class AppAssets {
   static const iconMenuPvRooftopNew = '$_basePath/${AppIcons.iconMenuPvRooftopNew}';
   static const iconMenuRecNew = '$_basePath/${AppIcons.iconMenuRecNew}';
   static const iconMenuSimulasiBiayaNew = '$_basePath/${AppIcons.iconMenuSimulasiBiayaNew}';
-  static const iconMenuSpkluAntreNew = '$_basePath/${AppIcons.iconMenuSpkluAntreNew}';
   static const iconMenuSpkluNew = '$_basePath/${AppIcons.iconMenuSpkluNew}';
   static const iconMenuSpkluR2New = '$_basePath/${AppIcons.iconMenuSpkluR2New}';
   static const iconMenuSpluNew = '$_basePath/${AppIcons.iconMenuSpluNew}';
@@ -138,8 +126,6 @@ abstract class AppAssets {
   static const iconMenuTripPlannerNew = '$_basePath/${AppIcons.iconMenuTripPlannerNew}';
   static const iconMenuTukarBateraiNew = '$_basePath/${AppIcons.iconMenuTukarBateraiNew}';
   static const iconMenuUbahDayaNew = '$_basePath/${AppIcons.iconMenuUbahDayaNew}';
-  static const iconMenuUpgradeAccountNew = '$_basePath/${AppIcons.iconMenuUpgradeAccountNew}';
-  static const iconMenuUpgradeIconnetNew = '$_basePath/${AppIcons.iconMenuUpgradeIconnetNew}';
   static const iconMenuWishlistNew = '$_basePath/${AppIcons.iconMenuWishlistNew}';
   static const iconAddFriendsOutlined = '$_basePath/${AppIcons.iconAddFriendsOutlined}';
   static const iconArrange1Outlined = '$_basePath/${AppIcons.iconArrange1Outlined}';
@@ -367,7 +353,6 @@ abstract class AppAssets {
   static const imageIllustrationBangunan = '$_basePath/${AppImages.illustrationBangunan}';
   static const imageIllustrationBlockLocationGeneral = '$_basePath/${AppImages.illustrationBlockLocationGeneral}';
   static const imageIllustrationCarGeneral = '$_basePath/${AppImages.illustrationCarGeneral}';
-  static const imageIllustrationComplaintSuccess = '$_basePath/${AppImages.illustrationComplaintSuccess}';
   static const imageIllustrationConfirmGeneral = '$_basePath/${AppImages.illustrationConfirmGeneral}';
   static const imageIllustrationConfirmationGeneral = '$_basePath/${AppImages.illustrationConfirmationGeneral}';
   static const imageIllustrationConnectorInitializing = '$_basePath/${AppImages.illustrationConnectorInitializing}';
@@ -387,9 +372,7 @@ abstract class AppAssets {
   static const imageIllustrationEvQueue = '$_basePath/${AppImages.illustrationEvQueue}';
   static const imageIllustrationFailedGeneral = '$_basePath/${AppImages.illustrationFailedGeneral}';
   static const imageIllustrationFlaggingRecDenom = '$_basePath/${AppImages.illustrationFlaggingRecDenom}';
-  static const imageIllustrationFormCancelGeneral = '$_basePath/${AppImages.illustrationFormCancelGeneral}';
   static const imageIllustrationFormSuccessGeneral = '$_basePath/${AppImages.illustrationFormSuccessGeneral}';
-  static const imageIllustrationHomecharging = '$_basePath/${AppImages.illustrationHomecharging}';
   static const imageIllustrationInactiveNfc = '$_basePath/${AppImages.illustrationInactiveNfc}';
   static const imageIllustrationInformationGeneral = '$_basePath/${AppImages.illustrationInformationGeneral}';
   static const imageIllustrationInvalidLicensePlate = '$_basePath/${AppImages.illustrationInvalidLicensePlate}';
@@ -398,7 +381,6 @@ abstract class AppAssets {
   static const imageIllustrationKwhMeter = '$_basePath/${AppImages.illustrationKwhMeter}';
   static const imageIllustrationLiveChat = '$_basePath/${AppImages.illustrationLiveChat}';
   static const imageIllustrationLocationGeneral = '$_basePath/${AppImages.illustrationLocationGeneral}';
-  static const imageIllustrationMaintenanceGeneral = '$_basePath/${AppImages.illustrationMaintenanceGeneral}';
   static const imageIllustrationMaintenanceListriqu = '$_basePath/${AppImages.illustrationMaintenanceListriqu}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
@@ -407,7 +389,6 @@ abstract class AppAssets {
   static const imageIllustrationOnBoardingLicPv1 = '$_basePath/${AppImages.illustrationOnBoardingLicPv1}';
   static const imageIllustrationOnBoardingLicPv2 = '$_basePath/${AppImages.illustrationOnBoardingLicPv2}';
   static const imageIllustrationOnBoardingLicPv3 = '$_basePath/${AppImages.illustrationOnBoardingLicPv3}';
-  static const imageIllustrationOnBoardingLogin = '$_basePath/${AppImages.illustrationOnBoardingLogin}';
   static const imageIllustrationOnBoardingPv = '$_basePath/${AppImages.illustrationOnBoardingPv}';
   static const imageIllustrationOnBoardingSubPv1 = '$_basePath/${AppImages.illustrationOnBoardingSubPv1}';
   static const imageIllustrationOnBoardingSubPv2 = '$_basePath/${AppImages.illustrationOnBoardingSubPv2}';
@@ -433,7 +414,6 @@ abstract class AppAssets {
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
   static const imageIllustrationTripPlanner = '$_basePath/${AppImages.illustrationTripPlanner}';
   static const imageIllustrationUnsupportedNfc = '$_basePath/${AppImages.illustrationUnsupportedNfc}';
-  static const imageIllustrationUpdateAppsGeneral = '$_basePath/${AppImages.illustrationUpdateAppsGeneral}';
   static const imageIllustrationVerificationEmail = '$_basePath/${AppImages.illustrationVerificationEmail}';
   static const imageIllustrationWarningCard = '$_basePath/${AppImages.illustrationWarningCard}';
   static const imageIllustrationWarningMotorcycle = '$_basePath/${AppImages.illustrationWarningMotorcycle}';
@@ -452,8 +432,6 @@ abstract class AppAssets {
   static const imageOnboardingSwapBattery5 = '$_basePath/${AppImages.onboardingSwapBattery5}';
   static const imageSwacam1 = '$_basePath/${AppImages.swacam1}';
   static const imageSwacam2 = '$_basePath/${AppImages.swacam2}';
-  static const imageIllustrationComplaintDetailHeaderBack = '$_basePath/${AppImages.illustrationComplaintDetailHeaderBack}';
-  static const imageIllustrationComplaintDetailHeaderFront = '$_basePath/${AppImages.illustrationComplaintDetailHeaderFront}';
   static const imageIllustrationEmptyStateComplaintHistory = '$_basePath/${AppImages.illustrationEmptyStateComplaintHistory}';
   static const imageLitWoker = '$_basePath/${AppImages.litWoker}';
   static const imageBackgroundAddIdpel = '$_basePath/${AppImages.backgroundAddIdpel}';
@@ -467,8 +445,6 @@ abstract class AppAssets {
   static const imageBackgroundEstimatePrice = '$_basePath/${AppImages.backgroundEstimatePrice}';
   static const imageBackgroundEstove = '$_basePath/${AppImages.backgroundEstove}';
   static const imageBackgroundGiveRating = '$_basePath/${AppImages.backgroundGiveRating}';
-  static const imageBackgroundHcDiscountAvailable = '$_basePath/${AppImages.backgroundHcDiscountAvailable}';
-  static const imageBackgroundHcDiscountUnavailable = '$_basePath/${AppImages.backgroundHcDiscountUnavailable}';
   static const imageBackgroundHeaderActiveCharging = '$_basePath/${AppImages.backgroundHeaderActiveCharging}';
   static const imageBackgroundHeaderCarbon = '$_basePath/${AppImages.backgroundHeaderCarbon}';
   static const imageBackgroundHeaderCharging = '$_basePath/${AppImages.backgroundHeaderCharging}';
@@ -486,7 +462,6 @@ abstract class AppAssets {
   static const imageBackgroundInvHeader = '$_basePath/${AppImages.backgroundInvHeader}';
   static const imageBackgroundLaunchImage = '$_basePath/${AppImages.backgroundLaunchImage}';
   static const imageBackgroundMarketplaceHeader = '$_basePath/${AppImages.backgroundMarketplaceHeader}';
-  static const imageBackgroundMarketplaceOpenMerchant = '$_basePath/${AppImages.backgroundMarketplaceOpenMerchant}';
   static const imageBackgroundMiniCardVehicle = '$_basePath/${AppImages.backgroundMiniCardVehicle}';
   static const imageBackgroundOnboardingHomecharging = '$_basePath/${AppImages.backgroundOnboardingHomecharging}';
   static const imageBackgroundPageBillPayment = '$_basePath/${AppImages.backgroundPageBillPayment}';
@@ -497,7 +472,6 @@ abstract class AppAssets {
   static const imageBackgroundPageEvTap = '$_basePath/${AppImages.backgroundPageEvTap}';
   static const imageBackgroundPageEvds = '$_basePath/${AppImages.backgroundPageEvds}';
   static const imageBackgroundPageHome = '$_basePath/${AppImages.backgroundPageHome}';
-  static const imageBackgroundPageIconcash = '$_basePath/${AppImages.backgroundPageIconcash}';
   static const imageBackgroundPageMyEv = '$_basePath/${AppImages.backgroundPageMyEv}';
   static const imageBackgroundPageQueue = '$_basePath/${AppImages.backgroundPageQueue}';
   static const imageBackgroundPageSuccess = '$_basePath/${AppImages.backgroundPageSuccess}';
@@ -513,12 +487,10 @@ abstract class AppAssets {
   static const imagePlaceholderDefault = '$_basePath/${AppImages.placeholderDefault}';
   static const imagePlaceholderBattery = '$_basePath/${AppImages.placeholderBattery}';
   static const imagePlaceholderCar = '$_basePath/${AppImages.placeholderCar}';
+  static const imagePlaceholderHomeCharging = '$_basePath/${AppImages.placeholderHomeCharging}';
   static const imagePlaceholderMotorcycle = '$_basePath/${AppImages.placeholderMotorcycle}';
 
   // --- AppAnimations Mapping ---
-  static const animationOnBoarding1 = '$_basePath/${AppAnimations.animationOnBoarding1}';
-  static const animationOnBoarding2 = '$_basePath/${AppAnimations.animationOnBoarding2}';
-  static const animationOnBoarding3 = '$_basePath/${AppAnimations.animationOnBoarding3}';
   static const animationCharging = '$_basePath/${AppAnimations.animationCharging}';
   static const animationLinearProgress = '$_basePath/${AppAnimations.animationLinearProgress}';
   static const animationLoadingMobi = '$_basePath/${AppAnimations.animationLoadingMobi}';

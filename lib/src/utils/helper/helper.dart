@@ -153,6 +153,8 @@ class AppHelper {
         return AppAssets.iconCazgo;
       case 'rhe charge':
         return AppAssets.iconRheCharge;
+      case 'arista power':
+        return AppAssets.iconAristaPower;
       default:
         return AppAssets.iconMenuSpkluNew;
     }
