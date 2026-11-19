@@ -2,6 +2,9 @@
 abstract class AppAnimations {
   AppAnimations._();
 
+  // Group: GIF
+  static const String animationMarketplaceService = 'assets/animations/gif/animation-marketplace-service.gif';
+
   // Group: LOTTIE
   static const String animationCharging = 'assets/animations/lottie/animation-charging.json';
   static const String animationLinearProgress = 'assets/animations/lottie/animation-linear-progress.json';

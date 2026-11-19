@@ -491,6 +491,7 @@ abstract class AppAssets {
   static const imagePlaceholderMotorcycle = '$_basePath/${AppImages.placeholderMotorcycle}';
 
   // --- AppAnimations Mapping ---
+  static const animationMarketplaceService = '$_basePath/${AppAnimations.animationMarketplaceService}';
   static const animationCharging = '$_basePath/${AppAnimations.animationCharging}';
   static const animationLinearProgress = '$_basePath/${AppAnimations.animationLinearProgress}';
   static const animationLoadingMobi = '$_basePath/${AppAnimations.animationLoadingMobi}';
