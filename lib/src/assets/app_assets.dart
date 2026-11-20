@@ -431,6 +431,7 @@ abstract class AppAssets {
   static const imageIllustrationSuccessGeneral = '$_basePath/${AppImages.illustrationSuccessGeneral}';
   static const imageIllustrationSuccessMotorcycle = '$_basePath/${AppImages.illustrationSuccessMotorcycle}';
   static const imageIllustrationSuccessTokenDefault = '$_basePath/${AppImages.illustrationSuccessTokenDefault}';
+  static const imageIllustrationSupportDoc = '$_basePath/${AppImages.illustrationSupportDoc}';
   static const imageIllustrationTripPlanner = '$_basePath/${AppImages.illustrationTripPlanner}';
   static const imageIllustrationUnsupportedNfc = '$_basePath/${AppImages.illustrationUnsupportedNfc}';
   static const imageIllustrationUpdateAppsGeneral = '$_basePath/${AppImages.illustrationUpdateAppsGeneral}';

@@ -72,6 +72,7 @@ abstract class AppImages {
   static const String illustrationSuccessGeneral = 'assets/images/png/illustration-success-general.png';
   static const String illustrationSuccessMotorcycle = 'assets/images/png/illustration-success-motorcycle.png';
   static const String illustrationSuccessTokenDefault = 'assets/images/png/illustration-success-token-default.png';
+  static const String illustrationSupportDoc = 'assets/images/png/illustration-support-doc.png';
   static const String illustrationTripPlanner = 'assets/images/png/illustration-trip-planner.png';
   static const String illustrationUnsupportedNfc = 'assets/images/png/illustration-unsupported-nfc.png';
   static const String illustrationUpdateAppsGeneral = 'assets/images/png/illustration-update-apps-general.png';
