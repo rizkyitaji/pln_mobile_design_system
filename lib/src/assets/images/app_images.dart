@@ -39,6 +39,7 @@ abstract class AppImages {
   static const String illustrationMaintenanceListriqu = 'assets/images/png/illustration-maintenance-listriqu.png';
   static const String illustrationMarketplaceOnboarding = 'assets/images/png/illustration-marketplace-onboarding.png';
   static const String illustrationMascotHalo = 'assets/images/png/illustration-mascot-halo.png';
+  static const String illustrationMobiRocket = 'assets/images/png/illustration-mobi-rocket.png';
   static const String illustrationMotorcycleGeneral = 'assets/images/png/illustration-motorcycle-general.png';
   static const String illustrationNoInternetGeneral = 'assets/images/png/illustration-no-internet-general.png';
   static const String illustrationOnBoardingLicPv1 = 'assets/images/png/illustration-on-boarding-lic-pv-1.png';

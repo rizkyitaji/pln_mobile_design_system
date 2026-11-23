@@ -384,6 +384,7 @@ abstract class AppAssets {
   static const imageIllustrationMaintenanceListriqu = '$_basePath/${AppImages.illustrationMaintenanceListriqu}';
   static const imageIllustrationMarketplaceOnboarding = '$_basePath/${AppImages.illustrationMarketplaceOnboarding}';
   static const imageIllustrationMascotHalo = '$_basePath/${AppImages.illustrationMascotHalo}';
+  static const imageIllustrationMobiRocket = '$_basePath/${AppImages.illustrationMobiRocket}';
   static const imageIllustrationMotorcycleGeneral = '$_basePath/${AppImages.illustrationMotorcycleGeneral}';
   static const imageIllustrationNoInternetGeneral = '$_basePath/${AppImages.illustrationNoInternetGeneral}';
   static const imageIllustrationOnBoardingLicPv1 = '$_basePath/${AppImages.illustrationOnBoardingLicPv1}';
