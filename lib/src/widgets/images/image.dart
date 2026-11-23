@@ -8,6 +8,8 @@ class AppImage extends StatelessWidget {
   final double? width, height, size;
   final Color? color;
   final BoxFit? fit;
+  final AlignmentGeometry? alignment;
+  final double? scale;
   final bool? animate, repeat, reverse;
   final BorderRadius? borderRadius;
 
@@ -16,9 +18,11 @@ class AppImage extends StatelessWidget {
     required this.asset,
     this.width,
     this.height,
-    this.size = AppSizes.s24,
+    this.size,
     this.color,
     this.fit,
+    this.alignment,
+    this.scale,
     this.animate,
     this.repeat,
     this.reverse,
@@ -27,39 +31,48 @@ class AppImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: borderRadius ?? AppRadius.zero,
-      child: Visibility(
-        visible: asset.contains('json'),
-        replacement: Visibility(
-          visible: asset.contains('svg'),
-          replacement: Image.asset(
-            asset,
-            width: width ?? size,
-            height: height ?? size,
-            color: color,
-            fit: fit,
-          ),
-          child: SvgPicture.asset(
-            asset,
-            width: width ?? size,
-            height: height ?? size,
-            fit: fit ?? BoxFit.contain,
-            colorFilter: color != null
-                ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
-                : null,
-          ),
-        ),
-        child: Lottie.asset(
-          asset,
-          width: width ?? size,
-          height: height ?? size,
-          fit: fit,
-          repeat: repeat,
-          reverse: reverse,
-          animate: animate,
-        ),
-      ),
-    );
+    Widget imageWidget;
+
+    if (asset.endsWith('.json') ||
+        asset.contains('.json') ||
+        asset.contains('animation')) {
+      imageWidget = Lottie.asset(
+        asset,
+        width: width ?? size,
+        height: height ?? size,
+        fit: fit,
+        alignment: (alignment as Alignment?) ?? Alignment.center,
+        repeat: repeat,
+        reverse: reverse,
+        animate: animate,
+      );
+    } else if (asset.endsWith('.svg') || asset.contains('.svg')) {
+      imageWidget = SvgPicture.asset(
+        asset,
+        width: width ?? size,
+        height: height ?? size,
+        fit: fit ?? BoxFit.contain,
+        alignment: alignment ?? Alignment.center,
+        colorFilter: color != null
+            ? ColorFilter.mode(color ?? AppColors.icon, BlendMode.srcIn)
+            : null,
+      );
+    } else {
+      imageWidget = Image.asset(
+        asset,
+        width: width ?? size,
+        height: height ?? size,
+        color: color,
+        fit: fit,
+        alignment: alignment ?? Alignment.center,
+        scale: scale,
+      );
+    }
+
+    if (borderRadius != null && borderRadius != BorderRadius.zero) {
+      return ClipRRect(borderRadius: borderRadius!, child: imageWidget);
+    }
+
+    return imageWidget;
   }
 }
