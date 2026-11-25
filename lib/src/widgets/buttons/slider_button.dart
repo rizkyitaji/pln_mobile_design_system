@@ -175,7 +175,7 @@ class _AppSliderButtonState extends State<AppSliderButton>
                           color: _isCompleted
                               ? widget.activeBackgroundColor
                               : widget.iconColor,
-                          size: 20,
+                          size: AppSizes.s20,
                         ),
                       ),
                     ),

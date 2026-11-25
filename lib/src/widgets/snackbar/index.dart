@@ -83,7 +83,7 @@ class AppSnackBar {
               AppImage(
                 asset: AppAssets.iconCheckRounded,
                 color: AppColors.iconOnSuccess,
-                width: AppSizes.s20,
+                size: AppSizes.s20,
               ),
               Expanded(
                 child: Column(
@@ -154,7 +154,7 @@ class AppSnackBar {
               AppImage(
                 asset: AppAssets.iconInfoRounded,
                 color: AppColors.iconOnError,
-                width: AppSizes.s20,
+                size: AppSizes.s20,
               ),
               Expanded(
                 child: Column(
@@ -225,7 +225,7 @@ class AppSnackBar {
               AppImage(
                 asset: AppAssets.iconInfoRounded,
                 color: AppColors.iconOnInfo,
-                width: AppSizes.s20,
+                size: AppSizes.s20,
               ),
               Expanded(
                 child: Column(
@@ -296,7 +296,7 @@ class AppSnackBar {
               AppImage(
                 asset: AppAssets.iconWarning,
                 color: AppColors.iconOnWarning,
-                width: AppSizes.s20,
+                size: AppSizes.s20,
               ),
               Expanded(
                 child: Column(
@@ -367,7 +367,7 @@ class AppSnackBar {
               AppImage(
                 asset: AppAssets.iconCheckRounded,
                 color: AppColors.iconOnSuccess,
-                width: AppSizes.s20,
+                size: AppSizes.s20,
               ),
               Expanded(
                 child: Column(

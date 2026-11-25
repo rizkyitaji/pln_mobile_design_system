@@ -120,7 +120,6 @@ class AppGeneralPage extends StatelessWidget {
                 width: double.infinity,
                 height: backgroundImageHeight,
                 fit: BoxFit.fill,
-                size: null,
               ),
             ),
             child: AppNetworkImage(

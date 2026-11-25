@@ -131,6 +131,7 @@ class _AppScannerViewState extends State<AppScannerView>
                   ? AppAssets.iconLightning
                   : AppAssets.iconLightningOutlined,
               color: AppColors.iconOnColor,
+              size: AppSizes.s24,
             ),
           ),
           AppSpacing.w16,
@@ -233,6 +234,7 @@ class _AppScannerViewState extends State<AppScannerView>
                   const AppImage(
                     asset: AppAssets.iconCharge,
                     color: AppColors.iconOnColor,
+                    size: AppSizes.s24,
                   ),
                   Expanded(
                     child: Text(

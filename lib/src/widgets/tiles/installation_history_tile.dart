@@ -118,7 +118,7 @@ class AppInstallationHistoryTile extends StatelessWidget {
                         : amiODAStatus == 'failed'
                         ? AppColors.iconError
                         : AppColors.iconWarningPressed,
-                    size: 20,
+                    size: AppSizes.s20,
                   ),
                   Flexible(
                     child: Text(

@@ -66,11 +66,7 @@ class AppUploadField extends StatelessWidget {
             child: Center(
               child:
                   loadingWidget ??
-                  SizedBox(
-                    width: 36,
-                    height: 36,
-                    child: AppLoadingIndicator(),
-                  ),
+                  SizedBox(width: 36, height: 36, child: AppLoadingIndicator()),
             ),
           ),
         ] else if (image != null)
@@ -113,6 +109,7 @@ class AppUploadField extends StatelessWidget {
                     AppImage(
                       asset: AppAssets.iconUploadOutlined,
                       color: AppColors.iconPrimary,
+                      size: AppSizes.s24,
                     ),
                     Text(
                       uploadLabel,
