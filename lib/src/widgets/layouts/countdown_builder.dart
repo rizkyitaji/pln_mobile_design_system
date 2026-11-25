@@ -121,7 +121,9 @@ class _AppCountdownBuilderState extends State<AppCountdownBuilder> {
     required String seconds,
   }) {
     switch (widget.format) {
-      case 'mmmsd':
+      case 'hh jam mm menit':
+        return '$hours jam $minutes menit';
+      case 'mmmssd':
         return '${minutes}m ${seconds}d';
       case 'mm:ss':
         return '$minutes : $seconds';
